@@ -1,0 +1,63 @@
+{
+  "guideId": "IG-FOREIGN",
+  "incomeType": "Foreign Income and Foreign Assets",
+  "fyApplicable": "2025-26",
+  "description": "Income earned from foreign sources and assets held abroad. Resident individuals (ROR) must report all worldwide income. Schedule FA (foreign assets) and Schedule FSI (foreign source income) are mandatory for residents with any foreign nexus. DTAA credits claimed via Schedule TR.",
+  "relevantITRForms": ["ITR-2", "ITR-3"],
+  "relevantSchedules": ["Schedule-FA", "Schedule-FSI", "Schedule-TR"],
+  "taxTreatment": {
+    "oldRegime": { "rate": "Foreign income taxed at applicable Indian slab rates. DTAA credit or section 91 credit available for foreign tax paid.", "notes": "DTAA benefit available for countries with treaty" },
+    "newRegime": { "rate": "Same slab rates apply to foreign income. DTAA credit available. New regime slab rates apply.", "notes": "No special treatment under new regime for foreign income" },
+    "specialRate": null
+  },
+  "incomeComponents": [
+    { "componentId": "FI-01", "name": "Foreign employment/salary income", "description": "Salary from foreign employer. Taxable for ROR at Indian slab rates. DTAA credit for tax withheld in foreign country.", "exemptAmount": null, "isFullyTaxable": true, "relevantSection": "Section 5(1)" },
+    { "componentId": "FI-02", "name": "Foreign bank interest", "description": "Interest on NRE account: exempt u/s 10(4) while NRI status; taxable once resident. Interest on NRO account: always taxable. FCNR interest: exempt while NRI.", "exemptAmount": "NRE/FCNR interest while NRI status", "isFullyTaxable": false, "relevantSection": "Section 10(4)" },
+    { "componentId": "FI-03", "name": "Foreign dividends", "description": "Dividends from foreign company shares. Taxable at slab rate for Indian residents. DTAA may reduce withholding tax at source.", "exemptAmount": null, "isFullyTaxable": true, "relevantSection": "Section 5(1)" },
+    { "componentId": "FI-04", "name": "RSU (Restricted Stock Units) income", "description": "Employer RSUs: Taxable as perquisite at vest date (market value at vest date). Subsequent gains = capital gains. Many IT employees in India receive RSUs from US parent.", "exemptAmount": null, "isFullyTaxable": true, "relevantSection": "Section 17(2)" },
+    { "componentId": "FI-05", "name": "Freelance/consulting income from foreign clients", "description": "Offshore freelancing income received in foreign currency. Taxable as business/profession income at Indian slab rates. Convert to INR at RBI reference rate on date of receipt or transaction date.", "exemptAmount": null, "isFullyTaxable": true, "relevantSection": "Sections 28-44" }
+  ],
+  "deductionsAvailable": [
+    { "sectionId": "90", "name": "DTAA Relief (Double Tax Avoidance Agreement)", "limit": "Foreign tax paid, subject to Indian tax on same income", "regime": "both", "notes": "File Form 67 before ITR due date for DTAA credit. Cannot carry forward unused DTAA credit." },
+    { "sectionId": "91", "name": "Unilateral Relief (non-DTAA countries)", "limit": "Lower of foreign tax rate or Indian rate on same income", "regime": "both", "notes": "For countries without DTAA with India. Proportional credit method." }
+  ],
+  "keyRules": [
+    { "ruleId": "FI-R01", "rule": "Residency determines tax scope: ROR (Resident and Ordinarily Resident) = worldwide income taxable. RNOR (Resident but Not Ordinarily Resident) = only Indian income + income from Indian business. NRI = only Indian-sourced income.", "legalReference": "Sections 5, 6", "isNewForFY202526": false },
+    { "ruleId": "FI-R02", "rule": "Schedule FA mandatory: ALL residents with foreign bank accounts, investments, property, or other financial interests MUST fill Schedule FA regardless of income amount. Even dormant accounts must be disclosed.", "legalReference": "Schedule FA, Black Money (Undisclosed Foreign Income and Assets) Act 2015", "isNewForFY202526": false },
+    { "ruleId": "FI-R03", "rule": "Form 67 for DTAA: To claim DTAA credit (Schedule TR), Form 67 must be filed on the Income Tax portal BEFORE filing the ITR. Form 67 is a statement of foreign income and tax paid.", "legalReference": "Rule 128, Income-tax Rules; Form 67", "isNewForFY202526": false },
+    { "ruleId": "FI-R04", "rule": "NRE account taxation on return to India: Interest on NRE accounts and FCNR deposits that were exempt during NRI status remain exempt for 2 years after becoming Resident (if RNOR) — under Section 10(4)(ii) and 10(15)(iv)(fa). After full resident status, they become taxable.", "legalReference": "Section 10(4), 10(15)", "isNewForFY202526": false },
+    { "ruleId": "FI-R05", "rule": "Black Money Act penalties: Non-disclosure of foreign assets carries penalty of ₹10L per violation. Wilful non-disclosure is prosecutable with imprisonment.", "legalReference": "Black Money (Undisclosed Foreign Income and Assets) and Imposition of Tax Act, 2015", "isNewForFY202526": false }
+  ],
+  "workedExample": {
+    "profile": "IT professional with US client income and US RSUs",
+    "incomeDetails": {
+      "IndianSalary": 1500000,
+      "USFreelanceIncome": 1680000,
+      "USTaxPaid": 252000,
+      "RSUVestValue": 500000,
+      "USBankAccount": "Disclosed in Schedule FA"
+    },
+    "computation": {
+      "totalGrossIncome": 3680000,
+      "dtaaCreditAvailable": 252000,
+      "taxOnIndianIncome": "Standard slab computation",
+      "taxOnForeignIncome": "Same slabs apply",
+      "netTaxAfterDTAA": "Total tax minus DTAA credit"
+    },
+    "taxableIncome": 3680000,
+    "taxPayable": 490000
+  },
+  "commonMistakes": [
+    "Not disclosing foreign bank accounts in Schedule FA even if account is dormant or has zero balance",
+    "Returning NRI not tracking when RNOR period ends and NRE interest becomes taxable",
+    "Not filing Form 67 before ITR — DTAA credit denied",
+    "Converting foreign income at incorrect exchange rate (use RBI reference rate)",
+    "RSU income not reported as perquisite at vest date"
+  ],
+  "auditTriggers": [
+    "Form 26AS/AIS shows TDS u/s 195 on payments to non-resident — compared with foreign income disclosure",
+    "Sudden spike in income after return from abroad",
+    "Large foreign remittances received (LRS/SWIFT data shared with tax department)"
+  ],
+  "relatedGuides": ["IG-SALARY", "IG-CG"]
+}

@@ -1,0 +1,61 @@
+{
+  "procedureId": "PROC-PA",
+  "procedureName": "ITR Processing and Assessment",
+  "fyApplicable": "2025-26",
+  "description": "After e-verification, ITR is processed by the Centralised Processing Centre (CPC), Bengaluru. Processing includes data validation, TDS matching, refund computation. Intimation u/s 143(1) is sent. Scrutiny assessment u/s 143(3) may follow for selected returns.",
+  "applicableForms": ["ITR-1", "ITR-2", "ITR-3", "ITR-4", "ITR-5", "ITR-6", "ITR-7"],
+  "timeline": "CPC processing: typically 15-90 days. Intimation u/s 143(1): within 9 months of end of AY (by December 31, 2027 for AY 2026-27).",
+  "steps": [
+    {
+      "stepId": "PA-01",
+      "stepName": "CPC Preliminary Processing",
+      "description": "CPC validates: PAN, Aadhaar linkage, return schema, mathematical accuracy, TDS matching with Form 26AS/AIS, advance tax verification. Automated comparison with third-party information.",
+      "deadline": null,
+      "isOnline": true,
+      "legalReference": "Section 143(1)"
+    },
+    {
+      "stepId": "PA-02",
+      "stepName": "Intimation u/s 143(1) Issued",
+      "description": "CPC sends intimation to registered email and on portal. Three outcomes: (a) Acceptance — return processed as filed; (b) Demand — additional tax payable due to CPC adjustments; (c) Refund — excess tax refunded.",
+      "deadline": "Within 9 months of end of AY (Dec 31, 2027 for AY 2026-27)",
+      "isOnline": true,
+      "legalReference": "Section 143(1)"
+    },
+    {
+      "stepId": "PA-03",
+      "stepName": "Respond to 143(1) Demand (if any)",
+      "description": "If 143(1) shows demand: Pay via Challan 280 (self-assessment tax) within 30 days OR file rectification u/s 154 if demand is due to CPC error. Do not ignore demand — interest accrues from Assessment Order date.",
+      "deadline": "30 days from intimation date",
+      "isOnline": true,
+      "legalReference": "Section 143(1)(a)"
+    },
+    {
+      "stepId": "PA-04",
+      "stepName": "Risk-Based Selection for Scrutiny",
+      "description": "CBDT's Computer Aided Scrutiny Selection (CASS) selects returns for detailed assessment u/s 143(2). Selection based on AI risk parameters: high income, large refunds, significant deductions, profession codes. Notice must be issued within 3 months of end of AY.",
+      "deadline": "Notice u/s 143(2): within 3 months of end of AY (June 30, 2027 for AY 2026-27)",
+      "isOnline": false,
+      "legalReference": "Section 143(2)"
+    },
+    {
+      "stepId": "PA-05",
+      "stepName": "Assessment u/s 143(3) (if scrutiny selected)",
+      "description": "AO (Assessing Officer) examines return in detail. Sends questionnaires (u/s 142(1)). Taxpayer must respond with documents within specified time. AO passes assessment order with or without additions to income.",
+      "deadline": "Assessment order: within 12 months of end of AY (March 31, 2028 for AY 2026-27)",
+      "isOnline": false,
+      "legalReference": "Section 143(3)"
+    }
+  ],
+  "commonMistakes": [
+    "Ignoring 143(1) demand notice — interest u/s 220(2) accrues at 1% per month",
+    "Not responding to 142(1) questionnaire within time — deemed income addition",
+    "Assuming 143(1) acceptance means no future scrutiny (selection for 143(2) can still happen)"
+  ],
+  "consequences": [
+    "Unaddressed 143(1) demand: Recovery proceedings u/s 220, penalty u/s 221",
+    "Non-response to 143(2): Best judgment assessment u/s 144",
+    "False statements in return: Prosecution u/s 276C"
+  ],
+  "legalReference": "Sections 143(1), 143(2), 143(3), Income-tax Act 1961"
+}

@@ -1,0 +1,67 @@
+{
+  "guideId": "IG-OS",
+  "incomeType": "Income from Other Sources",
+  "fyApplicable": "2025-26",
+  "description": "Residual income head (Section 56) covering all income not classified under salary, house property, business/profession, or capital gains. Includes bank interest, dividends, gifts, gaming winnings, and VDA/crypto income.",
+  "relevantITRForms": ["ITR-1", "ITR-2", "ITR-3", "ITR-4", "ITR-5", "ITR-6", "ITR-7"],
+  "relevantSchedules": ["Schedule-OS", "Schedule-TDS2", "Schedule-VI-A"],
+  "taxTreatment": {
+    "oldRegime": { "rate": "Slab rate for most components. Special rates: gaming 30%, lottery 30%, VDA 30%.", "notes": "80TTA/80TTB deduction available on savings interest (old regime only)" },
+    "newRegime": { "rate": "Same slab rates. Special rates for gaming/lottery/VDA same. No 80TTA/80TTB deduction.", "notes": "80TTA/80TTB not available under new regime" },
+    "specialRate": "30% on lottery/gaming winnings and VDA; slab rate on interest/dividends/gifts"
+  },
+  "incomeComponents": [
+    { "componentId": "OS-01", "name": "Bank savings account interest", "description": "Interest from savings accounts in banks, post offices, cooperative societies. Taxable at slab rate. Deduction: 80TTA ₹10K (old regime, < 60 years) or 80TTB ₹50K (old regime, 60+ years).", "exemptAmount": "₹10,000 u/s 80TTA (old regime, < 60)", "isFullyTaxable": false, "relevantSection": "Section 56(2)" },
+    { "componentId": "OS-02", "name": "Fixed deposit interest / RD interest", "description": "Accrual-based — taxable each year even if FD is not matured or interest not received. Banks deduct TDS u/s 194A at 10% above ₹40K/year (₹50K for senior citizens). NO 80TTA deduction on FD interest.", "exemptAmount": null, "isFullyTaxable": true, "relevantSection": "Section 56(2)" },
+    { "componentId": "OS-03", "name": "Dividends from domestic companies", "description": "Fully taxable from FY 2020-21 (post DDT abolition). TDS u/s 194 at 10% above ₹5,000 per company per year. No deduction against dividend income.", "exemptAmount": null, "isFullyTaxable": true, "relevantSection": "Section 56(2)(i)" },
+    { "componentId": "OS-04", "name": "Online gaming winnings u/s 115BBJ", "description": "Net winnings from online gaming platforms (fantasy sports, poker, rummy apps) taxed at 30% flat rate. TDS u/s 194BA at 30% at withdrawal point. No deduction of losses or expenses.", "exemptAmount": null, "isFullyTaxable": true, "relevantSection": "Section 115BBJ" },
+    { "componentId": "OS-05", "name": "Lottery/crossword/horse race winnings u/s 115BB", "description": "30% flat tax on gross winnings. TDS u/s 194B at 30% above ₹10,000 threshold. No deduction for losses.", "exemptAmount": "₹10,000 threshold (below this, TDS not deducted — but income still taxable)", "isFullyTaxable": true, "relevantSection": "Section 115BB" },
+    { "componentId": "OS-06", "name": "Gifts received u/s 56(2)(x)", "description": "Gifts from non-relatives above ₹50,000 in aggregate are taxable as other sources. Gifts from relatives (spouse, siblings, parents, in-laws, children) are FULLY EXEMPT. Gifts on marriage, by will, from local authority — exempt.", "exemptAmount": "₹50,000 aggregate from non-relatives", "isFullyTaxable": false, "relevantSection": "Section 56(2)(x)" },
+    { "componentId": "OS-07", "name": "VDA (Virtual Digital Assets — Crypto, NFT) u/s 115BBH", "description": "30% flat tax on VDA profits. No deduction except cost of acquisition. Transfer losses CANNOT be offset against non-VDA income or even other VDA profits from different tokens. TDS u/s 194S at 1%.", "exemptAmount": null, "isFullyTaxable": true, "relevantSection": "Section 115BBH" },
+    { "componentId": "OS-08", "name": "Family pension", "description": "Pension received by family member of deceased employee. 1/3 of pension or ₹25,000 (whichever is lower) is deductible as standard deduction from family pension.", "exemptAmount": "Lower of 1/3 of pension or ₹25,000", "isFullyTaxable": false, "relevantSection": "Section 57(iia)" },
+    { "componentId": "OS-09", "name": "NSC interest (accrued annually)", "description": "Interest on National Savings Certificate is deemed to accrue annually. Taxable in each year of accrual (not on maturity). Years 1-5: deemed reinvestment eligible for 80C deduction in old regime.", "exemptAmount": null, "isFullyTaxable": true, "relevantSection": "Section 56, Rule 17" }
+  ],
+  "deductionsAvailable": [
+    { "sectionId": "80TTA", "name": "Savings bank interest", "limit": "₹10,000", "regime": "old", "notes": "Only savings account interest; not FD/RD. Only for individuals < 60 years." },
+    { "sectionId": "80TTB", "name": "Bank interest (senior citizens 60+)", "limit": "₹50,000", "regime": "old", "notes": "Savings + FD + RD interest. Cannot claim both 80TTA and 80TTB." },
+    { "sectionId": "57(iia)", "name": "Family pension standard deduction", "limit": "Lower of 1/3 pension or ₹25,000", "regime": "both", "notes": "Available in both regimes for family pensioners." }
+  ],
+  "keyRules": [
+    { "ruleId": "OS-R01", "rule": "FD interest is accrual-based: Fixed deposit interest is taxable in the year it accrues — NOT when FD matures or interest is received. Most taxpayers mistakenly report FD interest only at maturity.", "legalReference": "Mercantile/accrual accounting; Section 145", "isNewForFY202526": false },
+    { "ruleId": "OS-R02", "rule": "VDA loss isolation: Losses from VDA transactions cannot be set off against any other income head including other VDA gains. Each VDA transaction is independent for loss computation.", "legalReference": "Section 115BBH(2)", "isNewForFY202526": false },
+    { "ruleId": "OS-R03", "rule": "Gift exemption from relatives: The definition of 'relative' for gift exemption includes spouse, siblings and their spouses, parents, lineal descendants, spouse's siblings. Gifts from friends/business associates > ₹50K are taxable.", "legalReference": "Section 56(2)(x), Explanation (e)", "isNewForFY202526": false }
+  ],
+  "workedExample": {
+    "profile": "Individual with interest and dividend income",
+    "incomeDetails": {
+      "savingsInterest": 15000,
+      "fdInterest": 80000,
+      "dividends": 12000,
+      "onlineGamingWinnings": 50000
+    },
+    "computation": {
+      "grossOtherSources": 157000,
+      "lesS80TTA": 10000,
+      "netRegularIncome": 147000,
+      "gamingTax": 15000,
+      "totalOSTax": "Gaming at 30% (₹15K) + regular income at slab"
+    },
+    "taxableIncome": 147000,
+    "taxPayable": 15000
+  },
+  "commonMistakes": [
+    "Reporting FD interest only at maturity instead of annually (accrual basis)",
+    "Not reporting dividends from small/unlisted companies (no Form 26AS entry — self-report required)",
+    "Claiming 80TTA on FD interest (80TTA is only for savings account interest)",
+    "Netting online gaming losses from one session against winnings from another (not allowed)",
+    "Forgetting to report gifts from friends above ₹50,000 in aggregate",
+    "Claiming 80TTB and 80TTA both (mutually exclusive)"
+  ],
+  "auditTriggers": [
+    "AIS shows bank interest income higher than reported in ITR",
+    "Dividend income in Form 26AS not matched in ITR",
+    "Large cash gifts with no explanation",
+    "TDS u/s 194BA (gaming) deducted but gaming income not reported"
+  ],
+  "relatedGuides": ["IG-SALARY", "IG-HP"]
+}

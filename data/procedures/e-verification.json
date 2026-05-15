@@ -1,0 +1,63 @@
+{
+  "procedureId": "PROC-EV",
+  "procedureName": "E-Verification of ITR",
+  "fyApplicable": "2025-26",
+  "description": "After filing an ITR, it must be verified within 30 days. Unverified ITRs are treated as if not filed. E-verification is the preferred electronic method. Physical ITR-V can be sent to CPC Bangalore as alternative.",
+  "applicableForms": ["ITR-1", "ITR-2", "ITR-3", "ITR-4", "ITR-5", "ITR-6", "ITR-7"],
+  "timeline": "Within 30 days of filing date (CBDT Notification No. 5/2023, effective August 1, 2022)",
+  "steps": [
+    {
+      "stepId": "EV-01",
+      "stepName": "Log into Income Tax Portal",
+      "description": "Go to www.incometax.gov.in → Login → e-Verify Return",
+      "deadline": null,
+      "isOnline": true,
+      "legalReference": null
+    },
+    {
+      "stepId": "EV-02",
+      "stepName": "Choose verification method",
+      "description": "Options: (a) Aadhaar OTP — OTP sent to Aadhaar-linked mobile; (b) Net banking EVC — generate EVC via bank; (c) Bank account EVC — pre-validated bank account; (d) Demat account EVC; (e) DSC (Digital Signature Certificate) — mandatory for companies and audit cases; (f) ITR-V physical submission to CPC Bangalore.",
+      "deadline": null,
+      "isOnline": true,
+      "legalReference": "Rule 12, Income-tax Rules"
+    },
+    {
+      "stepId": "EV-03",
+      "stepName": "Generate and enter OTP/EVC",
+      "description": "For Aadhaar OTP: Enter 6-digit OTP received on Aadhaar-registered mobile. For bank EVC: Copy EVC from bank's net banking portal and enter on income tax portal.",
+      "deadline": null,
+      "isOnline": true,
+      "legalReference": null
+    },
+    {
+      "stepId": "EV-04",
+      "stepName": "Receive verification acknowledgment",
+      "description": "After successful e-verification, portal shows success message. Acknowledgment email sent to registered email. Return moves to 'Verified' status.",
+      "deadline": "Within 30 days of filing",
+      "isOnline": true,
+      "legalReference": "CBDT Notification No. 5/2023"
+    }
+  ],
+  "alternatives": [
+    {
+      "method": "Physical ITR-V",
+      "description": "Print signed ITR-V (1-page acknowledgment from portal), sign in BLUE ink, send by ordinary post or speed post to: CPC, Post Box No. 1, Electronic City Post Office, Bengaluru – 560 100. Must reach within 30 days of filing.",
+      "applicableTo": "Only for ITR-1 to ITR-4 filed without DSC (not applicable for companies, audit cases)",
+      "legalReference": "Rule 12(3)"
+    }
+  ],
+  "commonMistakes": [
+    "Not verifying within 30 days — return treated as never filed, leading to late filing consequences",
+    "Sending ITR-V by courier/registered post (only ordinary or speed post accepted)",
+    "Using DSC of wrong person (company must use authorized signatory's DSC)",
+    "Aadhaar OTP not generating because Aadhaar not linked to mobile number"
+  ],
+  "consequences": [
+    "Unverified ITR is invalid — treated as non-filing",
+    "Interest u/s 234A applicable as if return not filed",
+    "Carry-forward of losses forfeited if return not verified timely",
+    "Refund not processed until verification complete"
+  ],
+  "legalReference": "Section 140, Rule 12; CBDT Notification No. 5/2023 dated July 29, 2022"
+}
