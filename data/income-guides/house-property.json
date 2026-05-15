@@ -1,0 +1,182 @@
+{
+  "guideId": "IG-HP",
+  "incomeType": "Income from House Property",
+  "fyApplicable": "2025-26",
+  "description": "Comprehensive guide to computation of Income from House Property in India for FY 2025-26 (AY 2026-27). Covers self-occupied, let-out, and deemed let-out property scenarios, home loan interest deductions, set-off rules for HP losses, and key changes for FY 2025-26 including expanded ITR-4 eligibility and relaxed SOP provisions.",
+  "relevantITRForms": ["ITR-1", "ITR-2", "ITR-3", "ITR-4"],
+  "relevantSchedules": ["Schedule-HP", "Schedule-CYLA", "Schedule-BFLA", "Schedule-CFL", "Schedule-VI-A"],
+  "taxTreatment": {
+    "oldRegime": {
+      "rate": "Slab rates — HP income added to total income and taxed at applicable rate (5%/20%/30%)",
+      "notes": "Self-occupied property: Annual value is Nil; interest on home loan deductible up to ₹2,00,000 u/s 24(b). Let-out property: Actual/expected rent (whichever higher) is GAV; standard deduction of 30% of NAV allowed; interest deductible without cap. HP loss can be set off against other income up to ₹2,00,000 per year; balance carried forward for 8 years."
+    },
+    "newRegime": {
+      "rate": "Slab rates — same new regime slab rates apply to HP income",
+      "notes": "Self-occupied property: NO deduction for interest on home loan u/s 24(b) — this is the most significant restriction. Let-out property: Interest deduction is available up to actual interest paid (no cap), 30% standard deduction on NAV still applies, and municipal taxes paid by owner are deductible. Set-off of HP loss against other heads is NOT available in new regime — loss can only be set off against HP income."
+    },
+    "specialRate": null
+  },
+  "incomeComponents": [
+    {
+      "componentId": "HP-001",
+      "name": "Self-Occupied Property (SOP)",
+      "description": "A property used by the owner for self-residence throughout the year. Annual Value is deemed to be Nil under the Income Tax Act. Up to 2 properties can be treated as self-occupied in FY 2025-26 (expanded from 1 in earlier years). If a person owns more than 2 properties used for self-residence, only 2 can be declared as SOP; the remaining are deemed let-out. Interest on home loan for SOP is deductible up to ₹2L/year in old regime; ₹0 in new regime.",
+      "exemptAmount": "Annual Value = Nil (no positive HP income from SOP)",
+      "isFullyTaxable": false,
+      "relevantSection": "Section 23(2), Section 24(b)"
+    },
+    {
+      "componentId": "HP-002",
+      "name": "Let-Out Property (LOP)",
+      "description": "A property given on rent for the whole or part of the year. Computation: (1) Gross Annual Value (GAV) = higher of actual rent received/receivable or expected rent (based on municipal value or fair rent, whichever is higher — subject to standard rent). (2) Net Annual Value (NAV) = GAV minus municipal taxes paid by owner during the year. (3) Net HP Income = NAV minus Standard Deduction of 30% of NAV minus interest on home loan (no cap for let-out). If property is let-out for part of the year, compute proportionally.",
+      "exemptAmount": "30% of NAV as standard deduction u/s 24(a)",
+      "isFullyTaxable": false,
+      "relevantSection": "Section 22, 23(1), 24(a), 24(b)"
+    },
+    {
+      "componentId": "HP-003",
+      "name": "Deemed Let-Out Property",
+      "description": "If a taxpayer owns more than 2 house properties in FY 2025-26 and claims more than 2 as self-occupied, the additional properties are treated as 'deemed let-out'. Annual value for deemed let-out is computed as the higher of expected rent (fair rent or municipal value, whichever is higher, subject to standard rent) — even if no actual rent is received. Municipal taxes and 30% standard deduction and interest are then deductible. This is only applicable in old regime; in new regime, the SOP restriction also applies.",
+      "exemptAmount": "30% standard deduction on deemed NAV",
+      "isFullyTaxable": false,
+      "relevantSection": "Section 23(4)"
+    },
+    {
+      "componentId": "HP-004",
+      "name": "Pre-Construction Interest",
+      "description": "Interest paid on home loan during the construction period (i.e., before the year in which the property is first occupied) is called pre-construction interest. It cannot be deducted in the year it is paid. It is aggregated and deducted in 5 equal annual installments starting from the year of possession/completion of construction. For SOP (old regime), the combined deduction of current year interest plus 1/5th of pre-construction interest cannot exceed ₹2,00,000. For let-out property, there is no such cap.",
+      "exemptAmount": "1/5th of total pre-construction interest each year for 5 years",
+      "isFullyTaxable": false,
+      "relevantSection": "Section 24(b) proviso"
+    }
+  ],
+  "deductionsAvailable": [
+    {
+      "sectionId": "24(a)",
+      "name": "Standard Deduction on NAV (30%)",
+      "limit": "30% of Net Annual Value — no ceiling",
+      "regime": "both",
+      "notes": "Available for let-out and deemed let-out properties only. Not available for SOP (since Annual Value itself is Nil for SOP). No documentation required — statutory flat deduction. Covers repairs, insurance, maintenance, collection charges etc."
+    },
+    {
+      "sectionId": "24(b)",
+      "name": "Interest on Home Loan",
+      "limit": "SOP: ₹2,00,000/year (old regime); ₹0 (new regime). Let-out: Actual interest paid (no cap, both regimes)",
+      "regime": "both",
+      "notes": "For SOP in old regime: ₹2L cap applies; loan must be for purchase/construction/repair/reconstruction; construction must be completed within 5 years from end of FY in which loan was taken (for ₹2L limit — otherwise capped at ₹30,000). For let-out: full interest deductible. Pre-EMI/pre-construction interest deductible in 5 equal installments from year of completion."
+    },
+    {
+      "sectionId": "80EE",
+      "name": "Additional Interest for First Home (pre-2017 loans)",
+      "limit": "₹50,000 per year",
+      "regime": "old",
+      "notes": "Available for loans sanctioned between April 1, 2016 and March 31, 2017. Loan amount ≤ ₹35L; property value ≤ ₹50L; buyer must not own any other house. Additional ₹50K over and above ₹2L u/s 24(b). Exhausted for most filers."
+    },
+    {
+      "sectionId": "80EEA",
+      "name": "Additional Interest for Affordable Housing",
+      "limit": "₹1,50,000 per year",
+      "regime": "old",
+      "notes": "Loan sanctioned between April 1, 2019 and March 31, 2022. Property stamp duty value ≤ ₹45L. Buyer must not own any other house on loan sanction date. First-time buyer. In addition to ₹2L u/s 24(b). Sunset clause passed — no new loans after March 31, 2022 qualify."
+    },
+    {
+      "sectionId": "80EEB",
+      "name": "Interest on EV Loan",
+      "limit": "₹1,50,000 per year",
+      "regime": "old",
+      "notes": "Deduction on interest paid on loan for purchase of electric vehicle. Loan sanctioned between April 1, 2019 and March 31, 2023. Individual taxpayers only."
+    }
+  ],
+  "keyRules": [
+    {
+      "ruleId": "KR-HP-001",
+      "rule": "HP loss set-off is restricted: HP loss can be set off against other income heads (salary, business, etc.) but only up to ₹2,00,000 per year. The balance HP loss (beyond ₹2L) must be carried forward for up to 8 assessment years and can only be set off against future HP income.",
+      "legalReference": "Section 71(3A) and Section 71B",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "KR-HP-002",
+      "rule": "In the new regime, set-off of HP loss (from let-out property) against other income heads is NOT permitted. HP loss under new regime can only be adjusted against HP income (if any) in the same year. Remaining loss cannot be carried forward under new regime.",
+      "legalReference": "Section 115BAC(2)(i)",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "KR-HP-003",
+      "rule": "FY 2025-26 ITR-4 expanded eligibility: Individuals filing ITR-4 (Sugam) can now declare income from up to 2 house properties (one SOP and one let-out, or two SOPs). Previously, ITR-4 was restricted to 1 house property. HP income from 3 or more properties requires ITR-2 or ITR-3.",
+      "legalReference": "ITR-4 Instructions for AY 2026-27, CBDT Notification",
+      "isNewForFY202526": true
+    },
+    {
+      "ruleId": "KR-HP-004",
+      "rule": "Deemed let-out relaxation: A taxpayer can treat up to 2 properties as self-occupied (not just 1) in any combination. If a person owns 3 houses and lives in all 3, they can choose any 2 as SOP and the third is deemed let-out. This provision applies to both regimes.",
+      "legalReference": "Section 23(4), Finance Act 2019 amendment",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "KR-HP-005",
+      "rule": "TDS on rent u/s 194IB: Tenant must deduct 2% TDS if annual rent exceeds ₹2,40,000 (changed from 5% and from ₹50,000/month threshold to annual threshold in Budget 2024). Tenant need not have TAN — uses Form 26QC and PAN. Non-deduction makes tenant an assessee-in-default.",
+      "legalReference": "Section 194IB, Finance Act 2024",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "KR-HP-006",
+      "rule": "Municipal taxes: Only municipal taxes actually paid by the owner during the previous year are deductible from GAV to arrive at NAV. Arrears of municipal taxes paid in current year for earlier years are also deductible in the year of actual payment.",
+      "legalReference": "Section 23(1) proviso",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "KR-HP-007",
+      "rule": "For home loan interest deduction u/s 24(b) on SOP under old regime: the construction of the property must be completed within 5 years from the end of the financial year in which the loan was taken, failing which the deduction is limited to ₹30,000 (not ₹2,00,000).",
+      "legalReference": "Section 24(b) second proviso",
+      "isNewForFY202526": false
+    }
+  ],
+  "workedExample": {
+    "profile": "Taxpayer owns a let-out flat in Pune. Annual rent: ₹30,000/month. Municipal taxes paid: ₹18,000. Home loan interest: ₹2,40,000. Computing HP income for FY 2025-26.",
+    "incomeDetails": {
+      "monthlyRent": 30000,
+      "annualRentReceived": 360000,
+      "municipalTaxesPaidByOwner": 18000,
+      "homeLoanInterestPaid": 240000,
+      "propertyType": "Let-out"
+    },
+    "computation": {
+      "GrossAnnualValue_GAV": 360000,
+      "note_GAV": "Higher of actual rent (₹3,60,000) or expected rent. Assuming actual rent is higher.",
+      "lessMunicipalTaxes": 18000,
+      "NetAnnualValue_NAV": 342000,
+      "lessStandardDeduction_30pct": 102600,
+      "lessHomeLoanInterest": 240000,
+      "netHPIncome": -600,
+      "note_result": "Result is a slight HP loss of ₹600. Under old regime, this ₹600 loss can be set off against salary or other income (well within ₹2L limit). Under new regime, this loss cannot be set off against other income."
+    },
+    "taxableIncome": -600,
+    "taxPayable": 0,
+    "note": "The HP loss of ₹600 effectively reduces taxable income by ₹600 in old regime. If no other HP income, remaining balance of loss (₹600) is eligible for carry forward for 8 years against future HP income."
+  },
+  "commonMistakes": [
+    "Claiming ₹2,00,000 interest deduction u/s 24(b) for self-occupied property in the new tax regime — this deduction is NOT available in the new regime for SOP.",
+    "Not reporting rental income in ITR even if tenant does not deduct TDS — rental income is taxable regardless of whether TDS is deducted. It is tracked via AIS, GST, and third-party data.",
+    "Computing GAV as only actual rent received instead of higher of actual rent or expected rent (fair rent / municipal value, whichever is higher, subject to standard rent).",
+    "Not deducting municipal taxes from GAV to arrive at NAV before applying the 30% standard deduction.",
+    "Confusing pre-construction interest with current year interest — pre-construction interest must be split into 5 equal installments and cannot be claimed in lump sum.",
+    "Setting off HP loss beyond ₹2,00,000 against salary or other income — only ₹2L per year is allowed; excess must be carried forward.",
+    "Not computing deemed let-out annual value for a third or subsequent property held as 'SOP' — owners of more than 2 properties must deem the extra ones as let-out under old regime.",
+    "Claiming interest deduction for SOP where construction took more than 5 years from loan year — interest cap reduces to ₹30,000 in such cases.",
+    "Tenants not deducting TDS u/s 194IB when annual rent exceeds ₹2,40,000 — tenant becomes assessee-in-default and interest/penalty applies."
+  ],
+  "auditTriggers": [
+    "Rental income not declared but rent payments visible in AIS (Annual Information Statement) from tenant TDS filings (Form 26QC).",
+    "Taxpayer claims ₹2L interest deduction for SOP but loan certificate shows loan was for renovation/extension of an existing property — different cap may apply.",
+    "Large HP losses set off against salary income every year — indicates possible inflated interest claims or fictitious loans.",
+    "ITR shows no rental income from property that appears in municipal records, electricity bills, or registry data as given on rent.",
+    "Home loan interest claimed from lender but no EMI payments visible in bank statement — cross-verification with AIS and Form 26AS.",
+    "Deemed let-out not computed for additional properties visible in property registration database (Benami Property scrutiny).",
+    "Mismatch between rental income reported in ITR and rent shown in 26AS (Form 26QC filings by tenants)."
+  ],
+  "relatedGuides": [
+    "IG-SALARY",
+    "IG-CG",
+    "IG-OS"
+  ]
+}

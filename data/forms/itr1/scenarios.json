@@ -1,0 +1,837 @@
+{
+  "formId": "ITR-1",
+  "fyApplicable": "2025-26",
+  "ayApplicable": "2026-27",
+  "totalScenarios": 6,
+  "scenarios": [
+    {
+      "scenarioId": "ITR1-S1",
+      "title": "Basic Salaried Individual — New Tax Regime (Zero Tax)",
+      "complexity": "basic",
+      "tags": ["salary", "new-regime", "standard-deduction", "zero-tax", "87A-rebate"],
+      "isNewFY202526": true,
+      "fy202526Highlight": "Zero tax up to ₹12,75,000 salary income under new regime with 87A rebate",
+      "taxpayerProfile": {
+        "name": "Arjun Mehta",
+        "age": 32,
+        "status": "Resident Individual",
+        "occupation": "Software Engineer",
+        "employer": "Tech Pvt. Ltd. (TDS deducted under new regime)",
+        "city": "Bengaluru (Metro)",
+        "incomes": {
+          "grossSalary": 1200000,
+          "hra_received": 240000,
+          "hra_exempt_note": "HRA exemption NOT available under new regime",
+          "savings_bank_interest": 8500
+        },
+        "deductions": {
+          "note": "No deductions under new regime (except standard deduction ₹75,000)"
+        },
+        "regimeChoice": "New Tax Regime (Default for FY 2025-26)"
+      },
+      "schedulesToFill": [
+        { "scheduleId": "Part-A-General", "compulsory": true, "notes": "Personal details, bank account for refund, select New Regime" },
+        { "scheduleId": "Schedule-S", "compulsory": true, "notes": "Enter salary details from Form 16" },
+        { "scheduleId": "Schedule-OS", "compulsory": true, "notes": "Savings bank interest ₹8,500" },
+        { "scheduleId": "Schedule-TDS1", "compulsory": true, "notes": "TDS from employer Form 16" },
+        { "scheduleId": "Schedule-TDS2", "compulsory": false, "notes": "If TDS on savings bank interest (rare for small amounts)" },
+        { "scheduleId": "Part-B-TTI", "compulsory": true, "notes": "Final tax computation" }
+      ],
+      "stepByStepFilling": [
+        {
+          "step": 1,
+          "section": "Part A — General Information",
+          "action": "Enter PAN, Aadhaar, personal details. Select tax regime: NEW TAX REGIME. Enter bank account IFSC and account number for refund.",
+          "sampleValues": {
+            "pan": "ABCPA1234D",
+            "assessmentYear": "2026-27",
+            "residencyStatus": "Resident",
+            "taxRegime": "New Tax Regime",
+            "bankIFSC": "HDFC0001234",
+            "bankAccount": "50100XXXXXXXX"
+          }
+        },
+        {
+          "step": 2,
+          "section": "Schedule S — Income from Salary",
+          "action": "Enter salary details from Form 16. Gross salary includes basic + DA + HRA + all allowances. Under new regime, HRA exemption is NOT deducted from gross salary.",
+          "sampleValues": {
+            "employer": "Tech Pvt. Ltd.",
+            "employerTAN": "BLRT12345A",
+            "employerCategory": "Others",
+            "grossSalary": 1200000,
+            "allowancesExemptU10": 0,
+            "note": "Under new regime, no exemptions u/s 10 for HRA, LTA, etc.",
+            "netSalaryBeforeStandardDeduction": 1200000,
+            "standardDeductionU16ia": 75000,
+            "professionalTax": 2400,
+            "incomeChargeable": 1122600
+          }
+        },
+        {
+          "step": 3,
+          "section": "Schedule OS — Other Sources",
+          "action": "Enter savings bank interest. Under new regime, 80TTA deduction is NOT available — full ₹8,500 is taxable.",
+          "sampleValues": {
+            "savingsBankInterest": 8500,
+            "totalOtherSources": 8500
+          }
+        },
+        {
+          "step": 4,
+          "section": "Part B — Gross Total Income",
+          "action": "Sum of salary and other sources. Auto-computed by ITR utility.",
+          "sampleValues": {
+            "salaryIncome": 1122600,
+            "housePropertyIncome": 0,
+            "otherSourcesIncome": 8500,
+            "grossTotalIncome": 1131100
+          }
+        },
+        {
+          "step": 5,
+          "section": "Schedule VI-A — Deductions",
+          "action": "Under new regime: No deductions except 80CCD(2) if applicable. Arjun's employer does not contribute to NPS, so no deduction here.",
+          "sampleValues": {
+            "totalDeductions": 0,
+            "note": "New regime — no 80C, 80D, 80G deductions available"
+          }
+        },
+        {
+          "step": 6,
+          "section": "Part B-TTI — Tax Computation",
+          "action": "Compute tax on ₹11,31,100 under new regime slabs. Apply 87A rebate.",
+          "sampleValues": {
+            "taxableIncome": 1131100,
+            "regime": "new",
+            "taxComputation": {
+              "0_to_400000": 0,
+              "400001_to_800000": 20000,
+              "800001_to_1200000": 40000,
+              "1200001_to_1131100": 0,
+              "note": "Income of ₹11,31,100 falls within 0-12L — tax before rebate = ₹20,000 + ₹40,000 = ₹60,000. Wait — ₹11,31,100 is between ₹8L-12L so: 0-4L = 0, 4-8L = 20000, 8-11.311L = 33110. Total = 53110."
+            },
+            "baseTax": 53110,
+            "surcharge": 0,
+            "cess": 2124,
+            "grossTaxLiability": 55234,
+            "rebate87A": 55234,
+            "rebate87ANote": "Total income ₹11,31,100 is ≤ ₹12,00,000. Full rebate u/s 87A. Rebate = min(55234, 60000) = 55234. Tax = 0.",
+            "netTaxLiability": 0,
+            "tdsCredited": 53000,
+            "refundDue": 53000
+          }
+        }
+      ],
+      "taxComputation": {
+        "regime": "new",
+        "grossTotalIncome": 1131100,
+        "deductions": 0,
+        "taxableIncome": 1131100,
+        "taxBreakdown": [
+          { "slabFrom": 0, "slabTo": 400000, "rate": 0, "taxAmount": 0 },
+          { "slabFrom": 400001, "slabTo": 800000, "rate": 5, "taxAmount": 20000 },
+          { "slabFrom": 800001, "slabTo": 1131100, "rate": 10, "taxAmount": 33110 }
+        ],
+        "totalBaseTax": 53110,
+        "surcharge": 0,
+        "cess": 2124,
+        "grossTaxLiability": 55234,
+        "rebate87A": 55234,
+        "rebate87AApplicable": true,
+        "rebate87AReason": "Taxable income ₹11,31,100 ≤ ₹12,00,000 — full rebate",
+        "netTaxAfterRebate": 0,
+        "tdsCredited": 53000,
+        "advanceTaxPaid": 0,
+        "netPayableOrRefund": -53000,
+        "payableOrRefundLabel": "Refund of ₹53,000"
+      },
+      "redFlagsInScenario": [
+        "Ensure Form 26AS reflects employer TDS correctly — if TDS was deposited late by employer, it may not appear and you cannot claim it",
+        "Do not claim HRA exemption under new regime — this is a common mistake",
+        "If employer switched regimes mid-year, verify which regime was used for TDS calculation"
+      ],
+      "commonMistakesToAvoid": [
+        "Selecting old regime by mistake and missing out on higher rebate under new regime",
+        "Not reporting savings bank interest of ₹8,500 — AIS will show it and create a mismatch",
+        "Forgetting to deduct professional tax of ₹2,400 before computing taxable salary",
+        "Not claiming refund — file the return even if zero tax is due to get TDS refund"
+      ],
+      "relatedScenarios": ["ITR1-S2", "ITR1-S4", "ITR2-S1"]
+    },
+    {
+      "scenarioId": "ITR1-S2",
+      "title": "Salaried + Let-Out House Property — Old Regime",
+      "complexity": "intermediate",
+      "tags": ["salary", "house-property", "let-out", "rental-income", "old-regime", "80C"],
+      "isNewFY202526": false,
+      "taxpayerProfile": {
+        "name": "Priya Sharma",
+        "age": 42,
+        "status": "Resident Individual",
+        "occupation": "Bank Manager",
+        "employer": "State Bank of India (Government category)",
+        "city": "Delhi (Metro)",
+        "incomes": {
+          "grossSalary": 1500000,
+          "hraReceived": 250000,
+          "actualRentPaid": 300000,
+          "rentalIncomeFromOwnedProperty": 240000,
+          "propertyType": "Let-Out residential flat (Noida)",
+          "municipalTaxPaid": 12000,
+          "homeLoanInterest": 150000,
+          "savingsBankInterest": 12000
+        },
+        "deductions": {
+          "ppf": 100000,
+          "lic_premium": 50000,
+          "healthInsurance_self": 20000,
+          "healthInsurance_parents_senior": 40000
+        },
+        "regimeChoice": "Old Tax Regime (opted explicitly)"
+      },
+      "schedulesToFill": [
+        { "scheduleId": "Part-A-General", "compulsory": true, "notes": "Select OLD REGIME" },
+        { "scheduleId": "Schedule-S", "compulsory": true, "notes": "Salary with HRA exemption calculation" },
+        { "scheduleId": "Schedule-HP", "compulsory": true, "notes": "Let-out property income" },
+        { "scheduleId": "Schedule-OS", "compulsory": true, "notes": "Savings bank interest" },
+        { "scheduleId": "Schedule-VI-A", "compulsory": true, "notes": "80C, 80D deductions" },
+        { "scheduleId": "Part-B-TTI", "compulsory": true }
+      ],
+      "stepByStepFilling": [
+        {
+          "step": 1,
+          "section": "Schedule S — Salary with HRA Exemption",
+          "action": "Under old regime, compute HRA exemption u/s 10(13A). Minimum of 3 conditions:",
+          "sampleValues": {
+            "grossSalary": 1500000,
+            "basic_DA_salary": 900000,
+            "hra_received": 250000,
+            "hra_condition1": 250000,
+            "hra_condition2_metro50pct": 450000,
+            "hra_condition3_rent_minus_10pct": 300000 - 90000,
+            "hra_exempt": 210000,
+            "note": "HRA exempt = min(250000, 450000, 210000) = ₹2,10,000",
+            "standardDeduction": 50000,
+            "professionalTax": 2500,
+            "netSalaryIncome": 1500000 - 210000 - 50000 - 2500
+          },
+          "calculation": {
+            "grossSalary": 1500000,
+            "lessHRAExemption": 210000,
+            "lessStandardDeduction": 50000,
+            "lessProfessionalTax": 2500,
+            "taxableSalary": 1237500
+          }
+        },
+        {
+          "step": 2,
+          "section": "Schedule HP — Let-Out Property",
+          "action": "Compute income from let-out property in Noida.",
+          "sampleValues": {
+            "type": "Let-Out",
+            "annualRentReceived": 240000,
+            "fairRentMunicipalValue": 200000,
+            "grossAnnualValue": 240000,
+            "municipalTaxPaid": 12000,
+            "netAnnualValue": 228000,
+            "standardDeduction30Pct": 68400,
+            "interestOnHomeLoan": 150000,
+            "incomFromHP": 228000 - 68400 - 150000
+          },
+          "calculation": {
+            "grossAnnualValue": 240000,
+            "lessMunicipalTax": 12000,
+            "netAnnualValue": 228000,
+            "lessStandardDeduction30Pct": 68400,
+            "lessHomeLoanInterest": 150000,
+            "incomeFromHP": 9600
+          }
+        },
+        {
+          "step": 3,
+          "section": "Schedule OS",
+          "sampleValues": {
+            "savingsBankInterest": 12000
+          }
+        },
+        {
+          "step": 4,
+          "section": "Gross Total Income",
+          "calculation": {
+            "salaryIncome": 1237500,
+            "housePropertyIncome": 9600,
+            "otherSourcesIncome": 12000,
+            "grossTotalIncome": 1259100
+          }
+        },
+        {
+          "step": 5,
+          "section": "Schedule VI-A — Deductions",
+          "calculation": {
+            "80C_PPF": 100000,
+            "80C_LIC": 50000,
+            "total80C": 150000,
+            "80D_self": 20000,
+            "80D_parentsSenior": 40000,
+            "total80D": 60000,
+            "80TTA_savings": 10000,
+            "totalDeductions": 220000
+          }
+        },
+        {
+          "step": 6,
+          "section": "Tax Computation — Old Regime",
+          "calculation": {
+            "grossTotalIncome": 1259100,
+            "totalDeductions": 220000,
+            "taxableIncome": 1039100,
+            "taxOnFirstFiveLakh": 12500,
+            "taxOnFiveToTenLakh": 100000,
+            "taxOnAboveTenLakh": 11730,
+            "totalBaseTax": 124230,
+            "surcharge": 0,
+            "cess": 4969,
+            "grossTaxLiability": 129199,
+            "rebate87A": 0,
+            "rebate87ANote": "Income > ₹5L under old regime — no rebate",
+            "tdsCredited": 120000,
+            "advanceTax": 0,
+            "selfAssessmentTaxToPay": 9199
+          }
+        }
+      ],
+      "taxComputation": {
+        "regime": "old",
+        "grossTotalIncome": 1259100,
+        "deductions": 220000,
+        "taxableIncome": 1039100,
+        "taxBreakdown": [
+          { "slabFrom": 0, "slabTo": 250000, "rate": 0, "taxAmount": 0 },
+          { "slabFrom": 250001, "slabTo": 500000, "rate": 5, "taxAmount": 12500 },
+          { "slabFrom": 500001, "slabTo": 1000000, "rate": 20, "taxAmount": 100000 },
+          { "slabFrom": 1000001, "slabTo": 1039100, "rate": 30, "taxAmount": 11730 }
+        ],
+        "totalBaseTax": 124230,
+        "surcharge": 0,
+        "cess": 4969,
+        "grossTaxLiability": 129199,
+        "rebate87A": 0,
+        "netTaxAfterRebate": 129199,
+        "tdsCredited": 120000,
+        "advanceTaxPaid": 0,
+        "netPayableOrRefund": 9199,
+        "payableOrRefundLabel": "Tax Payable: ₹9,199 (self-assessment tax before filing)"
+      },
+      "redFlagsInScenario": [
+        "Rental income in Form 26AS (if tenant deducted TDS on rent) must match declared rental income",
+        "If annual rent exceeds ₹2,40,000, tenant must deduct TDS u/s 194-IB at 5% on amount above ₹50,000/month",
+        "Municipal taxes must be PAID (not just billed) during the FY to be deductible"
+      ],
+      "commonMistakesToAvoid": [
+        "Deducting full home loan interest on let-out property under 30% standard deduction — standard deduction is only 30%, not full interest",
+        "Not computing GAV correctly — should be higher of actual rent vs fair market rent",
+        "Forgetting to include rental income — landlords are flagged if GST registration (for commercial) or TDS data shows mismatch",
+        "Not maintaining records of municipal tax payment receipts"
+      ],
+      "relatedScenarios": ["ITR1-S3", "ITR2-S5"]
+    },
+    {
+      "scenarioId": "ITR1-S3",
+      "title": "Salaried + Self-Occupied Home Loan — Old Regime (₹2L Interest Benefit)",
+      "complexity": "intermediate",
+      "tags": ["salary", "house-property", "self-occupied", "home-loan", "old-regime", "80C"],
+      "isNewFY202526": false,
+      "taxpayerProfile": {
+        "name": "Vivek Nair",
+        "age": 38,
+        "status": "Resident Individual",
+        "occupation": "Operations Manager",
+        "employer": "Manufacturing Co. Pvt. Ltd.",
+        "city": "Pune",
+        "incomes": {
+          "grossSalary": 900000,
+          "hraReceived": 0,
+          "hraNote": "No HRA — company-owned accommodation",
+          "savingsBankInterest": 5000
+        },
+        "deductions": {
+          "epfContribution": 80000,
+          "homeLoanPrincipalRepayment": 50000,
+          "lifeInsurance": 20000,
+          "total80C": 150000,
+          "healthInsurance": 15000,
+          "homeLoanInterestPaid": 220000
+        },
+        "regimeChoice": "Old Tax Regime (opting in because home loan interest deduction benefit outweighs new regime)"
+      },
+      "schedulesToFill": [
+        { "scheduleId": "Schedule-S", "compulsory": true },
+        { "scheduleId": "Schedule-HP", "compulsory": true, "notes": "Self-occupied property with home loan interest" },
+        { "scheduleId": "Schedule-OS", "compulsory": true },
+        { "scheduleId": "Schedule-VI-A", "compulsory": true }
+      ],
+      "stepByStepFilling": [
+        {
+          "step": 1,
+          "section": "Schedule S — Salary",
+          "calculation": {
+            "grossSalary": 900000,
+            "allowancesExempt_10": 0,
+            "standardDeduction": 50000,
+            "professionalTax": 2500,
+            "taxableSalary": 847500
+          }
+        },
+        {
+          "step": 2,
+          "section": "Schedule HP — Self-Occupied Property",
+          "action": "Self-occupied property: GAV = Nil, NAV = Nil. Only home loan interest is deductible (capped at ₹2L under old regime).",
+          "sampleValues": {
+            "type": "Self-Occupied",
+            "grossAnnualValue": 0,
+            "netAnnualValue": 0,
+            "homeLoanInterestActual": 220000,
+            "homeLoanInterestDeductible": 200000,
+            "note": "Capped at ₹2,00,000 for self-occupied. Excess ₹20,000 is not deductible.",
+            "incomeFromHP": -200000
+          }
+        },
+        {
+          "step": 3,
+          "section": "Gross Total Income",
+          "calculation": {
+            "salaryIncome": 847500,
+            "housePropertyLoss": -200000,
+            "otherSources": 5000,
+            "grossTotalIncome": 652500,
+            "note": "HP loss of ₹2L set off against salary income in the same year (allowed up to ₹2L)"
+          }
+        },
+        {
+          "step": 4,
+          "section": "Schedule VI-A",
+          "calculation": {
+            "80C_total": 150000,
+            "80D_health": 15000,
+            "80TTA_savings": 5000,
+            "totalDeductions": 170000
+          }
+        },
+        {
+          "step": 5,
+          "section": "Tax Computation",
+          "calculation": {
+            "grossTotalIncome": 652500,
+            "totalDeductions": 170000,
+            "taxableIncome": 482500,
+            "taxBreakdown": [
+              { "slabFrom": 0, "slabTo": 250000, "rate": 0, "taxAmount": 0 },
+              { "slabFrom": 250001, "slabTo": 482500, "rate": 5, "taxAmount": 11625 }
+            ],
+            "totalBaseTax": 11625,
+            "surcharge": 0,
+            "cess": 465,
+            "grossTaxLiability": 12090,
+            "rebate87A": 12090,
+            "rebate87ANote": "Income ≤ ₹5L — rebate applies. Tax = 0."
+          }
+        }
+      ],
+      "taxComputation": {
+        "regime": "old",
+        "grossTotalIncome": 652500,
+        "deductions": 170000,
+        "taxableIncome": 482500,
+        "taxBreakdown": [
+          { "slabFrom": 0, "slabTo": 250000, "rate": 0, "taxAmount": 0 },
+          { "slabFrom": 250001, "slabTo": 482500, "rate": 5, "taxAmount": 11625 }
+        ],
+        "totalBaseTax": 11625,
+        "surcharge": 0,
+        "cess": 465,
+        "grossTaxLiability": 12090,
+        "rebate87A": 12090,
+        "netTaxAfterRebate": 0,
+        "tdsCredited": 0,
+        "advanceTaxPaid": 0,
+        "netPayableOrRefund": 0,
+        "payableOrRefundLabel": "Zero tax payable (87A rebate applied)"
+      },
+      "regimeComparison": {
+        "oldRegimeTax": 0,
+        "newRegimeTax": 0,
+        "newRegimeTaxableIncome": 847500,
+        "newRegimeTaxBeforeRebate": 24750,
+        "newRegime87A": 24750,
+        "newRegimeFinalTax": 0,
+        "verdict": "Both regimes result in zero tax for this taxpayer. Old regime is slightly better if income were higher — the home loan interest deduction reduces taxable income significantly."
+      },
+      "redFlagsInScenario": [
+        "Claiming home loan interest deduction under new regime — NOT allowed for self-occupied property",
+        "Claiming more than ₹2L interest for self-occupied under old regime",
+        "Including home loan principal in interest claim — principal repayment is an 80C deduction, not Section 24"
+      ],
+      "commonMistakesToAvoid": [
+        "Confusing home loan PRINCIPAL (80C deduction) with INTEREST (Section 24 deduction)",
+        "Not maintaining bank certificate for loan interest paid during FY",
+        "Filing ITR-1 for two properties (even if second is under construction)"
+      ],
+      "relatedScenarios": ["ITR1-S2", "ITR1-S4"]
+    },
+    {
+      "scenarioId": "ITR1-S4",
+      "title": "Salaried — Old Regime with Maximum Deductions (Full 80C, 80D, 80CCD1B)",
+      "complexity": "intermediate",
+      "tags": ["salary", "old-regime", "80C", "80D", "80CCD", "NPS", "deduction-optimization"],
+      "isNewFY202526": false,
+      "taxpayerProfile": {
+        "name": "Sunita Rao",
+        "age": 45,
+        "status": "Resident Individual",
+        "occupation": "Senior Government Official",
+        "employer": "Government of India",
+        "city": "New Delhi",
+        "incomes": {
+          "grossSalary": 2000000,
+          "savingsBankInterest": 8000
+        },
+        "deductions": {
+          "epf": 120000,
+          "ppf": 30000,
+          "elss_mf": 0,
+          "total80C": 150000,
+          "nps_additional_80CCD1B": 50000,
+          "healthInsurance_self": 25000,
+          "healthInsurance_parentsSenior": 50000,
+          "total80D": 75000,
+          "donation_80G": 20000
+        },
+        "regimeChoice": "Old Tax Regime (high income; large deductions make old regime better)"
+      },
+      "schedulesToFill": [
+        { "scheduleId": "Schedule-S", "compulsory": true },
+        { "scheduleId": "Schedule-OS", "compulsory": true },
+        { "scheduleId": "Schedule-VI-A", "compulsory": true }
+      ],
+      "stepByStepFilling": [
+        {
+          "step": 1,
+          "section": "Schedule S",
+          "calculation": {
+            "grossSalary": 2000000,
+            "standardDeduction": 50000,
+            "taxableSalary": 1950000
+          }
+        },
+        {
+          "step": 2,
+          "section": "Gross Total Income",
+          "calculation": {
+            "salary": 1950000,
+            "otherSources": 8000,
+            "GTI": 1958000
+          }
+        },
+        {
+          "step": 3,
+          "section": "Schedule VI-A",
+          "calculation": {
+            "80C": 150000,
+            "80CCD1B_additional_NPS": 50000,
+            "80D_self": 25000,
+            "80D_parentsSenior": 50000,
+            "80G_donation_50pct": 10000,
+            "note": "80G: ₹20,000 donation to a 50% eligible institution → deduction = 50% × ₹20,000 = ₹10,000. Subject to 10% of Adjusted GTI cap: 10% × ₹1,958,000 = ₹1,95,800 — no cap issue here.",
+            "80TTA": 8000,
+            "totalDeductions": 293000
+          }
+        },
+        {
+          "step": 4,
+          "section": "Tax Computation",
+          "calculation": {
+            "GTI": 1958000,
+            "deductions": 293000,
+            "taxableIncome": 1665000,
+            "tax_0_250000": 0,
+            "tax_250001_500000": 12500,
+            "tax_500001_1000000": 100000,
+            "tax_1000001_1665000": 199500,
+            "totalBaseTax": 312000,
+            "surcharge": 0,
+            "cess": 12480,
+            "totalTaxLiability": 324480,
+            "tdsCredited": 310000,
+            "selfAssessmentTax": 14480
+          }
+        }
+      ],
+      "taxComputation": {
+        "regime": "old",
+        "grossTotalIncome": 1958000,
+        "deductions": 293000,
+        "taxableIncome": 1665000,
+        "taxBreakdown": [
+          { "slabFrom": 0, "slabTo": 250000, "rate": 0, "taxAmount": 0 },
+          { "slabFrom": 250001, "slabTo": 500000, "rate": 5, "taxAmount": 12500 },
+          { "slabFrom": 500001, "slabTo": 1000000, "rate": 20, "taxAmount": 100000 },
+          { "slabFrom": 1000001, "slabTo": 1665000, "rate": 30, "taxAmount": 199500 }
+        ],
+        "totalBaseTax": 312000,
+        "surcharge": 0,
+        "cess": 12480,
+        "grossTaxLiability": 324480,
+        "rebate87A": 0,
+        "netTaxAfterRebate": 324480,
+        "tdsCredited": 310000,
+        "netPayableOrRefund": 14480,
+        "payableOrRefundLabel": "Tax payable: ₹14,480"
+      },
+      "regimeComparison": {
+        "oldRegimeTax": 324480,
+        "newRegimeTaxableIncome": 1950000,
+        "newRegimeTax": "Approx ₹3,62,500 + cess = ~₹3,77,000",
+        "savingUnderOldRegime": "~₹52,500 saved by opting old regime due to deductions of ₹2.93L",
+        "verdict": "Old regime is better for this taxpayer because deductions reduce tax significantly."
+      },
+      "redFlagsInScenario": [
+        "80CCD(1B) — NPS contributions must be made to Tier-I NPS account to claim deduction",
+        "80G donation receipts must be kept — electronic receipts are acceptable but must show the registration number of the institution",
+        "Ensure senior citizen parents are 60+ for the higher ₹50,000 80D limit"
+      ],
+      "commonMistakesToAvoid": [
+        "Claiming 80D above ₹75,000 total (₹25,000 self + ₹50,000 senior parents is the maximum)",
+        "Claiming 80G for cash donations above ₹2,000",
+        "Not adding 80CCD(1B) separately — it is a SEPARATE deduction from 80C, not within the ₹1.5L cap"
+      ],
+      "relatedScenarios": ["ITR1-S1", "ITR2-S1"]
+    },
+    {
+      "scenarioId": "ITR1-S5",
+      "title": "Salaried + Dividend & Bank Interest — New Regime",
+      "complexity": "basic",
+      "tags": ["salary", "dividend", "bank-interest", "new-regime", "other-sources"],
+      "isNewFY202526": false,
+      "taxpayerProfile": {
+        "name": "Rahul Gupta",
+        "age": 29,
+        "status": "Resident Individual",
+        "occupation": "Marketing Executive",
+        "employer": "FMCG Company",
+        "city": "Mumbai",
+        "incomes": {
+          "grossSalary": 800000,
+          "dividendFromShares": 35000,
+          "dividendFromMF": 15000,
+          "savingsBankInterest": 6000,
+          "fdInterest": 22000,
+          "note": "TDS deducted: 10% on dividend > ₹5,000 from each company; 10% on FD interest if > ₹40,000"
+        },
+        "regimeChoice": "New Tax Regime"
+      },
+      "schedulesToFill": [
+        { "scheduleId": "Schedule-S", "compulsory": true },
+        { "scheduleId": "Schedule-OS", "compulsory": true, "notes": "Dividend, interest income" },
+        { "scheduleId": "Schedule-TDS2", "compulsory": true, "notes": "TDS on dividend and FD interest" }
+      ],
+      "stepByStepFilling": [
+        {
+          "step": 1,
+          "section": "Schedule S",
+          "calculation": {
+            "grossSalary": 800000,
+            "standardDeduction": 75000,
+            "taxableSalary": 725000
+          }
+        },
+        {
+          "step": 2,
+          "section": "Schedule OS",
+          "calculation": {
+            "dividendShares": 35000,
+            "dividendMF": 15000,
+            "savingsBankInterest": 6000,
+            "fdInterest": 22000,
+            "totalOtherSources": 78000,
+            "note": "Under new regime, 80TTA deduction on savings interest is NOT available. Full ₹6,000 is taxable."
+          }
+        },
+        {
+          "step": 3,
+          "section": "Tax Computation",
+          "calculation": {
+            "salaryIncome": 725000,
+            "otherSources": 78000,
+            "grossTotalIncome": 803000,
+            "deductions": 0,
+            "taxableIncome": 803000,
+            "tax_0_400000": 0,
+            "tax_400001_800000_partial": 20150,
+            "totalBaseTax": 20150,
+            "surcharge": 0,
+            "cess": 806,
+            "grossTaxLiability": 20956,
+            "rebate87A": 20956,
+            "rebate87ANote": "Income ₹8,03,000 < ₹12,00,000 — full rebate. Zero tax.",
+            "netTaxLiability": 0
+          }
+        }
+      ],
+      "taxComputation": {
+        "regime": "new",
+        "grossTotalIncome": 803000,
+        "deductions": 0,
+        "taxableIncome": 803000,
+        "taxBreakdown": [
+          { "slabFrom": 0, "slabTo": 400000, "rate": 0, "taxAmount": 0 },
+          { "slabFrom": 400001, "slabTo": 803000, "rate": 5, "taxAmount": 20150 }
+        ],
+        "totalBaseTax": 20150,
+        "surcharge": 0,
+        "cess": 806,
+        "grossTaxLiability": 20956,
+        "rebate87A": 20956,
+        "netTaxAfterRebate": 0,
+        "tdsCredited": 5000,
+        "netPayableOrRefund": -5000,
+        "payableOrRefundLabel": "Refund of ₹5,000 (TDS on dividend/FD)"
+      },
+      "redFlagsInScenario": [
+        "Dividend income is now visible in AIS — must match declared amount exactly",
+        "FD interest TDS certificates (Form 16A) must be cross-checked with Form 26AS"
+      ],
+      "commonMistakesToAvoid": [
+        "Not reporting dividend from mutual funds — AMCs report dividend data to AIS",
+        "Not reporting FD interest assuming TDS was final tax — TDS is advance tax, not final tax",
+        "Claiming 80TTA savings deduction under new regime"
+      ],
+      "relatedScenarios": ["ITR1-S1", "ITR2-S2"]
+    },
+    {
+      "scenarioId": "ITR1-S6",
+      "title": "Retired Pensioner — Pension + Bank Interest (Senior Citizen, Old Regime)",
+      "complexity": "basic",
+      "tags": ["pension", "senior-citizen", "old-regime", "80TTB", "savings-interest", "FD-interest"],
+      "isNewFY202526": false,
+      "taxpayerProfile": {
+        "name": "Ramachandran Iyer",
+        "age": 67,
+        "status": "Resident Individual — Senior Citizen (60-80 years)",
+        "occupation": "Retired (Central Government)",
+        "city": "Chennai",
+        "incomes": {
+          "monthlyPension": 45000,
+          "annualPension": 540000,
+          "fdInterest": 120000,
+          "savingsBankInterest": 18000
+        },
+        "deductions": {
+          "lifeInsurance": 25000,
+          "healthInsurance_self": 50000,
+          "note": "Senior citizen health insurance limit is ₹50,000"
+        },
+        "regimeChoice": "Old Tax Regime (senior citizen basic exemption ₹3L and 80TTB benefit make old regime better)"
+      },
+      "schedulesToFill": [
+        { "scheduleId": "Schedule-S", "compulsory": true, "notes": "Pension treated as salary; standard deduction applies" },
+        { "scheduleId": "Schedule-OS", "compulsory": true, "notes": "FD and savings interest" },
+        { "scheduleId": "Schedule-VI-A", "compulsory": true },
+        { "scheduleId": "Schedule-TDS1", "compulsory": true, "notes": "TDS on pension" },
+        { "scheduleId": "Schedule-TDS2", "compulsory": true, "notes": "TDS on FD interest" }
+      ],
+      "stepByStepFilling": [
+        {
+          "step": 1,
+          "section": "Schedule S — Pension as Salary",
+          "action": "Pension from former employer is treated as 'Salary'. Standard deduction u/s 16(ia) is available.",
+          "calculation": {
+            "grossPension": 540000,
+            "standardDeduction": 50000,
+            "taxablePension": 490000
+          }
+        },
+        {
+          "step": 2,
+          "section": "Schedule OS",
+          "calculation": {
+            "fdInterest": 120000,
+            "savingsBankInterest": 18000,
+            "totalOtherSources": 138000
+          }
+        },
+        {
+          "step": 3,
+          "section": "Gross Total Income",
+          "calculation": {
+            "pension": 490000,
+            "otherSources": 138000,
+            "GTI": 628000
+          }
+        },
+        {
+          "step": 4,
+          "section": "Schedule VI-A — Deductions",
+          "calculation": {
+            "80C_LIC": 25000,
+            "80D_health_senior": 50000,
+            "80TTB_interest": 50000,
+            "note": "80TTB: Senior citizen (60+) can deduct up to ₹50,000 for interest from bank deposits (savings + FD + RD). Cannot claim both 80TTA and 80TTB.",
+            "totalDeductions": 125000
+          }
+        },
+        {
+          "step": 5,
+          "section": "Tax Computation — Old Regime, Senior Citizen (Basic Exemption ₹3L)",
+          "calculation": {
+            "GTI": 628000,
+            "deductions": 125000,
+            "taxableIncome": 503000,
+            "tax_0_300000_seniorExemption": 0,
+            "tax_300001_500000": 10000,
+            "tax_500001_503000": 600,
+            "totalBaseTax": 10600,
+            "surcharge": 0,
+            "cess": 424,
+            "grossTaxLiability": 11024,
+            "rebate87A": 11024,
+            "rebate87ANote": "Income ≤ ₹5L under old regime — full rebate. Zero tax.",
+            "netTaxLiability": 0
+          }
+        }
+      ],
+      "taxComputation": {
+        "regime": "old",
+        "ageCategory": "senior-citizen",
+        "basicExemptionLimit": 300000,
+        "grossTotalIncome": 628000,
+        "deductions": 125000,
+        "taxableIncome": 503000,
+        "taxBreakdown": [
+          { "slabFrom": 0, "slabTo": 300000, "rate": 0, "taxAmount": 0 },
+          { "slabFrom": 300001, "slabTo": 500000, "rate": 5, "taxAmount": 10000 },
+          { "slabFrom": 500001, "slabTo": 503000, "rate": 20, "taxAmount": 600 }
+        ],
+        "totalBaseTax": 10600,
+        "surcharge": 0,
+        "cess": 424,
+        "grossTaxLiability": 11024,
+        "rebate87A": 11024,
+        "netTaxAfterRebate": 0,
+        "tdsCredited": 12000,
+        "netPayableOrRefund": -12000,
+        "payableOrRefundLabel": "Refund of ₹12,000 (TDS on FD)"
+      },
+      "redFlagsInScenario": [
+        "Ensure pension income is from a FORMER employer — pension from an insurance company annuity is 'other sources', not salary",
+        "Senior citizens above 75 with only pension and bank interest may be exempt from filing (Section 194P) — verify conditions"
+      ],
+      "commonMistakesToAvoid": [
+        "Using 80TTA instead of 80TTB for senior citizens — 80TTA covers only savings interest; 80TTB covers all bank interest",
+        "Not claiming standard deduction on pension — many pensioners are unaware this applies",
+        "Filing as 'below 60' instead of 'senior citizen' — results in lower basic exemption and higher tax"
+      ],
+      "relatedScenarios": ["ITR1-S4", "ITR1-S5"]
+    }
+  ]
+}

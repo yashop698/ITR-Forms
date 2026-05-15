@@ -1,0 +1,189 @@
+{
+  "fyApplicable": "2025-26",
+  "description": "TDS (Tax Deducted at Source) rates applicable for FY 2025-26 for common payment types. TDS credit is reflected in Form 26AS and AIS and can be claimed in ITR.",
+  "lastUpdated": "2025-05-15",
+  "legalReference": "Chapter XVII-B, Income-tax Act 1961",
+  "note": "If PAN is not provided by payee, TDS is deducted at 20% (or double the applicable rate, whichever is higher) u/s 206AA. Aadhaar can be used in lieu of PAN for certain transactions.",
+  "tdsRates": [
+    {
+      "section": "192",
+      "description": "TDS on Salary",
+      "paymentType": "Salary / Wages",
+      "threshold": "Above basic exemption limit (₹4L new regime / ₹2.5L old regime)",
+      "rate": "Slab rate applicable to employee",
+      "rateNote": "Employer deducts TDS at the applicable income tax slab rate for the employee's estimated income. Form 16 issued.",
+      "relevantITR": ["ITR-1", "ITR-2", "ITR-3"]
+    },
+    {
+      "section": "192A",
+      "description": "TDS on EPF Withdrawal",
+      "paymentType": "Premature withdrawal from EPF (before 5 years of service)",
+      "threshold": "₹50,000",
+      "rate": "10%",
+      "relevantITR": ["ITR-1", "ITR-2"]
+    },
+    {
+      "section": "193",
+      "description": "TDS on Interest on Securities",
+      "paymentType": "Interest on listed debentures, government securities",
+      "threshold": "₹10,000 (listed); ₹5,000 (unlisted)",
+      "rate": "10%",
+      "relevantITR": ["ITR-1", "ITR-2", "ITR-3"]
+    },
+    {
+      "section": "194",
+      "description": "TDS on Dividend",
+      "paymentType": "Dividend from domestic companies",
+      "threshold": "₹5,000 per company per year",
+      "rate": "10%",
+      "rateNote": "10% for residents; 20% for non-residents (or DTAA rate if lower)",
+      "relevantITR": ["ITR-1", "ITR-2", "ITR-3"]
+    },
+    {
+      "section": "194A",
+      "description": "TDS on Interest Other than Securities",
+      "paymentType": "Bank FD interest, RD interest, company deposit interest, P2P lending",
+      "threshold": "₹40,000 per bank per FY (₹50,000 for senior citizens)",
+      "rate": "10%",
+      "relevantITR": ["ITR-1", "ITR-2", "ITR-3", "ITR-4"]
+    },
+    {
+      "section": "194B",
+      "description": "TDS on Lottery/Crossword Winnings",
+      "paymentType": "Lottery prizes, crossword puzzle winnings, card game winnings",
+      "threshold": "₹10,000",
+      "rate": "30%",
+      "relevantITR": ["ITR-2"]
+    },
+    {
+      "section": "194BA",
+      "description": "TDS on Online Gaming Winnings",
+      "paymentType": "Net winnings from online gaming platforms",
+      "threshold": "No threshold — applies on all net winnings",
+      "rate": "30%",
+      "rateNote": "Net winnings = total winnings minus total deposits. TDS at point of withdrawal.",
+      "relevantITR": ["ITR-2"],
+      "legalReference": "Section 194BA (inserted by Finance Act 2023)"
+    },
+    {
+      "section": "194BB",
+      "description": "TDS on Horse Race Winnings",
+      "paymentType": "Winnings from horse races",
+      "threshold": "₹10,000",
+      "rate": "30%",
+      "relevantITR": ["ITR-2"]
+    },
+    {
+      "section": "194C",
+      "description": "TDS on Payments to Contractors",
+      "paymentType": "Payment to contractors, sub-contractors, catering, advertising, printing",
+      "threshold": "₹30,000 per transaction OR ₹1,00,000 in aggregate per year",
+      "rate": "1% (individual/HUF); 2% (others)",
+      "relevantITR": ["ITR-3", "ITR-4", "ITR-5", "ITR-6"]
+    },
+    {
+      "section": "194D",
+      "description": "TDS on Insurance Commission",
+      "paymentType": "Insurance commission paid to agents",
+      "threshold": "₹15,000",
+      "rate": "5%",
+      "relevantITR": ["ITR-3", "ITR-4"]
+    },
+    {
+      "section": "194H",
+      "description": "TDS on Commission/Brokerage",
+      "paymentType": "Commission, brokerage paid to agents (not insurance)",
+      "threshold": "₹15,000",
+      "rate": "5%",
+      "relevantITR": ["ITR-3", "ITR-4"]
+    },
+    {
+      "section": "194I",
+      "description": "TDS on Rent",
+      "paymentType": "Rent for land, building, machinery, plant, equipment",
+      "threshold": "₹2,40,000 per year",
+      "rate": "10% (land/building/furniture); 2% (machinery/plant/equipment)",
+      "rateNote": "Tenant must deduct TDS if annual rent exceeds ₹2,40,000",
+      "relevantITR": ["ITR-1", "ITR-2", "ITR-3", "ITR-4"]
+    },
+    {
+      "section": "194IA",
+      "description": "TDS on Purchase of Immovable Property",
+      "paymentType": "Purchase of immovable property (other than agricultural land)",
+      "threshold": "₹50,00,000 (sale consideration)",
+      "rate": "1%",
+      "rateNote": "Buyer deducts TDS. Seller claims credit in ITR.",
+      "relevantITR": ["ITR-2", "ITR-3"]
+    },
+    {
+      "section": "194IB",
+      "description": "TDS on Rent by Individual/HUF (not 194I)",
+      "paymentType": "Rent paid by individual/HUF not covered by 194I",
+      "threshold": "₹50,000 per month",
+      "rate": "5%",
+      "rateNote": "Applicable when monthly rent > ₹50,000. TDS deducted only once (at year-end or last month). Individual/HUF taxpayer need not have tax audit for this TDS obligation.",
+      "relevantITR": ["ITR-1", "ITR-2", "ITR-3", "ITR-4"]
+    },
+    {
+      "section": "194J",
+      "description": "TDS on Professional/Technical Services",
+      "paymentType": "Professional fees (doctors, lawyers, CAs, consultants), technical services, royalty",
+      "threshold": "₹30,000 per year",
+      "rate": "10% (professional services); 2% (technical services, call centres)",
+      "relevantITR": ["ITR-2", "ITR-3", "ITR-4"]
+    },
+    {
+      "section": "194N",
+      "description": "TDS on Cash Withdrawal",
+      "paymentType": "Cash withdrawals from bank accounts exceeding threshold",
+      "threshold": "₹1 Crore per year (₹20L if no ITR filed in last 3 years)",
+      "rate": "2% above ₹1 Crore (5% for non-filers above ₹20L)",
+      "relevantITR": ["All ITR forms"],
+      "note": "TDS credit can be claimed in ITR even for this deduction"
+    },
+    {
+      "section": "194Q",
+      "description": "TDS on Purchase of Goods",
+      "paymentType": "Purchase of goods (buyer responsible if turnover > ₹10Cr)",
+      "threshold": "₹50 lakh from a single seller in a FY",
+      "rate": "0.1%",
+      "relevantITR": ["ITR-3", "ITR-5", "ITR-6"]
+    },
+    {
+      "section": "194S",
+      "description": "TDS on Cryptoassets/VDA Transfer",
+      "paymentType": "Payment on transfer of Virtual Digital Assets (crypto, NFT)",
+      "threshold": "₹50,000 (if related party); ₹10,000 (others)",
+      "rate": "1%",
+      "relevantITR": ["ITR-2", "ITR-3"],
+      "legalReference": "Section 194S (inserted Finance Act 2022)"
+    },
+    {
+      "section": "195",
+      "description": "TDS on Payments to Non-Residents",
+      "paymentType": "Interest, royalty, FTS, capital gains and other payments to NRIs/foreign companies",
+      "threshold": "No threshold",
+      "rate": "Varies: 20% (interest), 10% (royalty/FTS), rate on capital gains; DTAA rates if lower",
+      "relevantITR": ["ITR-2 (NRI filers)", "ITR-6 (foreign companies)"]
+    },
+    {
+      "section": "206C(1H)",
+      "description": "TCS on Sale of Goods",
+      "paymentType": "TCS collected by seller on goods sales exceeding ₹50L to a buyer",
+      "threshold": "₹50 lakh per buyer",
+      "rate": "0.1%",
+      "relevantITR": ["ITR-3", "ITR-5", "ITR-6"]
+    },
+    {
+      "section": "206C(1G)",
+      "description": "TCS on Foreign Remittance (LRS)",
+      "paymentType": "Remittances under Liberalised Remittance Scheme",
+      "threshold": "₹10,00,000 per FY (raised from ₹7L in FY 2025-26)",
+      "rate": "20% (general); 5% (education — self-funded); 0.5% (education — loan funded); 5% (medical)",
+      "rateNote": "Rate on LRS remittances above ₹10L per year. This TCS can be credited against income tax liability.",
+      "relevantITR": ["ITR-2", "ITR-3"],
+      "isNewForFY202526": true,
+      "fy202526Change": "Threshold raised from ₹7L to ₹10L"
+    }
+  ]
+}

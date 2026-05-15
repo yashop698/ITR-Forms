@@ -1,0 +1,799 @@
+{
+  "formId": "ITR-4",
+  "fyApplicable": "2025-26",
+  "ayApplicable": "2026-27",
+  "totalScenarios": 7,
+  "scenarios": [
+    {
+      "scenarioId": "ITR4-S1",
+      "title": "Section 44AD — Small Trader with Mandatory Bank Balance Disclosure",
+      "complexity": "basic",
+      "tags": ["44AD", "business", "presumptive", "bank-balance-disclosure", "new-regime"],
+      "isNewFY202526": true,
+      "fy202526Highlight": "Mandatory cash and bank balance disclosure in Schedule BP (new for FY 2025-26)",
+      "taxpayerProfile": {
+        "name": "Suresh Kumar",
+        "age": 40,
+        "status": "Resident Individual",
+        "occupation": "Wholesale cloth trader",
+        "city": "Surat",
+        "businessCode": "09027 — Wholesale Trade (NEC)",
+        "incomes": {
+          "grossTurnover": 1800000,
+          "digitalReceipts_percentage": 80,
+          "cashReceipts_percentage": 20,
+          "note": "Since digital receipts > 60%, enhanced limit of ₹3Cr applies. Turnover ₹18L << limit.",
+          "presumptiveIncomeRate": "8% on cash portion + 6% on digital portion",
+          "cashTurnover": 360000,
+          "digitalTurnover": 1440000,
+          "presumptiveIncomeCash": 28800,
+          "presumptiveIncomeDigital": 86400,
+          "totalPresumptiveIncome": 115200,
+          "note2": "Since digital > 60%, can use 6% on digital. Alternatively, declare 8% on full turnover (simpler).",
+          "simplifiedApproach": "8% of ₹18,00,000 = ₹1,44,000 (conservative safe approach)",
+          "declared_income": 150000,
+          "savingsBankInterest": 9000
+        },
+        "balancesAsOn31March2026": {
+          "cashInHand": 25000,
+          "bankBalanceHDFC": 180000,
+          "bankBalanceSBI": 45000,
+          "totalBankBalance": 225000
+        },
+        "regimeChoice": "New Tax Regime (default)"
+      },
+      "schedulesToFill": [
+        { "scheduleId": "Schedule-BP", "compulsory": true, "notes": "Section 44AD presumptive income + MANDATORY cash/bank balance" },
+        { "scheduleId": "Schedule-OS", "compulsory": true, "notes": "Savings bank interest" },
+        { "scheduleId": "Schedule-IT", "compulsory": true, "notes": "Advance tax paid March 15, 2026" },
+        { "scheduleId": "Part-B-TTI", "compulsory": true }
+      ],
+      "stepByStepFilling": [
+        {
+          "step": 1,
+          "section": "Part A — General Information",
+          "sampleValues": {
+            "natureOfBusiness": "09027 — Wholesale Trade (NEC)",
+            "grossTurnoverIndicator": "Total receipts during FY 2025-26",
+            "taxRegime": "New Tax Regime"
+          }
+        },
+        {
+          "step": 2,
+          "section": "Schedule BP — Section 44AD",
+          "action": "Enter turnover, declare presumptive income (minimum 8% or 6%), and MANDATORY cash/bank balance.",
+          "sampleValues": {
+            "section": "44AD",
+            "grossTurnover": 1800000,
+            "declaredNetProfit": 150000,
+            "declaredProfitPercentage": 8.33,
+            "note": "Declaring ₹1,50,000 is 8.33% of turnover — above the 8% minimum. Valid.",
+            "cashBalanceAsOn31Mar2026": 25000,
+            "bankBalanceAsOn31Mar2026": 225000,
+            "totalFinancialParticulars": {
+              "cashInHand": 25000,
+              "bankBalance": 225000,
+              "note": "MANDATORY from FY 2025-26. Verify from bank passbooks/statements."
+            }
+          }
+        },
+        {
+          "step": 3,
+          "section": "Schedule OS",
+          "sampleValues": {
+            "savingsBankInterest": 9000
+          }
+        },
+        {
+          "step": 4,
+          "section": "Gross Total Income",
+          "calculation": {
+            "businessIncome": 150000,
+            "otherSources": 9000,
+            "GTI": 159000
+          }
+        },
+        {
+          "step": 5,
+          "section": "Tax Computation — New Regime",
+          "calculation": {
+            "taxableIncome": 159000,
+            "taxBreakdown": "₹0–₹4L at 0% = ₹0. Income ₹1,59,000 < ₹4L, so zero tax.",
+            "totalBaseTax": 0,
+            "surcharge": 0,
+            "cess": 0,
+            "grossTaxLiability": 0,
+            "rebate87A": 0,
+            "netTaxLiability": 0,
+            "netPayable": 0
+          }
+        }
+      ],
+      "taxComputation": {
+        "regime": "new",
+        "grossTotalIncome": 159000,
+        "deductions": 0,
+        "taxableIncome": 159000,
+        "taxBreakdown": [
+          { "slabFrom": 0, "slabTo": 400000, "rate": 0, "taxAmount": 0 }
+        ],
+        "totalBaseTax": 0,
+        "surcharge": 0,
+        "cess": 0,
+        "grossTaxLiability": 0,
+        "rebate87A": 0,
+        "netTaxAfterRebate": 0,
+        "tdsCredited": 0,
+        "netPayableOrRefund": 0,
+        "payableOrRefundLabel": "Zero tax payable"
+      },
+      "redFlagsInScenario": [
+        "Cash balance ₹25,000 must match actual physical cash — discrepancy triggers 69A proceedings",
+        "Bank balance ₹2,25,000 must match closing balances in bank passbooks as on March 31, 2026",
+        "GST turnover in GSTR-9 must reconcile with ITR turnover of ₹18 lakh"
+      ],
+      "commonMistakesToAvoid": [
+        "Forgetting to fill cash/bank balance fields — they are mandatory from FY 2025-26",
+        "Entering zero bank balance when accounts have funds — AIS will show actual data",
+        "Declaring income below 8% without getting tax audit done"
+      ],
+      "relatedScenarios": ["ITR4-S2", "ITR4-S6", "ITR3-S1"]
+    },
+    {
+      "scenarioId": "ITR4-S2",
+      "title": "Section 44ADA — Doctor with 2 House Properties (NEW FY 2025-26 Feature)",
+      "complexity": "intermediate",
+      "tags": ["44ADA", "professional", "doctor", "house-property", "two-properties", "new-regime"],
+      "isNewFY202526": true,
+      "fy202526Highlight": "First time filing ITR-4 with 2 house properties (expanded from 1 in FY 2024-25)",
+      "taxpayerProfile": {
+        "name": "Dr. Ananya Krishnan",
+        "age": 48,
+        "status": "Resident Individual",
+        "occupation": "Medical Practitioner (MBBS, MD Internal Medicine)",
+        "city": "Hyderabad",
+        "incomes": {
+          "grossProfessionalReceipts": 4800000,
+          "digitalReceiptsPercentage": 90,
+          "note": "₹48 lakh gross receipts (below ₹75L limit for 44ADA with high digital proportion)",
+          "presumptiveIncome": 2400000,
+          "house1_type": "Self-Occupied (residence in Hyderabad)",
+          "house1_homeLoanInterest": 180000,
+          "house2_type": "Let-Out (flat in Pune rented to tenant)",
+          "house2_annualRent": 168000,
+          "house2_municipalTax": 8000,
+          "house2_homeLoanInterest": 120000,
+          "savingsBankInterest": 15000
+        },
+        "balancesAsOn31March2026": {
+          "cashInHand": 50000,
+          "bankBalance_SBI": 850000,
+          "bankBalance_HDFC": 320000,
+          "totalBankBalance": 1170000
+        },
+        "regimeChoice": "New Tax Regime"
+      },
+      "schedulesToFill": [
+        { "scheduleId": "Schedule-BP", "compulsory": true, "notes": "44ADA presumptive income + cash/bank balance" },
+        { "scheduleId": "Schedule-HP", "compulsory": true, "notes": "BOTH properties — new for FY 2025-26 in ITR-4" },
+        { "scheduleId": "Schedule-OS", "compulsory": true },
+        { "scheduleId": "Schedule-IT", "compulsory": true, "notes": "Advance tax paid (₹24L income requires advance tax)" },
+        { "scheduleId": "Part-B-TTI", "compulsory": true }
+      ],
+      "stepByStepFilling": [
+        {
+          "step": 1,
+          "section": "Schedule BP — 44ADA",
+          "sampleValues": {
+            "section": "44ADA",
+            "grossReceipts": 4800000,
+            "presumptiveIncomeDeclared": 2400000,
+            "minimumRequired": 2400000,
+            "note": "50% of ₹48L = ₹24L. Dr. Krishnan declares exactly the minimum.",
+            "cashInHand31Mar": 50000,
+            "bankBalance31Mar": 1170000
+          }
+        },
+        {
+          "step": 2,
+          "section": "Schedule HP — Property 1 (Self-Occupied)",
+          "sampleValues": {
+            "propertyType": "Self-Occupied",
+            "grossAnnualValue": 0,
+            "netAnnualValue": 0,
+            "homeLoanInterest": 180000,
+            "deductibleInterest_newRegime": 0,
+            "note": "Under NEW regime, home loan interest on self-occupied property is NOT deductible. Income = Nil.",
+            "incomeHP1": 0
+          }
+        },
+        {
+          "step": 3,
+          "section": "Schedule HP — Property 2 (Let-Out) — NEW for FY 2025-26 in ITR-4",
+          "sampleValues": {
+            "propertyType": "Let-Out",
+            "grossAnnualValue": 168000,
+            "municipalTaxPaid": 8000,
+            "netAnnualValue": 160000,
+            "standardDeduction30Pct": 48000,
+            "homeLoanInterest": 120000,
+            "incomeHP2": 160000 - 48000 - 120000,
+            "note": "Net HP income from let-out = ₹1,60,000 - ₹48,000 - ₹1,20,000 = -₹8,000 (loss). Under new regime, HP loss from let-out can be set off against HP income but NOT against other income in some interpretations — verify with current CBDT guidance."
+          },
+          "calculation": {
+            "GAV": 168000,
+            "lessMunicipalTax": 8000,
+            "NAV": 160000,
+            "lessStandardDeduction30pct": 48000,
+            "lessHomeLoanInterest": 120000,
+            "netHP2": -8000
+          }
+        },
+        {
+          "step": 4,
+          "section": "Gross Total Income",
+          "calculation": {
+            "businessIncome_44ADA": 2400000,
+            "HP1": 0,
+            "HP2": -8000,
+            "otherSources": 15000,
+            "GTI": 2407000
+          }
+        },
+        {
+          "step": 5,
+          "section": "Tax Computation — New Regime",
+          "calculation": {
+            "taxableIncome": 2407000,
+            "tax_0_400000": 0,
+            "tax_400001_800000": 20000,
+            "tax_800001_1200000": 40000,
+            "tax_1200001_1600000": 60000,
+            "tax_1600001_2000000": 80000,
+            "tax_2000001_2400000": 100000,
+            "tax_2400001_2407000": 2100,
+            "totalBaseTax": 302100,
+            "surcharge": 0,
+            "cess": 12084,
+            "grossTaxLiability": 314184,
+            "rebate87A": 0,
+            "note87A": "Income > ₹12L — no rebate",
+            "netTaxLiability": 314184
+          }
+        },
+        {
+          "step": 6,
+          "section": "Advance Tax",
+          "sampleValues": {
+            "advanceTaxPaid": [
+              { "installment": "1st", "date": "2025-06-15", "amount": 50000 },
+              { "installment": "2nd", "date": "2025-09-15", "amount": 80000 },
+              { "installment": "3rd", "date": "2025-12-15", "amount": 80000 },
+              { "installment": "4th", "date": "2026-03-15", "amount": 80000 }
+            ],
+            "totalAdvanceTax": 290000,
+            "selfAssessmentTaxToPay": 24184,
+            "note": "44ADA taxpayers CAN pay all advance tax in one installment by March 15. Dr. Krishnan chose to pay quarterly."
+          }
+        }
+      ],
+      "taxComputation": {
+        "regime": "new",
+        "grossTotalIncome": 2407000,
+        "deductions": 0,
+        "taxableIncome": 2407000,
+        "taxBreakdown": [
+          { "slabFrom": 0, "slabTo": 400000, "rate": 0, "taxAmount": 0 },
+          { "slabFrom": 400001, "slabTo": 800000, "rate": 5, "taxAmount": 20000 },
+          { "slabFrom": 800001, "slabTo": 1200000, "rate": 10, "taxAmount": 40000 },
+          { "slabFrom": 1200001, "slabTo": 1600000, "rate": 15, "taxAmount": 60000 },
+          { "slabFrom": 1600001, "slabTo": 2000000, "rate": 20, "taxAmount": 80000 },
+          { "slabFrom": 2000001, "slabTo": 2400000, "rate": 25, "taxAmount": 100000 },
+          { "slabFrom": 2400001, "slabTo": 2407000, "rate": 30, "taxAmount": 2100 }
+        ],
+        "totalBaseTax": 302100,
+        "surcharge": 0,
+        "cess": 12084,
+        "grossTaxLiability": 314184,
+        "rebate87A": 0,
+        "netTaxAfterRebate": 314184,
+        "tdsCredited": 0,
+        "advanceTaxPaid": 290000,
+        "selfAssessmentTaxToPay": 24184,
+        "netPayableOrRefund": 24184,
+        "payableOrRefundLabel": "Self-assessment tax payable: ₹24,184"
+      },
+      "redFlagsInScenario": [
+        "Bank balance ₹11.7L with declared income ₹24L — department will check if income is consistent",
+        "GST returns (if registered) must show ₹48L gross receipts — match with ITR",
+        "Second property in Pune — stamp duty registration shows ownership; non-disclosure not possible"
+      ],
+      "commonMistakesToAvoid": [
+        "Filing ITR-3 unnecessarily when ITR-4 now accepts 2 house properties — ITR-4 is simpler",
+        "Claiming home loan interest for self-occupied under new regime",
+        "Advance tax default: if ₹3.14L tax was expected but only ₹2.9L paid in advance, interest u/s 234B applies on ₹24K"
+      ],
+      "relatedScenarios": ["ITR4-S1", "ITR4-S3", "ITR3-S2"]
+    },
+    {
+      "scenarioId": "ITR4-S3",
+      "title": "Section 44AD + LTCG u/s 112A Within ₹1.25L — New Feature (FY 2025-26)",
+      "complexity": "intermediate",
+      "tags": ["44AD", "business", "LTCG", "112A", "equity-MF", "new-regime", "capital-gains-in-ITR4"],
+      "isNewFY202526": true,
+      "fy202526Highlight": "For the first time, LTCG u/s 112A (within ₹1.25L) can be reported directly in ITR-4",
+      "taxpayerProfile": {
+        "name": "Ravi Shankar",
+        "age": 35,
+        "status": "Resident Individual",
+        "occupation": "Retail shopkeeper (grocery)",
+        "city": "Jaipur",
+        "incomes": {
+          "grossTurnover_44AD": 2500000,
+          "presumptiveIncome_44AD": 200000,
+          "ltcg_112A_soldShares": "Redeemed equity mutual fund units held 18 months",
+          "saleProceeds_equity_MF": 350000,
+          "costOfAcquisition": 280000,
+          "ltcg_gross": 70000,
+          "ltcg_exempt_limit": 125000,
+          "ltcg_taxable": 0,
+          "note": "LTCG of ₹70,000 < ₹1,25,000 exemption limit. Full LTCG is exempt. Zero capital gains tax.",
+          "savingsBankInterest": 7500,
+          "fdInterest": 25000
+        },
+        "balancesAsOn31March2026": {
+          "cashInHand": 35000,
+          "bankBalance": 420000
+        },
+        "regimeChoice": "New Tax Regime"
+      },
+      "schedulesToFill": [
+        { "scheduleId": "Schedule-BP", "compulsory": true, "notes": "44AD business income + cash/bank balance" },
+        { "scheduleId": "Schedule-CG", "compulsory": true, "notes": "LTCG 112A — allowed in ITR-4 for FY 2025-26 (NEW)" },
+        { "scheduleId": "Schedule-OS", "compulsory": true },
+        { "scheduleId": "Part-B-TTI", "compulsory": true }
+      ],
+      "stepByStepFilling": [
+        {
+          "step": 1,
+          "section": "Schedule BP — 44AD",
+          "sampleValues": {
+            "section": "44AD",
+            "grossTurnover": 2500000,
+            "presumptiveIncome": 200000,
+            "rateDeclared": "8% of ₹25L = ₹2L",
+            "cashInHand": 35000,
+            "bankBalance": 420000
+          }
+        },
+        {
+          "step": 2,
+          "section": "Schedule CG — LTCG u/s 112A (NEW in ITR-4 for FY 2025-26)",
+          "action": "Report LTCG from equity MF units. Total LTCG ₹70,000 is within ₹1.25L exemption. Zero taxable CG.",
+          "sampleValues": {
+            "typeOfGain": "LTCG u/s 112A — Equity Oriented MF Units",
+            "holdingPeriod": "18 months (long-term)",
+            "saleProceeds": 350000,
+            "costOfAcquisition": 280000,
+            "grossLTCG": 70000,
+            "exemptionLimit": 125000,
+            "taxableLTCG": 0,
+            "note": "₹70,000 < ₹1,25,000 — fully exempt. No tax on LTCG."
+          }
+        },
+        {
+          "step": 3,
+          "section": "Schedule OS",
+          "sampleValues": {
+            "savingsBankInterest": 7500,
+            "fdInterest": 25000,
+            "total": 32500
+          }
+        },
+        {
+          "step": 4,
+          "section": "Gross Total Income",
+          "calculation": {
+            "businessIncome": 200000,
+            "LTCG_taxable": 0,
+            "otherSources": 32500,
+            "GTI": 232500
+          }
+        },
+        {
+          "step": 5,
+          "section": "Tax Computation",
+          "calculation": {
+            "taxableIncome": 232500,
+            "note": "Income < ₹4L under new regime → Zero tax.",
+            "taxLiability": 0
+          }
+        }
+      ],
+      "taxComputation": {
+        "regime": "new",
+        "grossTotalIncome": 232500,
+        "deductions": 0,
+        "taxableIncome": 232500,
+        "taxBreakdown": [
+          { "slabFrom": 0, "slabTo": 400000, "rate": 0, "taxAmount": 0 }
+        ],
+        "totalBaseTax": 0,
+        "surcharge": 0,
+        "cess": 0,
+        "grossTaxLiability": 0,
+        "netTaxAfterRebate": 0,
+        "tdsCredited": 0,
+        "netPayableOrRefund": 0,
+        "payableOrRefundLabel": "Zero tax payable"
+      },
+      "redFlagsInScenario": [
+        "If LTCG from equity MF redemptions had been ₹1.30L (above ₹1.25L), must switch to ITR-2/ITR-3",
+        "Broker/AMC reports MF redemptions to AIS — undisclosed redemptions create mismatch"
+      ],
+      "commonMistakesToAvoid": [
+        "Not filling Schedule CG even for exempt LTCG — exempt LTCG must be disclosed",
+        "Confusing STCG (held <12 months) with LTCG — STCG on equity MF is taxed at 20% and cannot be filed in ITR-4",
+        "Thinking grandfathering (FMV as on Jan 31, 2018) applies — only for pre-Feb 2018 acquisitions"
+      ],
+      "relatedScenarios": ["ITR4-S1", "ITR2-S2"]
+    },
+    {
+      "scenarioId": "ITR4-S4",
+      "title": "Section 44AE — Goods Transport Operator (5 Trucks)",
+      "complexity": "basic",
+      "tags": ["44AE", "transport", "goods-vehicle", "truck", "new-regime"],
+      "isNewFY202526": false,
+      "taxpayerProfile": {
+        "name": "Gurpreet Singh",
+        "age": 52,
+        "status": "Resident Individual",
+        "occupation": "Goods Transport Operator",
+        "city": "Ludhiana",
+        "incomes": {
+          "vehicles": [
+            { "vehicleNumber": "PB10-AB-1234", "type": "Heavy (GVW 18 tonnes)", "monthsUsed": 12, "income": 216000 },
+            { "vehicleNumber": "PB10-AB-5678", "type": "Heavy (GVW 16 tonnes)", "monthsUsed": 12, "income": 192000 },
+            { "vehicleNumber": "PB10-CD-9012", "type": "Heavy (GVW 12 tonnes)", "monthsUsed": 12, "income": 144000 },
+            { "vehicleNumber": "PB10-EF-3456", "type": "Other vehicle (LCV)", "monthsUsed": 12, "income": 90000 },
+            { "vehicleNumber": "PB10-GH-7890", "type": "Other vehicle (Mini Truck)", "monthsUsed": 6, "income": 45000 }
+          ],
+          "computationNote": "Heavy vehicle: ₹1,000 per tonne per month. LCV/Mini truck: ₹7,500 per vehicle per month.",
+          "totalPresumptiveIncome": 687000,
+          "savingsBankInterest": 12000
+        },
+        "balancesAsOn31March2026": {
+          "cashInHand": 45000,
+          "bankBalance": 380000
+        },
+        "regimeChoice": "Old Tax Regime (to claim 80C and 80D)"
+      },
+      "stepByStepFilling": [
+        {
+          "step": 1,
+          "section": "Schedule BP — Section 44AE",
+          "sampleValues": {
+            "section": "44AE",
+            "vehicle1": { "type": "heavy", "grossWeight_tonnes": 18, "months": 12, "income": 216000 },
+            "vehicle2": { "type": "heavy", "grossWeight_tonnes": 16, "months": 12, "income": 192000 },
+            "vehicle3": { "type": "heavy", "grossWeight_tonnes": 12, "months": 12, "income": 144000 },
+            "vehicle4": { "type": "other", "months": 12, "income": 90000 },
+            "vehicle5": { "type": "other", "months": 6, "income": 45000 },
+            "totalPresumptiveIncome": 687000,
+            "cashInHand31Mar": 45000,
+            "bankBalance31Mar": 380000
+          }
+        },
+        {
+          "step": 2,
+          "section": "Gross Total Income",
+          "calculation": {
+            "businessIncome": 687000,
+            "otherSources": 12000,
+            "GTI": 699000
+          }
+        },
+        {
+          "step": 3,
+          "section": "Deductions (Old Regime)",
+          "calculation": {
+            "80C_PPF_etc": 100000,
+            "80D_health": 25000,
+            "80TTA_savings": 10000,
+            "totalDeductions": 135000
+          }
+        },
+        {
+          "step": 4,
+          "section": "Tax Computation — Old Regime",
+          "calculation": {
+            "taxableIncome": 564000,
+            "tax_0_250000": 0,
+            "tax_250001_500000": 12500,
+            "tax_500001_564000": 12800,
+            "totalBaseTax": 25300,
+            "cess": 1012,
+            "grossTaxLiability": 26312,
+            "rebate87A": 0,
+            "note": "Income > ₹5L → no rebate under old regime.",
+            "selfAssessmentTax": 26312
+          }
+        }
+      ],
+      "taxComputation": {
+        "regime": "old",
+        "grossTotalIncome": 699000,
+        "deductions": 135000,
+        "taxableIncome": 564000,
+        "taxBreakdown": [
+          { "slabFrom": 0, "slabTo": 250000, "rate": 0, "taxAmount": 0 },
+          { "slabFrom": 250001, "slabTo": 500000, "rate": 5, "taxAmount": 12500 },
+          { "slabFrom": 500001, "slabTo": 564000, "rate": 20, "taxAmount": 12800 }
+        ],
+        "totalBaseTax": 25300,
+        "surcharge": 0,
+        "cess": 1012,
+        "grossTaxLiability": 26312,
+        "rebate87A": 0,
+        "netTaxAfterRebate": 26312,
+        "tdsCredited": 0,
+        "advanceTaxPaid": 0,
+        "selfAssessmentTax": 26312,
+        "netPayableOrRefund": 26312,
+        "payableOrRefundLabel": "Self-assessment tax payable: ₹26,312"
+      },
+      "redFlagsInScenario": [
+        "Vehicle registration certificates must show ownership duration — partial year (like Vehicle 5 with 6 months) must be correctly computed",
+        "If more than 10 vehicles owned at any time during FY, 44AE does not apply — must use regular books"
+      ],
+      "commonMistakesToAvoid": [
+        "Computing income per month for heavy vehicles without using gross vehicle weight",
+        "Including hired/rented vehicles in the count — 44AE covers only OWNED vehicles"
+      ],
+      "relatedScenarios": ["ITR4-S1", "ITR4-S5"]
+    },
+    {
+      "scenarioId": "ITR4-S5",
+      "title": "HUF with Section 44AD Presumptive Business Income",
+      "complexity": "intermediate",
+      "tags": ["HUF", "44AD", "presumptive", "new-regime", "karta", "HUF-income"],
+      "isNewFY202526": false,
+      "taxpayerProfile": {
+        "name": "Kapoor HUF",
+        "karta": "Anil Kapoor (age 50)",
+        "members": ["Anil Kapoor (Karta)", "Sunita Kapoor (Spouse)", "Rajat Kapoor (Son, 24)"],
+        "status": "HUF — Resident",
+        "city": "Ahmedabad",
+        "incomes": {
+          "businessNature": "Trading in hardware items (44AD)",
+          "grossTurnover": 2200000,
+          "declaredPresumptiveIncome": 180000,
+          "note": "8.18% of ₹22L — slightly above 8% minimum",
+          "rentalIncomeFromHUF_property": 120000,
+          "municipalTaxOnHP": 5000,
+          "savingsBankInterest": 8000
+        },
+        "balancesAsOn31March2026": {
+          "cashInHand": 30000,
+          "bankBalance": 350000
+        },
+        "regimeChoice": "New Tax Regime"
+      },
+      "importantNote": "HUF is a separate tax entity from the Karta and members. The HUF files its own ITR-4. Income earned by the HUF in HUF's name (from HUF property, HUF business) is taxed in HUF's hands. Members then receive their share from HUF income — which is exempt u/s 10(2).",
+      "schedulesToFill": [
+        { "scheduleId": "Schedule-BP", "compulsory": true, "notes": "HUF's 44AD business income" },
+        { "scheduleId": "Schedule-HP", "compulsory": true, "notes": "HUF property rental income" },
+        { "scheduleId": "Schedule-OS", "compulsory": true },
+        { "scheduleId": "Part-B-TTI", "compulsory": true }
+      ],
+      "stepByStepFilling": [
+        {
+          "step": 1,
+          "section": "Schedule BP",
+          "sampleValues": {
+            "section": "44AD",
+            "grossTurnover": 2200000,
+            "presumptiveIncome": 180000,
+            "cashInHand": 30000,
+            "bankBalance": 350000
+          }
+        },
+        {
+          "step": 2,
+          "section": "Schedule HP — HUF Property",
+          "calculation": {
+            "GAV": 120000,
+            "municipalTax": 5000,
+            "NAV": 115000,
+            "standardDeduction30pct": 34500,
+            "interest_homeLoan": 0,
+            "netHP": 80500
+          }
+        },
+        {
+          "step": 3,
+          "section": "Gross Total Income",
+          "calculation": {
+            "businessIncome": 180000,
+            "HP": 80500,
+            "otherSources": 8000,
+            "GTI": 268500
+          }
+        },
+        {
+          "step": 4,
+          "section": "Tax Computation — New Regime, HUF",
+          "calculation": {
+            "taxableIncome": 268500,
+            "note": "Income < ₹4L — zero tax under new regime",
+            "taxLiability": 0
+          }
+        }
+      ],
+      "taxComputation": {
+        "regime": "new",
+        "grossTotalIncome": 268500,
+        "deductions": 0,
+        "taxableIncome": 268500,
+        "taxBreakdown": [
+          { "slabFrom": 0, "slabTo": 400000, "rate": 0, "taxAmount": 0 }
+        ],
+        "totalBaseTax": 0,
+        "grossTaxLiability": 0,
+        "netTaxAfterRebate": 0,
+        "netPayableOrRefund": 0,
+        "payableOrRefundLabel": "Zero tax payable"
+      },
+      "redFlagsInScenario": [
+        "Members' incomes are separate — HUF income and member income must not be clubbed",
+        "If Karta pays himself remuneration from HUF, that is taxable in Karta's hands as salary — not deductible from HUF income in ITR-4"
+      ],
+      "commonMistakesToAvoid": [
+        "Confusing HUF income with Karta's personal income",
+        "44ADA is NOT available for HUF — only 44AD and 44AE are available for HUF",
+        "HUF cannot use ITR-1 — must use at minimum ITR-2; ITR-4 if presumptive income"
+      ],
+      "relatedScenarios": ["ITR4-S1", "ITR2-S3"]
+    },
+    {
+      "scenarioId": "ITR4-S6",
+      "title": "Compliance Scenario — Schedule BP Bank Balance Disclosure (FY 2025-26 Mandatory)",
+      "complexity": "advanced",
+      "tags": ["bank-balance-disclosure", "compliance", "Schedule-BP", "cash-balance", "new-mandatory"],
+      "isNewFY202526": true,
+      "fy202526Highlight": "Detailed walkthrough of the mandatory cash and bank balance disclosure process",
+      "purpose": "This scenario explains HOW to correctly gather and disclose the mandatory cash and bank balance in Schedule BP for FY 2025-26. This is a procedural compliance scenario rather than a tax computation example.",
+      "taxpayerProfile": {
+        "name": "Meenakshi Traders (Proprietor: Meenakshi Devi)",
+        "age": 44,
+        "status": "Resident Individual",
+        "occupation": "Retail Textile Trader (Section 44AD)",
+        "city": "Varanasi",
+        "grossTurnover": 3000000,
+        "presumptiveIncome": 240000
+      },
+      "bankAccountsDetails": [
+        {
+          "bankName": "Bank of Baroda",
+          "accountType": "Current Account (Business)",
+          "accountNumber": "XXXX-1234",
+          "closingBalanceMar31": 380000,
+          "note": "Primary business account"
+        },
+        {
+          "bankName": "Punjab National Bank",
+          "accountType": "Savings Account (Personal)",
+          "accountNumber": "XXXX-5678",
+          "closingBalanceMar31": 125000,
+          "note": "Personal savings account"
+        },
+        {
+          "bankName": "SBI",
+          "accountType": "Savings Account (Linked to Aadhaar)",
+          "accountNumber": "XXXX-9012",
+          "closingBalanceMar31": 45000,
+          "note": "Dormant but has balance"
+        }
+      ],
+      "cashInHand": {
+        "physicalCashAtShop": 30000,
+        "cashAtHome": 15000,
+        "totalCashInHand": 45000
+      },
+      "disclosureInScheduleBP": {
+        "cashBalance31Mar2026": 45000,
+        "bankBalance31Mar2026": 550000,
+        "note": "Sum of all bank accounts: ₹3,80,000 + ₹1,25,000 + ₹45,000 = ₹5,50,000"
+      },
+      "complianceSteps": [
+        "Step 1: Download bank account statements for ALL accounts as of March 31, 2026",
+        "Step 2: Note the CLOSING BALANCE (not opening balance) from each statement",
+        "Step 3: Sum all closing balances = aggregate bank balance to disclose",
+        "Step 4: Count all physical cash (at shop, at home, in transit) as on March 31 evening",
+        "Step 5: Include all accounts — even dormant ones with balance",
+        "Step 6: Do NOT exclude any account — include FD accounts if they show a 'balance' in passbook",
+        "Step 7: Enter both figures in Schedule BP: Cash in Hand and Bank Balance"
+      ],
+      "whatToInclude": [
+        "All savings accounts (personal and joint)",
+        "All current accounts (business)",
+        "Cash credit/overdraft accounts with positive balance",
+        "NRO accounts if applicable (resident returning from abroad)",
+        "Dormant accounts with balance",
+        "Post office savings accounts"
+      ],
+      "whatNotToInclude": [
+        "Fixed deposits (shown separately as investments if material)",
+        "Recurring deposit accounts (maturity-linked)",
+        "Provident fund account balance",
+        "PPF balance"
+      ],
+      "redFlagsInScenario": [
+        "AIS (Annual Information Statement) now shows bank account balances reported by banks — discrepancy between AIS data and ITR disclosure will trigger notice",
+        "Declaring significantly lower bank balance than what AIS shows → scrutiny u/s 143(2)",
+        "Having high bank balance (e.g., ₹50L) relative to declared income (e.g., ₹5L) → Section 69A proceedings"
+      ],
+      "commonMistakesToAvoid": [
+        "Omitting a dormant account with small balance — include all",
+        "Not including personal savings accounts — all accounts of the individual must be included",
+        "Reporting bank balance from a date other than March 31, 2026",
+        "Leaving fields blank — they are mandatory and cannot be skipped in the form utility"
+      ],
+      "relatedScenarios": ["ITR4-S1", "ITR4-S7"]
+    },
+    {
+      "scenarioId": "ITR4-S7",
+      "title": "When to Switch from ITR-4 to ITR-3 — Disqualification Scenario",
+      "complexity": "advanced",
+      "tags": ["ITR4-to-ITR3-switch", "disqualification", "turnover-exceeds", "red-flag", "opt-out-44AD"],
+      "isNewFY202526": false,
+      "purpose": "This scenario identifies conditions that DISQUALIFY ITR-4 and require switching to ITR-3. Useful for self-assessment before form selection.",
+      "disqualifyingConditions": [
+        {
+          "conditionId": "DQ-1",
+          "condition": "Turnover exceeds applicable limit",
+          "details": "44AD: Turnover > ₹3 Crore (or > ₹2Cr if cash transactions > 5%). 44ADA: Gross receipts > ₹75L (or > ₹50L with high cash). 44AE: More than 10 vehicles owned.",
+          "consequence": "Must use ITR-3 with full books of accounts and tax audit if applicable.",
+          "example": "Ramu Traders had ₹3.5 Crore turnover in FY 2025-26. Cannot use ITR-4."
+        },
+        {
+          "conditionId": "DQ-2",
+          "condition": "Declaring income below minimum presumptive rate (44AD: <8% or <6%; 44ADA: <50%)",
+          "details": "If actual profits are lower than the presumptive rate and taxpayer wants to declare actual profits, must maintain regular books and get audit under Section 44AB.",
+          "consequence": "Switch to ITR-3. Maintain books for that year. Tax audit u/s 44AB required if turnover > ₹1Cr.",
+          "example": "Ramesh's actual profit = 5% of turnover = ₹1,50,000 against minimum required 8% = ₹2,40,000. He must maintain books and file ITR-3."
+        },
+        {
+          "conditionId": "DQ-3",
+          "condition": "Opted out of 44AD in any of previous 5 FYs",
+          "details": "Section 44AD(4): If taxpayer did not declare income under 44AD for any FY after having once opted in, they cannot use 44AD for 5 years.",
+          "consequence": "Must file ITR-3 for the prohibited 5-year period.",
+          "example": "Kishore used 44AD in FY 2020-21 but not in FY 2021-22 (filed ITR-3 with books). He cannot use 44AD again until FY 2026-27."
+        },
+        {
+          "conditionId": "DQ-4",
+          "condition": "More than 2 house properties",
+          "details": "More than 2 house properties disqualify ITR-4. Even if all properties are self-occupied.",
+          "consequence": "Switch to ITR-3.",
+          "example": "Preeti owns a flat in Delhi, house in Lucknow, and inherited property in Varanasi (3 properties). Cannot use ITR-4."
+        },
+        {
+          "conditionId": "DQ-5",
+          "condition": "Capital gains beyond allowed types/limits",
+          "details": "Any STCG, or LTCG on property or other assets, or LTCG u/s 112A exceeding ₹1.25L, or capital losses being carried forward.",
+          "consequence": "Switch to ITR-2 (if no business income) or ITR-3 (if business income).",
+          "example": "Arjun sold ancestral land (LTCG on immovable property). Even though he has 44AD income, must use ITR-3."
+        },
+        {
+          "conditionId": "DQ-6",
+          "condition": "Directorship in any company",
+          "details": "Being a director in any company — private, public, or foreign — disqualifies ITR-4.",
+          "consequence": "Switch to ITR-3.",
+          "example": "A shopkeeper who is also a nominee director in a family company cannot use ITR-4."
+        }
+      ],
+      "switchingProcedure": "If a mid-year event disqualifies ITR-4 (e.g., crossing turnover limit), the taxpayer should: (1) Maintain books of accounts for the year, (2) Get tax audit if applicable, (3) File ITR-3 with complete financial statements.",
+      "relatedScenarios": ["ITR4-S1", "ITR3-S6"]
+    }
+  ]
+}

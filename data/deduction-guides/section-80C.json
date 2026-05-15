@@ -1,0 +1,188 @@
+{
+  "guideId": "DG-80C",
+  "sectionId": "80C",
+  "sectionName": "Deduction in respect of Life Insurance Premium, PPF, ELSS, and other specified investments",
+  "fyApplicable": "2025-26",
+  "regime": "old",
+  "maxLimit": 150000,
+  "description": "Section 80C allows deduction up to ₹1,50,000 (combined with 80CCC and 80CCD(1)) for investments in specified instruments such as LIC, PPF, ELSS, NSC, home loan principal repayment, tuition fees, and more. Applicable only under the old tax regime.",
+  "eligibleAssessees": [
+    "Resident Individual",
+    "Non-Resident Individual",
+    "HUF"
+  ],
+  "notEligible": [
+    "Firms",
+    "Companies",
+    "AOP",
+    "BOI",
+    "Any person opting for new tax regime (Section 115BAC)"
+  ],
+  "eligibleInvestments": [
+    {
+      "investmentId": "80C-01",
+      "name": "Life Insurance Premium (LIC or any insurer)",
+      "limit": "Within ₹1,50,000 combined cap",
+      "notes": "Premium paid for self, spouse, or children. For policies issued after March 31, 2012: if premium exceeds 10% of sum assured, only 10% of sum assured is eligible. For policies issued before April 1, 2012: limit is 20% of sum assured.",
+      "isNewForFY202526": false
+    },
+    {
+      "investmentId": "80C-02",
+      "name": "EPF — Employee Provident Fund (Employee Contribution)",
+      "limit": "Within ₹1,50,000 combined cap",
+      "notes": "Only the employee's own contribution qualifies. Employer's EPF contribution is NOT eligible under 80C. Deducted automatically from salary; figures available in Form 16.",
+      "isNewForFY202526": false
+    },
+    {
+      "investmentId": "80C-03",
+      "name": "PPF — Public Provident Fund",
+      "limit": "Annual deposit limit ₹1,50,000; within ₹1,50,000 combined cap",
+      "notes": "15-year tenure with extension options in blocks of 5 years. Current interest rate: 7.1% per annum (compounded annually), notified quarterly by Government. Interest is entirely tax-free under Section 10(11). Partial withdrawal allowed from 7th year.",
+      "isNewForFY202526": false
+    },
+    {
+      "investmentId": "80C-04",
+      "name": "NSC — National Savings Certificate (VIII Issue)",
+      "limit": "Within ₹1,50,000 combined cap; no investment ceiling",
+      "notes": "5-year tenure. Current interest rate: 7.7% per annum (compounded annually). Interest accrued each year (except final year) is deemed reinvested and qualifies for 80C deduction in years 1–4. Interest is taxable as Income from Other Sources but deemed reinvested.",
+      "isNewForFY202526": false
+    },
+    {
+      "investmentId": "80C-05",
+      "name": "ELSS — Equity Linked Savings Scheme (Mutual Funds)",
+      "limit": "Within ₹1,50,000 combined cap",
+      "notes": "3-year lock-in (shortest among 80C instruments). Market-linked, equity-oriented returns. LTCG above ₹1,25,000 on redemption taxable at 12.5% (post Finance Act 2024). Most popular 80C option in FY 2025-26 due to growth potential. No TDS on redemption.",
+      "isNewForFY202526": false
+    },
+    {
+      "investmentId": "80C-06",
+      "name": "Home Loan Principal Repayment",
+      "limit": "Within ₹1,50,000 combined cap",
+      "notes": "Only the principal component of EMI is eligible (not the interest component — interest is under Section 24(b)). Stamp duty and registration charges paid at time of purchase also qualify in the year of payment. Property must not be sold within 5 years of possession; if sold earlier, deduction is reversed and added to income.",
+      "isNewForFY202526": false
+    },
+    {
+      "investmentId": "80C-07",
+      "name": "Children's Tuition Fees",
+      "limit": "Within ₹1,50,000 combined cap; maximum 2 children",
+      "notes": "Only full-time education at school, college, or university situated in India. Fees must be for tuition only — development fees, transport fees, hostel charges, donation, and capitation fees are NOT eligible. Limited to 2 children per taxpayer (spouse can separately claim for remaining children if applicable).",
+      "isNewForFY202526": false
+    },
+    {
+      "investmentId": "80C-08",
+      "name": "5-Year Tax-Saver Fixed Deposit (Bank FD)",
+      "limit": "Within ₹1,50,000 combined cap",
+      "notes": "Minimum 5-year lock-in period. Interest earned on the FD is fully taxable as Income from Other Sources. TDS applicable on interest if it exceeds ₹40,000 per annum (₹50,000 for senior citizens). Available at all scheduled commercial banks and some post offices.",
+      "isNewForFY202526": false
+    },
+    {
+      "investmentId": "80C-09",
+      "name": "SCSS — Senior Citizens Savings Scheme",
+      "limit": "Maximum investment: ₹30,00,000; within ₹1,50,000 combined cap for 80C deduction",
+      "notes": "Exclusively for individuals aged 60+ (or 55+ for VRS/superannuation retirees within 1 month of retirement). Tenure: 5 years (extendable by 3 years). Current rate: 8.2% per annum, paid quarterly. Interest is taxable as Income from Other Sources. TDS deductible if annual interest > ₹50,000.",
+      "isNewForFY202526": false
+    },
+    {
+      "investmentId": "80C-10",
+      "name": "Sukanya Samriddhi Yojana (SSY)",
+      "limit": "Annual deposit: min ₹250, max ₹1,50,000; within ₹1,50,000 combined cap",
+      "notes": "For girl child below 10 years of age at time of account opening. Current rate: 8.2% per annum. Matures when girl turns 21 (or on marriage after 18). Partial withdrawal allowed after girl turns 18 (for education/marriage). Proceeds (maturity + interest) are entirely tax-free under Section 10(11A). EEE status (Exempt-Exempt-Exempt).",
+      "isNewForFY202526": false
+    },
+    {
+      "investmentId": "80C-11",
+      "name": "NPS — National Pension System (Employee's Own Contribution u/s 80CCD(1))",
+      "limit": "10% of salary (salaried) or 20% of GTI (self-employed); within ₹1,50,000 combined cap",
+      "notes": "Own contribution to NPS Tier 1 account. Counted within the ₹1.5L combined cap of 80C + 80CCC + 80CCD(1). An additional ₹50,000 deduction is available under Section 80CCD(1B) OVER AND ABOVE this cap. NPS Tier 2 contributions are NOT eligible.",
+      "isNewForFY202526": false
+    }
+  ],
+  "conditions": [
+    "Available only under the old tax regime. Taxpayers opting for new regime (Section 115BAC) cannot claim 80C.",
+    "The combined deduction under Sections 80C, 80CCC, and 80CCD(1) cannot exceed ₹1,50,000 in any financial year.",
+    "Deduction is available only in the year of investment — no carry-forward to subsequent years.",
+    "For LIC premium: policy must be in force. Lapsed policy premiums are not eligible.",
+    "Home loan principal: property must be self-occupied or let-out residential property. Must not be sold within 5 years from end of FY of possession.",
+    "Tuition fees: only for full-time education at institutions in India. Maximum 2 children.",
+    "For ELSS: investment must be in regular or direct plan of ELSS; units must be held for minimum 3 years.",
+    "Business income taxpayers filing ITR-4: Form 10-IEA must be filed to opt for old regime before the due date of return filing."
+  ],
+  "documentationRequired": [
+    "LIC / insurance premium receipts or statements from insurer",
+    "EPF annual statement or Form 16 (Part B) showing employee contribution",
+    "PPF passbook or bank statement showing deposits",
+    "NSC purchase certificates",
+    "ELSS investment statements / Consolidated Account Statement (CAS) from NSDL/CDSL",
+    "Home loan principal repayment certificate from lender (issued annually)",
+    "Stamp duty and registration receipts (for year of property purchase)",
+    "Children's tuition fee receipts from school/college/university",
+    "Bank FD receipts for tax-saver FDs",
+    "SCSS passbook or account statement",
+    "Sukanya Samriddhi account passbook",
+    "NPS Transaction Statement (Tier 1 account)"
+  ],
+  "keyRules": [
+    {
+      "ruleId": "80C-R1",
+      "rule": "Combined cap of ₹1,50,000 applies across Section 80C, Section 80CCC (pension fund premiums), and Section 80CCD(1) (own NPS contribution). These three sections share a single ceiling.",
+      "legalReference": "Section 80CCE of Income Tax Act, 1961",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "80C-R2",
+      "rule": "LIC policy premium eligibility: For policies issued on or after April 1, 2012 — only premium up to 10% of sum assured qualifies. For policies issued before April 1, 2012 — only premium up to 20% of sum assured qualifies. Excess over the cap is not deductible.",
+      "legalReference": "Section 80C(3A) and Proviso to Section 80C(3)",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "80C-R3",
+      "rule": "If a property for which home loan principal deduction was claimed under 80C is transferred within 5 years from the end of the FY in which possession was obtained, the aggregate deductions claimed in prior years are deemed to be income of the year of transfer.",
+      "legalReference": "Section 80C(5)",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "80C-R4",
+      "rule": "NSC interest accrued in years 1 through 4 (of the 5-year certificate) is deemed to be reinvested and qualifies as a fresh 80C investment in those years. The interest accrued in year 5 (maturity year) is not reinvested and is only taxable income.",
+      "legalReference": "Section 80C read with NSC Rules",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "80C-R5",
+      "rule": "Employer EPF contribution does NOT qualify for 80C deduction. Only the employee's share of provident fund contribution is eligible. However, employer contribution up to 12% of salary is exempt from tax under Section 10(12).",
+      "legalReference": "Section 80C(2)(d)",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "80C-R6",
+      "rule": "Tuition fees must be for full-time education only. Fees for distance learning, part-time courses, private coaching classes, or any institution outside India are not eligible.",
+      "legalReference": "Section 80C(2)(xvii)",
+      "isNewForFY202526": false
+    }
+  ],
+  "commonMistakes": [
+    "Claiming 80C deductions while filing under the new tax regime (Section 115BAC) — not allowed; old regime must be specifically opted for.",
+    "Including employer's EPF contribution in the 80C claim — only the employee's contribution qualifies.",
+    "Forgetting to claim stamp duty and registration charges paid in the year of property purchase — these are eligible even if not part of a home loan.",
+    "Claiming tuition fees for private coaching classes, distance learning, or part-time courses — only full-time education at Indian institutions qualifies.",
+    "Exceeding the ₹1,50,000 combined cap without realising that 80CCC and 80CCD(1) contributions also reduce the available headroom.",
+    "Claiming LIC premium for a policy where premium exceeds 10% of sum assured (post-March 2012 policies) — only the eligible portion up to 10% of sum assured can be claimed.",
+    "Not claiming the 4 years of NSC accrued interest as deemed reinvestment under 80C — this is a missed deduction.",
+    "Assuming ELSS redemption is fully tax-free — LTCG above ₹1,25,000 is taxable at 12.5%.",
+    "Claiming 80C for 5-year FD interest as well — only the principal deposit qualifies, not the interest earned."
+  ],
+  "relatedSections": [
+    "80CCC — Contribution to pension fund of Life Insurance Corporation / other insurers",
+    "80CCD — Contribution to National Pension System (NPS)",
+    "80CCE — Aggregate limit of ₹1,50,000 for 80C + 80CCC + 80CCD(1)",
+    "Section 24(b) — Interest on home loan (separate from principal repayment under 80C)",
+    "Section 10(11) — Tax exemption on PPF interest",
+    "Section 10(11A) — Tax exemption on Sukanya Samriddhi Yojana proceeds",
+    "Section 10(38) / 112A — LTCG on ELSS (equity mutual funds)",
+    "Section 115BAC — New tax regime (under which 80C is not available)"
+  ],
+  "workedExample": {
+    "profile": "Salaried individual, age 35, gross income ₹12,00,000. Investments: EPF employee contribution ₹60,000; PPF ₹50,000; ELSS ₹40,000. Total = ₹1,50,000.",
+    "deductionClaimed": 150000,
+    "taxSaving": "At 30% slab: ₹1,50,000 × 30% = ₹45,000 + ₹4% cess = ₹46,800 tax saved. At 20% slab: ₹30,000 + cess = ₹31,200 saved."
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "guideId": "DG-80EE",
+  "sectionId": "80EE",
+  "sectionName": "Additional deduction for interest on home loan for first-time buyers (loans sanctioned April 2016 – March 2017)",
+  "fyApplicable": "2025-26",
+  "regime": "old",
+  "maxLimit": 50000,
+  "description": "Section 80EE provides an additional deduction of up to ₹50,000 per year on interest paid on a home loan, over and above the ₹2,00,000 limit under Section 24(b). This benefit applies exclusively to loans sanctioned between April 1, 2016 and March 31, 2017 by first-time home buyers. No new loans qualify after March 31, 2017 — this is a sunset provision. Taxpayers with qualifying loans continue to enjoy the benefit until the loan is fully repaid.",
+  "eligibleAssessees": [
+    "Resident Individual (first-time home buyer with qualifying loan)"
+  ],
+  "notEligible": [
+    "HUF",
+    "Firms",
+    "Companies",
+    "AOP",
+    "BOI",
+    "Individuals who already owned any residential property on the date of loan sanction",
+    "Individuals whose loan was sanctioned before April 1, 2016 or after March 31, 2017",
+    "Taxpayers opting for new tax regime (Section 115BAC)"
+  ],
+  "eligibleInvestments": [
+    {
+      "investmentId": "80EE-01",
+      "name": "Interest on home loan — additional deduction over and above Section 24(b)",
+      "limit": "₹50,000 per year (additional over Section 24(b) ₹2,00,000 limit)",
+      "notes": "Available only for loan sanctioned between April 1, 2016 and March 31, 2017. Loan value must be ₹35 lakh or less. Property value must be ₹50 lakh or less. Borrower must not have owned any residential property on the date of loan sanction. Deduction available until the loan is fully repaid.",
+      "isNewForFY202526": false
+    }
+  ],
+  "conditions": [
+    "Available only under the old tax regime.",
+    "Loan must have been sanctioned by a financial institution between April 1, 2016 and March 31, 2017 — this window is permanently closed. No new qualifying loans possible.",
+    "The loan amount sanctioned must not exceed ₹35,00,000.",
+    "The stamp duty value (or acquisition cost) of the property must not exceed ₹50,00,000.",
+    "The borrower must not have owned any other residential house property on the date of sanction of the loan.",
+    "The deduction of ₹50,000 is over and above the ₹2,00,000 deduction available under Section 24(b) for a self-occupied property.",
+    "The deduction is available every year as long as the loan has outstanding interest — i.e., until the loan is fully repaid.",
+    "Cannot claim both Section 80EE and Section 80EEA for the same loan or property."
+  ],
+  "documentationRequired": [
+    "Loan sanction letter from bank/financial institution (must show sanction date between April 1, 2016 and March 31, 2017)",
+    "Annual interest certificate from lender showing interest paid during FY 2025-26",
+    "Property purchase/registration documents showing property value",
+    "Self-declaration that no other residential house property was owned on the date of loan sanction",
+    "Loan agreement"
+  ],
+  "keyRules": [
+    {
+      "ruleId": "80EE-R1",
+      "rule": "80EE is a sunset provision — it applied only to loans sanctioned in FY 2016-17 (April 1, 2016 to March 31, 2017). No new loans can qualify. Taxpayers who took qualifying loans in that period continue to benefit for the remaining loan tenure.",
+      "legalReference": "Section 80EE — proviso limiting sanction period",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "80EE-R2",
+      "rule": "Section 80EE provides ₹50,000 ADDITIONAL deduction on top of the ₹2,00,000 under Section 24(b). So a first-time buyer with a qualifying 80EE loan can potentially claim ₹2,50,000 of interest deduction per year (₹2L under 24(b) + ₹50K under 80EE).",
+      "legalReference": "Section 80EE(1)",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "80EE-R3",
+      "rule": "The loan value criterion is on the sanctioned loan amount (₹35 lakh), not the outstanding balance or the property value. The property stamp duty value must separately be ₹50 lakh or less.",
+      "legalReference": "Section 80EE(2)(i) and (ii)",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "80EE-R4",
+      "rule": "If the taxpayer was already claiming 80EE in prior years, they continue to be eligible in FY 2025-26 as long as the loan is outstanding and the interest is paid.",
+      "legalReference": "Section 80EE — no year-wise sunset for existing claimants",
+      "isNewForFY202526": false
+    }
+  ],
+  "commonMistakes": [
+    "Confusing 80EE with 80EEA — 80EE is for loans sanctioned in FY 2016-17; 80EEA is for loans sanctioned April 2019 to March 2022. They cannot be claimed simultaneously.",
+    "Not claiming 80EE in current year assuming the provision has expired — existing qualifying loan holders can continue claiming each year until repayment.",
+    "Claiming 80EE for a loan sanctioned after March 31, 2017 — no new loans qualify.",
+    "Treating the ₹50,000 as part of Section 24(b) limit — it is separate and additional.",
+    "Not checking if the property value condition (≤₹50 lakh) and loan value condition (≤₹35 lakh) were met at the time of sanction."
+  ],
+  "relatedSections": [
+    "Section 24(b) — Interest on home loan (₹2,00,000 per year for self-occupied property; ₹80EE is over and above this)",
+    "Section 80EEA — Additional interest deduction for affordable housing loans (April 2019 – March 2022)",
+    "Section 80C — Principal repayment of home loan",
+    "Section 115BAC — New tax regime (80EE not available)"
+  ],
+  "workedExample": {
+    "profile": "First-time buyer. Loan of ₹32 lakh sanctioned October 2016 for a ₹45 lakh flat. Annual interest in FY 2025-26: ₹2,30,000. Section 24(b): ₹2,00,000. Section 80EE: ₹30,000 (remaining interest). Total interest deduction: ₹2,30,000.",
+    "deductionClaimed": 30000,
+    "taxSaving": "80EE additional deduction ₹30,000 (capped at ₹50,000 limit). At 30% slab: ₹9,000 + 4% cess = ₹9,360 additional tax saved beyond Section 24(b) benefit."
+  }
+}

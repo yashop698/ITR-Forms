@@ -1,0 +1,107 @@
+{
+  "guideId": "DG-80EEB",
+  "sectionId": "80EEB",
+  "sectionName": "Deduction for interest on loan taken for purchase of electric vehicle",
+  "fyApplicable": "2025-26",
+  "regime": "old",
+  "maxLimit": 150000,
+  "description": "Section 80EEB provides a deduction of up to ₹1,50,000 per year on interest paid on loans taken for purchase of electric vehicles (cars, two-wheelers, or three-wheelers). The loan must have been sanctioned between April 1, 2019 and March 31, 2023. The sanction window is now closed, but existing borrowers continue to benefit for the entire remaining loan tenure. Available only for individual assessees under the old tax regime.",
+  "eligibleAssessees": [
+    "Resident Individual",
+    "Non-Resident Individual"
+  ],
+  "notEligible": [
+    "HUF",
+    "Firms",
+    "Companies",
+    "AOP",
+    "BOI",
+    "Individuals whose loan was sanctioned after March 31, 2023",
+    "Taxpayers opting for new tax regime (Section 115BAC)"
+  ],
+  "eligibleInvestments": [
+    {
+      "investmentId": "80EEB-01",
+      "name": "Interest on loan for electric vehicle — car (four-wheeler)",
+      "limit": "Up to ₹1,50,000 per year",
+      "notes": "Loan sanctioned between April 1, 2019 and March 31, 2023 from a financial institution (bank, NBFC). Vehicle must be a battery-operated electric vehicle. Deduction of actual interest paid, capped at ₹1,50,000 per year.",
+      "isNewForFY202526": false
+    },
+    {
+      "investmentId": "80EEB-02",
+      "name": "Interest on loan for electric vehicle — two-wheeler",
+      "limit": "Up to ₹1,50,000 per year",
+      "notes": "Loan for electric two-wheelers (e-scooters, e-motorcycles) sanctioned in the qualifying period. Combined cap of ₹1,50,000 across all EV loans (not ₹1.5L per vehicle).",
+      "isNewForFY202526": false
+    },
+    {
+      "investmentId": "80EEB-03",
+      "name": "Interest on loan for electric vehicle — three-wheeler",
+      "limit": "Up to ₹1,50,000 per year",
+      "notes": "Loan for electric three-wheelers (e-rickshaws, e-autos) sanctioned in the qualifying period.",
+      "isNewForFY202526": false
+    }
+  ],
+  "conditions": [
+    "Available only under the old tax regime. New regime taxpayers cannot claim 80EEB.",
+    "Only individual assessees are eligible — HUF, firms, and companies cannot claim this deduction.",
+    "Loan must be sanctioned by a financial institution between April 1, 2019 and March 31, 2023. The sanction window is permanently closed for new loans.",
+    "The loan must be specifically for the purpose of purchasing an electric vehicle (battery-operated vehicle).",
+    "Loan must be from a financial institution — scheduled bank, cooperative bank, or a notified NBFC or financial institution.",
+    "The vehicle must qualify as an 'electric vehicle' as defined — i.e., driven exclusively by an electric motor whose traction energy is supplied exclusively by a traction battery installed in the vehicle.",
+    "Deduction is for interest only — the principal repayment does NOT qualify under 80EEB or any other section.",
+    "₹1,50,000 is an annual ceiling — actual interest paid, up to ₹1,50,000, is deductible each year for the entire loan tenure."
+  ],
+  "documentationRequired": [
+    "Loan sanction letter from bank/NBFC (must show sanction date between April 1, 2019 and March 31, 2023)",
+    "Annual interest certificate from lender showing interest paid during FY 2025-26",
+    "Registration certificate (RC) of the electric vehicle",
+    "Vehicle purchase invoice showing 'electric vehicle' classification",
+    "Loan agreement"
+  ],
+  "keyRules": [
+    {
+      "ruleId": "80EEB-R1",
+      "rule": "Section 80EEB sanction window closed on March 31, 2023. No EV loans sanctioned from April 1, 2023 onwards qualify. However, individuals who took qualifying loans in the April 2019 – March 2023 window continue to claim this deduction annually until the loan is repaid.",
+      "legalReference": "Section 80EEB — condition on loan sanction period",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "80EEB-R2",
+      "rule": "The deduction is only on the interest component. There is no deduction for principal repayment on an EV loan — unlike home loans where Section 80C covers principal. Borrowers should get an annual amortisation schedule to identify the interest portion.",
+      "legalReference": "Section 80EEB(1)",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "80EEB-R3",
+      "rule": "'Electric vehicle' under 80EEB means a vehicle driven solely by an electric motor powered exclusively by a battery installed in the vehicle. Hybrid vehicles (with both electric and combustion engines) may or may not qualify — this depends on whether they meet the statutory definition.",
+      "legalReference": "Section 80EEB — Explanation: definition of 'electric vehicle'",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "80EEB-R4",
+      "rule": "The ₹1,50,000 limit is an annual cap on the interest deduction. If actual interest in a year is less than ₹1,50,000, only the actual interest is deductible — the cap is a ceiling, not a fixed deduction.",
+      "legalReference": "Section 80EEB(1)",
+      "isNewForFY202526": false
+    }
+  ],
+  "commonMistakes": [
+    "Claiming 80EEB for a loan sanctioned after March 31, 2023 — no new loans qualify; sanction window is closed.",
+    "Claiming 80EEB for a hybrid vehicle loan — only pure battery-operated electric vehicles qualify; hybrid vehicles may not meet the definition.",
+    "Including principal repayment in the 80EEB deduction — only interest is deductible.",
+    "Claiming 80EEB under the new tax regime — it is only available under the old regime.",
+    "Claiming 80EEB for an EV purchased with personal funds or credit card (no formal loan) — a formal loan from a financial institution is mandatory.",
+    "HUF or firms attempting to claim 80EEB — only individual assessees are eligible."
+  ],
+  "relatedSections": [
+    "Section 80C — Principal repayment is NOT covered for EV loans (unlike home loans)",
+    "Section 80EE — Additional deduction for home loan interest (different asset class)",
+    "Section 80EEA — Affordable housing loan interest deduction",
+    "Section 115BAC — New tax regime (80EEB not available)"
+  ],
+  "workedExample": {
+    "profile": "Individual took a loan of ₹8,00,000 in November 2021 for an electric car. Annual interest in FY 2025-26: ₹68,000.",
+    "deductionClaimed": 68000,
+    "taxSaving": "Full ₹68,000 interest deductible (within ₹1,50,000 cap). At 20% slab: ₹13,600 + 4% cess = ₹14,144 tax saved. If interest were ₹1,80,000, only ₹1,50,000 would be deductible — saving ₹31,200 + cess at 20% slab."
+  }
+}

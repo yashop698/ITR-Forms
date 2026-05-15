@@ -1,0 +1,183 @@
+{
+  "guideId": "DG-OTHER",
+  "sectionId": "Various",
+  "sectionName": "Other Chapter VI-A deductions: 80GG, 80U, 80DD, 80DDB, 80TTA, 80TTB, 80CCH, 80RRB, 80QQB, 80PA",
+  "fyApplicable": "2025-26",
+  "regime": "old (except 80CCH which is both regimes)",
+  "maxLimit": "Varies by section — see individual entries below",
+  "description": "A consolidated guide covering ten additional Chapter VI-A deductions: 80GG (rent paid without HRA), 80U (self with disability), 80DD (disabled dependent), 80DDB (specified serious diseases), 80TTA (savings interest for non-seniors), 80TTB (bank interest for senior citizens), 80CCH (Agniveer corpus — both regimes), 80RRB (patent royalty), 80QQB (book royalty), and 80PA (cooperative society profits). Most are available only under the old regime; 80CCH is a special exception available in both.",
+  "eligibleAssessees": [
+    "Resident Individual (all sections unless noted)",
+    "HUF (80GG, 80TTA, 80TTB)",
+    "Cooperative Societies (80PA only)"
+  ],
+  "notEligible": [
+    "Firms (except 80PA for eligible cooperatives)",
+    "Companies",
+    "AOP / BOI (except 80PA)",
+    "Non-Resident Individuals for 80GG, 80DDB, 80QQB, 80RRB",
+    "New regime individual taxpayers (except 80CCH which is available in both regimes)"
+  ],
+  "eligibleInvestments": [
+    {
+      "investmentId": "80GG-01",
+      "name": "80GG — Rent paid (for taxpayers NOT receiving HRA)",
+      "limit": "Least of: (a) Rent paid minus 10% of total income, (b) 25% of total income, (c) ₹5,000 per month (₹60,000 per year)",
+      "notes": "Available to individuals and HUFs who pay rent for their accommodation but do NOT receive House Rent Allowance (HRA) from their employer. Self-employed professionals and salaried employees without HRA component can use this. Taxpayer (and spouse) must not own any residential property in the city/town of their employment/business. Form 10BA must be filed. Old regime only.",
+      "isNewForFY202526": false
+    },
+    {
+      "investmentId": "80U-01",
+      "name": "80U — Deduction for individual with disability (self)",
+      "limit": "₹75,000 (disability 40% to less than 80%) | ₹1,25,000 (severe disability: 80% and above)",
+      "notes": "Available to a resident individual who is HIMSELF/HERSELF a person with disability. These are fixed deductions — not dependent on actual medical expenditure. Certificate from a notified medical authority (government hospital) is mandatory. Form 10-IA must be filed to substantiate the claim. Old regime only. NOT for dependents — use 80DD for dependents.",
+      "isNewForFY202526": false
+    },
+    {
+      "investmentId": "80DD-01",
+      "name": "80DD — Medical treatment/maintenance of disabled dependent",
+      "limit": "₹75,000 (disability 40% to less than 80%) | ₹1,25,000 (severe disability: 80% and above)",
+      "notes": "For expenditure incurred on medical treatment, nursing, rehabilitation, or training of a DEPENDENT with disability. Dependents include: spouse, children (including step-children and adopted children), parents (including step-parents), and siblings (brothers/sisters). Premium paid for LIC/other approved insurer's policy for the maintenance of such disabled dependent also qualifies. Certificate from medical authority required. Old regime only. For self with disability: use 80U.",
+      "isNewForFY202526": false
+    },
+    {
+      "investmentId": "80DDB-01",
+      "name": "80DDB — Medical treatment of specified diseases",
+      "limit": "₹40,000 (for self or dependent below 60 years) | ₹1,00,000 (for self or dependent who is senior citizen 60+)",
+      "notes": "For medical treatment of specified diseases for self or dependent. Specified diseases include: neurological diseases with 40%+ disability (dementia, dystonia musculorum deformans, motor neuron disease, ataxia, chorea, hemiballismus, aphasia, Parkinson's disease), malignant cancers, AIDS/full-blown AIDS, chronic renal failure requiring hemodialysis or renal transplant, hemophilia, and thalassaemia. Prescription from a specialist (Form 10-I) required. Amount actually paid less amount reimbursed by insurer or employer is deductible. Old regime only.",
+      "isNewForFY202526": false
+    },
+    {
+      "investmentId": "80TTA-01",
+      "name": "80TTA — Interest on savings bank account (individuals and HUF below 60 years)",
+      "limit": "₹10,000 per year",
+      "notes": "Deduction on interest income from savings bank accounts maintained with: scheduled commercial banks, cooperative banks, and post offices. ONLY savings account interest qualifies — interest on fixed deposits (FDs), recurring deposits (RDs), or term deposits is NOT eligible. Not available to senior citizens (they use 80TTB instead). Old regime only.",
+      "isNewForFY202526": false
+    },
+    {
+      "investmentId": "80TTB-01",
+      "name": "80TTB — Interest income for senior citizens (60+ years)",
+      "limit": "₹50,000 per year",
+      "notes": "Available exclusively to senior citizens (aged 60 or above) for interest income from: savings accounts, fixed deposits (FDs), recurring deposits (RDs), and other deposits with banks (scheduled commercial banks, cooperative banks) and post offices. This is more generous than 80TTA — covers FD and RD interest as well. Senior citizens CANNOT claim both 80TTA and 80TTB — 80TTB replaces 80TTA for those aged 60+. Old regime only.",
+      "isNewForFY202526": false
+    },
+    {
+      "investmentId": "80CCH-01",
+      "name": "80CCH — Agniveer Corpus Fund contribution (Agnipath Scheme)",
+      "limit": "100% of the amount deposited in Agniveer Corpus Fund",
+      "notes": "Special deduction for individuals enrolled under the Agnipath Scheme (Agniveers — short-term armed forces personnel). 100% of the Agniveer's own contribution to the corpus fund is deductible. Additionally, Government's matching contribution is also exempt. Unique in that it is available in BOTH old and new tax regimes — one of very few Chapter VI-A deductions available in the new regime. Applicable only to persons enrolled under Agnipath Scheme.",
+      "isNewForFY202526": false
+    },
+    {
+      "investmentId": "80RRB-01",
+      "name": "80RRB — Royalty income from patents",
+      "limit": "₹3,00,000 per year (or actual royalty received, whichever is lower)",
+      "notes": "Available to a resident individual who is a patentee (registered holder of an Indian patent). The patent must be registered on or after April 1, 2003 under the Patents Act, 1970. Royalty includes consideration for assignment/grant of a patent licence, imparting information relating to the working of the patent, rendering services in connection with the same. If taxpayer receives both patent royalty and book royalty, 80RRB and 80QQB cannot be claimed for the same income. Old regime only.",
+      "isNewForFY202526": false
+    },
+    {
+      "investmentId": "80QQB-01",
+      "name": "80QQB — Royalty income from books (authors)",
+      "limit": "₹3,00,000 per year (or actual royalty received, whichever is lower)",
+      "notes": "For resident individuals who are authors of books on literary, artistic, or scientific subjects. Textbooks for school and college curricula (study guides) are excluded — only general literary, artistic, or scientific books qualify. Royalty must be received from the publisher. Lump-sum royalties also eligible. 80QQB and 80RRB cannot both be claimed for the same income stream. Old regime only. Must furnish prescribed form along with ITR.",
+      "isNewForFY202526": false
+    },
+    {
+      "investmentId": "80PA-01",
+      "name": "80PA — Profit of eligible cooperative society",
+      "limit": "100% of profits from eligible activities",
+      "notes": "Available to producer companies and farmer producer organizations (FPOs) / cooperative societies engaged in: (a) supply of milk, vegetables, fruits, fish, meat, poultry products, or similar produce to customers; (b) collection, procurement, or supply of specified agricultural produce. Deduction of 100% of profits derived from such eligible activities. Applicable for ITR-5 filers (firms, cooperative societies, AOP, BOI). Specific to cooperative structure — regular companies do not qualify.",
+      "isNewForFY202526": false
+    }
+  ],
+  "conditions": [
+    "80GG: Taxpayer must not receive any HRA from employer. File Form 10BA before/at time of return filing. Neither taxpayer nor spouse should own residential property in the place of work.",
+    "80GG: If taxpayer owns a house in another city where they are not residing, 80GG can still be claimed for rent in the city of work — but consult Section 23 rules for the owned property.",
+    "80U: Mandatory medical certificate from notified medical authority (civil surgeon or equivalent) establishing disability percentage. Certificate must be current and valid. Form 10-IA to be filed.",
+    "80DD: Medical authority certificate for the dependent's disability required. Dependent must be wholly or mainly dependent on the taxpayer. If LIC policy is purchased for the benefit of disabled dependent, premium also counts.",
+    "80DDB: Prescription from a specialist doctor (neurologist, oncologist, urologist, haematologist, immunologist as appropriate) is mandatory. Amount claimed must be net of any reimbursement from insurance or employer.",
+    "80TTA: Not available to senior citizens (60+) — they must use 80TTB instead. Cannot claim both 80TTA and 80TTB.",
+    "80TTB: Available only to senior citizens (60+). Covers savings, FD, and RD interest. Cannot claim 80TTA additionally.",
+    "80CCH: Available in both old and new regimes — unique exception. Only for Agniveers enrolled under Agnipath Scheme.",
+    "80RRB: Patent must be registered in India under the Patents Act after March 31, 2003. Royalty income is initially taxable as income; deduction brings it to nil/reduced amount.",
+    "80QQB: Book must be literary, artistic, or scientific — not a textbook or study material. Lump-sum royalty may be spread over the number of years as specified.",
+    "80PA: Applicable to cooperative societies and producer companies with specific eligible activities as defined in the section."
+  ],
+  "documentationRequired": [
+    "80GG: Rent receipts from landlord, rental agreement, Form 10BA (self-declaration), PAN of landlord (if annual rent > ₹1,00,000)",
+    "80U: Medical certificate in prescribed format from civil surgeon / specialist at government hospital; Form 10-IA",
+    "80DD: Medical certificate for dependent's disability; proof of relationship with dependent; Form 10-IA; premium receipts if LIC policy claimed",
+    "80DDB: Prescription from specialist doctor (Form 10-I); medical bills and receipts; reimbursement details from insurer/employer",
+    "80TTA: Bank statement/passbook showing savings account interest; Form 26AS / AIS (Annual Information Statement) for TDS on interest",
+    "80TTB: Bank statement showing savings/FD/RD interest; Form 26AS; Form 16A (TDS certificate from bank)",
+    "80CCH: Certificate/statement from NPS Trust/Agniveer Corpus Fund showing contribution amount",
+    "80RRB: Copy of patent registration certificate; royalty agreement; statement of royalty received",
+    "80QQB: Book publication agreement with publisher; royalty statement from publisher",
+    "80PA: Audited financial statements; certificate of registration as cooperative society or producer company; details of eligible activities"
+  ],
+  "keyRules": [
+    {
+      "ruleId": "OTHER-R1",
+      "rule": "80GG deduction is the LEAST of three amounts: (a) Rent paid minus 10% of total income, (b) 25% of total income, (c) ₹5,000 per month. Total income here means GTI after all deductions except 80GG itself. If HRA is received from employer (even a small amount), 80GG is NOT available — the individual must use the HRA exemption u/s 10(13A) instead.",
+      "legalReference": "Section 80GG read with Rule 11B",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "OTHER-R2",
+      "rule": "80U is for the taxpayer who IS the person with disability. 80DD is for the taxpayer who HAS a disabled dependent. They are distinct — a person with disability who also has a disabled dependent can potentially claim both 80U (for self) and 80DD (for dependent). Common confusion: claiming 80DD when the taxpayer himself is disabled (should be 80U).",
+      "legalReference": "Section 80U and Section 80DD",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "OTHER-R3",
+      "rule": "80TTA and 80TTB are mutually exclusive. An individual below 60 claims 80TTA (savings interest only, ₹10K limit). On turning 60, the individual can claim 80TTB (savings + FD + RD interest, ₹50K limit) and can no longer claim 80TTA. Age is determined as of the last day of the financial year (March 31).",
+      "legalReference": "Section 80TTA and Section 80TTB — 'individual other than a senior citizen' vs 'senior citizen'",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "OTHER-R4",
+      "rule": "80CCH is one of only two Chapter VI-A deductions available in the new tax regime (the other being 80CCD(2) for employer NPS contribution). This makes 80CCH particularly significant for Agniveers who opt for the new regime.",
+      "legalReference": "Section 115BAC(2) read with Section 80CCH",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "OTHER-R5",
+      "rule": "80DDB requires that the amount of deduction be reduced by any amount received from an insurance company or employer as reimbursement for the medical treatment. The NET expenditure (after reimbursement) is what qualifies, subject to the ₹40,000 / ₹1,00,000 limit.",
+      "legalReference": "Section 80DDB(3) — net expenditure basis",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "OTHER-R6",
+      "rule": "80GG and 80TTA cannot both be unavailable for the same reason — they serve different purposes. However, it is correct that if a taxpayer receives HRA (even partially exempt), they cannot claim 80GG but CAN still claim 80TTA on savings interest.",
+      "legalReference": "Section 80GG(a) — HRA recipient ineligibility; Section 80TTA — independent of HRA",
+      "isNewForFY202526": false
+    }
+  ],
+  "commonMistakes": [
+    "Claiming 80GG even though HRA is received from employer — if any HRA is received (regardless of how much is exempt), 80GG is not available.",
+    "Claiming 80DD for self when the taxpayer is the person with disability — should be 80U. 80DD is only for disabled dependents, not for the taxpayer's own disability.",
+    "Claiming 80DDB without a specialist's prescription — the prescription from a qualified specialist (not general practitioner) is mandatory and in the prescribed format (Form 10-I).",
+    "Senior citizens (60+) claiming 80TTA instead of 80TTB — they are only entitled to 80TTB (higher ₹50,000 limit covering FD interest), not 80TTA.",
+    "Claiming both 80TTA and 80TTB — only one is applicable; senior citizens use 80TTB exclusively.",
+    "Including FD interest in 80TTA claim — 80TTA covers only savings account interest; FD interest qualifies only under 80TTB (senior citizens).",
+    "Non-senior citizens claiming 80TTB — 80TTB is strictly for individuals aged 60 and above.",
+    "Not reducing 80DDB claim by insurance/employer reimbursement received — the deduction is on net expenditure after reimbursement.",
+    "Claiming 80GG without filing Form 10BA — Form 10BA is a mandatory declaration and must be filed before the return.",
+    "Authors claiming 80QQB for textbook royalties — only literary, artistic, or scientific books qualify; textbooks and study guides are explicitly excluded.",
+    "Missing 80CCH as an Agniveer filing under new regime — 80CCH is one of the rare Chapter VI-A deductions available in the new regime."
+  ],
+  "relatedSections": [
+    "Section 10(13A) — House Rent Allowance (HRA) exemption for salaried employees (alternative to 80GG)",
+    "Section 80D — Health insurance premium (related to 80DDB for medical treatment)",
+    "Section 80C — Not related to disability or rent, but often confused in context of 80DD (LIC policy for disabled dependent under 80DD is different from LIC under 80C)",
+    "Section 80CCD(2) — Other Chapter VI-A deduction available in new regime (alongside 80CCH)",
+    "Section 115BAC — New tax regime (only 80CCH and 80CCD(2) available from Chapter VI-A)",
+    "Patents Act, 1970 — Governs patent registration for 80RRB eligibility",
+    "Section 80GGB / 80GGC — Political party donations (different from 80G charitable donations)"
+  ],
+  "workedExample": {
+    "profile": "Senior citizen (age 65), retired. Bank interest: savings ₹8,000, FDs ₹65,000. Also pays ₹15,000 rent for accommodation (no HRA). Spouse has severe disability (80%+ disability — 80DD claim). Medical treatment for cancer: ₹90,000 (reimbursed ₹20,000 by insurer — net ₹70,000). Under old regime.",
+    "deductionClaimed": 305000,
+    "taxSaving": "80TTB: ₹50,000 (savings + FD interest ₹73,000, capped at ₹50,000). 80GG: Assume total income ₹8,00,000; least of (a) ₹15,000×12 - 10%×₹8L = ₹1,80,000-₹80,000=₹1,00,000, (b) 25%×₹8L=₹2,00,000, (c) ₹60,000 — so ₹60,000. 80DD: ₹1,25,000 (severe disability). 80DDB: ₹70,000 net (₹1,00,000 cap since senior citizen; net after ₹20K reimbursement). Total: ₹50,000+₹60,000+₹1,25,000+₹70,000 = ₹3,05,000. At 20% slab: ₹61,000 + 4% cess = ₹63,440 tax saved."
+  }
+}

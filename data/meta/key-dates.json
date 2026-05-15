@@ -1,0 +1,274 @@
+{
+  "fyApplicable": "2025-26",
+  "ayApplicable": "2026-27",
+  "lastUpdated": "2025-05-15",
+  "legalReferences": [
+    "Section 139, Income-tax Act 1961",
+    "Section 234A (late filing interest)",
+    "Section 234F (late filing fee)",
+    "CBDT Circular / Notification (for any extensions)"
+  ],
+  "categories": {
+    "itrFiling": {
+      "label": "ITR Filing Deadlines",
+      "dates": [
+        {
+          "id": "ITR-IND-HUF",
+          "event": "ITR Filing — Individuals, HUF, AOP, BOI (no tax audit required)",
+          "deadline": "2026-07-31",
+          "deadlineLabel": "July 31, 2026",
+          "section": "Section 139(1)",
+          "lateFilingFee": "Section 234F: ₹5,000 if income > ₹5L; ₹1,000 if income ≤ ₹5L",
+          "lateFilingInterest": "Section 234A: 1% per month or part thereof on unpaid tax",
+          "extensionHistory": "Historically extended in some years (COVID, portal issues). Check CBDT circulars for FY 2025-26 actual date.",
+          "notes": "This is the standard due date for non-audit cases. Extension notifications, if any, will supersede this date."
+        },
+        {
+          "id": "ITR-TAX-AUDIT",
+          "event": "ITR Filing — Entities requiring Tax Audit u/s 44AB",
+          "deadline": "2026-10-31",
+          "deadlineLabel": "October 31, 2026",
+          "section": "Section 139(1) read with Section 44AB",
+          "notes": "Applicable to businesses with turnover > ₹1 Crore (or ₹10 Crore with 95% digital transactions) and professionals with gross receipts > ₹50 lakh"
+        },
+        {
+          "id": "ITR-TRANSFER-PRICING",
+          "event": "ITR Filing — International/Specified Domestic Transactions (Transfer Pricing)",
+          "deadline": "2026-11-30",
+          "deadlineLabel": "November 30, 2026",
+          "section": "Section 139(1) read with Section 92E",
+          "notes": "Applicable to companies/entities with international transactions or specified domestic transactions above threshold"
+        },
+        {
+          "id": "ITR-REVISED",
+          "event": "Revised Return Filing (u/s 139(5))",
+          "deadline": "2027-03-31",
+          "deadlineLabel": "March 31, 2027",
+          "section": "Section 139(5)",
+          "notes": "Can be filed if original return had any omission/wrong statement. Must be filed before completion of assessment, whichever is earlier. Note: Cannot be filed after assessment order."
+        },
+        {
+          "id": "ITR-BELATED",
+          "event": "Belated Return Filing (u/s 139(4))",
+          "deadline": "2026-12-31",
+          "deadlineLabel": "December 31, 2026",
+          "section": "Section 139(4)",
+          "lateFilingFee": "Section 234F applies",
+          "notes": "If ITR not filed by July 31, 2026. Must be filed before assessment is completed or December 31, 2026 — whichever is earlier. Subject to late filing fee u/s 234F."
+        },
+        {
+          "id": "ITR-UPDATED",
+          "event": "Updated Return Filing (u/s 139(8A) — ITR-U)",
+          "deadline": "2028-03-31",
+          "deadlineLabel": "March 31, 2028 (2 years from end of AY)",
+          "section": "Section 139(8A), Income-tax Act 1961",
+          "additionalTax": "25% additional tax on unpaid tax (if filed within 12 months of AY end); 50% (if filed between 12-24 months)",
+          "notes": "Updated return allows taxpayers to correct under-reporting of income. Not available if assessment order passed, or for losses/refund increase. Requires payment of additional tax."
+        }
+      ]
+    },
+    "taxAudit": {
+      "label": "Tax Audit & Related Reports",
+      "dates": [
+        {
+          "id": "AUDIT-44AB",
+          "event": "Tax Audit Report u/s 44AB (Form 3CA/3CB + 3CD)",
+          "deadline": "2026-09-30",
+          "deadlineLabel": "September 30, 2026",
+          "notes": "Must be filed before ITR filing. Earlier of September 30, 2026 or date of ITR filing."
+        },
+        {
+          "id": "AUDIT-92E",
+          "event": "Transfer Pricing Report u/s 92E (Form 3CEB)",
+          "deadline": "2026-10-31",
+          "deadlineLabel": "October 31, 2026"
+        },
+        {
+          "id": "AUDIT-29B",
+          "event": "MAT/AMT Report u/s 115JB/115JC (Form 29B)",
+          "deadline": "2026-10-31",
+          "deadlineLabel": "October 31, 2026",
+          "notes": "Applicable to companies subject to MAT; LLPs/firms subject to AMT"
+        }
+      ]
+    },
+    "advanceTax": {
+      "label": "Advance Tax Payment Deadlines (FY 2025-26)",
+      "legalReference": "Section 207, 208, 209, 210, Income-tax Act 1961",
+      "applicability": "Applies if estimated tax liability for the year exceeds ₹10,000 after TDS credit",
+      "dates": [
+        {
+          "id": "ADV-1",
+          "installment": "1st Installment",
+          "deadline": "2025-06-15",
+          "deadlineLabel": "June 15, 2025",
+          "minimumPercentage": 15,
+          "notes": "At least 15% of estimated annual tax liability must be paid by June 15, 2025"
+        },
+        {
+          "id": "ADV-2",
+          "installment": "2nd Installment",
+          "deadline": "2025-09-15",
+          "deadlineLabel": "September 15, 2025",
+          "minimumPercentage": 45,
+          "notes": "Cumulative advance tax paid by September 15 must be at least 45% of estimated liability"
+        },
+        {
+          "id": "ADV-3",
+          "installment": "3rd Installment",
+          "deadline": "2025-12-15",
+          "deadlineLabel": "December 15, 2025",
+          "minimumPercentage": 75,
+          "notes": "Cumulative advance tax paid by December 15 must be at least 75% of estimated liability"
+        },
+        {
+          "id": "ADV-4",
+          "installment": "4th / Final Installment",
+          "deadline": "2026-03-15",
+          "deadlineLabel": "March 15, 2026",
+          "minimumPercentage": 100,
+          "notes": "100% of estimated tax liability (net of TDS) by March 15, 2026. Presumptive income taxpayers (44AD/44ADA) pay 100% in single installment by March 15."
+        }
+      ],
+      "presumptiveTaxpayers": {
+        "note": "Taxpayers under Section 44AD or 44ADA (presumptive income) may pay entire advance tax in one installment by March 15, 2026. Section 234C interest for earlier installments does not apply to them.",
+        "legalReference": "Proviso to Section 211(1), Income-tax Act 1961"
+      }
+    },
+    "tds": {
+      "label": "TDS / TCS Compliance Deadlines",
+      "dates": [
+        {
+          "id": "TDS-Q1-RETURN",
+          "event": "TDS/TCS Return — Q1 (April–June 2025)",
+          "deadline": "2025-07-31",
+          "deadlineLabel": "July 31, 2025",
+          "form": "Form 24Q (Salary), 26Q (Others), 27EQ (TCS)"
+        },
+        {
+          "id": "TDS-Q2-RETURN",
+          "event": "TDS/TCS Return — Q2 (July–September 2025)",
+          "deadline": "2025-10-31",
+          "deadlineLabel": "October 31, 2025"
+        },
+        {
+          "id": "TDS-Q3-RETURN",
+          "event": "TDS/TCS Return — Q3 (October–December 2025)",
+          "deadline": "2026-01-31",
+          "deadlineLabel": "January 31, 2026"
+        },
+        {
+          "id": "TDS-Q4-RETURN",
+          "event": "TDS/TCS Return — Q4 (January–March 2026)",
+          "deadline": "2026-05-31",
+          "deadlineLabel": "May 31, 2026"
+        },
+        {
+          "id": "FORM-16-SALARY",
+          "event": "Form 16 (TDS Certificate for Salary) issuance to employees",
+          "deadline": "2026-06-15",
+          "deadlineLabel": "June 15, 2026",
+          "notes": "Employer must issue Form 16 (Part A + Part B) to all employees by June 15, 2026"
+        },
+        {
+          "id": "FORM-16A",
+          "event": "Form 16A (TDS Certificate for non-salary) issuance",
+          "deadlineNote": "Within 15 days from due date of TDS return for each quarter",
+          "notes": "Q4: Due by June 15, 2026"
+        }
+      ]
+    },
+    "eVerification": {
+      "label": "E-Verification of Filed ITR",
+      "dates": [
+        {
+          "id": "EVERIFY-DEADLINE",
+          "event": "E-Verification of ITR after filing",
+          "deadlineDays": 30,
+          "deadlineNote": "Within 30 days from date of filing the ITR",
+          "section": "Rule 12AC, Income-tax Rules 1962",
+          "legalReference": "CBDT Notification No. 5/2023 (reduced from 120 days to 30 days)",
+          "consequences": [
+            "If not verified within 30 days, ITR is treated as invalid (as if not filed)",
+            "Late verification is possible but ITR will be treated as filed on the date of verification (not original filing date)",
+            "Interest u/s 234A and fee u/s 234F may apply from actual filing date"
+          ],
+          "methods": ["Aadhaar OTP", "Net Banking EVC", "Bank Account EVC", "Demat Account EVC", "Digital Signature Certificate (DSC)", "Physical ITR-V to CPC Bengaluru"]
+        }
+      ]
+    },
+    "assessmentProcessing": {
+      "label": "Assessment & Processing Timelines",
+      "dates": [
+        {
+          "id": "SCRUTINY-143-2",
+          "event": "Issue of notice for scrutiny assessment u/s 143(2)",
+          "deadlineMonths": 6,
+          "deadlineNote": "Within 6 months from end of AY (i.e., by September 30, 2027 for AY 2026-27)",
+          "section": "Section 143(2), Income-tax Act 1961"
+        },
+        {
+          "id": "ASSESSMENT-COMPLETION",
+          "event": "Completion of regular assessment u/s 143(3)",
+          "deadlineNote": "12 months from end of AY (i.e., by March 31, 2028 for AY 2026-27)",
+          "section": "Section 153, Income-tax Act 1961"
+        },
+        {
+          "id": "REASSESSMENT-148",
+          "event": "Issue of notice for reassessment u/s 148",
+          "deadlineNote": "3 years from end of AY for income escaped ≤ ₹50L; 10 years for income escaped > ₹50L (with PCIT/CIT approval)",
+          "section": "Sections 148, 149, Income-tax Act 1961"
+        },
+        {
+          "id": "RECTIFICATION-154",
+          "event": "Rectification u/s 154 (by taxpayer or AO)",
+          "deadlineNote": "Within 4 years from end of FY in which order was passed",
+          "section": "Section 154, Income-tax Act 1961"
+        }
+      ]
+    },
+    "gst": {
+      "label": "Key GST Dates (Cross-reference for business filers)",
+      "note": "GST compliance is separate from income tax, but relevant for ITR-3/4 filers to cross-reference turnover",
+      "dates": [
+        {
+          "id": "GSTR-9-AY2526",
+          "event": "GSTR-9 (Annual Return for FY 2025-26)",
+          "deadline": "2026-12-31",
+          "deadlineLabel": "December 31, 2026 (typically)",
+          "notes": "GST turnover in GSTR-9 should reconcile with ITR turnover"
+        }
+      ]
+    }
+  },
+  "interestAndPenaltySummary": {
+    "section234A": {
+      "name": "Interest for late filing of return",
+      "rate": "1% per month or part thereof",
+      "period": "From due date of filing to date of actual filing",
+      "base": "Tax payable after allowing TDS, advance tax, and self-assessment tax",
+      "note": "No interest if no tax is due"
+    },
+    "section234B": {
+      "name": "Interest for default in advance tax payment",
+      "rate": "1% per month or part thereof",
+      "period": "From April 1 of the AY to date of assessment",
+      "base": "Tax payable minus advance tax paid",
+      "applicability": "If advance tax paid < 90% of assessed tax"
+    },
+    "section234C": {
+      "name": "Interest for deferment of advance tax",
+      "rate": "1% per month",
+      "period": "3 months each for June 15, September 15, December 15 installments; 1 month for March 15",
+      "applicability": "If advance tax paid in each installment < required percentage"
+    },
+    "section234F": {
+      "name": "Fee for default in furnishing return of income",
+      "rates": [
+        { "condition": "Total income > ₹5 lakh and return filed after due date", "fee": 5000 },
+        { "condition": "Total income ≤ ₹5 lakh and return filed after due date", "fee": 1000 },
+        { "condition": "Total income below basic exemption limit", "fee": 0 }
+      ]
+    }
+  }
+}

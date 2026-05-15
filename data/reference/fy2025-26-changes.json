@@ -1,0 +1,316 @@
+{
+  "fyApplicable": "2025-26",
+  "ayApplicable": "2026-27",
+  "title": "Key Changes for FY 2025-26 (AY 2026-27)",
+  "summary": "Comprehensive registry of income tax amendments effective for FY 2025-26, primarily from Finance Act 2025 (Budget February 1, 2025) and CBDT notifications for AY 2026-27 ITR forms.",
+  "lastUpdated": "2025-05-15",
+  "changes": [
+    {
+      "changeId": "FA25-001",
+      "category": "tax-regime",
+      "priority": "critical",
+      "title": "New Tax Regime Remains Default; Nil Slab Extended to ₹4 Lakh",
+      "section": "Section 115BAC, Income-tax Act 1961",
+      "legalReference": "Finance Act 2025",
+      "summary": "The new tax regime u/s 115BAC continues as the default regime for FY 2025-26. The nil-rate slab has been extended from ₹3 lakh to ₹4 lakh. Combined with the standard deduction of ₹75,000, salaried individuals effectively pay zero tax on income up to ₹4,75,000.",
+      "impact": "high",
+      "affectedForms": ["ITR-1", "ITR-2", "ITR-3", "ITR-4"],
+      "affectedAssesseeTypes": ["Resident Individual", "NRI", "HUF"],
+      "effectiveFrom": "2025-04-01",
+      "practicalImplication": "Every taxpayer must now actively opt OUT of the new regime (via Form 10-IEA if they have business income) if they want old regime deductions (80C, 80D, HRA, etc.). Salaried individuals can make the choice at the time of filing ITR.",
+      "comparisonOldFY": {
+        "fy": "2024-25",
+        "nilSlabTo": 300000,
+        "change": "Nil slab extended from ₹3L to ₹4L"
+      },
+      "isNewForFY202526": true
+    },
+    {
+      "changeId": "FA25-002",
+      "category": "tax-regime",
+      "priority": "critical",
+      "title": "Section 87A Rebate Raised to ₹60,000 Under New Regime (Income up to ₹12 Lakh Tax-Free)",
+      "section": "Section 87A, Income-tax Act 1961",
+      "legalReference": "Finance Act 2025",
+      "summary": "Under the new tax regime, the rebate u/s 87A has been increased to ₹60,000 (from ₹25,000 under old regime). This effectively eliminates income tax for taxable income up to ₹12 lakh. For salaried employees with standard deduction of ₹75,000, income up to ₹12,75,000 becomes tax-free.",
+      "impact": "high",
+      "affectedForms": ["ITR-1", "ITR-2", "ITR-3", "ITR-4"],
+      "effectiveFrom": "2025-04-01",
+      "practicalImplication": "Individuals with total income up to ₹12 lakh (new regime) need not pay any income tax. This is a major benefit for middle-income taxpayers. Note: Special rate incomes (LTCG, STCG, etc.) are NOT covered by the rebate — tax on such incomes is payable even if total income is below ₹12L.",
+      "comparisonOldFY": {
+        "fy": "2024-25",
+        "oldRegimedRebateLimit": 500000,
+        "oldRegimeMaxRebate": 12500,
+        "newRegimeRebateLimit": 700000,
+        "newRegimeMaxRebate": 25000,
+        "change": "New regime 87A rebate raised from ₹25,000 (income ≤ ₹7L) to ₹60,000 (income ≤ ₹12L)"
+      },
+      "importantCaveat": "The rebate applies only to tax on normal income at slab rates. Tax on special rate incomes (LTCG u/s 112A, STCG u/s 111A, VDA u/s 115BBH) is not covered by the rebate.",
+      "isNewForFY202526": true
+    },
+    {
+      "changeId": "FA25-003",
+      "category": "form-eligibility",
+      "priority": "high",
+      "form": "ITR-4",
+      "title": "ITR-4 (Sugam) Now Allows Up to 2 House Properties",
+      "section": "ITR-4 Form Design — Schedule HP",
+      "legalReference": "CBDT Notification for ITR Forms AY 2026-27",
+      "summary": "Effective FY 2025-26, the ITR-4 (Sugam) form has been expanded to allow taxpayers to report income from up to 2 house properties (expanded from the previous limit of 1 house property). The overall income limit of ₹50 lakh still applies.",
+      "impact": "medium",
+      "affectedForms": ["ITR-4"],
+      "effectiveFrom": "2025-04-01",
+      "practicalImplication": "A small business owner using presumptive taxation (44AD/44ADA/44AE) who also owns 2 residential properties (e.g., one self-occupied and one let-out) can now use the simpler ITR-4 instead of being forced to file ITR-3.",
+      "conditions": [
+        "Still applies only to Resident Individuals and HUF",
+        "Total income must not exceed ₹50 lakh",
+        "Turnover/receipts thresholds for 44AD/44ADA/44AE still apply",
+        "If more than 2 house properties, must use ITR-3"
+      ],
+      "isNewForFY202526": true
+    },
+    {
+      "changeId": "FA25-004",
+      "category": "form-eligibility",
+      "priority": "high",
+      "form": "ITR-4",
+      "title": "ITR-4 Now Permits LTCG u/s 112A Up to ₹1.25 Lakh",
+      "section": "ITR-4 Form Design — Schedule CG (restricted)",
+      "legalReference": "CBDT Notification for ITR Forms AY 2026-27",
+      "summary": "For FY 2025-26, ITR-4 filers can now report Long-Term Capital Gains on listed equity shares, equity-oriented mutual funds, or units of business trusts (u/s 112A) directly in ITR-4, provided the net LTCG does not exceed ₹1,25,000 (the exemption threshold for FY 2025-26). If LTCG exceeds ₹1.25L or if capital losses are being carried forward, the taxpayer must use ITR-2 or ITR-3.",
+      "impact": "medium",
+      "affectedForms": ["ITR-4"],
+      "effectiveFrom": "2025-04-01",
+      "conditions": [
+        "Only LTCG u/s 112A (listed equity/equity MF/business trust units) is allowed in ITR-4",
+        "Net LTCG u/s 112A must not exceed ₹1,25,000",
+        "No capital losses being carried forward",
+        "No other capital gain/loss transactions",
+        "If any of these conditions fail, must switch to ITR-2/ITR-3"
+      ],
+      "practicalImplication": "Traders/professionals using presumptive taxation who also have minor equity MF redemptions no longer need to switch to ITR-3 just for a small LTCG.",
+      "isNewForFY202526": true
+    },
+    {
+      "changeId": "FA25-005",
+      "category": "disclosure",
+      "priority": "critical",
+      "form": "ITR-4",
+      "title": "Mandatory Cash & Bank Balance Disclosure in Schedule BP (ITR-4)",
+      "section": "ITR-4 Schedule BP — Financial Particulars of Business",
+      "legalReference": "CBDT Notification for ITR Forms AY 2026-27",
+      "summary": "Schedule BP in ITR-4 for FY 2025-26 now mandatorily requires disclosure of: (a) Cash balance in hand as on 31st March 2026, and (b) Aggregate bank balance across all bank accounts as on 31st March 2026. Previously, these were not required for presumptive income filers.",
+      "impact": "high",
+      "affectedForms": ["ITR-4"],
+      "effectiveFrom": "2025-04-01",
+      "purpose": "Enhance transparency and enable the Income Tax Department to correlate declared income with actual cash flows. Helps identify cases where declared presumptive income is inconsistent with actual financial position.",
+      "complianceRequirements": [
+        "Disclose actual cash in hand as on March 31, 2026 (not estimated)",
+        "Sum of closing balances across ALL bank accounts as on March 31, 2026 (savings, current, FD, etc.)",
+        "Include all accounts — even dormant or inactive accounts with balance",
+        "Exclude fixed deposits (FDs) already covered as investments unless current accounts"
+      ],
+      "redFlags": [
+        "Non-disclosure may trigger scrutiny under Section 69A (unexplained cash credits)",
+        "Inconsistency between declared cash/bank balance and bank statements can trigger notice u/s 143(2)",
+        "If bank balance significantly exceeds declared presumptive income, department may question under-reporting",
+        "Zero bank balance disclosure while showing high turnover will be flagged"
+      ],
+      "isNewForFY202526": true
+    },
+    {
+      "changeId": "FA25-006",
+      "category": "tax-slabs",
+      "priority": "high",
+      "title": "Revised New Tax Regime Slabs — Multiple New Brackets",
+      "section": "Section 115BAC, Income-tax Act 1961",
+      "legalReference": "Finance Act 2025",
+      "summary": "The new tax regime slabs for FY 2025-26 have been restructured with finer brackets compared to FY 2024-25. New brackets at 15%, 20%, and 25% have been introduced for income between ₹12L–₹24L.",
+      "impact": "high",
+      "affectedForms": ["ITR-1", "ITR-2", "ITR-3", "ITR-4"],
+      "effectiveFrom": "2025-04-01",
+      "newSlabs": [
+        { "from": 0, "to": 400000, "rate": 0 },
+        { "from": 400001, "to": 800000, "rate": 5 },
+        { "from": 800001, "to": 1200000, "rate": 10 },
+        { "from": 1200001, "to": 1600000, "rate": 15 },
+        { "from": 1600001, "to": 2000000, "rate": 20 },
+        { "from": 2000001, "to": 2400000, "rate": 25 },
+        { "from": 2400001, "to": null, "rate": 30 }
+      ],
+      "isNewForFY202526": true
+    },
+    {
+      "changeId": "FA24-001",
+      "category": "capital-gains",
+      "priority": "high",
+      "title": "LTCG Tax Rate Increased to 12.5% (from 10%) — Finance Act 2024, Applicable in FY 2025-26",
+      "section": "Section 112A, Income-tax Act 1961",
+      "legalReference": "Finance Act 2024 (effective July 23, 2024 — applicable throughout FY 2025-26)",
+      "summary": "Long-term capital gains on listed equity shares, equity-oriented MF units, and business trust units (u/s 112A) are now taxed at 12.5% (increased from 10%). The exemption limit has been raised to ₹1.25 lakh (from ₹1 lakh). Both changes were effective from July 23, 2024 and fully applicable for FY 2025-26.",
+      "impact": "high",
+      "affectedForms": ["ITR-1", "ITR-2", "ITR-3", "ITR-4"],
+      "effectiveFrom": "2024-07-23",
+      "changeDetail": {
+        "previousRate": 10,
+        "newRate": 12.5,
+        "previousExemptionLimit": 100000,
+        "newExemptionLimit": 125000
+      },
+      "isNewForFY202526": false,
+      "noteForFY202526": "This change was introduced mid-FY 2024-25 (July 23, 2024). It applies fully throughout FY 2025-26. All LTCG u/s 112A transactions in FY 2025-26 are taxed at 12.5%."
+    },
+    {
+      "changeId": "FA24-002",
+      "category": "capital-gains",
+      "priority": "high",
+      "title": "STCG Tax Rate on Equity Increased to 20% (from 15%) — Finance Act 2024",
+      "section": "Section 111A, Income-tax Act 1961",
+      "legalReference": "Finance Act 2024 (effective July 23, 2024)",
+      "summary": "Short-term capital gains on listed equity shares and equity-oriented MF units (u/s 111A) are now taxed at 20% (up from 15%). Effective July 23, 2024 — fully applicable in FY 2025-26.",
+      "impact": "high",
+      "affectedForms": ["ITR-2", "ITR-3"],
+      "effectiveFrom": "2024-07-23",
+      "changeDetail": { "previousRate": 15, "newRate": 20 },
+      "isNewForFY202526": false,
+      "noteForFY202526": "Applies to all equity disposals in FY 2025-26. Rate is 20% flat (plus 4% cess = 20.8% effective)."
+    },
+    {
+      "changeId": "FA24-003",
+      "category": "capital-gains",
+      "priority": "high",
+      "title": "LTCG on Other Assets: 12.5% Without Indexation (Finance Act 2024)",
+      "section": "Section 112, Income-tax Act 1961",
+      "legalReference": "Finance Act 2024 (effective July 23, 2024)",
+      "summary": "Long-term capital gains on assets other than equity (immovable property, unlisted shares, debt mutual funds, etc.) are now taxed at 12.5% WITHOUT indexation benefit. For immovable property acquired BEFORE July 23, 2024, the taxpayer has the option to choose the more beneficial between: (a) 12.5% without indexation, or (b) 20% with indexation.",
+      "impact": "high",
+      "affectedForms": ["ITR-2", "ITR-3", "ITR-5", "ITR-6"],
+      "effectiveFrom": "2024-07-23",
+      "changeDetail": {
+        "previousRate": 20,
+        "previousIndexation": true,
+        "newRate": 12.5,
+        "newIndexation": false,
+        "grandfatheringClause": "For property acquired before July 23, 2024: choose min of (12.5% without indexation) or (20% with indexation)"
+      },
+      "isNewForFY202526": false
+    },
+    {
+      "changeId": "FA25-007",
+      "category": "deductions",
+      "priority": "medium",
+      "title": "Section 80CCD(2) — Employer NPS Deduction Limit Enhanced",
+      "section": "Section 80CCD(2), Income-tax Act 1961",
+      "legalReference": "Finance Act 2025",
+      "summary": "The deduction limit for employer's contribution to NPS u/s 80CCD(2) has been enhanced for private sector employees. Previously, private sector employees could claim up to 10% of salary (basic + DA); this has been increased to 14% of salary (to align with the benefit available to central government employees). This deduction is available under BOTH old and new tax regimes.",
+      "impact": "medium",
+      "affectedForms": ["ITR-1", "ITR-2", "ITR-3", "ITR-4"],
+      "effectiveFrom": "2025-04-01",
+      "changeDetail": {
+        "previousLimit_privateEmployees": "10% of basic salary + DA",
+        "newLimit_privateEmployees": "14% of basic salary + DA",
+        "centralGovtEmployees": "14% (unchanged)",
+        "stateGovtEmployees": "14% (unchanged)"
+      },
+      "availableUnder": ["old-regime", "new-regime"],
+      "isNewForFY202526": true
+    },
+    {
+      "changeId": "FA25-008",
+      "category": "tcs",
+      "priority": "medium",
+      "title": "TCS on Foreign Remittances (LRS) — Threshold Raised to ₹10 Lakh",
+      "section": "Section 206C(1G), Income-tax Act 1961",
+      "legalReference": "Finance Act 2025",
+      "summary": "The threshold for TCS on remittances under the Liberalised Remittance Scheme (LRS) has been raised to ₹10 lakh per financial year (from ₹7 lakh). TCS at 20% applies on LRS remittances exceeding ₹10 lakh per year (5% for certain education/medical purposes). This affects ITR filers who remit money abroad for investments, travel, or education.",
+      "impact": "medium",
+      "affectedForms": ["ITR-2", "ITR-3"],
+      "effectiveFrom": "2025-10-01",
+      "changeDetail": {
+        "previousThreshold": 700000,
+        "newThreshold": 1000000,
+        "tcsRate_general": 20,
+        "tcsRate_education_loanFunded": 0.5,
+        "tcsRate_education_selfFunded": 5,
+        "tcsRate_medical": 5
+      },
+      "itrImpact": "TCS paid on LRS remittances appears in Form 26AS and can be claimed as credit while computing tax liability in ITR.",
+      "isNewForFY202526": true
+    },
+    {
+      "changeId": "FA25-009",
+      "category": "deductions",
+      "priority": "low",
+      "title": "Section 80D — Health Insurance Premium Deduction (Unchanged but Clarified)",
+      "section": "Section 80D, Income-tax Act 1961",
+      "legalReference": "Finance Act 2025 (no change)",
+      "summary": "Section 80D remains unchanged. Deduction for health insurance premium: ₹25,000 for self/spouse/children; additional ₹25,000 for parents (₹50,000 if senior citizens). Only available under old tax regime.",
+      "impact": "low",
+      "affectedForms": ["ITR-1", "ITR-2", "ITR-3"],
+      "isNewForFY202526": false,
+      "noteForFY202526": "No change from FY 2024-25. Available only under old regime."
+    },
+    {
+      "changeId": "FA25-010",
+      "category": "compliance",
+      "priority": "medium",
+      "title": "Updated Return (ITR-U) u/s 139(8A) — Extended to 2 Years",
+      "section": "Section 139(8A), Income-tax Act 1961",
+      "legalReference": "Finance Act 2022 onwards; in effect for FY 2025-26",
+      "summary": "Taxpayers can file an updated return (ITR-U) to declare any additional income omitted in the original/revised return. Window: 2 years from the end of the assessment year. Additional tax applies: 25% extra if filed within 12 months of AY end; 50% extra if filed within 24 months. Available until March 31, 2028 for FY 2025-26.",
+      "impact": "medium",
+      "affectedForms": ["ITR-1", "ITR-2", "ITR-3", "ITR-4", "ITR-5", "ITR-6", "ITR-7"],
+      "effectiveFrom": "2022-04-01",
+      "isNewForFY202526": false
+    },
+    {
+      "changeId": "FA25-011",
+      "category": "deductions",
+      "priority": "medium",
+      "title": "Section 80C Limit Unchanged at ₹1.5 Lakh (Old Regime Only)",
+      "section": "Section 80C, Income-tax Act 1961",
+      "legalReference": "Finance Act 2025 (no change)",
+      "summary": "Section 80C deduction limit remains at ₹1,50,000. No increase despite expectations. Available only under old tax regime. Covers PF, PPF, LIC premium, ELSS, NSC, 5-year FD, tuition fees, home loan principal, etc.",
+      "impact": "low",
+      "affectedForms": ["ITR-1", "ITR-2", "ITR-3"],
+      "isNewForFY202526": false,
+      "noteForFY202526": "No change. Old regime only."
+    }
+  ],
+  "formChangeSummary": {
+    "ITR-1": {
+      "significantChanges": ["New tax regime slabs (87A rebate up to ₹12L)", "Nil slab extended to ₹4L"],
+      "formStructureChanged": false
+    },
+    "ITR-2": {
+      "significantChanges": ["New capital gains rates (112A at 12.5%, 111A at 20%)", "New tax slabs"],
+      "formStructureChanged": false
+    },
+    "ITR-3": {
+      "significantChanges": ["Employer NPS deduction limit enhanced to 14%", "Capital gains rate changes"],
+      "formStructureChanged": false
+    },
+    "ITR-4": {
+      "significantChanges": [
+        "Mandatory bank balance disclosure in Schedule BP",
+        "Eligibility expanded to 2 house properties",
+        "LTCG u/s 112A reporting allowed (within exemption limit)",
+        "New tax slabs under new regime"
+      ],
+      "formStructureChanged": true,
+      "isNewForFY202526": true
+    },
+    "ITR-5": {
+      "significantChanges": ["No major structural changes for FY 2025-26"],
+      "formStructureChanged": false
+    },
+    "ITR-6": {
+      "significantChanges": ["No major structural changes for FY 2025-26"],
+      "formStructureChanged": false
+    },
+    "ITR-7": {
+      "significantChanges": ["No major structural changes for FY 2025-26"],
+      "formStructureChanged": false
+    }
+  }
+}

@@ -1,0 +1,224 @@
+{
+  "fyApplicable": "2025-26",
+  "description": "Matrix mapping assessee type and income sources to the recommended ITR form. Use this as a quick reference table.",
+  "lastUpdated": "2025-05-15",
+  "legend": {
+    "RECOMMENDED": "This form is the correct/primary form for this combination",
+    "ALTERNATIVE": "This form can be used as alternative in certain conditions",
+    "NOT_APPLICABLE": "This form cannot be used for this assessee/income combination"
+  },
+  "assesseeTypes": [
+    { "id": "RI", "label": "Resident Individual" },
+    { "id": "NRI", "label": "Non-Resident Individual" },
+    { "id": "RNOR", "label": "Resident but Not Ordinarily Resident" },
+    { "id": "HUF", "label": "Hindu Undivided Family" },
+    { "id": "FIRM", "label": "Partnership Firm / LLP" },
+    { "id": "COMPANY", "label": "Company (Domestic / Foreign)" },
+    { "id": "TRUST", "label": "Charitable/Religious Trust (claiming u/s 11/12)" },
+    { "id": "POLITICAL", "label": "Political Party" },
+    { "id": "UNIVERSITY", "label": "University/Research Institution u/s 10(23C)" },
+    { "id": "AOP_BOI", "label": "Association of Persons / Body of Individuals" }
+  ],
+  "matrix": [
+    {
+      "assesseeId": "RI",
+      "assesseeLabel": "Resident Individual",
+      "combinations": [
+        {
+          "incomeProfile": "Only salary/pension, one house property, other sources ≤ ₹50L total",
+          "recommendedForm": "ITR-1",
+          "conditions": "No capital gains, no business income, not a director, no unlisted shares, no foreign assets, not NRI, one property max",
+          "alternativeForms": ["ITR-2"],
+          "fy202526Note": null
+        },
+        {
+          "incomeProfile": "Salary + any capital gains (LTCG/STCG) OR multiple properties OR director OR unlisted shares",
+          "recommendedForm": "ITR-2",
+          "conditions": "No business income. If business income too, use ITR-3.",
+          "alternativeForms": [],
+          "fy202526Note": "LTCG u/s 112A: 12.5% above ₹1.25L; STCG u/s 111A: 20%"
+        },
+        {
+          "incomeProfile": "Business/professional income (maintains books of accounts)",
+          "recommendedForm": "ITR-3",
+          "conditions": "Includes salary, capital gains, house property in addition to business income",
+          "alternativeForms": [],
+          "fy202526Note": null
+        },
+        {
+          "incomeProfile": "Presumptive income u/s 44AD/44ADA/44AE, income ≤ ₹50L, up to 2 HPs, LTCG 112A ≤ ₹1.25L",
+          "recommendedForm": "ITR-4",
+          "conditions": "No director status, no unlisted shares, no foreign assets, no capital losses CF",
+          "alternativeForms": ["ITR-3"],
+          "fy202526Note": "FY 2025-26: Expanded to 2 house properties; LTCG 112A allowed within ₹1.25L; Cash/bank balance mandatory in Schedule BP"
+        }
+      ]
+    },
+    {
+      "assesseeId": "NRI",
+      "assesseeLabel": "Non-Resident Individual",
+      "combinations": [
+        {
+          "incomeProfile": "India-sourced income: salary, house property, capital gains (no business)",
+          "recommendedForm": "ITR-2",
+          "conditions": "NRIs cannot use ITR-1 or ITR-4 under any circumstances",
+          "alternativeForms": [],
+          "fy202526Note": "NRE account interest: exempt u/s 10(4). FCNR interest: exempt. NRO interest: taxable."
+        },
+        {
+          "incomeProfile": "Business income from India operations",
+          "recommendedForm": "ITR-3",
+          "conditions": "NRI with business income from India must use ITR-3",
+          "alternativeForms": [],
+          "fy202526Note": null
+        }
+      ]
+    },
+    {
+      "assesseeId": "RNOR",
+      "assesseeLabel": "Resident but Not Ordinarily Resident",
+      "combinations": [
+        {
+          "incomeProfile": "Any income combination",
+          "recommendedForm": "ITR-2",
+          "conditions": "RNOR cannot use ITR-1. Must use ITR-2 minimum. If business income, use ITR-3.",
+          "alternativeForms": ["ITR-3"],
+          "fy202526Note": null
+        }
+      ]
+    },
+    {
+      "assesseeId": "HUF",
+      "assesseeLabel": "Hindu Undivided Family",
+      "combinations": [
+        {
+          "incomeProfile": "Investment income, house property, capital gains (no business)",
+          "recommendedForm": "ITR-2",
+          "conditions": "HUF cannot use ITR-1",
+          "alternativeForms": [],
+          "fy202526Note": null
+        },
+        {
+          "incomeProfile": "Presumptive business income u/s 44AD or 44AE, income ≤ ₹50L",
+          "recommendedForm": "ITR-4",
+          "conditions": "HUF is eligible for 44AD and 44AE but NOT 44ADA (professionals only). Expanded HP allowed in FY 2025-26.",
+          "alternativeForms": ["ITR-3"],
+          "fy202526Note": "HUF cannot use 44ADA. 44AD and 44AE eligible."
+        },
+        {
+          "incomeProfile": "Regular business income (books of accounts)",
+          "recommendedForm": "ITR-3",
+          "conditions": "HUF with regular business maintains books and files ITR-3",
+          "alternativeForms": [],
+          "fy202526Note": null
+        }
+      ]
+    },
+    {
+      "assesseeId": "FIRM",
+      "assesseeLabel": "Partnership Firm / LLP",
+      "combinations": [
+        {
+          "incomeProfile": "All income types",
+          "recommendedForm": "ITR-5",
+          "conditions": "All partnership firms (registered or unregistered), LLPs, AOP, BOI file ITR-5",
+          "alternativeForms": [],
+          "fy202526Note": null
+        }
+      ]
+    },
+    {
+      "assesseeId": "COMPANY",
+      "assesseeLabel": "Company",
+      "combinations": [
+        {
+          "incomeProfile": "All companies NOT claiming exemption u/s 11",
+          "recommendedForm": "ITR-6",
+          "conditions": "Domestic companies, foreign companies, Section 8 companies not claiming u/s 11",
+          "alternativeForms": [],
+          "fy202526Note": "Section 115BAA (22% flat) and 115BAB (15% for new manufacturing) available"
+        },
+        {
+          "incomeProfile": "Company registered u/s 12A/12AB claiming exemption u/s 11",
+          "recommendedForm": "ITR-7",
+          "conditions": "Section 8 companies that are registered charitable institutions",
+          "alternativeForms": [],
+          "fy202526Note": null
+        }
+      ]
+    },
+    {
+      "assesseeId": "TRUST",
+      "assesseeLabel": "Charitable / Religious Trust",
+      "combinations": [
+        {
+          "incomeProfile": "All income — claiming exemption u/s 11/12",
+          "recommendedForm": "ITR-7",
+          "conditions": "Trust registered u/s 12A or 12AB with CBDT",
+          "alternativeForms": [],
+          "fy202526Note": null
+        }
+      ]
+    },
+    {
+      "assesseeId": "POLITICAL",
+      "assesseeLabel": "Political Party",
+      "combinations": [
+        {
+          "incomeProfile": "All income of political parties",
+          "recommendedForm": "ITR-7",
+          "conditions": "Political parties registered with Election Commission file u/s 139(4B)",
+          "alternativeForms": [],
+          "fy202526Note": null
+        }
+      ]
+    },
+    {
+      "assesseeId": "UNIVERSITY",
+      "assesseeLabel": "University / Research Institution u/s 10(23C)",
+      "combinations": [
+        {
+          "incomeProfile": "All income of approved institutions",
+          "recommendedForm": "ITR-7",
+          "conditions": "Institutions approved u/s 10(23C)(iii) to (vi) file ITR-7",
+          "alternativeForms": [],
+          "fy202526Note": null
+        }
+      ]
+    },
+    {
+      "assesseeId": "AOP_BOI",
+      "assesseeLabel": "Association of Persons / Body of Individuals",
+      "combinations": [
+        {
+          "incomeProfile": "Regular income (business, investment, property)",
+          "recommendedForm": "ITR-5",
+          "conditions": "AOP/BOI not claiming u/s 11 exemption files ITR-5",
+          "alternativeForms": [],
+          "fy202526Note": null
+        },
+        {
+          "incomeProfile": "AOP registered u/s 12A/12AB, claiming u/s 11",
+          "recommendedForm": "ITR-7",
+          "conditions": "Charitable AOP/BOI registered as charitable institution",
+          "alternativeForms": [],
+          "fy202526Note": null
+        }
+      ]
+    }
+  ],
+  "quickReferenceTable": {
+    "description": "Simple lookup: Assessee Type → Eligible Forms",
+    "data": [
+      { "assesseeType": "Resident Individual (simple income)", "forms": ["ITR-1"] },
+      { "assesseeType": "Resident Individual (capital gains, director, foreign)", "forms": ["ITR-2"] },
+      { "assesseeType": "Resident Individual (business — presumptive)", "forms": ["ITR-4"] },
+      { "assesseeType": "Resident Individual (business — regular books)", "forms": ["ITR-3"] },
+      { "assesseeType": "NRI", "forms": ["ITR-2", "ITR-3"] },
+      { "assesseeType": "HUF", "forms": ["ITR-2", "ITR-3", "ITR-4"] },
+      { "assesseeType": "Partnership Firm / LLP / AOP / BOI", "forms": ["ITR-5"] },
+      { "assesseeType": "Company (not claiming 11/12)", "forms": ["ITR-6"] },
+      { "assesseeType": "Charitable Trust / Political Party / University", "forms": ["ITR-7"] }
+    ]
+  }
+}

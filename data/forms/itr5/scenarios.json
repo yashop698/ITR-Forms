@@ -1,0 +1,441 @@
+{
+  "formId": "ITR-5",
+  "fyApplicable": "2025-26",
+  "scenarios": [
+    {
+      "scenarioId": "ITR5-S1",
+      "title": "Simple 2-Partner Firm — Profitable Year with Partner Remuneration",
+      "complexity": "Beginner",
+      "tags": ["partnership-firm", "section-40b", "partner-remuneration", "interest-on-capital", "no-tax-payable"],
+      "taxpayerProfile": {
+        "name": "M/s ABC Traders",
+        "entityType": "Partnership Firm (Registered)",
+        "location": "Delhi",
+        "businessActivity": "Trading",
+        "numberOfPartners": 2,
+        "profitSharingRatio": "50:50",
+        "partnerCapital": 1000000,
+        "turnover": 4500000,
+        "taxAuditRequired": false
+      },
+      "schedulesToFill": ["PART-A-GEN", "SCHED-BP", "PART-B-GTI", "PART-B-TTI", "SCHED-CFL"],
+      "stepByStepFilling": [
+        {
+          "step": 1,
+          "action": "Fill Part A General — enter firm name, PAN (starts with 'F' as 4th character), Delhi address, GSTIN if registered, business code for Trading.",
+          "notes": "Tax audit is not required since turnover ₹45L < ₹1 crore threshold."
+        },
+        {
+          "step": 2,
+          "action": "Compute book profit for Section 40(b): Net profit before partner payments per P&L = ₹8,00,000.",
+          "notes": "Book profit = Net profit as per P&L + remuneration already debited. Here remuneration not yet debited, so book profit = ₹8,00,000."
+        },
+        {
+          "step": 3,
+          "action": "Compute allowable partner remuneration u/s 40(b): First ₹3,00,000 of book profit × 90% = ₹2,70,000; Balance book profit ₹5,00,000 × 60% = ₹3,00,000; Total allowable = ₹5,70,000.",
+          "notes": "Actual remuneration paid = ₹5,70,000 = exactly the allowed limit. No disallowance."
+        },
+        {
+          "step": 4,
+          "action": "Compute allowable interest u/s 40(b): Total partner capital = ₹10,00,000 × 2 = ₹20,00,000. Maximum allowed interest = 12% per annum = ₹2,40,000 per partner = ₹4,80,000 total.",
+          "notes": "Assume interest actually paid = ₹4,80,000 (exactly 12%). Full amount is deductible."
+        },
+        {
+          "step": 5,
+          "action": "Compute firm's taxable income in Schedule BP: Net profit ₹8,00,000 − Remuneration ₹5,70,000 − Interest ₹4,80,000 = (−₹2,50,000) = LOSS.",
+          "notes": "Firm's taxable income is negative. No tax payable. Loss will be carried forward in Schedule CFL."
+        },
+        {
+          "step": 6,
+          "action": "Fill Schedule CFL: Business loss ₹2,50,000 to be carried forward for 8 assessment years (can be set off against future business income).",
+          "notes": "Return must be filed by July 31, 2026 (due date for non-audit cases) to preserve the right to carry forward this loss."
+        },
+        {
+          "step": 7,
+          "action": "Fill Part B-GTI with total income = ₹0 (loss situation). Fill Part B-TTI: Tax = ₹0, TDS = ₹0, Advance tax = ₹0.",
+          "notes": "Partners file ITR-3 individually — each partner reports remuneration ₹2,85,000 + interest ₹2,40,000 = ₹5,25,000 as income from firm (remuneration under business income, interest under other sources)."
+        }
+      ],
+      "taxComputation": {
+        "regime": "Normal — Flat 30% for partnership firms",
+        "grossTotalIncome": 0,
+        "deductions": 0,
+        "taxableIncome": 0,
+        "taxBreakdown": [
+          {
+            "slabFrom": 0,
+            "slabTo": 0,
+            "rate": "30%",
+            "taxAmount": 0
+          }
+        ],
+        "totalBaseTax": 0,
+        "surcharge": 0,
+        "cess": 0,
+        "totalTaxLiability": 0,
+        "advanceTaxPaid": 0,
+        "tdsCredited": 0,
+        "selfAssessmentTax": 0,
+        "refundDue": 0,
+        "notes": "Firm has a business loss of ₹2,50,000 to be carried forward. Partners pay tax in their individual ITR-3 on remuneration (₹2,85,000 each) and interest (₹2,40,000 each)."
+      },
+      "redFlagsInScenario": [
+        "Ensure return is filed by due date to preserve loss carry-forward right.",
+        "Partners must include their share of remuneration and interest as taxable income in their personal ITR-3.",
+        "Do not deduct partners' share of firm profit as an expense — only remuneration and interest are deductible."
+      ],
+      "commonMistakesToAvoid": [
+        "Claiming remuneration in excess of 40(b) limits — even ₹1 extra is disallowed.",
+        "Interest claimed at more than 12% per annum — excess is disallowed.",
+        "Filing the return late (after July 31, 2026) and thereby losing the right to carry forward the business loss."
+      ],
+      "relatedScenarios": ["ITR5-S3"]
+    },
+    {
+      "scenarioId": "ITR5-S2",
+      "title": "LLP with Professional Services — Tax Audit Applicable",
+      "complexity": "Intermediate",
+      "tags": ["LLP", "professional-services", "tax-audit", "section-40b", "advance-tax"],
+      "taxpayerProfile": {
+        "name": "M/s LegalTech LLP",
+        "entityType": "Limited Liability Partnership (LLP)",
+        "location": "Mumbai",
+        "businessActivity": "Legal and Technology Consulting",
+        "numberOfPartners": 3,
+        "profitSharingRatio": "Equal (1/3 each)",
+        "grossReceipts": 12000000,
+        "taxAuditRequired": true,
+        "auditThresholdReason": "Gross receipts ₹1.2 crore > ₹1 crore threshold u/s 44AB"
+      },
+      "schedulesToFill": ["PART-A-GEN", "SCHED-BP", "SCHED-VI-A", "PART-B-GTI", "PART-B-TTI"],
+      "stepByStepFilling": [
+        {
+          "step": 1,
+          "action": "Fill Part A General — LLP details, LLPIN (MCA registration number), Mumbai address, nature of business code for professional services (legal/consulting). Mark 'Yes' for tax audit required.",
+          "notes": "Tax audit is mandatory since gross receipts ₹1.2Cr > ₹1Cr threshold. CA must issue audit report in Form 3CD before filing."
+        },
+        {
+          "step": 2,
+          "action": "Fill Schedule BP: Start with Net profit before partner payments = ₹30,00,000. Compute book profit (same since no depreciation adjustments needed here).",
+          "notes": "Book profit = ₹30,00,000."
+        },
+        {
+          "step": 3,
+          "action": "Compute allowable partner remuneration u/s 40(b): First ₹3,00,000 × 90% = ₹2,70,000; Balance ₹27,00,000 × 60% = ₹16,20,000; Total allowed = ₹18,90,000.",
+          "notes": "This is split equally: ₹6,30,000 per partner. Each partner reports this as income in their ITR-3."
+        },
+        {
+          "step": 4,
+          "action": "No interest to partners (no interest on capital clause in LLP agreement). Therefore interest deduction = ₹0.",
+          "notes": "Always check LLP agreement — interest to partners is only deductible if specifically authorised in the LLP agreement."
+        },
+        {
+          "step": 5,
+          "action": "Compute firm's taxable income: ₹30,00,000 − ₹18,90,000 = ₹11,10,000.",
+          "notes": "This is the taxable income of the LLP."
+        },
+        {
+          "step": 6,
+          "action": "Compute tax: 30% × ₹11,10,000 = ₹3,33,000. Surcharge: Nil (income < ₹1Cr). Cess: 4% × ₹3,33,000 = ₹13,320. Total tax: ₹3,46,320.",
+          "notes": "No AMT applies here since no special deductions are claimed."
+        },
+        {
+          "step": 7,
+          "action": "Fill advance tax details: Advance tax paid ₹3,00,000 (in instalments during the year). Self-assessment tax payable: ₹3,46,320 − ₹3,00,000 = ₹46,320.",
+          "notes": "Pay self-assessment tax with challan before filing the return. Due date for audit cases: October 31, 2026."
+        }
+      ],
+      "taxComputation": {
+        "regime": "Normal — Flat 30% for LLP",
+        "grossTotalIncome": 1110000,
+        "deductions": 0,
+        "taxableIncome": 1110000,
+        "taxBreakdown": [
+          {
+            "slabFrom": 0,
+            "slabTo": 1110000,
+            "rate": "30%",
+            "taxAmount": 333000
+          }
+        ],
+        "totalBaseTax": 333000,
+        "surcharge": 0,
+        "cess": 13320,
+        "totalTaxLiability": 346320,
+        "advanceTaxPaid": 300000,
+        "tdsCredited": 0,
+        "selfAssessmentTax": 46320,
+        "refundDue": 0,
+        "notes": "Net profit before partner remuneration: ₹30,00,000. Allowable remuneration u/s 40(b): ₹18,90,000. Taxable income of LLP: ₹11,10,000."
+      },
+      "redFlagsInScenario": [
+        "Tax audit report (Form 3CD) must be completed and submitted before filing the ITR.",
+        "LLP remuneration must be authorised by the LLP agreement — not just any payment to partners.",
+        "Advance tax shortfall: Only ₹3,00,000 paid vs ₹3,46,320 liability — interest u/s 234B may apply on the ₹46,320 shortfall."
+      ],
+      "commonMistakesToAvoid": [
+        "Treating LLP as a company and applying MAT provisions — MAT does not apply to LLPs.",
+        "Claiming remuneration without a corresponding clause in the LLP agreement.",
+        "Not attaching the tax audit report when filing the return."
+      ],
+      "relatedScenarios": ["ITR5-S1"]
+    },
+    {
+      "scenarioId": "ITR5-S3",
+      "title": "Partnership Firm with Business Loss — Carry Forward",
+      "complexity": "Beginner",
+      "tags": ["partnership-firm", "business-loss", "carry-forward", "section-40b", "nil-tax"],
+      "taxpayerProfile": {
+        "name": "M/s Sunrise Industries",
+        "entityType": "Partnership Firm (Registered)",
+        "location": "Ahmedabad",
+        "businessActivity": "Manufacturing",
+        "numberOfPartners": 2,
+        "turnover": 2500000,
+        "taxAuditRequired": false
+      },
+      "schedulesToFill": ["PART-A-GEN", "SCHED-BP", "SCHED-CFL", "PART-B-GTI", "PART-B-TTI"],
+      "stepByStepFilling": [
+        {
+          "step": 1,
+          "action": "Fill Part A General — firm name, PAN, Ahmedabad address, manufacturing business code. No tax audit (turnover ₹25L < ₹1Cr).",
+          "notes": "Filing deadline: July 31, 2026. CRITICAL — must file by this date to carry forward losses."
+        },
+        {
+          "step": 2,
+          "action": "Fill Schedule BP: Revenue ₹25,00,000, Expenses ₹32,00,000 → Net P&L loss = ₹7,00,000 before partner payments.",
+          "notes": "Book profit is negative (book loss of ₹7,00,000)."
+        },
+        {
+          "step": 3,
+          "action": "Partner remuneration u/s 40(b) when book profit is negative: Minimum allowable = ₹1,50,000 (even when book profit is negative or zero). Assume actual remuneration paid = ₹1,50,000.",
+          "notes": "This adds ₹1,50,000 to the firm's loss. Total business loss = ₹7,00,000 + ₹1,50,000 = ₹8,50,000."
+        },
+        {
+          "step": 4,
+          "action": "Fill Schedule CFL: Business loss of ₹8,50,000 to be carried forward.",
+          "notes": "This loss can be set off against business income in future years for up to 8 assessment years (i.e., up to AY 2034-35)."
+        },
+        {
+          "step": 5,
+          "action": "Fill Part B-GTI: Total income = ₹0 (loss). Fill Part B-TTI: Tax = ₹0.",
+          "notes": "No advance tax needed in a loss year. No penalty for non-payment of advance tax when income is nil."
+        }
+      ],
+      "taxComputation": {
+        "regime": "Normal — Flat 30% for partnership firms",
+        "grossTotalIncome": 0,
+        "deductions": 0,
+        "taxableIncome": 0,
+        "taxBreakdown": [
+          {
+            "slabFrom": 0,
+            "slabTo": 0,
+            "rate": "30%",
+            "taxAmount": 0
+          }
+        ],
+        "totalBaseTax": 0,
+        "surcharge": 0,
+        "cess": 0,
+        "totalTaxLiability": 0,
+        "advanceTaxPaid": 0,
+        "tdsCredited": 0,
+        "selfAssessmentTax": 0,
+        "refundDue": 0,
+        "notes": "Business loss of ₹8,50,000 carried forward (₹7,00,000 operating loss + ₹1,50,000 minimum partner remuneration under 40(b)). Loss can be set off against business income in next 8 assessment years."
+      },
+      "redFlagsInScenario": [
+        "CRITICAL: If return is filed after July 31, 2026 (due date), the right to carry forward the ₹8,50,000 business loss is permanently lost.",
+        "The minimum ₹1,50,000 remuneration allowed even in a loss year — but only if the partnership deed authorises it.",
+        "Partners who received remuneration of ₹75,000 each must still report it as income in their ITR-3."
+      ],
+      "commonMistakesToAvoid": [
+        "Filing return late (after due date) and losing the loss carry-forward.",
+        "Not paying interest u/s 234A on late filing if there's some tax payable in future.",
+        "Claiming loss carry-forward for more than 8 assessment years."
+      ],
+      "relatedScenarios": ["ITR5-S1", "ITR5-S2"]
+    },
+    {
+      "scenarioId": "ITR5-S4",
+      "title": "AOP (Association of Persons) with Rental Income and Interest Income",
+      "complexity": "Intermediate",
+      "tags": ["AOP", "house-property", "rental-income", "other-sources", "maximum-marginal-rate"],
+      "taxpayerProfile": {
+        "name": "Joint Property AOP (3 co-owners)",
+        "entityType": "Association of Persons (AOP)",
+        "location": "Pune",
+        "businessActivity": "Jointly owned commercial property — rental income",
+        "numberOfMembers": 3,
+        "memberSharesIndeterminate": false,
+        "membersIndividualIncome": "Each member's individual income exceeds basic exemption limit",
+        "taxAuditRequired": false
+      },
+      "schedulesToFill": ["PART-A-GEN", "SCHED-HP", "SCHED-OS", "PART-B-GTI", "PART-B-TTI"],
+      "stepByStepFilling": [
+        {
+          "step": 1,
+          "action": "Fill Part A General — AOP name, PAN (4th character 'A' for AOP), Pune address, select 'AOP' as type of assessee.",
+          "notes": "AOPs have a separate PAN. The AOP files a single ITR-5 covering all jointly-earned income."
+        },
+        {
+          "step": 2,
+          "action": "Fill Schedule HP: Gross Rent = ₹18,00,000. Municipal Taxes Paid = ₹1,50,000. Net Annual Value (NAV) = ₹18,00,000 − ₹1,50,000 = ₹16,50,000. Standard Deduction (30% of NAV) = ₹4,95,000. Net HP Income = ₹16,50,000 − ₹4,95,000 = ₹11,55,000.",
+          "notes": "TDS u/s 194I: Tenant deducts 10% TDS on rent. TDS = ₹1,80,000. This will be credited in Part B-TTI."
+        },
+        {
+          "step": 3,
+          "action": "Fill Schedule OS: FD interest income = ₹2,00,000.",
+          "notes": "Gross interest before TDS. TDS on FD interest (u/s 194A) typically 10% = ₹20,000. Add to TDS credit."
+        },
+        {
+          "step": 4,
+          "action": "Compute GTI: HP Income ₹11,55,000 + OS Income ₹2,00,000 = ₹13,55,000.",
+          "notes": "No deductions under Chapter VI-A available for AOPs except 80G."
+        },
+        {
+          "step": 5,
+          "action": "Determine AOP tax rate: Since members' individual income exceeds basic exemption limit, AOP is taxed at Maximum Marginal Rate (MMR) = 30%.",
+          "notes": "If AOP is taxed at MMR, members do not pay tax again on their share of AOP income (it is exempt in their hands u/s 86). If AOP pays at slab rates, members pay at their own slab rates on their share."
+        },
+        {
+          "step": 6,
+          "action": "Compute tax: 30% × ₹13,55,000 = ₹4,06,500. Surcharge: Nil (income < ₹1Cr). Cess: 4% × ₹4,06,500 = ₹16,260. Total tax: ₹4,22,760.",
+          "notes": "TDS credited: ₹1,80,000 (rent TDS) + ₹20,000 (FD TDS) = ₹2,00,000. Self-assessment tax: ₹4,22,760 − ₹2,00,000 = ₹2,22,760."
+        }
+      ],
+      "taxComputation": {
+        "regime": "Maximum Marginal Rate (30%) — members' income exceeds basic exemption",
+        "grossTotalIncome": 1355000,
+        "deductions": 0,
+        "taxableIncome": 1355000,
+        "taxBreakdown": [
+          {
+            "slabFrom": 0,
+            "slabTo": 1355000,
+            "rate": "30%",
+            "taxAmount": 406500
+          }
+        ],
+        "totalBaseTax": 406500,
+        "surcharge": 0,
+        "cess": 16260,
+        "totalTaxLiability": 422760,
+        "advanceTaxPaid": 0,
+        "tdsCredited": 200000,
+        "selfAssessmentTax": 222760,
+        "refundDue": 0,
+        "notes": "HP income: ₹11,55,000 (NAV ₹16,50,000 less 30% standard deduction). FD interest: ₹2,00,000. Total: ₹13,55,000. Taxed at MMR 30% since all members have income above basic exemption. TDS from tenant (194I): ₹1,80,000 and FD TDS (194A): ₹20,000 credited."
+      },
+      "redFlagsInScenario": [
+        "AOP must obtain its own PAN — using individual member's PAN is incorrect.",
+        "If shares of members in AOP income are indeterminate, MMR always applies.",
+        "TDS credit must match Form 26AS for the AOP's PAN, not individual member PANs."
+      ],
+      "commonMistakesToAvoid": [
+        "Individual members each filing separate returns for AOP income — the AOP itself must file ITR-5.",
+        "Applying slab rates instead of MMR when members have income above basic exemption.",
+        "Forgetting to claim TDS credit on rent (194I) in the AOP's return."
+      ],
+      "relatedScenarios": ["ITR5-S1"]
+    },
+    {
+      "scenarioId": "ITR5-S5",
+      "title": "Firm with Capital Gains on Sale of Business Property (Section 50 STCG)",
+      "complexity": "Advanced",
+      "tags": ["partnership-firm", "capital-gains", "section-50", "depreciable-assets", "STCG", "advance-tax"],
+      "taxpayerProfile": {
+        "name": "M/s XYZ Trading Co.",
+        "entityType": "Partnership Firm (Registered)",
+        "location": "Hyderabad",
+        "businessActivity": "Trading + Sale of business property",
+        "numberOfPartners": 2,
+        "turnover": 0,
+        "businessIncome": 1500000,
+        "factoryBuildingSaleProceeds": 4000000,
+        "factoryBuildingWDV": 800000,
+        "taxAuditRequired": true,
+        "auditThresholdReason": "Turnover from trading business exceeds ₹1 crore"
+      },
+      "schedulesToFill": ["PART-A-GEN", "SCHED-BP", "SCHED-DPM", "SCHED-DOA", "SCHED-CG", "PART-B-GTI", "PART-B-TTI"],
+      "stepByStepFilling": [
+        {
+          "step": 1,
+          "action": "Fill Part A General — firm details, Hyderabad address, mark tax audit as 'Yes' (trading turnover > ₹1Cr).",
+          "notes": "Attach Form 3CD audit report. Due date for filing: October 31, 2026."
+        },
+        {
+          "step": 2,
+          "action": "Fill Schedule BP: Business income (trading) = ₹15,00,000 after all allowable deductions including partner remuneration and interest u/s 40(b).",
+          "notes": "Assume partner remuneration and interest already factored into the ₹15,00,000 figure."
+        },
+        {
+          "step": 3,
+          "action": "Fill Schedule DOA (or DPM for the building block): Factory building WDV at start of year = ₹8,00,000. Sale proceeds = ₹40,00,000. Since sale proceeds > block WDV, the entire block is eliminated.",
+          "notes": "Under Section 50, gain on sale of a depreciable asset = Sale Proceeds − WDV of block = ₹40,00,000 − ₹8,00,000 = ₹32,00,000. This is treated as SHORT-TERM capital gain regardless of how long the asset was held."
+        },
+        {
+          "step": 4,
+          "action": "Fill Schedule CG: STCG u/s 50 = ₹32,00,000. No indexation applies (STCG under Section 50 — this is a statutory fiction, not actual STCG).",
+          "notes": "CRITICAL: Section 50 deems this as STCG even if the building was held for 30 years. No LTCG treatment, no indexation benefit."
+        },
+        {
+          "step": 5,
+          "action": "Compute GTI: Business income ₹15,00,000 + STCG u/s 50 ₹32,00,000 = ₹47,00,000.",
+          "notes": "STCG under Section 50 is taxed at the normal rate (30% for firm) — not at 20% or any special CG rate."
+        },
+        {
+          "step": 6,
+          "action": "Compute tax: 30% × ₹47,00,000 = ₹14,10,000. Surcharge: Nil (₹47L < ₹1Cr). Cess: 4% × ₹14,10,000 = ₹56,400. Total: ₹14,66,400.",
+          "notes": "TDS deducted on property sale? Note: TDS u/s 194-IA (1% by buyer on property > ₹50L) — here sale is ₹40L < ₹50L, so no 194-IA TDS."
+        },
+        {
+          "step": 7,
+          "action": "Advance tax: ₹13,00,000 paid during the year. TDS credit: ₹1,20,000 (TDS on business receipts). Self-assessment: ₹14,66,400 − ₹13,00,000 − ₹1,20,000 = ₹46,400.",
+          "notes": "Pay self-assessment challan before filing. Interest u/s 234B may apply if advance tax < 90% of total tax."
+        }
+      ],
+      "taxComputation": {
+        "regime": "Normal — Flat 30% for partnership firm; STCG u/s 50 also at 30%",
+        "grossTotalIncome": 4700000,
+        "deductions": 0,
+        "taxableIncome": 4700000,
+        "taxBreakdown": [
+          {
+            "slabFrom": 0,
+            "slabTo": 1500000,
+            "rate": "30% (Business Income)",
+            "taxAmount": 450000
+          },
+          {
+            "slabFrom": 0,
+            "slabTo": 3200000,
+            "rate": "30% (STCG u/s 50 — depreciable asset)",
+            "taxAmount": 960000
+          }
+        ],
+        "totalBaseTax": 1410000,
+        "surcharge": 0,
+        "cess": 56400,
+        "totalTaxLiability": 1466400,
+        "advanceTaxPaid": 1300000,
+        "tdsCredited": 120000,
+        "selfAssessmentTax": 46400,
+        "refundDue": 0,
+        "notes": "STCG u/s 50 on factory building: Sale ₹40,00,000 − WDV ₹8,00,000 = ₹32,00,000. Taxed at firm rate of 30%, not at 20% LTCG rate. Total income = business ₹15L + STCG ₹32L = ₹47L."
+      },
+      "redFlagsInScenario": [
+        "CRITICAL: Section 50 STCG on depreciable assets — do NOT treat as LTCG even if held for many years.",
+        "No indexation benefit on Section 50 STCG — a common error.",
+        "Partners may want to reinvest in property for Section 54F relief — but Section 54F exemption is available only to individuals/HUFs, NOT to firms."
+      ],
+      "commonMistakesToAvoid": [
+        "Claiming LTCG treatment with indexation on the factory building sale — Section 50 overrides this.",
+        "Applying special LTCG rate of 20% on Section 50 gains — firm rate of 30% applies.",
+        "Attempting to claim Section 54EC (bond investment) exemption for a firm — this exemption is only for individuals and HUFs."
+      ],
+      "relatedScenarios": ["ITR5-S1", "ITR5-S2"]
+    }
+  ]
+}

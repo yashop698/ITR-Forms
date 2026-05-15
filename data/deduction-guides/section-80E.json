@@ -1,0 +1,121 @@
+{
+  "guideId": "DG-80E",
+  "sectionId": "80E",
+  "sectionName": "Deduction in respect of interest on loan taken for higher education",
+  "fyApplicable": "2025-26",
+  "regime": "old",
+  "maxLimit": "No upper monetary limit — full interest paid is deductible for up to 8 consecutive assessment years",
+  "description": "Section 80E provides a deduction for the interest component of education loans taken for higher education. There is no maximum cap on the deduction amount — the entire interest paid during the year is deductible. The benefit is available for 8 consecutive assessment years starting from the year in which repayment begins. Loan must be taken from a financial institution or approved charitable institution.",
+  "eligibleAssessees": [
+    "Resident Individual",
+    "Non-Resident Individual"
+  ],
+  "notEligible": [
+    "HUF",
+    "Firms",
+    "Companies",
+    "AOP",
+    "BOI",
+    "Taxpayers opting for new tax regime (Section 115BAC)",
+    "Borrowers who took loan from relatives, friends, or any person other than approved institutions"
+  ],
+  "eligibleInvestments": [
+    {
+      "investmentId": "80E-01",
+      "name": "Interest on education loan — for self",
+      "limit": "No monetary limit. Full interest deductible for 8 assessment years from first repayment year.",
+      "notes": "Taxpayer must be the borrower. Loan must be from a scheduled bank, cooperative bank, or a notified charitable institution.",
+      "isNewForFY202526": false
+    },
+    {
+      "investmentId": "80E-02",
+      "name": "Interest on education loan — for spouse",
+      "limit": "No monetary limit. Full interest deductible for 8 assessment years.",
+      "notes": "Taxpayer takes loan for higher education of their spouse. The taxpayer (not the spouse) claims the deduction.",
+      "isNewForFY202526": false
+    },
+    {
+      "investmentId": "80E-03",
+      "name": "Interest on education loan — for children",
+      "limit": "No monetary limit. Full interest deductible for 8 assessment years.",
+      "notes": "Parent takes loan for child's higher education. Applies to biological children as well as children for whom the taxpayer is a legal guardian.",
+      "isNewForFY202526": false
+    },
+    {
+      "investmentId": "80E-04",
+      "name": "Interest on education loan — for student for whom taxpayer is legal guardian",
+      "limit": "No monetary limit. Full interest deductible for 8 assessment years.",
+      "notes": "Extends to students where the taxpayer is the legal guardian (not necessarily parent). Useful for single-parent families or guardianship situations.",
+      "isNewForFY202526": false
+    }
+  ],
+  "conditions": [
+    "Available only under the old tax regime. Not available under new regime (Section 115BAC).",
+    "Loan must be taken from: (a) a financial institution (scheduled bank, cooperative bank, or any banking institution notified by Central Government), or (b) an approved charitable institution as defined under the Income Tax Act.",
+    "Loan from employer, relative, friend, or any private individual is NOT eligible — only institutional loans qualify.",
+    "The loan must be for the purpose of pursuing 'higher education' — meaning any full-time or part-time educational programme, including vocational studies, pursued after passing Senior Secondary (Class 12) examination.",
+    "Deduction is available for 8 consecutive assessment years starting from the assessment year in which the taxpayer first starts repaying the loan (or until the interest is fully repaid, whichever is earlier).",
+    "Only the INTEREST portion of EMI is deductible under 80E. The principal repayment portion does NOT qualify (and does not qualify under 80C either for education loans).",
+    "Education loan taken for studies outside India (foreign universities) is also eligible, provided the other conditions are met.",
+    "There is no restriction on the course or subject matter — any higher education (graduation, post-graduation, professional courses, vocational studies after Class 12) qualifies."
+  ],
+  "documentationRequired": [
+    "Loan sanction letter from financial institution or charitable institution",
+    "Repayment statement from lender showing split of interest and principal components",
+    "Interest certificate for the financial year (issued by the bank/institution)",
+    "Proof of higher education institution and enrollment",
+    "Proof of relationship with student (for spouse/child/ward — marriage certificate, birth certificate, guardianship documents)"
+  ],
+  "keyRules": [
+    {
+      "ruleId": "80E-R1",
+      "rule": "There is NO upper limit on the amount of interest deductible under Section 80E. The entire interest paid on an education loan in a year is deductible, regardless of quantum. This makes 80E particularly valuable for large foreign education loans.",
+      "legalReference": "Section 80E of Income Tax Act, 1961",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "80E-R2",
+      "rule": "The 8-year clock starts from the assessment year in which the taxpayer begins repayment of the loan — not from when the loan was taken or when education began. If repayment starts in FY 2020-21 (AY 2021-22), the last eligible year is AY 2028-29.",
+      "legalReference": "Section 80E — Explanation (b)",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "80E-R3",
+      "rule": "'Higher education' for 80E purposes means any course of study pursued after passing Senior Secondary examination (Class 12 or equivalent). This includes graduate, post-graduate, professional, vocational, and technical courses — whether in India or abroad.",
+      "legalReference": "Section 80E — Explanation (b): definition of 'higher education'",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "80E-R4",
+      "rule": "The deduction is for interest only — not principal. Principal repayment on education loan does not qualify under any deduction section (not 80C, not 80E). Students should ensure they get an interest certificate from the bank separating interest and principal components.",
+      "legalReference": "Section 80E(1)",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "80E-R5",
+      "rule": "If the interest is paid by a parent on behalf of the student and the parent is the co-borrower, the parent (not the student) claims the deduction. The deduction follows the person who actually repays the loan.",
+      "legalReference": "Section 80E — 'paid by him' requirement",
+      "isNewForFY202526": false
+    }
+  ],
+  "commonMistakes": [
+    "Claiming 80E deduction for the principal repayment component of EMI — only the interest portion is deductible.",
+    "Claiming 80E for a loan taken from a family member, employer, or friend — only institutional loans (scheduled bank, cooperative bank, or notified charitable institution) qualify.",
+    "Claiming 80E in the 9th or later assessment year — deduction is available only for 8 consecutive assessment years from the first repayment year.",
+    "Restricting the claim to a mistaken 'cap' — there is no upper monetary limit under 80E; the full interest amount is deductible.",
+    "Claiming 80E for a diploma or certificate course taken directly without completing Senior Secondary (Class 12) — such courses do not qualify as 'higher education'.",
+    "Not claiming 80E for education loans for studies abroad — foreign university education loans also qualify under 80E.",
+    "Claiming 80E under the new tax regime — this deduction is not available in the new regime."
+  ],
+  "relatedSections": [
+    "Section 80C — Home loan principal repayment (different from education loan; no principal deduction for education loan)",
+    "Section 24(b) — Interest on home loan (different from education loan interest)",
+    "Section 10(16) — Scholarship/stipend exemption",
+    "Section 115BAC — New tax regime (80E not available)"
+  ],
+  "workedExample": {
+    "profile": "Individual took an education loan of ₹20,00,000 in 2020 for an MBA abroad. First repayment starts April 2023 (AY 2024-25). Annual interest in FY 2025-26 (AY 2026-27): ₹1,80,000. This is the 2nd of 8 eligible years.",
+    "deductionClaimed": 180000,
+    "taxSaving": "Full ₹1,80,000 interest deductible — no cap. At 30% slab: ₹54,000 + 4% cess = ₹56,160 tax saved. Benefit continues until FY 2030-31 (8th year) or full repayment, whichever is earlier."
+  }
+}

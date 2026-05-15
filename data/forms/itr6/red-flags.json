@@ -1,0 +1,112 @@
+{
+  "formId": "ITR-6",
+  "fyApplicable": "2025-26",
+  "redFlags": [
+    {
+      "id": "RF-ITR6-01",
+      "category": "mat-compliance",
+      "severity": "critical",
+      "title": "Not Computing MAT When Mandatory",
+      "description": "All companies (except those under 115BAA/115BAB) must compute MAT u/s 115JB and pay higher of normal tax or MAT. Skipping MAT computation is a critical error.",
+      "consequence": "Under-payment of tax. Interest u/s 234B and 234C. Scrutiny notice.",
+      "correction": "Always compute MAT on book profit. If MAT > normal tax, pay MAT and generate MATC credit.",
+      "legalReference": "Section 115JB, Income-tax Act 1961"
+    },
+    {
+      "id": "RF-ITR6-02",
+      "category": "tax-rate",
+      "severity": "critical",
+      "title": "Applying Wrong Tax Rate (25% vs 30%)",
+      "description": "25% rate applies only if the company's total turnover or gross receipts in the PREVIOUS financial year (FY 2024-25) did not exceed ₹400 Crore. Otherwise 30% applies.",
+      "consequence": "Under-payment of tax if 30% applied as 25%.",
+      "correction": "Verify prior-year turnover from last ITR-6 or audited accounts before selecting rate.",
+      "legalReference": "Section 115BA, Finance Act 2018"
+    },
+    {
+      "id": "RF-ITR6-03",
+      "category": "depreciation",
+      "severity": "high",
+      "title": "Depreciation on Fully Depreciated Assets",
+      "description": "If WDV of a block has been reduced to zero in a prior year, no further depreciation can be claimed. Common error: continuing to claim depreciation on old assets.",
+      "consequence": "Incorrect depreciation reduces taxable income. May trigger scrutiny.",
+      "correction": "Check opening WDV block-by-block in Schedule DPM. If zero or negative (due to disposals), no depreciation.",
+      "legalReference": "Section 32, Income-tax Act"
+    },
+    {
+      "id": "RF-ITR6-04",
+      "category": "related-party",
+      "severity": "high",
+      "title": "Excessive Related Party Payments Not Disallowed (Section 40A(2))",
+      "description": "Payments to directors, relatives, or associated companies above fair market value are disallowed u/s 40A(2). Transfer pricing rules (for international transactions) apply separately.",
+      "consequence": "Disallowance increases taxable income. Penalty for concealment.",
+      "correction": "Ensure all related party payments are at arm's length. Maintain documentation.",
+      "legalReference": "Section 40A(2), Transfer Pricing Chapter X"
+    },
+    {
+      "id": "RF-ITR6-05",
+      "category": "exempt-income",
+      "severity": "high",
+      "title": "Section 14A Disallowance Not Computed",
+      "description": "Expenses incurred to earn exempt income (dividends, MF returns) must be disallowed per Rule 8D method. Many companies skip this, understating taxable income.",
+      "consequence": "Disallowance increases taxable income. Interest and penalty if caught in assessment.",
+      "correction": "Compute Rule 8D disallowance: direct expenses + (total assets / total assets × interest + 1% of average value of investments) — see Rule 8D formula.",
+      "legalReference": "Section 14A, Rule 8D, Income-tax Rules"
+    },
+    {
+      "id": "RF-ITR6-06",
+      "category": "csr",
+      "severity": "high",
+      "title": "CSR Expenditure Claimed as Business Deduction",
+      "description": "Section 37(1) Explanation 2: CSR expenditure u/s 135 of Companies Act 2013 is NOT deductible as business expense. Must be shown in Schedule CSR without deduction.",
+      "consequence": "If claimed as deduction, taxable income understated. Disallowance on assessment.",
+      "correction": "Show CSR spending in Schedule CSR. Do NOT include in business expenses.",
+      "legalReference": "Section 37(1) Explanation 2, Section 135 Companies Act 2013"
+    },
+    {
+      "id": "RF-ITR6-07",
+      "category": "matc-credit",
+      "severity": "medium",
+      "title": "MATC Credit Not Utilized When Normal Tax Exceeds MAT",
+      "description": "In years when normal tax > MAT, the MATC credit from prior years (when MAT was paid) should be applied to reduce tax. Many companies forget this, over-paying tax.",
+      "consequence": "Excess tax payment. Cash flow loss.",
+      "correction": "Check Schedule MATC from prior returns. Apply available MATC credit in Part B-TTI.",
+      "legalReference": "Section 115JAA"
+    },
+    {
+      "id": "RF-ITR6-08",
+      "category": "advance-tax",
+      "severity": "medium",
+      "title": "Insufficient Advance Tax — Companies Must Pay 100% by March 15",
+      "description": "Companies must pay advance tax in 4 installments: 15% by June 15, 45% by Sept 15, 75% by Dec 15, 100% by March 15. Shortfall in any installment attracts interest u/s 234C.",
+      "consequence": "Interest u/s 234C at 1% per month on each installment shortfall.",
+      "correction": "Estimate income early. Pay advance tax on time in correct proportions.",
+      "legalReference": "Section 208, 211, 234C"
+    }
+  ],
+  "validationErrors": [
+    {
+      "errorCode": "ITR6-VE-01",
+      "errorMessage": "MAT computation (Schedule MAT) not filled",
+      "cause": "Company did not compute MAT — mandatory for normal-rate companies",
+      "resolution": "Fill Schedule MAT with book profit computation"
+    },
+    {
+      "errorCode": "ITR6-VE-02",
+      "errorMessage": "Balance sheet totals do not match",
+      "cause": "Total assets ≠ total liabilities + equity",
+      "resolution": "Reconcile P&L, capital accounts, and balance sheet before filing"
+    },
+    {
+      "errorCode": "ITR6-VE-03",
+      "errorMessage": "Tax audit report not attached",
+      "cause": "All companies must file tax audit report — no exemption",
+      "resolution": "Attach Form 3CA/3CD (company audit) or Form 3CB/3CD (non-company audit)"
+    },
+    {
+      "errorCode": "ITR6-VE-04",
+      "errorMessage": "CIN (Corporate Identity Number) not provided",
+      "cause": "Mandatory field for all companies",
+      "resolution": "Get CIN from MCA21 portal. For foreign companies, provide registration number."
+    }
+  ]
+}

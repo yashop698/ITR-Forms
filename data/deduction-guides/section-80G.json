@@ -1,0 +1,133 @@
+{
+  "guideId": "DG-80G",
+  "sectionId": "80G",
+  "sectionName": "Deduction in respect of donations to certain funds, charitable institutions, etc.",
+  "fyApplicable": "2025-26",
+  "regime": "old",
+  "maxLimit": "Varies: 100% or 50% of donation; with or without 10% of Adjusted GTI cap. Applicable regime: old for individuals; both regimes for firms and companies.",
+  "description": "Section 80G allows deduction for donations made to government relief funds, charitable institutions, and notified organizations. Deductions range from 50% to 100% of the donated amount, with some categories subject to a cap of 10% of Adjusted Gross Total Income (GTI). For individual assessees, 80G is available only under the old tax regime. For firms and companies, 80G is available in both old and new regimes.",
+  "eligibleAssessees": [
+    "Resident Individual (old regime only)",
+    "Non-Resident Individual (old regime only)",
+    "HUF (old regime only)",
+    "Firms (both regimes)",
+    "Companies (both regimes)",
+    "AOP",
+    "BOI"
+  ],
+  "notEligible": [
+    "Individual taxpayers opting for new regime (Section 115BAC) — 80G not available for individuals in new regime",
+    "Donors to non-registered or lapsed-registration institutions",
+    "Donors making cash contributions above ₹2,000"
+  ],
+  "eligibleInvestments": [
+    {
+      "investmentId": "80G-01",
+      "name": "Category A — 100% deduction, NO 10% GTI cap",
+      "limit": "100% of donation amount — no upper limit relative to income",
+      "notes": "Includes: PM National Relief Fund, National Defence Fund, PM Citizen Assistance and Relief in Emergency Situations (PM CARES) Fund, National Children's Fund, National Foundation for Communal Harmony, approved universities/educational institutions of national eminence, National Trust for Welfare of Persons with Autism/Cerebral Palsy/Mental Retardation/Multiple Disabilities, Zila Saksharta Samiti, National Illness Assistance Fund, and State/UT government funds established for relief of earthquake/flood victims.",
+      "isNewForFY202526": false
+    },
+    {
+      "investmentId": "80G-02",
+      "name": "Category B — 50% deduction, NO 10% GTI cap",
+      "limit": "50% of donation amount — no upper limit relative to income",
+      "notes": "Includes: Jawaharlal Nehru Memorial Fund, Indira Gandhi Memorial Trust, Rajiv Gandhi Foundation. These are historical/political memorial funds — deduction is 50% of the donated amount with no income-based cap.",
+      "isNewForFY202526": false
+    },
+    {
+      "investmentId": "80G-03",
+      "name": "Category C — 100% deduction, WITH 10% of Adjusted GTI cap",
+      "limit": "100% of donation, but donation amount considered is capped at 10% of Adjusted GTI",
+      "notes": "Includes: donations to Government or any approved local authority/institution for promoting family planning, donations to Indian Olympic Association or other notified sports bodies. Adjusted GTI = GTI minus long-term capital gain, short-term capital gain u/s 111A, income u/s 115A/115D, and deductions under 80C to 80U (other than 80G).",
+      "isNewForFY202526": false
+    },
+    {
+      "investmentId": "80G-04",
+      "name": "Category D — 50% deduction, WITH 10% of Adjusted GTI cap",
+      "limit": "50% of donation, and donation amount considered is capped at 10% of Adjusted GTI",
+      "notes": "Includes: Most registered charitable trusts and organizations (NGOs), religious trusts, educational and medical institutions registered under Section 80G. This is the most common category for donations to registered NGOs and charities.",
+      "isNewForFY202526": false
+    }
+  ],
+  "conditions": [
+    "For individual assessees: 80G is available only under the old tax regime. For firms and companies: available in both old and new regimes.",
+    "Cash donations above ₹2,000 are NOT eligible for 80G deduction. All donations above ₹2,000 must be made via cheque, demand draft, NEFT, RTGS, UPI, or other banking channels.",
+    "Cash donations of ₹2,000 or less remain eligible — but this practical limit means small cash donations (₹1,000-₹2,000) can still qualify.",
+    "The donee institution must have a valid 80G registration certificate for the financial year of donation. Expired or cancelled registrations do not qualify.",
+    "Donor must obtain a donation receipt bearing: institution's name, PAN, 80G registration number, donation amount, mode of payment, and date.",
+    "From AY 2022-23: Institutions must file Form 10BD (statement of donations) and issue Form 10BE (certificate to donor). Donors should verify and reconcile pre-filled data in their ITR.",
+    "In-kind donations (goods, services) are NOT eligible for 80G — only monetary donations qualify.",
+    "For the 10% GTI cap (Category C and D): Adjusted GTI is computed by reducing from GTI: any income on which no tax is payable, LTCG (112A and 112), STCG (111A), and deductions under 80C to 80U (except 80G itself)."
+  ],
+  "documentationRequired": [
+    "Donation receipt / acknowledgement from the institution",
+    "Institution's 80G registration certificate (copy or registration number for verification)",
+    "Institution's PAN",
+    "Form 10BE (certificate of donation) issued by institution from AY 2022-23 onwards",
+    "Bank statement / transaction record evidencing the payment (cheque number, NEFT/UPI reference)",
+    "For large donations: cancelled cheque or bank transfer confirmation"
+  ],
+  "keyRules": [
+    {
+      "ruleId": "80G-R1",
+      "rule": "Cash donations exceeding ₹2,000 are disallowed for Section 80G — effective from FY 2017-18. This is an absolute bar; no judicial discretion. Even if the receiving trust is a valid 80G institution, cash above ₹2,000 cannot be claimed.",
+      "legalReference": "Section 80G(5D) — inserted by Finance Act 2017",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "80G-R2",
+      "rule": "From AY 2022-23, institutions must register on the Income Tax portal and file Form 10BD (annual statement of donations received). Donors receive Form 10BE from the institution. The portal pre-fills donor's Schedule 80G based on Form 10BE data. Donors should cross-check this pre-filled data.",
+      "legalReference": "Section 80G(5)(vi), Rule 18AB, Form 10BD and 10BE",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "80G-R3",
+      "rule": "Adjusted GTI computation for the 10% cap: Start with GTI. Subtract: (a) LTCG included in GTI, (b) STCG u/s 111A, (c) income u/s 115A, 115AB, 115AC, 115AD, 115D, and (d) deductions under Chapter VI-A (80C to 80U, except 80G). The result is Adjusted GTI. Category C and D donations are capped at 10% of Adjusted GTI for deduction calculation.",
+      "legalReference": "Section 80G(4) — Explanation defining 'Adjusted GTI'",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "80G-R4",
+      "rule": "Individuals under the new tax regime (Section 115BAC) CANNOT claim 80G. However, firms and companies are not covered by Section 115BAC (which applies only to individuals and HUFs) and can claim 80G in their respective tax regimes.",
+      "legalReference": "Section 115BAC(2) — deductions available in new regime (80G not listed)",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "80G-R5",
+      "rule": "Donation to a political party is NOT covered under Section 80G — it falls under Section 80GGB (companies) or Section 80GGC (individuals). Political party donations under 80GGC are cash-prohibited beyond ₹2,000 as well.",
+      "legalReference": "Section 80GGB and 80GGC (separate from 80G)",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "80G-R6",
+      "rule": "Donations to foreign institutions or to institutions situated outside India are NOT eligible for 80G, even if the purpose is charitable.",
+      "legalReference": "Section 80G — Explanation 4: institution must be in India",
+      "isNewForFY202526": false
+    }
+  ],
+  "commonMistakes": [
+    "Making cash donations above ₹2,000 and expecting 80G deduction — not allowed since FY 2017-18.",
+    "Donating to an institution whose 80G registration has expired or been cancelled — always verify current registration status on the Income Tax portal.",
+    "Not entering the institution's PAN in the ITR Schedule 80G — PAN of the donee is mandatory for the deduction to be processed.",
+    "Claiming 80G in the new tax regime as an individual taxpayer — not permitted; only old regime individuals can claim 80G.",
+    "Treating the 10% GTI cap as applying to ALL 80G donations — the cap applies only to Category C and D; Category A and B have no GTI cap.",
+    "Claiming in-kind donations (food, clothes, goods) under 80G — only monetary donations are eligible.",
+    "Not cross-checking pre-filled ITR data from Form 10BE — amounts may differ from actual donations or may be missing.",
+    "Claiming donation to foreign institution under 80G — not eligible."
+  ],
+  "relatedSections": [
+    "Section 80GGA — Donations for scientific research and rural development",
+    "Section 80GGB — Contribution to political parties by companies",
+    "Section 80GGC — Contribution to political parties by individuals (different from 80G)",
+    "Section 12A / 12AB — Registration of trusts/institutions (which enables 80G registration)",
+    "Section 115BAC — New tax regime (80G not available for individuals)",
+    "Form 10BD — Statement of donations filed by institution",
+    "Form 10BE — Certificate of donation issued to donor"
+  ],
+  "workedExample": {
+    "profile": "Individual, Adjusted GTI ₹10,00,000. Donates ₹50,000 to PM National Relief Fund (100%, no cap) and ₹1,00,000 to a registered NGO (Category D: 50%, 10% GTI cap = ₹1,00,000 cap). Both via NEFT.",
+    "deductionClaimed": 100000,
+    "taxSaving": "PM National Relief Fund: 100% of ₹50,000 = ₹50,000. NGO Category D: Donation ₹1,00,000; 10% of Adjusted GTI = ₹1,00,000 (cap met); deduction = 50% × ₹1,00,000 = ₹50,000. Total 80G = ₹1,00,000. At 20% slab: ₹20,000 + 4% cess = ₹20,800 tax saved."
+  }
+}

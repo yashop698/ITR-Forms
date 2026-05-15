@@ -1,0 +1,249 @@
+{
+  "guideId": "IG-SALARY",
+  "incomeType": "Income from Salary",
+  "fyApplicable": "2025-26",
+  "description": "Comprehensive guide to taxation of salary income in India. Covers all components of salary, exemptions, deductions, perquisites, and compliance requirements for salaried employees filing income tax returns for FY 2025-26 (AY 2026-27).",
+  "relevantITRForms": ["ITR-1", "ITR-2", "ITR-3", "ITR-4"],
+  "relevantSchedules": ["Schedule-S", "Schedule-OS", "Schedule-VI-A", "Schedule-80D", "Schedule-TDS1"],
+  "taxTreatment": {
+    "oldRegime": {
+      "rate": "Slab rates (0% / 5% / 20% / 30%) after exemptions and deductions",
+      "notes": "Allows HRA exemption u/s 10(13A), LTA exemption u/s 10(5), standard deduction of ₹50,000 u/s 16(ia), professional tax deduction u/s 16(iii), and Chapter VI-A deductions (80C, 80D, etc.)"
+    },
+    "newRegime": {
+      "rate": "Revised slab rates: 0% up to ₹4L, 5% ₹4L–₹8L, 10% ₹8L–₹12L, 15% ₹12L–₹16L, 20% ₹16L–₹20L, 25% ₹20L–₹24L, 30% above ₹24L. Rebate u/s 87A up to ₹60,000 for income up to ₹12L.",
+      "notes": "Standard deduction of ₹75,000 available u/s 16(ia). Most exemptions and Chapter VI-A deductions not available. Employer NPS contribution deduction u/s 80CCD(2) still available (up to 14% of salary for government employees, 10% for others). Default regime from FY 2023-24 onwards."
+    },
+    "specialRate": null
+  },
+  "incomeComponents": [
+    {
+      "componentId": "SC-001",
+      "name": "Basic Salary",
+      "description": "Core component of salary as per employment contract. Forms the basis for computing PF, gratuity, and HRA eligibility.",
+      "exemptAmount": null,
+      "isFullyTaxable": true,
+      "relevantSection": "Section 15 and 17(1)"
+    },
+    {
+      "componentId": "SC-002",
+      "name": "House Rent Allowance (HRA)",
+      "description": "Allowance paid by employer to cover rental expenses. Partially exempt u/s 10(13A) for employees actually paying rent. Exemption is least of: (a) actual HRA received, (b) 50% of salary (metro cities: Delhi, Mumbai, Chennai, Kolkata) or 40% of salary (non-metro), (c) actual rent paid minus 10% of salary. 'Salary' here means Basic + DA (if forming part of retirement benefit) + fixed commission.",
+      "exemptAmount": "Least of: actual HRA received, 50%/40% of salary, or actual rent minus 10% of salary",
+      "isFullyTaxable": false,
+      "relevantSection": "Section 10(13A) read with Rule 2A"
+    },
+    {
+      "componentId": "SC-003",
+      "name": "Leave Travel Allowance (LTA)",
+      "description": "Allowance for travel within India on leave. Exempt for 2 journeys in a 4-year block period. Current block: 2022–2025. Next block: 2026–2029. Exemption covers economy airfare or AC first class rail fare for shortest route, for employee and family (spouse, children up to 2, dependent parents/siblings). Cash encashment without travel is fully taxable.",
+      "exemptAmount": "Actual travel expenses (economy air or AC 1st class rail) for 2 journeys in the 4-year block",
+      "isFullyTaxable": false,
+      "relevantSection": "Section 10(5) read with Rule 2B"
+    },
+    {
+      "componentId": "SC-004",
+      "name": "Special Allowances u/s 10(14)",
+      "description": "Prescribed allowances that are exempt to the extent actually spent for the purpose they are granted. Key examples: (a) Children Education Allowance — ₹100/month per child, maximum 2 children (₹2,400/year total); (b) Hostel Expenditure Allowance — ₹300/month per child, max 2 children; (c) Transport Allowance for disabled employees — ₹3,200/month; (d) Uniform allowance, research allowance, helper allowance — exempt to extent actually spent.",
+      "exemptAmount": "Varies by allowance type; prescribed limits apply",
+      "isFullyTaxable": false,
+      "relevantSection": "Section 10(14) read with Rule 2BB"
+    },
+    {
+      "componentId": "SC-005",
+      "name": "Standard Deduction",
+      "description": "Flat deduction from gross salary income — no documentation or proof required. Available to all salaried employees and pensioners. Introduced in FY 2018-19 replacing transport and medical reimbursement exemptions. Increased to ₹75,000 under new regime from FY 2024-25.",
+      "exemptAmount": "₹75,000 (new regime) / ₹50,000 (old regime)",
+      "isFullyTaxable": false,
+      "relevantSection": "Section 16(ia)"
+    },
+    {
+      "componentId": "SC-006",
+      "name": "Professional Tax",
+      "description": "State-level tax levied by employers on employees' salaries and deducted from salary. Fully deductible from gross salary income. Maximum limit set by Constitution: ₹2,500/year. Most states levy ₹200/month (₹2,400/year). Available under both regimes.",
+      "exemptAmount": "Full amount actually paid (generally ₹2,400/year)",
+      "isFullyTaxable": false,
+      "relevantSection": "Section 16(iii)"
+    },
+    {
+      "componentId": "SC-007",
+      "name": "Perquisites",
+      "description": "Benefits provided by employer in addition to salary. Taxable perquisites include: (a) Rent-free accommodation — value as per Rule 3 (government: license fee; others: % of salary based on city population); (b) Employer-provided car — ₹1,800–₹3,300/month as perquisite value depending on car capacity and driver; (c) ESOP/ESPP at exercise — FMV on exercise date minus exercise price is perquisite (TDS by employer deferred for startups); (d) Gifts > ₹5,000 in value from employer; (e) Club membership, credit card charges paid by employer. Employer's PF contribution above ₹7,50,000 (in aggregate across PF + NPS + superannuation) is taxable perquisite u/s 17(2)(vii).",
+      "exemptAmount": "₹5,000 for gifts; perquisite values computed per Rule 3",
+      "isFullyTaxable": false,
+      "relevantSection": "Section 17(2) read with Rule 3"
+    },
+    {
+      "componentId": "SC-008",
+      "name": "Gratuity",
+      "description": "Lump sum paid by employer on retirement, death, or resignation after 5 years of service. Exemption: For employees covered under Payment of Gratuity Act — least of actual gratuity, 15 days' salary × completed years of service, or ₹20,00,000. For government employees — fully exempt. For other employees not covered by PGA — least of actual, half-month's average salary × completed years, or ₹20,00,000.",
+      "exemptAmount": "Up to ₹20,00,000 (private sector); fully exempt for government employees",
+      "isFullyTaxable": false,
+      "relevantSection": "Section 10(10)"
+    }
+  ],
+  "deductionsAvailable": [
+    {
+      "sectionId": "16(ia)",
+      "name": "Standard Deduction",
+      "limit": "₹75,000 (new regime) / ₹50,000 (old regime)",
+      "regime": "both",
+      "notes": "Available to all salaried individuals and pensioners. No documentation required. Deducted from gross salary before computing income."
+    },
+    {
+      "sectionId": "16(iii)",
+      "name": "Professional Tax Deduction",
+      "limit": "Actual amount paid (max ₹2,500/year by Constitution)",
+      "regime": "both",
+      "notes": "Deduct actual professional tax paid to state government. Usually ₹2,400/year. Shown in Form 16 Part B."
+    },
+    {
+      "sectionId": "10(13A)",
+      "name": "HRA Exemption",
+      "limit": "Least of: actual HRA, 50%/40% of salary, rent paid minus 10% of salary",
+      "regime": "old",
+      "notes": "Not available in new regime. Mutually exclusive with 80GG deduction. Landlord PAN mandatory if annual rent exceeds ₹1,00,000. Cannot claim if owner of residential property in same city."
+    },
+    {
+      "sectionId": "80C",
+      "name": "Investments in specified instruments",
+      "limit": "₹1,50,000 per year",
+      "regime": "old",
+      "notes": "Covers EPF, PPF, ELSS, NSC, life insurance premium, tuition fees, home loan principal repayment, SSY, 5-year FD, NPS Tier-I. Not available under new regime."
+    },
+    {
+      "sectionId": "80D",
+      "name": "Health Insurance Premium",
+      "limit": "₹25,000 (self/family) + ₹25,000 (parents) = ₹50,000; higher limits if senior citizens",
+      "regime": "old",
+      "notes": "₹50,000 for senior citizen parents. Preventive health check-up ₹5,000 included within limit. Not available in new regime."
+    },
+    {
+      "sectionId": "80CCD(2)",
+      "name": "Employer's contribution to NPS",
+      "limit": "Up to 14% of salary for central/state government employees; up to 10% of salary for others",
+      "regime": "both",
+      "notes": "One of the few deductions available in the new regime. Salary = Basic + DA. Employer deducts and deposits. Employee reports in ITR."
+    },
+    {
+      "sectionId": "80GG",
+      "name": "Rent paid deduction (no HRA received)",
+      "limit": "Least of: ₹5,000/month, 25% of total income, or actual rent minus 10% of total income",
+      "regime": "old",
+      "notes": "Available only if employee does not receive HRA from employer and does not own a house in city of employment. Cannot be claimed along with HRA exemption."
+    }
+  ],
+  "keyRules": [
+    {
+      "ruleId": "KR-SAL-001",
+      "rule": "Employer deducts TDS u/s 192 at the average rate of income tax applicable to the employee based on estimated annual salary and declared investments. Form 16 (Part A from TRACES, Part B from employer) must be issued by June 15 of the following FY.",
+      "legalReference": "Section 192, Rule 31",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "KR-SAL-002",
+      "rule": "Employees who change jobs during the year must submit Form 12B to the new employer disclosing salary, TDS, and investments with previous employer. The new employer must aggregate and deduct TDS accordingly to prevent under-deduction.",
+      "legalReference": "Section 192(2), Rule 26A, Form 12B",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "KR-SAL-003",
+      "rule": "Employer's aggregate contribution to EPF + NPS + superannuation fund exceeding ₹7,50,000 in a year is taxable as perquisite in the employee's hands u/s 17(2)(vii). Accretions (interest/returns) on the taxable portion are also taxable.",
+      "legalReference": "Section 17(2)(vii) and 17(2)(viia)",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "KR-SAL-004",
+      "rule": "Salary received from a foreign employer by a Resident and Ordinarily Resident (ROR) is fully taxable in India at applicable slab rates. Double Tax Avoidance Agreement (DTAA) credit for taxes paid in the foreign country can be claimed via Schedule TR after filing Form 67.",
+      "legalReference": "Section 5(1), Section 90/91, Rule 128",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "KR-SAL-005",
+      "rule": "New tax regime is the default regime from FY 2023-24. To opt for old regime, salaried individuals (without business income) must declare their choice to employer at start of year and confirm by filing ITR under old regime. They can switch every year.",
+      "legalReference": "Section 115BAC, Finance Act 2023",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "KR-SAL-006",
+      "rule": "ESOP perquisite is taxable at the time of exercise (not grant or sale). For eligible startups, TDS on ESOP perquisite is deferred: payable by employee directly within 14 days of the earliest of 5 years from exercise, sale of shares, or cessation of employment.",
+      "legalReference": "Section 17(2)(vi), Section 192(1C), Notification for eligible startups",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "KR-SAL-007",
+      "rule": "Standard deduction of ₹75,000 is available under the new regime for FY 2025-26 (increased from ₹50,000 in FY 2023-24). The same ₹75,000 deduction is now also available for family pension received under new regime.",
+      "legalReference": "Section 16(ia), Finance Act 2024",
+      "isNewForFY202526": false
+    }
+  ],
+  "workedExample": {
+    "profile": "Software engineer employed in Mumbai with ₹15L CTC. Pays monthly rent of ₹20,000. Comparing old vs new regime for FY 2025-26.",
+    "incomeDetails": {
+      "basicSalary": 600000,
+      "HRA": 300000,
+      "LTA": 100000,
+      "specialAllowances": 100000,
+      "employerPFContribution": 72000,
+      "otherPerquisites": 228000,
+      "grossCTC": 1500000,
+      "monthlyRentPaid": 20000,
+      "annualRentPaid": 240000
+    },
+    "computation": {
+      "oldRegime": {
+        "grossSalary": 1500000,
+        "HRAExemptionComputation": {
+          "actualHRAReceived": 300000,
+          "fiftyPercentOfBasic_metroCity": 300000,
+          "rentPaidMinus10PercentOfBasic": 180000,
+          "exemptHRA": 180000,
+          "note": "Least of the three: ₹3,00,000, ₹3,00,000, ₹1,80,000 = ₹1,80,000"
+        },
+        "LTAExemptionClaimed": 100000,
+        "standardDeduction": 50000,
+        "professionalTax": 2400,
+        "totalDeductionsFromSalary": 332400,
+        "salaryIncome": 1167600,
+        "note": "Further 80C/80D deductions can reduce taxable income under old regime"
+      },
+      "newRegime": {
+        "grossSalary": 1500000,
+        "standardDeduction": 75000,
+        "HRAExemptionClaimed": 0,
+        "LTAExemptionClaimed": 0,
+        "salaryIncome": 1425000,
+        "note": "No HRA, LTA or most exemptions. Only standard deduction and 80CCD(2) for NPS employer contribution available."
+      }
+    },
+    "taxableIncome": 1167600,
+    "taxPayable": 0,
+    "note": "Tax payable depends on additional deductions claimed (80C, 80D etc.) in old regime and applicable slab rates. New regime income ₹14,25,000 — tax computed at new slab rates after ₹75K standard deduction."
+  },
+  "commonMistakes": [
+    "Not including value of perquisites (company car, rent-free accommodation, club membership) in gross salary — these are reflected in Form 16 but sometimes overlooked when filing manually.",
+    "Claiming HRA exemption without actually paying rent — exemption requires genuine rent payments and the landlord's PAN if annual rent exceeds ₹1,00,000.",
+    "Claiming both HRA exemption u/s 10(13A) and 80GG deduction in the same year — they are mutually exclusive.",
+    "Not reporting salary income from previous employer in the same FY — both stints must be combined to determine correct tax slab and TDS may be under-deducted.",
+    "Not reporting salary from foreign employer — fully taxable for Resident and Ordinarily Resident taxpayers even if the income is received abroad.",
+    "Treating LTA cash encashment (without actual travel) as exempt — it is fully taxable; only reimbursement against actual travel with bills qualifies.",
+    "Assuming EPF interest on contributions is always tax-free — EPF interest on employee contributions exceeding ₹2.5L/year (₹5L for government employees) is taxable from FY 2021-22.",
+    "Reporting salary income net of TDS instead of gross salary — always report gross salary; TDS appears separately as tax credit in Schedule TDS.",
+    "Not claiming standard deduction for pension income — retired employees receiving pension from former employer are also entitled to standard deduction."
+  ],
+  "auditTriggers": [
+    "Significant mismatch between Form 16 figures and ITR Schedule-S — income mismatch flags in CPC processing.",
+    "HRA exemption claimed but 26AS/AIS shows no rent receipts and landlord PAN not verified.",
+    "Salary disclosed in ITR significantly lower than reported in Form 26AS or Form 16.",
+    "Multiple Form 16s from different employers in same year but only one reported in ITR.",
+    "Employer PF contribution near ₹7.5L threshold — perquisite computation scrutinized.",
+    "ESOP perquisite not reported in year of exercise — cross-matched with employer's TDS returns.",
+    "Foreign salary received but no Schedule TR filed for DTAA credit claim — AIS may reflect foreign income."
+  ],
+  "relatedGuides": [
+    "IG-OS",
+    "IG-HP",
+    "IG-CG",
+    "IG-FOREIGN"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "formId": "ITR-6",
+  "popularName": null,
+  "fyApplicable": "2025-26",
+  "ayApplicable": "2026-27",
+  "shortDescription": "For all companies (domestic and foreign) not claiming charitable exemption u/s 11",
+  "longDescription": "ITR-6 is the income tax return for companies incorporated under the Companies Act 2013 (or earlier). This includes domestic private limited companies, public limited companies, Section 8 companies (not claiming u/s 11), and foreign companies earning income in India. It requires a complete set of financial statements (P&L, Balance Sheet), depreciation schedules, and mandatory MAT computation for most companies.",
+  "incomeLimitTotal": null,
+  "assesseeTypes": [
+    "Domestic Company (Private/Public)",
+    "Foreign Company with Indian Income",
+    "Section 8 Company (not claiming u/s 11)"
+  ],
+  "eligibilityCriteria": [
+    {
+      "id": "EC-1",
+      "criterion": "Company incorporated under Companies Act",
+      "detail": "Any company registered under the Companies Act, whether private, public, one-person company, or Section 8 company (unless claiming u/s 11).",
+      "isInclusion": true
+    },
+    {
+      "id": "EC-2",
+      "criterion": "Foreign company with Indian-sourced income",
+      "detail": "Foreign companies earning income from India (royalty, FTS, business connection, capital gains on Indian assets) must file ITR-6.",
+      "isInclusion": true
+    },
+    {
+      "id": "EC-3",
+      "criterion": "Companies under special rates (115BAA, 115BAB)",
+      "detail": "Domestic companies that have opted for 22% (115BAA) or 15% (115BAB new manufacturing) flat rates also file ITR-6.",
+      "isInclusion": true
+    }
+  ],
+  "exclusionCriteria": [
+    {
+      "id": "EX-1",
+      "criterion": "Company claiming u/s 11 charitable exemption",
+      "detail": "Section 8 companies registered u/s 12A/12AB and claiming exemption u/s 11 must use ITR-7.",
+      "consequence": "Must use ITR-7 to claim charitable exemption"
+    },
+    {
+      "id": "EX-2",
+      "criterion": "Non-company entities",
+      "detail": "Individuals, HUFs, firms, LLPs, AOP/BOI cannot use ITR-6.",
+      "consequence": "Use appropriate form: ITR-1 to 5"
+    }
+  ],
+  "hufApplicable": false,
+  "commonMisconceptions": [
+    "Misconception: Small companies don't need to file ITR-6. Reality: ALL companies must file ITR-6 regardless of income level — even loss-making or dormant companies.",
+    "Misconception: MAT doesn't apply if company is in losses. Reality: MAT is on book profit, not taxable profit. If book profit is positive (even when taxable income is negative due to carried losses), MAT applies.",
+    "Misconception: Companies paying 25% tax don't need MAT. Reality: 25% rate companies must still compute MAT and pay higher of normal tax or MAT (unless opted 115BAA/115BAB).",
+    "Misconception: 115BAA and 115BAB are the same. Reality: 115BAA (22%) is for existing companies; 115BAB (15%) is only for new manufacturing companies set up after October 1, 2019 and commencing production by March 31, 2023."
+  ],
+  "fy202526Changes": [
+    "Capital gains rates from Finance Act 2024 apply: LTCG on investments at 12.5% (no indexation), STCG via STT at 20%",
+    "No change in corporate tax rates — 25% (turnover ≤ ₹400Cr), 30% (others), 22% (115BAA), 15% (115BAB)",
+    "CBDT notification requiring detailed disclosure of benami transactions and related party payments in ITR-6"
+  ],
+  "officialFormLink": "https://www.incometax.gov.in/iec/foportal/downloads/form-and-downloads"
+}

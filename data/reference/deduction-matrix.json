@@ -1,0 +1,306 @@
+{
+  "fyApplicable": "2025-26",
+  "description": "Matrix showing which deduction sections are available in which ITR forms and under which tax regimes.",
+  "lastUpdated": "2025-05-15",
+  "regimeKey": {
+    "old": "Old Tax Regime (optional, opt-in required)",
+    "new": "New Tax Regime (default for FY 2025-26)",
+    "both": "Available under both regimes",
+    "NA": "Not available — deduction not applicable for this entity type"
+  },
+  "deductions": [
+    {
+      "sectionId": "80C",
+      "name": "Life Insurance Premium, EPF, PPF, NSC, ELSS, Home Loan Principal, Tuition Fees",
+      "maxLimit": 150000,
+      "maxLimitNote": "Combined 80C+80CCC+80CCD(1) ≤ ₹1,50,000",
+      "formApplicability": {
+        "ITR-1": { "available": true, "regime": "old" },
+        "ITR-2": { "available": true, "regime": "old" },
+        "ITR-3": { "available": true, "regime": "old" },
+        "ITR-4": { "available": true, "regime": "old" },
+        "ITR-5": { "available": false, "note": "Firms/LLPs do not get Chapter VI-A deductions (individuals only)" },
+        "ITR-6": { "available": false, "note": "Companies do not get Chapter VI-A individual deductions" },
+        "ITR-7": { "available": false, "note": "Trusts do not get individual deductions" }
+      },
+      "legalReference": "Section 80C, Income-tax Act 1961"
+    },
+    {
+      "sectionId": "80CCC",
+      "name": "Pension Fund Premium (LIC Jeevan Dhara, etc.)",
+      "maxLimit": 150000,
+      "maxLimitNote": "Within the combined ₹1.5L cap with 80C",
+      "formApplicability": {
+        "ITR-1": { "available": true, "regime": "old" },
+        "ITR-2": { "available": true, "regime": "old" },
+        "ITR-3": { "available": true, "regime": "old" },
+        "ITR-4": { "available": true, "regime": "old" },
+        "ITR-5": { "available": false },
+        "ITR-6": { "available": false },
+        "ITR-7": { "available": false }
+      },
+      "legalReference": "Section 80CCC"
+    },
+    {
+      "sectionId": "80CCD(1)",
+      "name": "Employee's Own NPS Contribution",
+      "maxLimit": "10% of salary (salaried); 20% of GTI (self-employed) — within ₹1.5L cap",
+      "formApplicability": {
+        "ITR-1": { "available": true, "regime": "old" },
+        "ITR-2": { "available": true, "regime": "old" },
+        "ITR-3": { "available": true, "regime": "old" },
+        "ITR-4": { "available": true, "regime": "old" },
+        "ITR-5": { "available": false },
+        "ITR-6": { "available": false },
+        "ITR-7": { "available": false }
+      },
+      "legalReference": "Section 80CCD(1)"
+    },
+    {
+      "sectionId": "80CCD(1B)",
+      "name": "Additional NPS Contribution (over and above 80C cap)",
+      "maxLimit": 50000,
+      "formApplicability": {
+        "ITR-1": { "available": true, "regime": "old" },
+        "ITR-2": { "available": true, "regime": "old" },
+        "ITR-3": { "available": true, "regime": "old" },
+        "ITR-4": { "available": true, "regime": "old" },
+        "ITR-5": { "available": false },
+        "ITR-6": { "available": false },
+        "ITR-7": { "available": false }
+      },
+      "legalReference": "Section 80CCD(1B)"
+    },
+    {
+      "sectionId": "80CCD(2)",
+      "name": "Employer's Contribution to NPS (available both regimes)",
+      "maxLimit": "14% of salary (central/state govt and private employees from FY 2025-26)",
+      "maxLimitNote": "FY 2025-26: Raised from 10% to 14% for private employees by Finance Act 2025",
+      "isNewForFY202526": true,
+      "formApplicability": {
+        "ITR-1": { "available": true, "regime": "both", "note": "For salaried individuals with NPS employer contribution" },
+        "ITR-2": { "available": true, "regime": "both" },
+        "ITR-3": { "available": true, "regime": "both", "note": "For partners receiving salary from firm — employer NPS not typical" },
+        "ITR-4": { "available": true, "regime": "both", "note": "Limited applicability — mainly for salaried component if any" },
+        "ITR-5": { "available": false },
+        "ITR-6": { "available": false },
+        "ITR-7": { "available": false }
+      },
+      "legalReference": "Section 80CCD(2), Finance Act 2025"
+    },
+    {
+      "sectionId": "80D",
+      "name": "Health Insurance Premium",
+      "maxLimit": "₹25,000 self/spouse/children (₹50,000 if senior citizen) + ₹25,000 parents (₹50,000 if senior)",
+      "formApplicability": {
+        "ITR-1": { "available": true, "regime": "old" },
+        "ITR-2": { "available": true, "regime": "old" },
+        "ITR-3": { "available": true, "regime": "old" },
+        "ITR-4": { "available": true, "regime": "old" },
+        "ITR-5": { "available": false },
+        "ITR-6": { "available": false },
+        "ITR-7": { "available": false }
+      },
+      "legalReference": "Section 80D"
+    },
+    {
+      "sectionId": "80DD",
+      "name": "Maintenance/Medical Treatment of Disabled Dependent",
+      "maxLimit": "₹75,000 (40-80% disability); ₹1,25,000 (severe ≥80%)",
+      "formApplicability": {
+        "ITR-1": { "available": true, "regime": "old" },
+        "ITR-2": { "available": true, "regime": "old" },
+        "ITR-3": { "available": true, "regime": "old" },
+        "ITR-4": { "available": true, "regime": "old" },
+        "ITR-5": { "available": false },
+        "ITR-6": { "available": false },
+        "ITR-7": { "available": false }
+      },
+      "legalReference": "Section 80DD"
+    },
+    {
+      "sectionId": "80DDB",
+      "name": "Medical Treatment of Specified Diseases",
+      "maxLimit": "₹40,000 (₹1,00,000 for senior citizens)",
+      "formApplicability": {
+        "ITR-1": { "available": true, "regime": "old" },
+        "ITR-2": { "available": true, "regime": "old" },
+        "ITR-3": { "available": true, "regime": "old" },
+        "ITR-4": { "available": true, "regime": "old" },
+        "ITR-5": { "available": false },
+        "ITR-6": { "available": false },
+        "ITR-7": { "available": false }
+      }
+    },
+    {
+      "sectionId": "80E",
+      "name": "Interest on Education Loan",
+      "maxLimit": "No limit — full interest deductible for 8 years",
+      "formApplicability": {
+        "ITR-1": { "available": true, "regime": "old" },
+        "ITR-2": { "available": true, "regime": "old" },
+        "ITR-3": { "available": true, "regime": "old" },
+        "ITR-4": { "available": true, "regime": "old" },
+        "ITR-5": { "available": false },
+        "ITR-6": { "available": false },
+        "ITR-7": { "available": false }
+      },
+      "legalReference": "Section 80E"
+    },
+    {
+      "sectionId": "80EE",
+      "name": "Interest on Home Loan (First-Time Buyers, pre-2017 loans)",
+      "maxLimit": 50000,
+      "maxLimitNote": "Additional ₹50,000 over and above Section 24(b) ₹2L limit. For loans sanctioned between April 1, 2016 and March 31, 2017. Loan value ≤ ₹35L and property value ≤ ₹50L.",
+      "formApplicability": {
+        "ITR-1": { "available": true, "regime": "old" },
+        "ITR-2": { "available": true, "regime": "old" },
+        "ITR-3": { "available": true, "regime": "old" },
+        "ITR-4": { "available": true, "regime": "old" },
+        "ITR-5": { "available": false },
+        "ITR-6": { "available": false },
+        "ITR-7": { "available": false }
+      },
+      "legalReference": "Section 80EE"
+    },
+    {
+      "sectionId": "80EEA",
+      "name": "Interest on Home Loan (Affordable Housing)",
+      "maxLimit": 150000,
+      "maxLimitNote": "Additional ₹1.5L for first-time homebuyers if stamp duty value ≤ ₹45L. Loan sanctioned April 1, 2019 – March 31, 2022. Cannot claim both 80EE and 80EEA.",
+      "formApplicability": {
+        "ITR-1": { "available": true, "regime": "old" },
+        "ITR-2": { "available": true, "regime": "old" },
+        "ITR-3": { "available": true, "regime": "old" },
+        "ITR-4": { "available": true, "regime": "old" },
+        "ITR-5": { "available": false },
+        "ITR-6": { "available": false },
+        "ITR-7": { "available": false }
+      },
+      "legalReference": "Section 80EEA"
+    },
+    {
+      "sectionId": "80EEB",
+      "name": "Interest on Loan for Purchase of Electric Vehicle",
+      "maxLimit": 150000,
+      "formApplicability": {
+        "ITR-1": { "available": true, "regime": "old" },
+        "ITR-2": { "available": true, "regime": "old" },
+        "ITR-3": { "available": true, "regime": "old" },
+        "ITR-4": { "available": true, "regime": "old" },
+        "ITR-5": { "available": false },
+        "ITR-6": { "available": false },
+        "ITR-7": { "available": false }
+      },
+      "legalReference": "Section 80EEB"
+    },
+    {
+      "sectionId": "80G",
+      "name": "Donations to Approved Institutions",
+      "maxLimit": "100% or 50% of donation (depending on institution), subject to 10% of adjusted GTI cap for 50% category",
+      "formApplicability": {
+        "ITR-1": { "available": true, "regime": "old" },
+        "ITR-2": { "available": true, "regime": "old" },
+        "ITR-3": { "available": true, "regime": "old" },
+        "ITR-4": { "available": true, "regime": "old" },
+        "ITR-5": { "available": true, "regime": "both", "note": "Firms can claim 80G donations" },
+        "ITR-6": { "available": true, "regime": "both", "note": "Companies can claim 80G donations" },
+        "ITR-7": { "available": false, "note": "Trusts themselves making donations — complex; typically not applicable" }
+      },
+      "legalReference": "Section 80G"
+    },
+    {
+      "sectionId": "80GG",
+      "name": "Rent Paid (for taxpayers not receiving HRA)",
+      "maxLimit": "Lower of: rent paid minus 10% of income; 25% of income; ₹5,000 per month",
+      "formApplicability": {
+        "ITR-1": { "available": true, "regime": "old", "note": "Only if employer does not provide HRA" },
+        "ITR-2": { "available": true, "regime": "old" },
+        "ITR-3": { "available": true, "regime": "old" },
+        "ITR-4": { "available": true, "regime": "old" },
+        "ITR-5": { "available": false },
+        "ITR-6": { "available": false },
+        "ITR-7": { "available": false }
+      }
+    },
+    {
+      "sectionId": "80TTA",
+      "name": "Savings Bank Interest (for individuals below 60)",
+      "maxLimit": 10000,
+      "formApplicability": {
+        "ITR-1": { "available": true, "regime": "old", "note": "Only for individuals below 60. Senior citizens use 80TTB." },
+        "ITR-2": { "available": true, "regime": "old" },
+        "ITR-3": { "available": true, "regime": "old" },
+        "ITR-4": { "available": true, "regime": "old" },
+        "ITR-5": { "available": false },
+        "ITR-6": { "available": false },
+        "ITR-7": { "available": false }
+      }
+    },
+    {
+      "sectionId": "80TTB",
+      "name": "Interest from Bank Deposits (for Senior Citizens 60+)",
+      "maxLimit": 50000,
+      "maxLimitNote": "Covers savings + FD + RD interest. Cannot claim both 80TTA and 80TTB.",
+      "formApplicability": {
+        "ITR-1": { "available": true, "regime": "old", "note": "Senior citizens only (60+)" },
+        "ITR-2": { "available": true, "regime": "old" },
+        "ITR-3": { "available": true, "regime": "old" },
+        "ITR-4": { "available": true, "regime": "old" },
+        "ITR-5": { "available": false },
+        "ITR-6": { "available": false },
+        "ITR-7": { "available": false }
+      }
+    },
+    {
+      "sectionId": "80U",
+      "name": "Deduction for Persons with Disability",
+      "maxLimit": "₹75,000 (40-80% disability); ₹1,25,000 (severe ≥80%)",
+      "formApplicability": {
+        "ITR-1": { "available": true, "regime": "old" },
+        "ITR-2": { "available": true, "regime": "old" },
+        "ITR-3": { "available": true, "regime": "old" },
+        "ITR-4": { "available": true, "regime": "old" },
+        "ITR-5": { "available": false },
+        "ITR-6": { "available": false },
+        "ITR-7": { "available": false }
+      }
+    },
+    {
+      "sectionId": "80CCH",
+      "name": "Agniveer Corpus Fund Contribution",
+      "maxLimit": "100% of contribution — fully deductible",
+      "formApplicability": {
+        "ITR-1": { "available": true, "regime": "both", "note": "Available in both old and new regime" },
+        "ITR-2": { "available": true, "regime": "both" },
+        "ITR-3": { "available": true, "regime": "both" },
+        "ITR-4": { "available": true, "regime": "both" },
+        "ITR-5": { "available": false },
+        "ITR-6": { "available": false },
+        "ITR-7": { "available": false }
+      },
+      "legalReference": "Section 80CCH"
+    }
+  ],
+  "corporateDeductions": [
+    {
+      "sectionId": "80IC",
+      "name": "Deduction for Industries in Himachal Pradesh, Uttarakhand, Northeast",
+      "formApplicability": {
+        "ITR-3": { "available": true },
+        "ITR-5": { "available": true },
+        "ITR-6": { "available": true },
+        "note": "Profit-linked deduction, available in both regimes for eligible businesses"
+      }
+    },
+    {
+      "sectionId": "10AA",
+      "name": "SEZ Unit Exemption",
+      "formApplicability": {
+        "ITR-3": { "available": true },
+        "ITR-5": { "available": true },
+        "ITR-6": { "available": true }
+      }
+    }
+  ]
+}

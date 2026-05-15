@@ -1,0 +1,188 @@
+{
+  "fyApplicable": "2025-26",
+  "description": "Matrix showing which schedules appear in each ITR form and whether they are compulsory or optional.",
+  "lastUpdated": "2025-05-15",
+  "legend": {
+    "C": "Compulsory — must be filled if applicable",
+    "O": "Optional — fill only if relevant income/transaction exists",
+    "NA": "Not applicable — schedule not present in this form",
+    "NEW": "New schedule for FY 2025-26"
+  },
+  "schedules": [
+    {
+      "scheduleId": "Part-A-General",
+      "scheduleName": "Part A — General Information (PAN, Aadhaar, Address, Bank, Regime)",
+      "description": "Personal details, bank account for refund, tax regime selection, filing category",
+      "ITR-1": "C", "ITR-2": "C", "ITR-3": "C", "ITR-4": "C",
+      "ITR-5": "C", "ITR-6": "C", "ITR-7": "C"
+    },
+    {
+      "scheduleId": "Schedule-S",
+      "scheduleName": "Schedule S — Income from Salary",
+      "description": "Salary breakup: gross salary, allowances exempt u/s 10, standard deduction, professional tax",
+      "ITR-1": "C (if salary income)", "ITR-2": "C (if salary income)", "ITR-3": "C (if salary income)",
+      "ITR-4": "O (if any salary income alongside business)", "ITR-5": "NA", "ITR-6": "NA", "ITR-7": "NA"
+    },
+    {
+      "scheduleId": "Schedule-HP",
+      "scheduleName": "Schedule HP — Income from House Property",
+      "description": "Rental income or loss from owned house property. Self-occupied: nil NAV. Let-out: rental minus deductions.",
+      "ITR-1": "O (1 property only)", "ITR-2": "O (multiple properties)", "ITR-3": "O",
+      "ITR-4": "O (up to 2 properties — expanded FY 2025-26 from 1)", "ITR-5": "O", "ITR-6": "O", "ITR-7": "NA"
+    },
+    {
+      "scheduleId": "Schedule-BP",
+      "scheduleName": "Schedule BP — Business/Professional Income Particulars",
+      "description": "ITR-3: Actual P&L, depreciation, partner remuneration. ITR-4: Presumptive income section + FY 2025-26 NEW mandatory cash/bank balance disclosure.",
+      "ITR-1": "NA", "ITR-2": "NA", "ITR-3": "C (if business/profession income)",
+      "ITR-4": "C (core presumptive income schedule)", "ITR-5": "C (partnership particulars)", "ITR-6": "C", "ITR-7": "NA"
+    },
+    {
+      "scheduleId": "Schedule-CG",
+      "scheduleName": "Schedule CG — Capital Gains",
+      "description": "Long-term and short-term capital gains from all asset types. Includes Schedule 112A (equity LTCG), Schedule CFL (loss carry-forward).",
+      "ITR-1": "NA", "ITR-2": "C (if any CG)", "ITR-3": "C (if any CG)",
+      "ITR-4": "O (restricted — LTCG 112A within ₹1.25L only, NEW FY 2025-26)", "ITR-5": "O", "ITR-6": "O", "ITR-7": "NA"
+    },
+    {
+      "scheduleId": "Schedule-112A",
+      "scheduleName": "Schedule 112A — LTCG on Listed Equity (STT-paid) — Break-up",
+      "description": "Transaction-wise break-up of LTCG on listed equity shares and equity MF units",
+      "ITR-1": "NA", "ITR-2": "C (if LTCG 112A exists)", "ITR-3": "C (if LTCG 112A exists)",
+      "ITR-4": "O (restricted to within ₹1.25L — NEW FY 2025-26)", "ITR-5": "O", "ITR-6": "O", "ITR-7": "NA"
+    },
+    {
+      "scheduleId": "Schedule-CFL",
+      "scheduleName": "Schedule CFL — Carry Forward of Losses",
+      "description": "Losses from prior years being carried forward — capital losses, house property losses, business losses",
+      "ITR-1": "NA", "ITR-2": "C (if any carry-forward)", "ITR-3": "C (if any carry-forward)",
+      "ITR-4": "NA (not allowed — CFL disqualifies ITR-4)", "ITR-5": "O", "ITR-6": "O", "ITR-7": "NA"
+    },
+    {
+      "scheduleId": "Schedule-OS",
+      "scheduleName": "Schedule OS — Income from Other Sources",
+      "description": "Interest income (savings, FD), dividend income, family pension, winnings, VDA income",
+      "ITR-1": "O", "ITR-2": "O", "ITR-3": "O",
+      "ITR-4": "O", "ITR-5": "O", "ITR-6": "O", "ITR-7": "O"
+    },
+    {
+      "scheduleId": "Schedule-VI-A",
+      "scheduleName": "Schedule VI-A — Deductions (Chapter VI-A: 80C, 80D, 80G, etc.)",
+      "description": "All individual deductions: 80C (PF, LIC), 80CCD (NPS), 80D (health), 80E (edu loan), 80G (donations), etc.",
+      "ITR-1": "O (old regime only, except 80CCD2)", "ITR-2": "O", "ITR-3": "O",
+      "ITR-4": "O", "ITR-5": "O (80G available to firms)", "ITR-6": "O (80G for companies)", "ITR-7": "NA"
+    },
+    {
+      "scheduleId": "Schedule-FA",
+      "scheduleName": "Schedule FA — Foreign Assets and Income",
+      "description": "Disclosure of foreign bank accounts, investments, business interests, and income from foreign sources",
+      "ITR-1": "NA", "ITR-2": "C (if any foreign asset/income)", "ITR-3": "C (if any foreign asset)",
+      "ITR-4": "NA (foreign assets disqualify ITR-4)", "ITR-5": "O", "ITR-6": "O", "ITR-7": "NA"
+    },
+    {
+      "scheduleId": "Schedule-FSI",
+      "scheduleName": "Schedule FSI — Foreign Source Income",
+      "description": "Income earned from sources outside India (for residents disclosing foreign income)",
+      "ITR-1": "NA", "ITR-2": "O (if foreign income)", "ITR-3": "O",
+      "ITR-4": "NA", "ITR-5": "O", "ITR-6": "O", "ITR-7": "NA"
+    },
+    {
+      "scheduleId": "Schedule-TR",
+      "scheduleName": "Schedule TR — Tax Relief (DTAA Foreign Tax Credit)",
+      "description": "Foreign tax credit claimed under Double Taxation Avoidance Agreement (DTAA). Tax paid abroad credited against Indian tax liability.",
+      "ITR-1": "NA", "ITR-2": "O (if foreign tax paid)", "ITR-3": "O",
+      "ITR-4": "NA", "ITR-5": "O", "ITR-6": "O", "ITR-7": "NA"
+    },
+    {
+      "scheduleId": "Schedule-DPM",
+      "scheduleName": "Schedule DPM — Depreciation on Plant & Machinery",
+      "description": "Block-wise depreciation computation for business assets",
+      "ITR-1": "NA", "ITR-2": "NA", "ITR-3": "O (if business assets with depreciation)",
+      "ITR-4": "NA (presumptive — no separate depreciation)", "ITR-5": "O", "ITR-6": "C", "ITR-7": "O"
+    },
+    {
+      "scheduleId": "Schedule-DOA",
+      "scheduleName": "Schedule DOA — Depreciation on Other Assets (Buildings, etc.)",
+      "description": "Depreciation on buildings and other fixed assets (non-P&M)",
+      "ITR-1": "NA", "ITR-2": "NA", "ITR-3": "O",
+      "ITR-4": "NA", "ITR-5": "O", "ITR-6": "C", "ITR-7": "O"
+    },
+    {
+      "scheduleId": "Schedule-UDL",
+      "scheduleName": "Schedule UDL — Unabsorbed Depreciation and Losses",
+      "description": "Carry-forward of unabsorbed depreciation from previous years",
+      "ITR-1": "NA", "ITR-2": "NA", "ITR-3": "O",
+      "ITR-4": "NA", "ITR-5": "O", "ITR-6": "C (if any UDL)", "ITR-7": "O"
+    },
+    {
+      "scheduleId": "Schedule-MAT",
+      "scheduleName": "Schedule MAT — Minimum Alternate Tax Computation (Section 115JB)",
+      "description": "MAT computation: 15% of book profit if lower than normal tax. Only for companies.",
+      "ITR-1": "NA", "ITR-2": "NA", "ITR-3": "NA",
+      "ITR-4": "NA", "ITR-5": "NA", "ITR-6": "C (if MAT applicable)", "ITR-7": "NA"
+    },
+    {
+      "scheduleId": "Schedule-AMT",
+      "scheduleName": "Schedule AMT — Alternate Minimum Tax (Section 115JC) for non-corporate entities",
+      "description": "AMT at 18.5% of adjusted total income for partnership firms and LLPs claiming deductions u/s 10AA, 80HH to 80RRB",
+      "ITR-1": "NA", "ITR-2": "NA", "ITR-3": "O",
+      "ITR-4": "NA", "ITR-5": "O", "ITR-6": "NA", "ITR-7": "NA"
+    },
+    {
+      "scheduleId": "Schedule-TDS1",
+      "scheduleName": "Schedule TDS1 — TDS on Salary",
+      "description": "TDS deducted by employer on salary. Data from Form 16.",
+      "ITR-1": "O (if employer TDS)", "ITR-2": "O", "ITR-3": "O",
+      "ITR-4": "O", "ITR-5": "NA", "ITR-6": "NA", "ITR-7": "NA"
+    },
+    {
+      "scheduleId": "Schedule-TDS2",
+      "scheduleName": "Schedule TDS2 — TDS on Non-Salary Income",
+      "description": "TDS on FD interest, rent, professional fees, dividends, etc.",
+      "ITR-1": "O", "ITR-2": "O", "ITR-3": "O",
+      "ITR-4": "O", "ITR-5": "O", "ITR-6": "O", "ITR-7": "O"
+    },
+    {
+      "scheduleId": "Schedule-TCS",
+      "scheduleName": "Schedule TCS — Tax Collected at Source",
+      "description": "TCS on LRS remittances, vehicle purchase, goods purchase, etc. Credited against tax liability.",
+      "ITR-1": "O", "ITR-2": "O", "ITR-3": "O",
+      "ITR-4": "O", "ITR-5": "O", "ITR-6": "O", "ITR-7": "O"
+    },
+    {
+      "scheduleId": "Schedule-IT",
+      "scheduleName": "Schedule IT — Advance Tax and Self-Assessment Tax",
+      "description": "Challan details for advance tax payments and self-assessment tax paid",
+      "ITR-1": "O", "ITR-2": "O", "ITR-3": "O",
+      "ITR-4": "O", "ITR-5": "O", "ITR-6": "O", "ITR-7": "O"
+    },
+    {
+      "scheduleId": "Part-B-GTI",
+      "scheduleName": "Part B — Gross Total Income",
+      "description": "Summary of all income heads: salary + HP + CG + business + other sources",
+      "ITR-1": "C", "ITR-2": "C", "ITR-3": "C",
+      "ITR-4": "C", "ITR-5": "C", "ITR-6": "C", "ITR-7": "C"
+    },
+    {
+      "scheduleId": "Part-B-TTI",
+      "scheduleName": "Part B-TTI — Total Tax Liability",
+      "description": "Final computation: total income → tax at rates → surcharge → cess → rebate → TDS credit → net payable/refund",
+      "ITR-1": "C", "ITR-2": "C", "ITR-3": "C",
+      "ITR-4": "C", "ITR-5": "C", "ITR-6": "C", "ITR-7": "C"
+    },
+    {
+      "scheduleId": "Schedule-EI",
+      "scheduleName": "Schedule EI — Exempt Income",
+      "description": "Income exempt from tax: agricultural income, NRE interest, dividends (pre-DDT), LTCG within exempt limit, etc.",
+      "ITR-1": "O", "ITR-2": "O", "ITR-3": "O",
+      "ITR-4": "O", "ITR-5": "O", "ITR-6": "O", "ITR-7": "O"
+    },
+    {
+      "scheduleId": "Schedule-SI",
+      "scheduleName": "Schedule SI — Special Rate Income",
+      "description": "Income taxable at special rates: LTCG at 12.5%, STCG at 20%, lottery at 30%, VDA at 30%",
+      "ITR-1": "NA", "ITR-2": "O", "ITR-3": "O",
+      "ITR-4": "O (restricted 112A only)", "ITR-5": "O", "ITR-6": "O", "ITR-7": "NA"
+    }
+  ]
+}

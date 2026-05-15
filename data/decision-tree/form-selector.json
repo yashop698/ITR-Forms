@@ -1,0 +1,496 @@
+{
+  "version": "FY 2025-26",
+  "ayApplicable": "2026-27",
+  "description": "Interactive decision tree to help taxpayers select the correct ITR form for FY 2025-26. Start at node Q1 and follow the path based on user answers.",
+  "startNodeId": "Q1",
+  "nodes": [
+    {
+      "nodeId": "Q1",
+      "type": "question",
+      "step": 1,
+      "questionText": "What is your legal status as a taxpayer?",
+      "helpText": "Select the category that best describes you. This determines which family of ITR forms is applicable.",
+      "options": [
+        {
+          "optionId": "Q1-A",
+          "label": "Resident Individual (Indian citizen living in India)",
+          "helpText": "An individual who satisfies the residential conditions u/s 6(1) — present in India for 182+ days in the FY, or 60+ days in FY and 365+ days in preceding 4 FYs",
+          "nextNodeId": "Q2"
+        },
+        {
+          "optionId": "Q1-B",
+          "label": "Non-Resident Individual (NRI / Seafarer / Indian Abroad)",
+          "helpText": "An individual who does NOT satisfy residential conditions u/s 6(1). Includes Resident but Not Ordinarily Resident (RNOR) for some income types.",
+          "nextNodeId": "Q2-NRI"
+        },
+        {
+          "optionId": "Q1-C",
+          "label": "Hindu Undivided Family (HUF)",
+          "helpText": "A joint family with a Karta. HUF is a distinct tax entity from individual members.",
+          "nextNodeId": "Q2-HUF"
+        },
+        {
+          "optionId": "Q1-D",
+          "label": "Partnership Firm or LLP",
+          "helpText": "A registered partnership firm or Limited Liability Partnership (LLP) under the Partnership Act / LLP Act",
+          "nextNodeId": "RESULT-ITR5"
+        },
+        {
+          "optionId": "Q1-E",
+          "label": "Company (Private, Public, or Foreign)",
+          "helpText": "Any company incorporated under Companies Act 2013 or foreign company with income in India",
+          "nextNodeId": "Q1-E-COMPANY"
+        },
+        {
+          "optionId": "Q1-F",
+          "label": "Trust, Society, or Institution (Charitable/Religious)",
+          "helpText": "Any person registered u/s 12A/12AB or claiming exemption u/s 11/12",
+          "nextNodeId": "RESULT-ITR7"
+        },
+        {
+          "optionId": "Q1-G",
+          "label": "AOP, BOI, or Artificial Juridical Person",
+          "helpText": "Association of Persons, Body of Individuals, or entities like universities, statutory corporations",
+          "nextNodeId": "Q1-G-AOP"
+        }
+      ]
+    },
+    {
+      "nodeId": "Q1-E-COMPANY",
+      "type": "question",
+      "step": 2,
+      "questionText": "Is this company claiming exemption under Section 11 or 12 (as a charitable/religious institution)?",
+      "options": [
+        {
+          "optionId": "Q1-E-A",
+          "label": "No — regular company (business, investment, etc.)",
+          "nextNodeId": "RESULT-ITR6"
+        },
+        {
+          "optionId": "Q1-E-B",
+          "label": "Yes — company registered u/s 12A/12AB and claiming u/s 11/12",
+          "nextNodeId": "RESULT-ITR7"
+        }
+      ]
+    },
+    {
+      "nodeId": "Q1-G-AOP",
+      "type": "question",
+      "step": 2,
+      "questionText": "Is this AOP/BOI registered as a charitable institution (claiming exemption u/s 11/12)?",
+      "options": [
+        {
+          "optionId": "Q1-G-A",
+          "label": "No — ordinary AOP/BOI with business or investment income",
+          "nextNodeId": "RESULT-ITR5"
+        },
+        {
+          "optionId": "Q1-G-B",
+          "label": "Yes — registered u/s 12A/12AB and claiming exemption",
+          "nextNodeId": "RESULT-ITR7"
+        }
+      ]
+    },
+    {
+      "nodeId": "Q2",
+      "type": "question",
+      "step": 2,
+      "questionText": "Do you have business or professional income? (Select Yes if you are self-employed, run a trade/business, or provide professional services)",
+      "helpText": "Business income includes trade, shop, manufacturing, trading. Professional income includes CA, doctor, lawyer, architect, engineer, consultant services.",
+      "options": [
+        {
+          "optionId": "Q2-A",
+          "label": "Yes — and I use a presumptive income scheme (44AD, 44ADA, 44AE, or 44B)",
+          "helpText": "44AD: Small businesses; 44ADA: Specified professionals; 44AE: Goods vehicle operators; 44B: Shipping business",
+          "nextNodeId": "Q3-PRESUMPTIVE"
+        },
+        {
+          "optionId": "Q2-B",
+          "label": "Yes — I maintain regular books of accounts (actual profit/loss)",
+          "helpText": "You prepare a Profit & Loss Account and Balance Sheet",
+          "nextNodeId": "RESULT-ITR3"
+        },
+        {
+          "optionId": "Q2-C",
+          "label": "No — I have no business or professional income",
+          "helpText": "Income is only from salary, house property, capital gains, or other sources",
+          "nextNodeId": "Q3-INDIVIDUAL"
+        }
+      ]
+    },
+    {
+      "nodeId": "Q2-NRI",
+      "type": "question",
+      "step": 2,
+      "questionText": "As an NRI, do you have business or professional income in India?",
+      "options": [
+        {
+          "optionId": "Q2-NRI-A",
+          "label": "Yes — business/professional income in India",
+          "helpText": "Business operated through a branch/agent in India, or professional services rendered in India",
+          "nextNodeId": "RESULT-ITR3",
+          "note": "NRIs with business income typically use ITR-3. ITR-4 presumptive schemes are available to NRIs only for limited cases (44AE)."
+        },
+        {
+          "optionId": "Q2-NRI-B",
+          "label": "No — only salary, capital gains, property, or other India-sourced income",
+          "nextNodeId": "RESULT-ITR2-NRI"
+        }
+      ]
+    },
+    {
+      "nodeId": "Q2-HUF",
+      "type": "question",
+      "step": 2,
+      "questionText": "What type of income does the HUF have?",
+      "options": [
+        {
+          "optionId": "Q2-HUF-A",
+          "label": "Presumptive business income (44AD or 44AE)",
+          "nextNodeId": "Q3-HUF-PRESUMPTIVE"
+        },
+        {
+          "optionId": "Q2-HUF-B",
+          "label": "Regular business income (maintains books of accounts)",
+          "nextNodeId": "RESULT-ITR3"
+        },
+        {
+          "optionId": "Q2-HUF-C",
+          "label": "No business income (investments, capital gains, house property, etc.)",
+          "nextNodeId": "Q3-HUF-NOINCOME"
+        }
+      ]
+    },
+    {
+      "nodeId": "Q3-HUF-PRESUMPTIVE",
+      "type": "question",
+      "step": 3,
+      "questionText": "Does the HUF have any of these disqualifying factors?",
+      "options": [
+        {
+          "optionId": "Q3-HUF-A",
+          "label": "More than 2 house properties",
+          "nextNodeId": "RESULT-ITR3"
+        },
+        {
+          "optionId": "Q3-HUF-B",
+          "label": "Capital gains of any type (other than LTCG 112A within ₹1.25L)",
+          "nextNodeId": "RESULT-ITR3"
+        },
+        {
+          "optionId": "Q3-HUF-C",
+          "label": "Foreign income or foreign assets",
+          "nextNodeId": "RESULT-ITR3"
+        },
+        {
+          "optionId": "Q3-HUF-D",
+          "label": "None of the above",
+          "nextNodeId": "RESULT-ITR4"
+        }
+      ]
+    },
+    {
+      "nodeId": "Q3-HUF-NOINCOME",
+      "type": "question",
+      "step": 3,
+      "questionText": "Does the HUF have capital gains or more than 1 house property?",
+      "options": [
+        {
+          "optionId": "Q3-HUF-NI-A",
+          "label": "Yes — has capital gains or multiple house properties",
+          "nextNodeId": "RESULT-ITR2"
+        },
+        {
+          "optionId": "Q3-HUF-NI-B",
+          "label": "No — only house property income (1 property) and other sources",
+          "nextNodeId": "RESULT-ITR2",
+          "note": "HUFs cannot file ITR-1. They must use ITR-2 minimum."
+        }
+      ]
+    },
+    {
+      "nodeId": "Q3-PRESUMPTIVE",
+      "type": "question",
+      "step": 3,
+      "questionText": "Do any of these conditions apply to you? (Any YES answer may require a different form)",
+      "helpText": "These are disqualifying factors that prevent use of the simpler ITR-4 form.",
+      "options": [
+        {
+          "optionId": "Q3P-A",
+          "label": "I own more than 2 house properties",
+          "nextNodeId": "RESULT-ITR3"
+        },
+        {
+          "optionId": "Q3P-B",
+          "label": "I have capital gains other than LTCG u/s 112A within ₹1.25 lakh",
+          "helpText": "This includes STCG on equity, LTCG on property, capital losses being carried forward, or LTCG u/s 112A above ₹1.25 lakh",
+          "nextNodeId": "RESULT-ITR3"
+        },
+        {
+          "optionId": "Q3P-C",
+          "label": "I am a Director in any company",
+          "nextNodeId": "RESULT-ITR3"
+        },
+        {
+          "optionId": "Q3P-D",
+          "label": "I held unlisted equity shares at any time during FY 2025-26",
+          "nextNodeId": "RESULT-ITR3"
+        },
+        {
+          "optionId": "Q3P-E",
+          "label": "I have foreign income, foreign assets, or signing authority in foreign accounts",
+          "nextNodeId": "RESULT-ITR3"
+        },
+        {
+          "optionId": "Q3P-F",
+          "label": "My total income (all sources) exceeds ₹50 lakh",
+          "nextNodeId": "RESULT-ITR3"
+        },
+        {
+          "optionId": "Q3P-G",
+          "label": "None of the above — I'm eligible for ITR-4",
+          "nextNodeId": "RESULT-ITR4"
+        }
+      ]
+    },
+    {
+      "nodeId": "Q3-INDIVIDUAL",
+      "type": "question",
+      "step": 3,
+      "questionText": "Which of these apply to you? (Select the first that applies)",
+      "helpText": "We need to determine if you need ITR-2 or can use the simpler ITR-1",
+      "options": [
+        {
+          "optionId": "Q3I-A",
+          "label": "I am a Director in any company",
+          "helpText": "Even a nominee director of any company disqualifies ITR-1",
+          "nextNodeId": "RESULT-ITR2"
+        },
+        {
+          "optionId": "Q3I-B",
+          "label": "I held unlisted equity shares at any point during FY 2025-26",
+          "helpText": "Even holding 1 share in an unlisted company for 1 day disqualifies ITR-1",
+          "nextNodeId": "RESULT-ITR2"
+        },
+        {
+          "optionId": "Q3I-C",
+          "label": "I have any capital gains (long-term or short-term) or capital losses",
+          "helpText": "Any amount of capital gain — including LTCG u/s 112A even within the exempt limit",
+          "nextNodeId": "RESULT-ITR2"
+        },
+        {
+          "optionId": "Q3I-D",
+          "label": "I own more than 1 house property",
+          "nextNodeId": "RESULT-ITR2"
+        },
+        {
+          "optionId": "Q3I-E",
+          "label": "I have foreign income or foreign assets",
+          "helpText": "Includes foreign bank accounts, overseas investments, foreign salary, etc.",
+          "nextNodeId": "RESULT-ITR2"
+        },
+        {
+          "optionId": "Q3I-F",
+          "label": "My total income exceeds ₹50 lakh",
+          "nextNodeId": "RESULT-ITR2"
+        },
+        {
+          "optionId": "Q3I-G",
+          "label": "None of the above — I have only salary, 1 house property (or none), and other sources",
+          "nextNodeId": "RESULT-ITR1"
+        }
+      ]
+    },
+    {
+      "nodeId": "RESULT-ITR1",
+      "type": "result",
+      "recommendedForm": "ITR-1",
+      "popularName": "Sahaj",
+      "confidence": "high",
+      "color": "green",
+      "explanation": "You are a resident individual with simple income sources. ITR-1 (Sahaj) is the correct and simplest form for you.",
+      "eligibilitySummary": [
+        "Resident Individual only",
+        "Salary or pension income (any amount)",
+        "Maximum 1 house property",
+        "Other sources (savings interest, dividends, etc.)",
+        "Agricultural income up to ₹5,000",
+        "Total income must not exceed ₹50 lakh"
+      ],
+      "warnings": [
+        "Confirm you are NOT a director in any company",
+        "Confirm you did NOT hold unlisted equity shares at any time in FY 2025-26",
+        "Confirm you have NO capital gains of any type"
+      ],
+      "nextSteps": [
+        "Collect Form 16 from employer",
+        "Check Form 26AS and AIS on income tax portal",
+        "File by July 31, 2026"
+      ],
+      "fy202526Notes": [
+        "Default regime is NEW tax regime — evaluate old vs new regime before filing",
+        "Standard deduction under new regime: ₹75,000",
+        "Zero tax up to ₹12,75,000 income (new regime, salaried with standard deduction)"
+      ]
+    },
+    {
+      "nodeId": "RESULT-ITR2",
+      "type": "result",
+      "recommendedForm": "ITR-2",
+      "popularName": null,
+      "confidence": "high",
+      "color": "blue",
+      "explanation": "You need ITR-2 because you have capital gains, multiple house properties, are a director/shareholder of unlisted company, or have foreign income.",
+      "eligibilitySummary": [
+        "Resident Individuals AND NRIs",
+        "HUFs",
+        "Capital gains (LTCG, STCG, or capital losses)",
+        "Multiple house properties",
+        "Directors in companies",
+        "Holders of unlisted equity shares",
+        "Foreign income or foreign assets"
+      ],
+      "warnings": [
+        "If you also have business/professional income (books of accounts), you need ITR-3 instead",
+        "If you have presumptive income (44AD/44ADA) with no disqualifying factors, check ITR-4 eligibility"
+      ],
+      "fy202526Notes": [
+        "LTCG u/s 112A: Taxed at 12.5% above ₹1.25 lakh exemption",
+        "STCG u/s 111A: Taxed at 20% flat",
+        "Schedule FA mandatory if foreign assets or foreign accounts"
+      ]
+    },
+    {
+      "nodeId": "RESULT-ITR2-NRI",
+      "type": "result",
+      "recommendedForm": "ITR-2",
+      "popularName": null,
+      "confidence": "high",
+      "color": "blue",
+      "explanation": "As an NRI with India-sourced income (salary, property, capital gains, etc.), you must file ITR-2. NRIs cannot use ITR-1.",
+      "eligibilitySummary": [
+        "NRI with salary/pension from India",
+        "NRI with house property income in India",
+        "NRI with capital gains on Indian assets",
+        "NRI with NRO account interest (taxable)"
+      ],
+      "warnings": [
+        "NRE account interest is exempt u/s 10(4) — do not include as taxable income",
+        "FCNR account interest is exempt — report in Schedule EI (exempt income)",
+        "DTAA benefits may apply depending on the country of residence — consult a tax advisor"
+      ]
+    },
+    {
+      "nodeId": "RESULT-ITR3",
+      "type": "result",
+      "recommendedForm": "ITR-3",
+      "popularName": null,
+      "confidence": "high",
+      "color": "orange",
+      "explanation": "You need ITR-3 because you have business or professional income (maintaining books of accounts), or you have additional income types that disqualify ITR-4.",
+      "eligibilitySummary": [
+        "Individual or HUF with business/professional income (regular books)",
+        "Individual who switched from presumptive (44AD) to regular books",
+        "Individual with business income + multiple house properties + capital gains",
+        "Partners in partnership firms (for their individual ITR)",
+        "Equity F&O traders (speculative + non-speculative business)"
+      ],
+      "warnings": [
+        "Must prepare Profit & Loss Account and Balance Sheet if turnover > ₹1 Crore (or professional receipts > ₹50L)",
+        "Tax audit u/s 44AB may be required",
+        "F&O trading loss can be set off against business income but not against salary"
+      ],
+      "fy202526Notes": [
+        "Employer NPS contribution u/s 80CCD(2) deduction raised to 14% (available in both regimes)"
+      ]
+    },
+    {
+      "nodeId": "RESULT-ITR4",
+      "type": "result",
+      "recommendedForm": "ITR-4",
+      "popularName": "Sugam",
+      "confidence": "high",
+      "color": "green",
+      "explanation": "You qualify for ITR-4 (Sugam) — the simplified form for presumptive income taxpayers. No need to maintain detailed books of accounts.",
+      "eligibilitySummary": [
+        "Resident Individual or HUF using presumptive income scheme",
+        "Section 44AD: Small businesses with turnover ≤ ₹3 Crore (digital-heavy) or ≤ ₹2 Crore (otherwise)",
+        "Section 44ADA: Specified professionals with gross receipts ≤ ₹75 lakh",
+        "Section 44AE: Goods transport operators (≤ 10 vehicles)",
+        "Total income ≤ ₹50 lakh",
+        "Up to 2 house properties (NEW for FY 2025-26)",
+        "LTCG u/s 112A within ₹1.25 lakh (NEW for FY 2025-26)"
+      ],
+      "warnings": [
+        "If you opt out of presumptive scheme, you cannot re-enter for 5 years (44AD)",
+        "If cash transactions exceed 5% of turnover, the higher limit of ₹3 Crore does not apply for 44AD"
+      ],
+      "fy202526Notes": [
+        "NEW: Mandatory disclosure of cash balance and bank balance in Schedule BP as on March 31, 2026",
+        "NEW: Up to 2 house properties allowed in ITR-4",
+        "NEW: LTCG u/s 112A up to ₹1.25 lakh can be reported in ITR-4"
+      ]
+    },
+    {
+      "nodeId": "RESULT-ITR5",
+      "type": "result",
+      "recommendedForm": "ITR-5",
+      "popularName": null,
+      "confidence": "high",
+      "color": "purple",
+      "explanation": "Partnership firms, LLPs, AOPs, BOIs, and similar entities file ITR-5.",
+      "eligibilitySummary": [
+        "Partnership firms (registered or unregistered)",
+        "Limited Liability Partnerships (LLPs)",
+        "Association of Persons (AOP)",
+        "Body of Individuals (BOI)",
+        "Cooperative Societies",
+        "Artificial Juridical Persons (not covered elsewhere)"
+      ],
+      "warnings": [
+        "Partners file their individual ITRs separately (ITR-2 or ITR-3) for their personal income including share from firm",
+        "Share of profit from a partnership firm is EXEMPT in the hands of partner u/s 10(2A)"
+      ]
+    },
+    {
+      "nodeId": "RESULT-ITR6",
+      "type": "result",
+      "recommendedForm": "ITR-6",
+      "popularName": null,
+      "confidence": "high",
+      "color": "purple",
+      "explanation": "All companies (domestic and foreign) not claiming exemption u/s 11 must file ITR-6.",
+      "eligibilitySummary": [
+        "Domestic companies (Private, Public, OPC, Section 8, etc.)",
+        "Foreign companies with income sourced from India",
+        "Excludes companies claiming exemption u/s 11 (those use ITR-7)"
+      ],
+      "warnings": [
+        "Section 8 companies that are charitable (registered u/s 12A/12AB) may use ITR-7 instead",
+        "E-filing of ITR-6 is mandatory — no physical filing",
+        "DSC (Digital Signature Certificate) is mandatory for companies"
+      ]
+    },
+    {
+      "nodeId": "RESULT-ITR7",
+      "type": "result",
+      "recommendedForm": "ITR-7",
+      "popularName": null,
+      "confidence": "high",
+      "color": "gray",
+      "explanation": "Persons required to file under Sections 139(4A), 139(4B), 139(4C), or 139(4D) — including charitable trusts, political parties, research institutions, and universities.",
+      "eligibilitySummary": [
+        "Trusts registered u/s 12A/12AB claiming exemption u/s 11/12",
+        "Political parties u/s 139(4B)",
+        "Scientific research associations, news agencies, trade unions u/s 139(4C)",
+        "Universities, colleges, institutions u/s 10(23C)",
+        "Mutual funds, securitization trusts u/s 139(4D)"
+      ],
+      "warnings": [
+        "Trust registration under FCRA may have additional compliance requirements",
+        "85% income application rule must be met for exemption u/s 11",
+        "Failure to comply with conditions u/s 13 leads to loss of exemption"
+      ]
+    }
+  ]
+}

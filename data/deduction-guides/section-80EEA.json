@@ -1,0 +1,102 @@
+{
+  "guideId": "DG-80EEA",
+  "sectionId": "80EEA",
+  "sectionName": "Additional deduction for interest on home loan for affordable housing (loans sanctioned April 2019 – March 2022)",
+  "fyApplicable": "2025-26",
+  "regime": "old",
+  "maxLimit": 150000,
+  "description": "Section 80EEA provides an additional deduction of up to ₹1,50,000 per year on interest paid on home loans for affordable housing, over and above the ₹2,00,000 limit under Section 24(b). This applies to loans sanctioned between April 1, 2019 and March 31, 2022 for properties with a stamp duty value of ₹45 lakh or less. The sanction window is closed; existing qualifying borrowers continue to benefit. Maximum combined interest deduction with Section 24(b) is ₹3,50,000 per year.",
+  "eligibleAssessees": [
+    "Resident Individual (first-time home buyer with qualifying loan)"
+  ],
+  "notEligible": [
+    "HUF",
+    "Firms",
+    "Companies",
+    "AOP",
+    "BOI",
+    "Individuals who already owned any residential property on the date of loan sanction",
+    "Individuals whose loan was sanctioned before April 1, 2019 or after March 31, 2022",
+    "Taxpayers also claiming Section 80EE for the same property",
+    "Taxpayers opting for new tax regime (Section 115BAC)"
+  ],
+  "eligibleInvestments": [
+    {
+      "investmentId": "80EEA-01",
+      "name": "Interest on affordable housing loan — additional deduction over and above Section 24(b)",
+      "limit": "₹1,50,000 per year (additional over Section 24(b) ₹2,00,000 limit)",
+      "notes": "Loan must be sanctioned between April 1, 2019 and March 31, 2022. Stamp duty value of the residential property must be ₹45 lakh or less (note: this is the stamp duty value, not the market/agreement value). Borrower must not have owned any other residential house property on the loan sanction date. Cannot simultaneously claim Section 80EE for the same or different property.",
+      "isNewForFY202526": false
+    }
+  ],
+  "conditions": [
+    "Available only under the old tax regime.",
+    "Loan must have been sanctioned by a financial institution between April 1, 2019 and March 31, 2022 — the window is closed for new loans.",
+    "The stamp duty value (government circle rate value) of the residential property must be ₹45,00,000 or less at the time of sanction — not the market value or agreement value.",
+    "The taxpayer must be a first-time home buyer — no residential house property owned on the date of loan sanction.",
+    "An individual cannot claim both Section 80EE and Section 80EEA — they are mutually exclusive.",
+    "Deduction is available each year until the loan is fully repaid.",
+    "The loan must be taken from a financial institution (bank, housing finance company, NBFC) — not from private individuals.",
+    "The property should be residential in nature."
+  ],
+  "documentationRequired": [
+    "Loan sanction letter from bank/housing finance company (must show sanction date between April 1, 2019 and March 31, 2022)",
+    "Annual interest certificate from lender for FY 2025-26",
+    "Stamp duty valuation document or registration document showing stamp duty value of property",
+    "Self-declaration that no other residential house property was owned on the date of loan sanction",
+    "Property registration documents",
+    "Loan agreement"
+  ],
+  "keyRules": [
+    {
+      "ruleId": "80EEA-R1",
+      "rule": "80EEA is a sunset provision for affordable housing — no new loans sanctioned after March 31, 2022 qualify. Existing borrowers with loans sanctioned between April 1, 2019 and March 31, 2022 continue to benefit for the remaining loan tenure.",
+      "legalReference": "Section 80EEA — condition on loan sanction period",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "80EEA-R2",
+      "rule": "The property value test under 80EEA uses STAMP DUTY VALUE (government circle rate), NOT the agreement value or market price. If stamp duty value is ₹45 lakh or below, the condition is met even if the actual market price is higher.",
+      "legalReference": "Section 80EEA(2)(i) — 'stamp duty value'",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "80EEA-R3",
+      "rule": "Maximum combined interest deduction for a qualifying 80EEA borrower: ₹2,00,000 (Section 24(b)) + ₹1,50,000 (80EEA) = ₹3,50,000 per year on the same property.",
+      "legalReference": "Section 80EEA(1)",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "80EEA-R4",
+      "rule": "80EE and 80EEA are mutually exclusive. A taxpayer who qualifies for 80EE (loan sanctioned in 2016-17) cannot also claim 80EEA, and vice versa. However, in practice, the different sanction date windows make simultaneous eligibility impossible for the same loan.",
+      "legalReference": "Section 80EEA(2)(iii) — 'no deduction under Section 80EE'",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "80EEA-R5",
+      "rule": "RERA registration of the property is NOT mandatorily required for 80EEA, but the property must be residential. Commercial properties do not qualify.",
+      "legalReference": "Section 80EEA — 'residential house property'",
+      "isNewForFY202526": false
+    }
+  ],
+  "commonMistakes": [
+    "Confusing 80EEA with 80EE — 80EEA is for loans sanctioned April 2019 to March 2022 (affordable housing ₹45L stamp duty); 80EE is for loans sanctioned April 2016 to March 2017 (₹50L property, ₹35L loan). They are mutually exclusive.",
+    "Using market value or agreement value instead of stamp duty value to check the ₹45 lakh threshold — the condition is on stamp duty value.",
+    "Claiming 80EEA for a loan sanctioned after March 31, 2022 — no new loans qualify.",
+    "Not continuing to claim 80EEA in subsequent years on an existing qualifying loan — the benefit persists until full repayment.",
+    "Claiming 80EEA without confirming first-time buyer status — if the taxpayer owned any residential property on the loan sanction date, they are ineligible.",
+    "Forgetting that 80EEA is over and above Section 24(b) — some taxpayers only claim one and miss the other.",
+    "Claiming 80EEA in the new tax regime — it is only available under the old regime."
+  ],
+  "relatedSections": [
+    "Section 24(b) — Interest on home loan (₹2,00,000 per year for self-occupied; 80EEA is additional beyond this)",
+    "Section 80EE — Additional interest deduction for FY 2016-17 loans (mutually exclusive with 80EEA)",
+    "Section 80C — Principal repayment of home loan",
+    "Section 115BAC — New tax regime (80EEA not available)"
+  ],
+  "workedExample": {
+    "profile": "First-time buyer. Loan of ₹38 lakh sanctioned June 2020 for a flat with stamp duty value ₹42 lakh. Annual interest in FY 2025-26: ₹3,20,000. Section 24(b): ₹2,00,000 (capped). Section 80EEA: ₹1,20,000 (remaining ₹1,20,000 of actual interest, within ₹1,50,000 limit).",
+    "deductionClaimed": 120000,
+    "taxSaving": "80EEA deduction ₹1,20,000 (actual interest remaining after 24(b) cap). At 30% slab: ₹36,000 + 4% cess = ₹37,440 additional tax saved. Total interest relief on this property: ₹2,00,000 (24(b)) + ₹1,20,000 (80EEA) = ₹3,20,000."
+  }
+}

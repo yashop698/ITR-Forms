@@ -1,0 +1,267 @@
+{
+  "fyApplicable": "2025-26",
+  "ayApplicable": "2026-27",
+  "financeAct": "Finance Act 2025",
+  "defaultRegime": "new",
+  "defaultRegimeNote": "New tax regime u/s 115BAC is the DEFAULT for FY 2025-26 per Finance Act 2025. Taxpayers must explicitly opt for old regime by filing Form 10-IEA before or at the time of filing ITR.",
+  "legalReference": "Section 115BAC, Income-tax Act 1961 (as amended by Finance Act 2025)",
+  "regimes": {
+    "new": {
+      "label": "New Tax Regime (Default — Section 115BAC)",
+      "shortCode": "NTR",
+      "isDefault": true,
+      "optOutForm": "Form 10-IEA (for business/professional income taxpayers only)",
+      "optOutNote": "Salaried/other individuals simply choose regime at filing; no separate form needed unless they have business income.",
+      "basicExemptionLimit": 400000,
+      "basicExemptionLimitNote": "₹4,00,000 — nil tax up to this amount under new regime slabs (FY 2025-26 revision from earlier ₹3L)",
+      "rebateU87A": {
+        "applicableUpToIncome": 1200000,
+        "maxRebate": 60000,
+        "note": "Full income tax rebate u/s 87A if total taxable income does not exceed ₹12,00,000. Rebate = lower of tax payable or ₹60,000. Effectively zero tax up to ₹12,00,000. For salaried with standard deduction of ₹75,000, salary up to ₹12,75,000 is tax-free.",
+        "legalReference": "Section 87A, Income-tax Act 1961 (amended by Finance Act 2025)",
+        "fy202526Change": true
+      },
+      "standardDeduction": {
+        "salaried": 75000,
+        "pensioner": 75000,
+        "familyPensioner": 15000,
+        "selfEmployed": 0,
+        "note": "Standard deduction of ₹75,000 available for salaried and pensioners under new regime (₹50,000 under old regime). Family pension: standard deduction is lower of ₹15,000 or 1/3rd of family pension.",
+        "legalReference": "Section 16(ia), Income-tax Act 1961"
+      },
+      "slabs": [
+        {
+          "from": 0,
+          "to": 400000,
+          "rate": 0,
+          "rateLabel": "Nil",
+          "taxAmount": 0,
+          "fy202526Change": true,
+          "previousSlabTo": 300000,
+          "changeNote": "Nil slab extended from ₹3L to ₹4L in FY 2025-26 (Finance Act 2025)"
+        },
+        {
+          "from": 400001,
+          "to": 800000,
+          "rate": 5,
+          "rateLabel": "5%",
+          "taxOnThisSlab": 20000
+        },
+        {
+          "from": 800001,
+          "to": 1200000,
+          "rate": 10,
+          "rateLabel": "10%",
+          "taxOnThisSlab": 40000
+        },
+        {
+          "from": 1200001,
+          "to": 1600000,
+          "rate": 15,
+          "rateLabel": "15%",
+          "taxOnThisSlab": 60000,
+          "fy202526Change": true,
+          "changeNote": "New slab introduced in FY 2025-26 (Finance Act 2025)"
+        },
+        {
+          "from": 1600001,
+          "to": 2000000,
+          "rate": 20,
+          "rateLabel": "20%",
+          "taxOnThisSlab": 80000,
+          "fy202526Change": true,
+          "changeNote": "New slab introduced in FY 2025-26 (Finance Act 2025)"
+        },
+        {
+          "from": 2000001,
+          "to": 2400000,
+          "rate": 25,
+          "rateLabel": "25%",
+          "taxOnThisSlab": 100000,
+          "fy202526Change": true,
+          "changeNote": "New slab introduced in FY 2025-26 (Finance Act 2025)"
+        },
+        {
+          "from": 2400001,
+          "to": null,
+          "rate": 30,
+          "rateLabel": "30%",
+          "taxOnThisSlab": null
+        }
+      ],
+      "surcharge": [
+        {
+          "incomeFrom": 5000000,
+          "incomeTo": 10000000,
+          "rate": 10,
+          "note": "10% surcharge on income tax if total income > ₹50L and ≤ ₹1Cr"
+        },
+        {
+          "incomeFrom": 10000001,
+          "incomeTo": 20000000,
+          "rate": 15,
+          "note": "15% surcharge on income tax if total income > ₹1Cr and ≤ ₹2Cr"
+        },
+        {
+          "incomeFrom": 20000001,
+          "incomeTo": null,
+          "rate": 25,
+          "note": "25% surcharge (capped at 25% under new regime — unlike old regime where it was 37% for income > ₹5Cr). Applicable from ₹2Cr onwards.",
+          "legalReference": "Section 115BAC(1A), Finance Act 2023 onwards"
+        }
+      ],
+      "cess": {
+        "rate": 4,
+        "appliesTo": "income_tax_plus_surcharge",
+        "name": "Health and Education Cess",
+        "legalReference": "Finance Act 2018 onwards"
+      },
+      "deductionsAllowed": [
+        "Standard deduction u/s 16(ia) — ₹75,000",
+        "Employer NPS contribution u/s 80CCD(2) — up to 14% of salary (central/state govt employees) or 10% otherwise",
+        "Agniveer corpus fund u/s 80CCH",
+        "Family pension standard deduction u/s 57(iia)"
+      ],
+      "deductionsNotAllowed": [
+        "Section 80C (PF, LIC, ELSS, etc.)",
+        "Section 80D (Health insurance)",
+        "Section 80E (Education loan)",
+        "Section 80G (Donations)",
+        "Section 80CCD(1B) (Additional NPS)",
+        "HRA exemption u/s 10(13A)",
+        "LTA exemption u/s 10(5)",
+        "Interest on housing loan u/s 24(b) for self-occupied property",
+        "Set-off of house property loss against other income"
+      ]
+    },
+    "old": {
+      "label": "Old Tax Regime (Optional — opt via Form 10-IEA for business income; salaried can choose at filing)",
+      "shortCode": "OTR",
+      "isDefault": false,
+      "optInForm": "Form 10-IEA (only for taxpayers with business/professional income; salaried/others simply select at time of ITR filing)",
+      "basicExemptionLimit": 250000,
+      "basicExemptionLimitNote": "₹2,50,000 for individuals below 60 years",
+      "seniorCitizenExemptionLimit": 300000,
+      "seniorCitizenAgeFrom": 60,
+      "superSeniorCitizenExemptionLimit": 500000,
+      "superSeniorCitizenAgeFrom": 80,
+      "rebateU87A": {
+        "applicableUpToIncome": 500000,
+        "maxRebate": 12500,
+        "note": "Rebate u/s 87A under old regime: if total taxable income ≤ ₹5,00,000, tax is reduced by rebate amount (max ₹12,500). Tax is zero for income up to ₹5L (for individuals below 60 years)."
+      },
+      "standardDeduction": {
+        "salaried": 50000,
+        "pensioner": 50000,
+        "familyPensioner": 15000,
+        "selfEmployed": 0
+      },
+      "slabs": {
+        "belowAge60": [
+          { "from": 0, "to": 250000, "rate": 0, "rateLabel": "Nil" },
+          { "from": 250001, "to": 500000, "rate": 5, "rateLabel": "5%" },
+          { "from": 500001, "to": 1000000, "rate": 20, "rateLabel": "20%" },
+          { "from": 1000001, "to": null, "rate": 30, "rateLabel": "30%" }
+        ],
+        "seniorCitizen60To80": [
+          { "from": 0, "to": 300000, "rate": 0, "rateLabel": "Nil" },
+          { "from": 300001, "to": 500000, "rate": 5, "rateLabel": "5%" },
+          { "from": 500001, "to": 1000000, "rate": 20, "rateLabel": "20%" },
+          { "from": 1000001, "to": null, "rate": 30, "rateLabel": "30%" }
+        ],
+        "superSeniorCitizen80Plus": [
+          { "from": 0, "to": 500000, "rate": 0, "rateLabel": "Nil" },
+          { "from": 500001, "to": 1000000, "rate": 20, "rateLabel": "20%" },
+          { "from": 1000001, "to": null, "rate": 30, "rateLabel": "30%" }
+        ]
+      },
+      "surcharge": [
+        { "incomeFrom": 5000000, "incomeTo": 10000000, "rate": 10 },
+        { "incomeFrom": 10000001, "incomeTo": 20000000, "rate": 15 },
+        { "incomeFrom": 20000001, "incomeTo": 50000000, "rate": 25 },
+        {
+          "incomeFrom": 50000001,
+          "incomeTo": null,
+          "rate": 37,
+          "note": "37% surcharge for income > ₹5 Crore under old regime (unlike new regime where max surcharge is capped at 25%)"
+        }
+      ],
+      "cess": {
+        "rate": 4,
+        "appliesTo": "income_tax_plus_surcharge"
+      },
+      "deductionsAllowed": "All deductions under Chapter VI-A (80C, 80D, 80E, 80G, etc.), HRA, LTA, housing loan interest u/s 24(b), house property loss set-off"
+    }
+  },
+  "specialRates": {
+    "ltcg112A": {
+      "description": "LTCG on listed equity shares / equity-oriented MF units / units of business trust",
+      "section": "Section 112A",
+      "rate": 12.5,
+      "exemptionLimit": 125000,
+      "exemptionNote": "First ₹1,25,000 of LTCG u/s 112A is exempt per year (₹1 lakh up to FY 2023-24; raised to ₹1.25 lakh from FY 2024-25 by Finance Act 2024)",
+      "holdingPeriod": "More than 12 months",
+      "indexationBenefit": false,
+      "legalReference": "Section 112A, Income-tax Act 1961 (amended by Finance Act 2024)",
+      "fy202526Note": "Rate increased from 10% to 12.5% by Finance Act 2024, effective for transfers from July 23, 2024. Applicable in FY 2025-26."
+    },
+    "stcg111A": {
+      "description": "STCG on listed equity shares / equity-oriented MF units / units of business trust (STT paid)",
+      "section": "Section 111A",
+      "rate": 20,
+      "holdingPeriod": "Up to 12 months",
+      "legalReference": "Section 111A, Income-tax Act 1961 (amended by Finance Act 2024)",
+      "fy202526Note": "Rate increased from 15% to 20% by Finance Act 2024, effective for transfers from July 23, 2024."
+    },
+    "ltcgOtherAssets": {
+      "description": "LTCG on other assets (immovable property, unlisted shares, debt MF, etc.)",
+      "section": "Section 112",
+      "rate": 12.5,
+      "indexationBenefit": false,
+      "indexationBenefitNote": "Indexation removed by Finance Act 2024 for most assets. Exception: For immovable property acquired before July 23, 2024, taxpayer can opt for 20% with indexation OR 12.5% without indexation — whichever is lower.",
+      "holdingPeriod": "More than 24 months (immovable property/unlisted shares); 36 months (other assets)",
+      "legalReference": "Section 112, Income-tax Act 1961 (amended by Finance Act 2024)"
+    },
+    "stcgOtherAssets": {
+      "description": "STCG on other assets (immovable property, debt MF, etc.)",
+      "section": "Taxed at normal slab rates",
+      "rate": "slab_rate",
+      "note": "Short-term capital gains on assets not covered u/s 111A are taxed at the applicable income tax slab rate"
+    },
+    "virtualDigitalAssets": {
+      "description": "Income from transfer of Virtual Digital Assets (crypto, NFTs, etc.)",
+      "section": "Section 115BBH",
+      "rate": 30,
+      "note": "30% flat tax + 4% cess = 31.2% effective rate. No deductions except cost of acquisition. Losses cannot be set off or carried forward.",
+      "legalReference": "Section 115BBH, inserted by Finance Act 2022"
+    }
+  },
+  "corporateTaxRates": {
+    "domesticCompany": {
+      "defaultRate": 30,
+      "reducedRate115BA": 25,
+      "reducedRate115BAA": 22,
+      "reducedRate115BAB": 15,
+      "note": "Companies with turnover ≤ ₹400 Cr in FY 2020-21: 25%. New manufacturing companies u/s 115BAB: 15%. Section 115BAA (all companies): 22% (no incentives/deductions). All rates before surcharge and cess.",
+      "surcharge": { "allDomesticCompanies": 7, "incomeCap": null },
+      "cess": 4
+    },
+    "foreignCompany": {
+      "defaultRate": 40,
+      "surcharge": 2,
+      "cess": 4
+    },
+    "mat115JB": {
+      "rate": 15,
+      "note": "Minimum Alternate Tax at 15% of book profit if regular tax < 15% of book profit. Not applicable to companies opting for Section 115BAA/115BAB.",
+      "legalReference": "Section 115JB, Income-tax Act 1961"
+    }
+  },
+  "partnershipFirmLLP": {
+    "taxRate": 30,
+    "surcharge": 12,
+    "surchargeNote": "12% surcharge if income > ₹1 Crore",
+    "cess": 4,
+    "amr": { "rate": 18.5, "legalReference": "Section 115JC — AMT on firms/LLPs" }
+  }
+}

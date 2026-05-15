@@ -1,0 +1,137 @@
+{
+  "guideId": "DG-80D",
+  "sectionId": "80D",
+  "sectionName": "Deduction in respect of health insurance premium (Mediclaim)",
+  "fyApplicable": "2025-26",
+  "regime": "old",
+  "maxLimit": "₹50,000 (self/family < 60 yrs + parents < 60 yrs) | ₹75,000 (self < 60 + parents ≥ 60) | ₹1,00,000 (self ≥ 60 + parents ≥ 60)",
+  "description": "Section 80D allows deduction for health insurance premiums paid for self, spouse, dependent children, and parents. The limit is ₹25,000 (₹50,000 if senior citizen insured) for own family, plus ₹25,000 (₹50,000 for senior citizens) for parents. An inner limit of ₹5,000 for preventive health check-up is included within the overall limits. Available only under the old tax regime.",
+  "eligibleAssessees": [
+    "Resident Individual",
+    "Non-Resident Individual",
+    "HUF"
+  ],
+  "notEligible": [
+    "Firms",
+    "Companies",
+    "AOP",
+    "BOI",
+    "Taxpayers opting for new tax regime (Section 115BAC)"
+  ],
+  "eligibleInvestments": [
+    {
+      "investmentId": "80D-01",
+      "name": "Health insurance premium — self, spouse, and dependent children (below 60 years)",
+      "limit": "₹25,000 per year",
+      "notes": "Covers medical insurance policy (Mediclaim) for self, spouse, and dependent children. If any of these insured persons is a senior citizen (aged 60 or above), the limit increases to ₹50,000. Premium must be paid by non-cash mode (cheque, NEFT, online, etc.).",
+      "isNewForFY202526": false
+    },
+    {
+      "investmentId": "80D-02",
+      "name": "Health insurance premium — self, spouse, or dependent children (any insured is senior citizen ≥ 60 years)",
+      "limit": "₹50,000 per year",
+      "notes": "If the taxpayer himself/herself or their spouse is a senior citizen (60+), the limit for own-family premium is ₹50,000 instead of ₹25,000. Non-cash payment mandatory.",
+      "isNewForFY202526": false
+    },
+    {
+      "investmentId": "80D-03",
+      "name": "Health insurance premium — parents (below 60 years)",
+      "limit": "₹25,000 per year (additional, over and above self-family limit)",
+      "notes": "Premium for parents is a separate deduction in addition to the self/spouse/children limit. Parents need not be financially dependent — even financially independent parents qualify. Non-cash payment mandatory.",
+      "isNewForFY202526": false
+    },
+    {
+      "investmentId": "80D-04",
+      "name": "Health insurance premium — parents (senior citizens ≥ 60 years)",
+      "limit": "₹50,000 per year (additional, over and above self-family limit)",
+      "notes": "If parents are senior citizens (aged 60+), the limit for parents' health insurance is ₹50,000 instead of ₹25,000. Non-cash payment mandatory.",
+      "isNewForFY202526": false
+    },
+    {
+      "investmentId": "80D-05",
+      "name": "Preventive health check-up — self, spouse, dependent children, and parents",
+      "limit": "₹5,000 per year (included WITHIN the overall 80D limit, NOT additional)",
+      "notes": "Expenses for preventive health check-up (annual health screening, diagnostic tests) for self, spouse, dependent children, or parents. Crucially, this ₹5,000 is carved out FROM the applicable limit (₹25,000 or ₹50,000), not added on top. CASH payments are allowed for preventive check-up — this is the only exception to the non-cash rule under 80D.",
+      "isNewForFY202526": false
+    },
+    {
+      "investmentId": "80D-06",
+      "name": "Medical expenditure for very senior citizens (80+) without health insurance",
+      "limit": "₹50,000 (within overall cap)",
+      "notes": "Where the taxpayer or dependent (self, spouse, parents) is a very senior citizen (80+ years) and no health insurance policy is in force for them, actual medical expenditure incurred can be claimed up to ₹50,000. This provides relief where insurers refuse to cover very senior citizens.",
+      "isNewForFY202526": false
+    }
+  ],
+  "conditions": [
+    "Available only under the old tax regime. New regime taxpayers cannot claim 80D.",
+    "Premium must be paid by non-cash mode (cheque, NEFT, bank transfer, credit/debit card). Only preventive health check-up (₹5,000) can be paid by cash.",
+    "Premium must be paid by the taxpayer — premium paid by employer on group insurance is not eligible for 80D (though employer-paid premiums may be exempt under other provisions).",
+    "Dependent children means children who are financially dependent on the taxpayer — adult independent children's premiums do not qualify.",
+    "Parents' premium qualifies even if parents are NOT financially dependent on the taxpayer.",
+    "The ₹5,000 preventive health check-up is a sub-limit within the overall cap — it does not increase the ceiling.",
+    "Health insurance premium must be for a medical insurance policy (Mediclaim) — term life insurance, health-riders on life insurance, or critical illness riders on life insurance are NOT eligible.",
+    "Group health insurance provided by employer: premium borne by employee (through salary deduction) is eligible; premium borne by employer is not deductible by the employee under 80D."
+  ],
+  "documentationRequired": [
+    "Health insurance premium payment receipt from insurer",
+    "Policy document showing insured names and date of birth (to establish senior citizen status)",
+    "Bank statement evidencing non-cash payment of premium",
+    "Receipts for preventive health check-up from diagnostic center/hospital",
+    "In case of medical expenditure for very senior citizen without insurance: doctor's prescriptions and bills"
+  ],
+  "keyRules": [
+    {
+      "ruleId": "80D-R1",
+      "rule": "Maximum combined deduction under 80D: (a) Self + family only, all below 60: ₹25,000; (b) Self/family below 60, parents below 60: ₹50,000; (c) Self/family below 60, parents senior citizens: ₹75,000; (d) Self/family senior citizen, parents senior citizen: ₹1,00,000.",
+      "legalReference": "Section 80D(2) and 80D(3)",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "80D-R2",
+      "rule": "Cash payments are NOT eligible for health insurance premium deduction. The prohibition applies even if the insurer accepts cash. EXCEPTION: Preventive health check-up payments up to ₹5,000 can be made in cash.",
+      "legalReference": "Section 80D(2)(d) — non-cash requirement; Explanation to Section 80D",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "80D-R3",
+      "rule": "Single premium health insurance policies: If premium covers more than one year (multi-year policy), deduction is available proportionate to the coverage period (pro-rated basis) — the premium is divided over the policy term.",
+      "legalReference": "Section 80D(2) — first proviso",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "80D-R4",
+      "rule": "Preventive health check-up of ₹5,000 is an inner limit forming part of the overall 80D cap. A taxpayer claiming ₹25,000 of premium already exhausts the full ₹25,000 limit — the ₹5,000 check-up does not add to this.",
+      "legalReference": "Section 80D(2)(d)",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "80D-R5",
+      "rule": "HUF can also claim 80D for health insurance premium paid for any member of the HUF. Limit is ₹25,000 (₹50,000 if insured member is senior citizen).",
+      "legalReference": "Section 80D(3A)",
+      "isNewForFY202526": false
+    }
+  ],
+  "commonMistakes": [
+    "Claiming 80D for cash-paid health insurance premium (not allowed — only preventive check-up can be cash).",
+    "Claiming 80D for term life insurance or life insurance premiums — term/life insurance premium is deductible under Section 80C, not 80D.",
+    "Claiming 80D for premiums paid for independent (non-dependent) adult children.",
+    "Treating the ₹5,000 preventive health check-up as an additional ₹5,000 over the ₹25,000/₹50,000 limit — it is included WITHIN the limit.",
+    "Not claiming parents' health insurance separately — parents' premium is a separate additional deduction and does not reduce the self/family limit.",
+    "Missing the 80D deduction for employer's group health insurance where the employee's share of premium is deducted from salary.",
+    "Claiming 80D under the new tax regime — this deduction is not available to new regime taxpayers.",
+    "Overlooking the medical expenditure deduction for very senior citizens (80+) who cannot obtain health insurance."
+  ],
+  "relatedSections": [
+    "80C — Life insurance premium (LIC and other life policies — not health insurance)",
+    "80DD — Medical treatment of disabled dependent",
+    "80DDB — Medical treatment of specified serious diseases",
+    "80U — Deduction for self with disability",
+    "Section 17(2) — Employer-provided medical reimbursement (perquisite rules)",
+    "Section 115BAC — New tax regime (80D not available)"
+  ],
+  "workedExample": {
+    "profile": "Individual aged 45. Pays ₹18,000 health insurance for self and spouse. Pays ₹40,000 health insurance for parents (both above 60). Preventive check-up: ₹3,000 (cash) for parents.",
+    "deductionClaimed": 58000,
+    "taxSaving": "Self/spouse premium ₹18,000 (limit ₹25,000) + preventive check-up ₹3,000 within ₹25,000 limit = ₹18,000 (capped). Parents senior citizen premium ₹40,000 (limit ₹50,000) = ₹40,000. Total 80D = ₹18,000 + ₹40,000 = ₹58,000. Tax saving at 20% slab: ₹11,600 + 4% cess = ₹12,064."
+  }
+}

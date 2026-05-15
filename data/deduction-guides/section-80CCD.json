@@ -1,0 +1,130 @@
+{
+  "guideId": "DG-80CCD",
+  "sectionId": "80CCD",
+  "sectionName": "Deduction in respect of contribution to National Pension System (NPS)",
+  "fyApplicable": "2025-26",
+  "regime": "both",
+  "maxLimit": "80CCD(1): ₹1,50,000 within combined 80C cap | 80CCD(1B): ₹50,000 additional | 80CCD(2): 14% of salary (no monetary ceiling)",
+  "description": "Section 80CCD covers three distinct NPS-related deductions: 80CCD(1) for the employee's own contribution within the ₹1.5L cap, 80CCD(1B) for an additional ₹50,000 over and above the ₹1.5L cap (old regime only), and 80CCD(2) for the employer's NPS contribution which is available in BOTH old and new tax regimes. The employer contribution limit was raised to 14% of salary for private-sector employees from FY 2025-26.",
+  "eligibleAssessees": [
+    "Resident Individual (salaried and self-employed)",
+    "Non-Resident Individual",
+    "HUF (not eligible for 80CCD(2) — employer contribution applies to individuals only)"
+  ],
+  "notEligible": [
+    "Firms",
+    "Companies",
+    "AOP",
+    "BOI",
+    "Taxpayers opting for new regime for 80CCD(1) and 80CCD(1B)",
+    "NPS Tier 2 account holders (Tier 2 has no tax benefit under any sub-section)"
+  ],
+  "eligibleInvestments": [
+    {
+      "investmentId": "80CCD-01",
+      "name": "80CCD(1) — Employee's own NPS Tier 1 contribution (salaried)",
+      "limit": "10% of salary (Basic + DA). Within ₹1,50,000 combined cap of 80C + 80CCC + 80CCD(1). Old regime only.",
+      "notes": "Salary means Basic Pay + Dearness Allowance. HRA, special allowances, and other perquisites are excluded. The deduction is capped at the lower of (a) actual contribution or (b) 10% of salary. Deduction available only under old regime.",
+      "isNewForFY202526": false
+    },
+    {
+      "investmentId": "80CCD-02",
+      "name": "80CCD(1) — Self-employed individual's own NPS Tier 1 contribution",
+      "limit": "20% of Gross Total Income (GTI). Within ₹1,50,000 combined cap. Old regime only.",
+      "notes": "Self-employed individuals (professionals, proprietors, freelancers) can claim up to 20% of GTI (before this deduction). This is a higher percentage than salaried employees to compensate for no employer contribution.",
+      "isNewForFY202526": false
+    },
+    {
+      "investmentId": "80CCD-03",
+      "name": "80CCD(1B) — Additional NPS Tier 1 contribution (over and above ₹1.5L cap)",
+      "limit": "₹50,000 per year. This is OVER AND ABOVE the ₹1,50,000 combined cap of 80C + 80CCC + 80CCD(1). Old regime only.",
+      "notes": "This is a separate, additional deduction available to both salaried and self-employed individuals. Even if the ₹1.5L cap is fully exhausted by 80C investments, an additional ₹50,000 can be claimed under 80CCD(1B) by contributing to NPS Tier 1. Maximum tax saving: ₹15,600 at 30% slab + 4% cess.",
+      "isNewForFY202526": false
+    },
+    {
+      "investmentId": "80CCD-04",
+      "name": "80CCD(2) — Employer's NPS contribution (available in BOTH regimes)",
+      "limit": "14% of salary (Basic + DA) for private-sector employees (raised from 10% in FY 2025-26). 14% for Central Government employees (unchanged). No upper monetary ceiling.",
+      "notes": "Employer contributes to employee's NPS Tier 1 account as part of CTC. This deduction is available in BOTH old and new tax regimes — a critical advantage. The Finance Act 2025 raised the limit for private-sector employers from 10% to 14% of salary, bringing parity with Central Government employees. Amount appears in Form 16 Part B.",
+      "isNewForFY202526": true
+    }
+  ],
+  "conditions": [
+    "NPS Tier 1 account (Permanent Retirement Account) is mandatory — deduction is NOT available for Tier 2 contributions.",
+    "80CCD(1) and 80CCD(1B) are available only under the old tax regime. Taxpayers opting for new regime cannot claim these.",
+    "80CCD(2) is available in BOTH old and new tax regimes — even taxpayers under new regime can claim employer NPS contribution deduction.",
+    "80CCD(2) limit for private employers is now 14% of (Basic + DA) effective FY 2025-26 under Finance Act 2025.",
+    "80CCD(1B) ₹50,000 is an additional deduction fully independent of the ₹1.5L cap — both can be claimed simultaneously.",
+    "For 80CCD(2): only employer contribution made to a notified pension scheme (NPS) qualifies. EPF or Superannuation fund contributions fall under different sections.",
+    "Employees must have a PRAN (Permanent Retirement Account Number) issued by NPS Trust.",
+    "NPS maturity: 60% lump sum is exempt from tax; 40% must be used to purchase an annuity (pension) which is taxable as salary income in the year of receipt."
+  ],
+  "documentationRequired": [
+    "PRAN (Permanent Retirement Account Number) card",
+    "NPS Tier 1 Transaction Statement for the financial year",
+    "Form 16 Part B — showing employer's contribution under Section 80CCD(2)",
+    "Salary slips showing employee's NPS deduction (for 80CCD(1))",
+    "Bank account statement or challan for voluntary additional NPS contribution (for 80CCD(1B))",
+    "NSDL CRA / KFintech NPS portal transaction history"
+  ],
+  "keyRules": [
+    {
+      "ruleId": "80CCD-R1",
+      "rule": "80CCD(2) employer contribution limit raised from 10% to 14% of salary (Basic + DA) for private-sector employees effective FY 2025-26. This is a Finance Act 2025 change bringing parity with Central Government employees.",
+      "legalReference": "Section 80CCD(2) as amended by Finance Act 2025",
+      "isNewForFY202526": true
+    },
+    {
+      "ruleId": "80CCD-R2",
+      "rule": "Section 80CCE restricts the combined deduction under 80C + 80CCC + 80CCD(1) to ₹1,50,000. Section 80CCD(1B) ₹50,000 and Section 80CCD(2) are explicitly excluded from this cap — they are genuinely additional.",
+      "legalReference": "Section 80CCE of Income Tax Act, 1961",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "80CCD-R3",
+      "rule": "80CCD(2) is the only NPS-related deduction available in the new tax regime. All other NPS deductions (80CCD(1) and 80CCD(1B)) require the old regime.",
+      "legalReference": "Section 115BAC(2) — list of deductions available in new regime",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "80CCD-R4",
+      "rule": "Upon NPS maturity at age 60: the 60% lump sum withdrawn is exempt from tax. The remaining 40% must mandatorily be used to purchase an annuity from an annuity service provider; the pension received from this annuity is taxable as 'Income from Salaries' in the year of receipt.",
+      "legalReference": "Section 10(12A) — exemption of 60% NPS withdrawal; Section 17(1)(ia) — pension from annuity",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "80CCD-R5",
+      "rule": "For self-employed individuals, the 80CCD(1) deduction is capped at 20% of Gross Total Income (not 10% as for salaried). There is no employer contribution available to self-employed; hence, a higher own-contribution limit is provided.",
+      "legalReference": "Section 80CCD(1) — first proviso",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "80CCD-R6",
+      "rule": "Employer NPS contribution is first included in the employee's gross salary and then deducted under 80CCD(2). This means it must appear in Form 16 and the ITR — omitting it from gross salary and also not claiming deduction would both be incorrect.",
+      "legalReference": "Section 17(1) read with Section 80CCD(2)",
+      "isNewForFY202526": false
+    }
+  ],
+  "commonMistakes": [
+    "Confusing 80CCD(1B) ₹50,000 as part of the ₹1.5L cap — it is a separate additional deduction over and above the cap, giving a total potential NPS-related deduction of ₹2,00,000.",
+    "Claiming 80CCD(2) at the old 10% limit for private employers instead of the new 14% limit effective FY 2025-26 — this results in a missed deduction.",
+    "Not claiming 80CCD(2) at all while filing under the new regime — many taxpayers incorrectly believe no Chapter VI-A deductions are available in the new regime, but 80CCD(2) is specifically allowed.",
+    "Claiming employer's NPS contribution under 80CCD(1) instead of 80CCD(2) — these are different sub-sections with different rules and regime applicability.",
+    "Contributing to NPS Tier 2 and trying to claim 80C or 80CCD deductions — Tier 2 has no tax deduction benefit (though NPS Tier 2 for government employees has a 3-year lock-in benefit for 80C under specific scheme).",
+    "Not filing Form 10-IEA (for business income filers) before the due date when opting for old regime — failure to file means new regime is treated as default and 80CCD(1) and 80CCD(1B) are lost.",
+    "Omitting employer NPS contribution from gross salary — the employer contribution must be added to salary income first, then deducted under 80CCD(2)."
+  ],
+  "relatedSections": [
+    "80C — Other investments within ₹1,50,000 cap",
+    "80CCC — Contribution to annuity/pension fund of LIC or other insurer",
+    "80CCE — Combined cap of ₹1,50,000 for 80C + 80CCC + 80CCD(1)",
+    "Section 10(12A) — Exemption of 60% NPS lump sum withdrawal on maturity",
+    "Section 10(12B) — Exemption on NPS partial withdrawal",
+    "Section 115BAC — New tax regime (80CCD(2) available; 80CCD(1) and 80CCD(1B) not available)"
+  ],
+  "workedExample": {
+    "profile": "Salaried employee, Basic salary ₹15,00,000. Employer contributes 14% NPS = ₹2,10,000. Employee own NPS contribution = ₹1,50,000 (within 80C cap). Additional NPS contribution = ₹50,000 (80CCD(1B)). Under new regime: Only 80CCD(2) ₹2,10,000 deductible. Under old regime: 80CCD(2) ₹2,10,000 + 80CCD(1) ₹1,50,000 (within ₹1.5L cap) + 80CCD(1B) ₹50,000 = ₹4,10,000 total NPS-related deduction.",
+    "deductionClaimed": 410000,
+    "taxSaving": "Old regime vs new regime NPS benefit: Additional ₹2,00,000 (80CCD(1) + 80CCD(1B)) at 30% slab = ₹60,000 + 4% cess = ₹62,400 additional saving in old regime. Under new regime, ₹2,10,000 (80CCD(2)) at applicable slab rate saves approximately ₹63,000 + cess at 30% slab."
+  }
+}
