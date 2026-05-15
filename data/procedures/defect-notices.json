@@ -1,0 +1,31 @@
+{
+  "procedureId": "PROC-DN",
+  "procedureName": "Responding to Defect Notices (Section 139(9))",
+  "fyApplicable": "2025-26",
+  "description": "CPC may find the filed ITR defective — incomplete, incorrect, or inconsistent. A defect notice u/s 139(9) is issued electronically. Taxpayer must rectify within 15 days (extendable). If not rectified, return is treated as invalid.",
+  "applicableForms": ["ITR-1", "ITR-2", "ITR-3", "ITR-4", "ITR-5", "ITR-6", "ITR-7"],
+  "timeline": "Rectify within 15 days of notice (extension possible on request to AO)",
+  "commonDefects": [
+    { "defectCode": "D-01", "defect": "Missing mandatory schedules", "description": "Required schedules not filled (e.g., Schedule S for salary income declared but Schedule S blank).", "resolution": "Re-file ITR with all mandatory schedules completed." },
+    { "defectCode": "D-02", "defect": "Wrong ITR form used", "description": "Filer used ITR-1 but has capital gains, or ITR-4 but owns 3+ properties.", "resolution": "File fresh return in correct form. Defective return treated as invalid." },
+    { "defectCode": "D-03", "defect": "Income mismatch with TDS data", "description": "Income declared lower than TDS credit claimed. TDS credits exceed declared income significantly.", "resolution": "Rectify income figure or recheck TDS schedule entries." },
+    { "defectCode": "D-04", "defect": "Tax payable but no payment challan", "description": "Computation shows tax payable but no advance tax or self-assessment tax payment challan entered.", "resolution": "Pay tax and enter challan in Schedule IT before resubmitting." },
+    { "defectCode": "D-05", "defect": "Balance sheet not matching", "description": "In ITR-3/5/6: balance sheet totals don't balance (assets ≠ liabilities + capital).", "resolution": "Correct balance sheet figures and resubmit." }
+  ],
+  "steps": [
+    { "stepId": "DN-01", "stepName": "Receive notice u/s 139(9)", "description": "Notice sent to registered email and on e-filing portal under 'Pending Actions'. Download notice to understand specific defects.", "deadline": null, "isOnline": true, "legalReference": "Section 139(9)" },
+    { "stepId": "DN-02", "stepName": "Prepare rectified return", "description": "Correct the identified defects in the ITR. For wrong form — prepare fresh return in correct form.", "deadline": "Within 15 days of notice date (extendable)", "isOnline": true, "legalReference": null },
+    { "stepId": "DN-03", "stepName": "Submit response on portal", "description": "Go to e-filing portal → 'Respond to Defective Return Notice'. Submit corrected return linked to original acknowledgment number.", "deadline": "15 days (extendable on AO approval)", "isOnline": true, "legalReference": "Section 139(9)" },
+    { "stepId": "DN-04", "stepName": "Verify response", "description": "E-verify the response/revised return. Confirmation sent by email.", "deadline": "Within 30 days of submission", "isOnline": true, "legalReference": null }
+  ],
+  "commonMistakes": [
+    "Ignoring defect notice — return becomes invalid after 15 days",
+    "Filing revised return instead of responding to defect notice (different procedures)",
+    "Not addressing ALL defects listed in notice"
+  ],
+  "consequences": [
+    "Unresponded defect: ITR treated as never filed — late filing fee u/s 234F applies",
+    "Loss carry-forward forfeited if return invalidated"
+  ],
+  "legalReference": "Section 139(9), Income-tax Act 1961"
+}
