@@ -1,0 +1,91 @@
+{
+  "procedureId": "PROC-RP",
+  "procedureName": "Income Tax Refund Processing",
+  "fyApplicable": "2025-26",
+  "description": "Guide to income tax refund processing: how refunds are issued, timelines, interest on delayed refunds (Section 244A at 6% p.a.), and steps to track or resolve refund issues.",
+  "applicableForms": ["ITR-1", "ITR-2", "ITR-3", "ITR-4", "ITR-5", "ITR-6", "ITR-7"],
+  "timeline": "Typically 15-90 days after ITR processing for e-filed and e-verified returns. Delayed refunds earn interest u/s 244A at 6% per annum.",
+  "howRefundArises": "Refund = TDS (Form 16/16A credits) + TCS credit + Advance tax paid − Total tax liability. Shown automatically in Part B-TTI of ITR.",
+  "refundInterest": {
+    "section": "244A",
+    "rate": "6% per annum (0.5% per month, simple interest)",
+    "startDateTimely": "April 1 of Assessment Year (for returns filed by original due date)",
+    "startDateBelated": "Date of filing (for belated returns)",
+    "endDate": "Date of refund order passed by CPC/AO",
+    "noInterest": "If refund is less than 10% of total tax assessed u/s 143(1)",
+    "taxability": "Interest u/s 244A is itself taxable as income from other sources in the year of receipt"
+  },
+  "steps": [
+    {
+      "stepId": "RP-01",
+      "stepName": "Pre-validate bank account on portal",
+      "description": "Refund can only be credited to a pre-validated bank account linked to PAN. Go to e-filing portal → Profile → My Bank Account → Add/validate account. Takes 2-3 days for validation.",
+      "deadline": "Before filing ITR",
+      "isOnline": true,
+      "legalReference": null
+    },
+    {
+      "stepId": "RP-02",
+      "stepName": "Verify TDS/TCS entries in ITR",
+      "description": "Check Schedule TDS1 (salary TDS), Schedule TDS2 (non-salary TDS), Schedule TCS (tax collected at source). All entries must match Form 26AS/AIS. Missing TDS entry = refund reduced.",
+      "deadline": "At time of filing",
+      "isOnline": true,
+      "legalReference": null
+    },
+    {
+      "stepId": "RP-03",
+      "stepName": "File and e-verify ITR",
+      "description": "After filing, refund amount shows in Part B-TTI. E-verify within 30 days. Refund processing begins only after e-verification.",
+      "deadline": "E-verify within 30 days of filing",
+      "isOnline": true,
+      "legalReference": "CBDT Notification No. 5/2023"
+    },
+    {
+      "stepId": "RP-04",
+      "stepName": "Track refund status",
+      "description": "Track on NSDL portal (tin.tin.nsdl.com/oltas/refundstatuslogin.html) or Income Tax portal under e-File → Income Tax Returns → Refund / Demand Status. Status progression: Return Submitted → Verified → Processing → Refund Issued.",
+      "deadline": null,
+      "isOnline": true,
+      "legalReference": null
+    },
+    {
+      "stepId": "RP-05",
+      "stepName": "Receive refund via NEFT",
+      "description": "Refund credited to pre-validated bank account via NEFT/RTGS. SMS + email notification sent. Usually takes 1-5 business days after processing.",
+      "deadline": null,
+      "isOnline": true,
+      "legalReference": null
+    }
+  ],
+  "commonIssues": [
+    {
+      "issue": "Refund failed (bank account validation failure)",
+      "resolution": "Update bank account details on portal → Submit fresh pre-validation → Submit refund re-issue request under e-File → Refund Reissue"
+    },
+    {
+      "issue": "Refund set off against old demand",
+      "resolution": "Department can set off refund against any outstanding tax demand u/s 245. Portal sends intimation. If demand is incorrect, file rectification u/s 154."
+    },
+    {
+      "issue": "Refund not received after 90 days",
+      "resolution": "Submit grievance on income tax portal under 'Grievance' section or contact Aaykar Sampark Kendra: 1800-103-0025 (toll free)"
+    },
+    {
+      "issue": "TDS mismatch — refund lower than expected",
+      "resolution": "Check Form 26AS vs ITR entries. If employer reported wrong TDS, contact employer for correction (TDS return revision). If portal issue, file rectification u/s 154."
+    }
+  ],
+  "refundSetOff": {
+    "section": "245",
+    "description": "If outstanding tax demand exists against the taxpayer, the refund due may be partially or fully adjusted against that demand. CPC sends an intimation before set-off. Taxpayer can object within 30 days if demand is disputed.",
+    "legalReference": "Section 245"
+  },
+  "commonMistakes": [
+    "Not pre-validating bank account — refund cannot be issued",
+    "Missing TDS entries in ITR — reduces refund below entitlement",
+    "Wrong IFSC or account number — refund bounces back",
+    "Not tracking refund status — delayed issues go unnoticed",
+    "Ignoring Section 245 intimation — old demands may be set off without review"
+  ],
+  "legalReference": "Sections 237, 244A, 245, Income-tax Act 1961"
+}

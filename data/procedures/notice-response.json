@@ -1,0 +1,111 @@
+{
+  "procedureId": "PROC-NR",
+  "procedureName": "Responding to Income Tax Notices",
+  "fyApplicable": "2025-26",
+  "description": "Guide to common income tax notices, how to read them, and how to respond. All notices since 2019 are served electronically on the e-filing portal (and registered email). Timely, accurate response prevents adverse assessment.",
+  "applicableForms": ["ITR-1", "ITR-2", "ITR-3", "ITR-4", "ITR-5", "ITR-6", "ITR-7"],
+  "whereToFind": "Income Tax Portal → Login → Pending Actions → For Your Action (all notices appear here)",
+  "commonNotices": [
+    {
+      "noticeType": "Intimation u/s 143(1)",
+      "description": "Auto-generated intimation after CPC processing. Shows: (a) Return accepted as filed, (b) Demand raised due to CPC adjustments (TDS mismatch, disallowances), or (c) Refund determined.",
+      "responseRequired": "If demand: Pay within 30 days OR file rectification u/s 154 if error in CPC's computation. If refund: Verify bank account pre-validation.",
+      "timeline": "Pay demand within 30 days of intimation",
+      "importance": "HIGH — unaddressed demand leads to recovery",
+      "legalReference": "Section 143(1)"
+    },
+    {
+      "noticeType": "Notice u/s 143(2) — Scrutiny",
+      "description": "Return selected for detailed scrutiny. AO will examine specific issues (income mismatch, large deductions, high refund, industry risk flags). Must respond via e-Proceedings module.",
+      "responseRequired": "Acknowledge notice. Prepare documentation for specific issues mentioned. File written reply with evidence via e-Proceedings.",
+      "timeline": "Typically 15-30 days as specified in notice",
+      "importance": "CRITICAL — non-response leads to ex-parte assessment",
+      "legalReference": "Section 143(2)"
+    },
+    {
+      "noticeType": "Notice u/s 142(1) — Production of Documents",
+      "description": "AO requires information or documents during ongoing assessment. Can ask for books of accounts, investment proofs, loan documents, etc.",
+      "responseRequired": "Submit requested documents electronically via e-Proceedings within time specified in notice.",
+      "timeline": "As specified in notice — usually 7-15 days",
+      "importance": "HIGH",
+      "legalReference": "Section 142(1)"
+    },
+    {
+      "noticeType": "Notice u/s 148A — Re-Assessment Show Cause",
+      "description": "AO proposes to reassess income of a past year (alleging income escaped assessment). Must first give opportunity to respond before issuing re-assessment notice. Finance Act 2021 introduced this show-cause step.",
+      "responseRequired": "File objections within 15 days explaining why reassessment is not warranted. If AO proceeds despite objections, file return for that year within time given.",
+      "timeline": "15 days from 148A notice to file objections",
+      "importance": "CRITICAL — can result in demands for past years",
+      "legalReference": "Section 148A (Finance Act 2021)"
+    },
+    {
+      "noticeType": "Notice of Demand u/s 156",
+      "description": "Formal demand notice after assessment order showing tax, interest, and penalty due.",
+      "responseRequired": "Pay within 30 days OR file appeal to CIT(A) u/s 246A within 30 days if disputing the assessment.",
+      "timeline": "30 days from demand notice date",
+      "importance": "HIGH — non-payment triggers recovery proceedings",
+      "legalReference": "Sections 156, 220"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "NR-01",
+      "stepName": "Access notice on portal",
+      "description": "Login to incometax.gov.in → Services → e-Proceedings (or Pending Actions). All notices appear here. Download and read carefully.",
+      "deadline": null,
+      "isOnline": true,
+      "legalReference": null
+    },
+    {
+      "stepId": "NR-02",
+      "stepName": "Identify notice type and issues",
+      "description": "Note: (a) Section under which issued; (b) AY concerned; (c) Specific issues or income heads questioned; (d) Documents required; (e) Response deadline.",
+      "deadline": null,
+      "isOnline": false,
+      "legalReference": null
+    },
+    {
+      "stepId": "NR-03",
+      "stepName": "Gather supporting documents",
+      "description": "Collect: Form 16/16A, bank statements, investment proofs, property sale documents, business accounts, loan statements — whatever relates to issues raised.",
+      "deadline": "Before response deadline",
+      "isOnline": false,
+      "legalReference": null
+    },
+    {
+      "stepId": "NR-04",
+      "stepName": "Submit response via e-Proceedings",
+      "description": "Portal → Services → e-Proceedings → Select the notice → Submit response with written reply (point-by-point addressing each issue) + attach supporting documents.",
+      "deadline": "As specified in notice",
+      "isOnline": true,
+      "legalReference": null
+    },
+    {
+      "stepId": "NR-05",
+      "stepName": "Follow up",
+      "description": "After response, track on portal. AO may issue questionnaire for further clarification. Respond promptly to all follow-up queries.",
+      "deadline": null,
+      "isOnline": true,
+      "legalReference": null
+    }
+  ],
+  "commonMistakes": [
+    "Ignoring notices — AO makes ex-parte assessment after prescribed time, usually unfavorably",
+    "Responding after deadline — AO may not consider late response",
+    "Providing incomplete documentation — AO makes adverse inference from gaps",
+    "Confusing 143(1) intimation with 143(2) scrutiny — 143(1) is usually less serious",
+    "Not engaging a CA for complex 143(2) or 148A notices — professional representation helps"
+  ],
+  "consequences": [
+    "Non-response to 143(2): Best judgment assessment u/s 144 — AO estimates income adversely",
+    "Non-payment of 156 demand: Recovery proceedings, attachment of bank accounts u/s 220-232",
+    "Ignoring 148A: Re-assessment notice issued without opportunity to object"
+  ],
+  "appealProcess": {
+    "firstAppeal": "Commissioner of Income Tax (Appeals) — CIT(A) u/s 246A within 30 days of order",
+    "secondAppeal": "Income Tax Appellate Tribunal (ITAT) within 60 days of CIT(A) order",
+    "highCourt": "High Court on substantial question of law within 120 days of ITAT order",
+    "supremeCourt": "Supreme Court on special leave petition"
+  },
+  "legalReference": "Sections 142(1), 143(1), 143(2), 143(3), 148A, 156, 246A, Income-tax Act 1961"
+}

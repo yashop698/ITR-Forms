@@ -1,0 +1,86 @@
+{
+  "procedureId": "PROC-BR",
+  "procedureName": "Belated Return (Section 139(4))",
+  "fyApplicable": "2025-26",
+  "description": "If an ITR is not filed by the due date (July 31, 2026 for most individuals/HUF), a belated return can be filed u/s 139(4) up to December 31, 2026. Attracts late filing fee u/s 234F and forfeits loss carry-forward benefits.",
+  "applicableForms": ["ITR-1", "ITR-2", "ITR-3", "ITR-4", "ITR-5", "ITR-6", "ITR-7"],
+  "timeline": "Deadline: December 31, 2026 for AY 2026-27",
+  "dueDates": {
+    "individual_huf_no_audit": "July 31, 2026",
+    "audit_cases": "October 31, 2026",
+    "transfer_pricing": "November 30, 2026",
+    "belated_deadline": "December 31, 2026"
+  },
+  "lateFee": {
+    "section": "234F",
+    "feeStructure": "₹5,000 if total income > ₹5 lakh; ₹1,000 if total income ≤ ₹5 lakh; NIL if income below basic exemption limit",
+    "note": "Late fee mandatory — cannot be waived. In addition to interest u/s 234A."
+  },
+  "interestOnLateFiling": {
+    "section": "234A",
+    "rate": "1% per month (or part thereof)",
+    "from": "August 1, 2026 (day after original due date for individuals)",
+    "to": "Date of actual filing",
+    "base": "Tax due minus TDS minus advance tax"
+  },
+  "lossesForfeited": [
+    { "lossType": "Business losses (non-speculative u/s 28)", "canCarryForward": false, "note": "FORFEITED — cannot be carried forward if return is belated" },
+    { "lossType": "Speculative business losses", "canCarryForward": false, "note": "FORFEITED" },
+    { "lossType": "Short-term capital losses", "canCarryForward": false, "note": "FORFEITED if return filed after due date" },
+    { "lossType": "Long-term capital losses", "canCarryForward": false, "note": "FORFEITED if return filed after due date" },
+    { "lossType": "Unabsorbed depreciation", "canCarryForward": true, "note": "CAN be carried forward even with belated return — special provision" },
+    { "lossType": "House property loss set-off in current year", "canCarryForward": true, "note": "Current-year HP loss can still be set off against other income even in belated return" }
+  ],
+  "steps": [
+    {
+      "stepId": "BR-01",
+      "stepName": "Gather all documents",
+      "description": "Form 16, Form 16A, bank statements, FD interest certificates, investment proofs, property documents. Calculate total income for FY 2025-26.",
+      "deadline": null,
+      "isOnline": false,
+      "legalReference": null
+    },
+    {
+      "stepId": "BR-02",
+      "stepName": "Compute total tax and pay outstanding dues",
+      "description": "Compute: total income tax + interest u/s 234A (from Aug 1) + interest u/s 234B (if advance tax < 90%) + late fee u/s 234F. Pay via Challan 280 (self-assessment tax).",
+      "deadline": "Before filing",
+      "isOnline": true,
+      "legalReference": "Sections 234A, 234B, 234F"
+    },
+    {
+      "stepId": "BR-03",
+      "stepName": "File belated return on e-filing portal",
+      "description": "Login → File Income Tax Return → AY 2026-27 → Select 'Belated Return u/s 139(4)'. Enter challan details. Complete and submit.",
+      "deadline": "December 31, 2026",
+      "isOnline": true,
+      "legalReference": "Section 139(4)"
+    },
+    {
+      "stepId": "BR-04",
+      "stepName": "E-verify within 30 days",
+      "description": "Unverified belated return is treated as not filed at all. E-verify via Aadhaar OTP, EVC, or DSC within 30 days of filing.",
+      "deadline": "30 days from filing date",
+      "isOnline": true,
+      "legalReference": "CBDT Notification No. 5/2023"
+    }
+  ],
+  "afterDeadline": {
+    "option": "Updated Return u/s 139(8A)",
+    "description": "If belated return deadline (Dec 31) also missed, taxpayer can file updated return u/s 139(8A) within 2 years from end of AY. Must pay additional tax: 25% of tax+interest (if filed within 12 months) or 50% (if filed between 12-24 months). Cannot reduce previously declared income.",
+    "legalReference": "Section 139(8A)"
+  },
+  "commonMistakes": [
+    "Not paying interest u/s 234A before filing — portal may show mismatch",
+    "Assuming belated return has same benefits as timely return — loss carry-forward is critical difference",
+    "Filing after December 31, 2026 — only updated return option remains (with extra 25-50% tax)",
+    "Not e-verifying within 30 days — belated return becomes invalid"
+  ],
+  "consequences": [
+    "Late filing fee u/s 234F: ₹1,000 or ₹5,000",
+    "Interest u/s 234A: 1% per month from August 1, 2026 to filing date",
+    "Business and capital losses forfeited for carry-forward",
+    "If belated return deadline also missed: Only updated return option with 25-50% additional tax"
+  ],
+  "legalReference": "Section 139(4), Section 234F, Income-tax Act 1961"
+}

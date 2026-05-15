@@ -1,0 +1,41 @@
+{
+  "procedureId": "PROC-RECT",
+  "procedureName": "Rectification u/s 154 / 155",
+  "fyApplicable": "2025-26",
+  "description": "Section 154 allows rectification of a mistake apparent from the record in an income tax order (143(1) intimation or 143(3) assessment order). For taxpayer-initiated errors in the original return, use revised return u/s 139(5) instead. Rectification u/s 154 addresses errors in the ORDER, not the return.",
+  "applicableForms": ["ITR-1", "ITR-2", "ITR-3", "ITR-4", "ITR-5", "ITR-6", "ITR-7"],
+  "timeline": "Application for rectification: within 4 years from end of AY in which order passed. AO must pass rectification order within 6 months of application.",
+  "whoCanApply": [
+    "Taxpayer (assessee): If AO made an error in the assessment order",
+    "Assessing Officer: Can rectify suo motu (on their own motion) within 4 years",
+    "CPC: For errors in intimation u/s 143(1)"
+  ],
+  "commonRectificationGrounds": [
+    "TDS credit not given despite appearing in Form 26AS",
+    "Arithmetic errors in the 143(1) intimation",
+    "Double counting of income in assessment order",
+    "Incorrect tax rate applied",
+    "Wrong AY considered in order"
+  ],
+  "steps": [
+    { "stepId": "RECT-01", "stepName": "Identify error in order", "description": "Review 143(1) intimation or assessment order. Note specific errors. Error must be 'apparent from record' — cannot introduce new claims or arguments not in original return.", "deadline": null, "isOnline": false, "legalReference": "Section 154" },
+    { "stepId": "RECT-02", "stepName": "File rectification on portal", "description": "E-filing portal → Services → Rectification Request. Select AY and order type. Describe the error and attach supporting documents (Form 26AS, 16, 16A).", "deadline": "Within 4 years of the order", "isOnline": true, "legalReference": "Section 154(1)" },
+    { "stepId": "RECT-03", "stepName": "AO passes rectification order", "description": "AO reviews application and passes rectification order within 6 months. If rectification allowed: new intimation issued with corrected tax/refund. If rejected: reasons communicated.", "deadline": "AO must act within 6 months", "isOnline": false, "legalReference": "Section 154(8)" },
+    { "stepId": "RECT-04", "stepName": "Appeal if rectification denied", "description": "If AO refuses rectification unfairly, appeal to CIT(A) u/s 246A within 30 days of rectification refusal order.", "deadline": "30 days of AO refusal order", "isOnline": false, "legalReference": "Section 246A" }
+  ],
+  "distinction": {
+    "section154": "Rectify errors in AO's ORDER. Cannot change what was filed in return.",
+    "section139(5)": "Revise what was filed in the original RETURN (taxpayer's own errors). Before March 31, 2027.",
+    "section139(8A)": "Updated return — can be filed within 2 years. Pay additional tax (25%-50% extra). Cannot reduce income."
+  },
+  "commonMistakes": [
+    "Filing rectification to introduce new deductions not claimed in original return (not allowed — must file revised return)",
+    "Applying after 4-year limitation period",
+    "Not attaching supporting documents — rectification rejected without evidence"
+  ],
+  "consequences": [
+    "If rectification approved: Refund issued or demand reduced",
+    "If ignored and demand exists: Recovery proceedings u/s 220"
+  ],
+  "legalReference": "Sections 154, 155, Income-tax Act 1961"
+}
