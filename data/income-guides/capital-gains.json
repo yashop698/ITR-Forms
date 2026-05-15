@@ -1,0 +1,163 @@
+{
+  "guideId": "IG-CG",
+  "incomeType": "Capital Gains",
+  "fyApplicable": "2025-26",
+  "description": "Income from transfer of capital assets — shares, property, mutual funds, gold, VDA (crypto). FY 2025-26 applies Finance Act 2024 rates: LTCG 12.5% (equity, no indexation), STCG 20% (equity).",
+  "relevantITRForms": ["ITR-2", "ITR-3", "ITR-4 (restricted — LTCG 112A within ₹1.25L only)"],
+  "relevantSchedules": ["Schedule-CG", "Schedule-112A", "Schedule-CFL", "Schedule-SI"],
+  "taxTreatment": {
+    "oldRegime": { "rate": "Special rates override slab. LTCG 112A: 12.5%; STCG 111A: 20%; Other LTCG: 12.5%; Property (pre-July 23, 2024): 20% with indexation option", "notes": "Capital gains taxed at special rates regardless of regime choice" },
+    "newRegime": { "rate": "Same as old regime — special rates apply independently of slab regime", "notes": "Capital gains rates are determined by asset type and holding period, not income tax regime" },
+    "specialRate": "12.5% (LTCG equity), 20% (STCG equity), 12.5% (LTCG property/others), 30% (VDA)"
+  },
+  "incomeComponents": [
+    {
+      "componentId": "CG-01",
+      "name": "LTCG u/s 112A — Listed Equity & Equity MF (STT-paid)",
+      "description": "Long-term capital gains from listed equity shares and equity-oriented mutual funds where STT is paid. Holding period: > 12 months.",
+      "exemptAmount": "₹1,25,000 per year (combined)",
+      "isFullyTaxable": false,
+      "relevantSection": "Section 112A",
+      "rate": "12.5% on amount above ₹1.25L",
+      "isNewForFY202526": false,
+      "financeActChange": "Rate raised from 10% to 12.5% and exemption from ₹1L to ₹1.25L by Finance Act 2024 (effective July 23, 2024)"
+    },
+    {
+      "componentId": "CG-02",
+      "name": "STCG u/s 111A — Listed Equity & Equity MF (STT-paid)",
+      "description": "Short-term capital gains (holding ≤ 12 months) from listed equity and equity MF with STT paid.",
+      "exemptAmount": null,
+      "isFullyTaxable": true,
+      "relevantSection": "Section 111A",
+      "rate": "20% flat",
+      "isNewForFY202526": false,
+      "financeActChange": "Rate raised from 15% to 20% by Finance Act 2024 (effective July 23, 2024)"
+    },
+    {
+      "componentId": "CG-03",
+      "name": "LTCG on Property/Unlisted Shares (transferred after July 23, 2024)",
+      "description": "Long-term capital gains (holding > 24 months for property, > 24 months for unlisted shares) transferred after July 23, 2024.",
+      "exemptAmount": null,
+      "isFullyTaxable": true,
+      "relevantSection": "Section 112",
+      "rate": "12.5% without indexation",
+      "isNewForFY202526": false,
+      "financeActChange": "Indexation removed from July 23, 2024. Earlier: 20% with indexation."
+    },
+    {
+      "componentId": "CG-04",
+      "name": "LTCG on Property (acquired before July 23, 2024)",
+      "description": "For immovable property acquired before July 23, 2024, taxpayer has OPTION to use either 12.5% (no indexation) or 20% (with indexation) — whichever results in lower tax.",
+      "exemptAmount": null,
+      "isFullyTaxable": true,
+      "relevantSection": "Section 112 proviso",
+      "rate": "Lower of: 12.5% without indexation OR 20% with indexation",
+      "isNewForFY202526": false,
+      "financeActChange": "Transitional relief for pre-July 23, 2024 acquisitions by Finance Act 2024"
+    },
+    {
+      "componentId": "CG-05",
+      "name": "STCG on Property",
+      "description": "Short-term capital gains on property (held ≤ 24 months). Taxed at slab rate.",
+      "exemptAmount": null,
+      "isFullyTaxable": true,
+      "relevantSection": "Section 48",
+      "rate": "Slab rate"
+    },
+    {
+      "componentId": "CG-06",
+      "name": "Debt Mutual Funds (post-April 2023)",
+      "description": "From April 1, 2023, debt MF loses LTCG status — all gains taxed at slab rate regardless of holding period. No indexation available.",
+      "exemptAmount": null,
+      "isFullyTaxable": true,
+      "relevantSection": "Section 50AA",
+      "rate": "Slab rate (not special rate)"
+    },
+    {
+      "componentId": "CG-07",
+      "name": "VDA/Crypto (Virtual Digital Assets)",
+      "description": "All crypto, NFT gains taxed at 30% flat. No deduction except cost of acquisition. Losses from VDA cannot offset non-VDA income. TDS u/s 194S at 1%.",
+      "exemptAmount": null,
+      "isFullyTaxable": true,
+      "relevantSection": "Section 115BBH",
+      "rate": "30% flat"
+    }
+  ],
+  "keyRules": [
+    {
+      "ruleId": "CG-R01",
+      "rule": "Section 112A Grandfathering: For equity/equity MF acquired before January 31, 2018, cost of acquisition = higher of actual cost or FMV on January 31, 2018. This protects pre-budget 2018 gains from tax.",
+      "legalReference": "Section 112A(7), Income-tax Act",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "CG-R02",
+      "rule": "Loss Set-off: STCL (short-term capital loss) can offset both STCG and LTCG. LTCL (long-term capital loss) can only offset LTCG. Capital losses cannot offset salary/business/HP income.",
+      "legalReference": "Sections 70, 71",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "CG-R03",
+      "rule": "Loss Carry-Forward (8 years): Capital losses (both STCL and LTCL) can be carried forward for 8 assessment years. Must file return on time (by due date) in the year of loss to avail carry-forward.",
+      "legalReference": "Section 74",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "CG-R04",
+      "rule": "Section 54 Exemption: LTCG on residential property reinvested in another residential property within 2 years (purchase) or 3 years (construction) is exempt. Cap: ₹10 Crore per life.",
+      "legalReference": "Section 54",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "CG-R05",
+      "rule": "Section 54EC: LTCG on any asset (except residential property) invested in NHAI/REC bonds within 6 months is exempt. Maximum ₹50 lakh investment.",
+      "legalReference": "Section 54EC",
+      "isNewForFY202526": false
+    },
+    {
+      "ruleId": "CG-R06",
+      "rule": "Transaction-wise reporting in Schedule 112A: Every equity/equity MF transaction must be listed individually (ISIN, buy date, sell date, buy price, sell price). No netting at instrument level.",
+      "legalReference": "Schedule 112A, ITR-2 instructions",
+      "isNewForFY202526": false
+    }
+  ],
+  "workedExample": {
+    "profile": "Salaried individual with Infosys shares",
+    "incomeDetails": {
+      "asset": "500 Infosys shares",
+      "purchaseDate": "August 2017",
+      "purchasePrice": 1000,
+      "fmvJan312018": 1200,
+      "grandfatheredCost": 6000000,
+      "saleDate": "November 2025",
+      "salePrice": 1800,
+      "saleValue": 9000000
+    },
+    "computation": {
+      "ltcg": 3000000,
+      "exemption": 125000,
+      "taxableLtcg": 1750000,
+      "taxRate": "12.5%",
+      "taxAmount": 218750,
+      "cess": 8750
+    },
+    "taxableIncome": 1750000,
+    "taxPayable": 227500
+  },
+  "commonMistakes": [
+    "Applying 10% LTCG rate (old rate — now 12.5% from July 23, 2024)",
+    "Not using grandfathering for shares acquired before January 31, 2018",
+    "Using indexation for property acquired after July 23, 2024 (not allowed)",
+    "Netting crypto gains and losses across different coins (each VDA is separate)",
+    "Forgetting to report Schedule 112A transaction details (required even if zero tax)",
+    "Carrying forward capital loss without filing return on time (loss forfeited)",
+    "Applying LTCG property exemption (Section 54) for more than ₹10Cr (capped)"
+  ],
+  "auditTriggers": [
+    "Large LTCG on equity without corresponding Schedule 112A transactions",
+    "Property sale where stamp duty value (circle rate) > sale consideration declared",
+    "Capital gains reported but no STT paid (no 112A/111A benefit)",
+    "Frequent high-value equity trades not reported as business income (day trading scrutiny)"
+  ],
+  "relatedGuides": ["IG-BPROF", "IG-FOREIGN"]
+}

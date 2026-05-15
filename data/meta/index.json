@@ -1,0 +1,173 @@
+{
+  "version": "1.0.0",
+  "fyApplicable": "2025-26",
+  "ayApplicable": "2026-27",
+  "description": "Master registry of all knowledge base data files. Use this index to discover available files, their purpose, and schema version.",
+  "lastUpdated": "2025-05-15",
+  "totalFiles": 61,
+  "directories": {
+    "meta": {
+      "path": "data/meta/",
+      "description": "Global metadata: tax slabs, key dates, master index",
+      "files": [
+        { "filename": "index.json", "fileId": "META-INDEX", "description": "This file — master registry", "status": "complete" },
+        { "filename": "tax-slabs.json", "fileId": "META-SLABS", "description": "New and old regime tax slabs, special rates, surcharge, corporate rates", "status": "complete" },
+        { "filename": "key-dates.json", "fileId": "META-DATES", "description": "All filing deadlines, advance tax dates, penalty trigger dates for FY 2025-26", "status": "complete" }
+      ]
+    },
+    "decision-tree": {
+      "path": "data/decision-tree/",
+      "description": "Step-by-step form selector logic for React wizard UI",
+      "files": [
+        { "filename": "form-selector.json", "fileId": "DT-SELECTOR", "description": "Decision tree nodes: assessee type → income profile → recommended ITR form", "status": "complete" }
+      ]
+    },
+    "reference": {
+      "path": "data/reference/",
+      "description": "Cross-cutting reference matrices and change logs",
+      "files": [
+        { "filename": "fy2025-26-changes.json", "fileId": "REF-CHANGES", "description": "All Finance Act 2025 and CBDT notification changes with impact flags", "status": "complete" },
+        { "filename": "form-applicability-matrix.json", "fileId": "REF-FAM", "description": "Assessee type × income profile → recommended ITR form matrix", "status": "complete" },
+        { "filename": "schedule-matrix.json", "fileId": "REF-SCH", "description": "ITR form × Schedule → Compulsory/Optional/NA matrix (25 schedules × 7 forms)", "status": "complete" },
+        { "filename": "deduction-matrix.json", "fileId": "REF-DED", "description": "Deduction section × ITR form → Applicable/Conditions matrix", "status": "complete" },
+        { "filename": "tds-rates.json", "fileId": "REF-TDS", "description": "TDS/TCS rates for 22 payment types, thresholds, relevant ITR forms", "status": "complete" }
+      ]
+    },
+    "forms": {
+      "path": "data/forms/",
+      "description": "Per-form knowledge: eligibility, schedules, scenarios, red flags",
+      "forms": {
+        "itr1": {
+          "formId": "ITR-1",
+          "popularName": "Sahaj",
+          "path": "data/forms/itr1/",
+          "files": [
+            { "filename": "overview.json", "fileId": "ITR1-OV", "description": "Eligibility criteria, exclusions, FY 2025-26 changes for ITR-1", "status": "complete" },
+            { "filename": "schedules.json", "fileId": "ITR1-SCH", "description": "10 schedules with key fields, common mistakes, cross-references", "status": "complete" },
+            { "filename": "scenarios.json", "fileId": "ITR1-SCEN", "description": "6 worked scenarios: salaried, pensioner, HP, deductions, dividends", "status": "complete" },
+            { "filename": "red-flags.json", "fileId": "ITR1-RF", "description": "12 red flags + 5 validation errors for ITR-1", "status": "complete" }
+          ]
+        },
+        "itr2": {
+          "formId": "ITR-2",
+          "popularName": null,
+          "path": "data/forms/itr2/",
+          "files": [
+            { "filename": "overview.json", "fileId": "ITR2-OV", "description": "Eligibility for capital gains, directors, NRIs, multiple HPs", "status": "complete" },
+            { "filename": "schedules.json", "fileId": "ITR2-SCH", "description": "Schedules including 112A, CFL, FA, FSI, TR", "status": "complete" },
+            { "filename": "scenarios.json", "fileId": "ITR2-SCEN", "description": "6 scenarios: LTCG, STCG, NRI, capital loss CF, HUF, director", "status": "complete" },
+            { "filename": "red-flags.json", "fileId": "ITR2-RF", "description": "Red flags for capital gains, foreign assets, NRI compliance", "status": "complete" }
+          ]
+        },
+        "itr3": {
+          "formId": "ITR-3",
+          "popularName": null,
+          "path": "data/forms/itr3/",
+          "files": [
+            { "filename": "overview.json", "fileId": "ITR3-OV", "description": "For individuals/HUF with business/profession income (actual books)", "status": "complete" },
+            { "filename": "schedules.json", "fileId": "ITR3-SCH", "description": "P&L, Balance Sheet, DPM, DOA, AMT schedules", "status": "complete" },
+            { "filename": "scenarios.json", "fileId": "ITR3-SCEN", "description": "6 scenarios: freelancer, tax audit, partner, property CG, 44AD exit, foreign+VDA", "status": "complete" },
+            { "filename": "red-flags.json", "fileId": "ITR3-RF", "description": "GST mismatch, tax audit, cash payment, TDS default red flags", "status": "complete" }
+          ]
+        },
+        "itr4": {
+          "formId": "ITR-4",
+          "popularName": "Sugam",
+          "path": "data/forms/itr4/",
+          "files": [
+            { "filename": "overview.json", "fileId": "ITR4-OV", "description": "44AD/44ADA/44AE schemes, FY 2025-26 changes (2HP, LTCG 112A, BP balance)", "status": "complete" },
+            { "filename": "schedules.json", "fileId": "ITR4-SCH", "description": "Schedule BP with NEW mandatory cash/bank balance fields", "isNewForFY202526": true, "status": "complete" },
+            { "filename": "scenarios.json", "fileId": "ITR4-SCEN", "description": "7 scenarios including FY 2025-26 new features and disqualification cases", "status": "complete" },
+            { "filename": "red-flags.json", "fileId": "ITR4-RF", "description": "12 red flags: cash balance non-disclosure, CG limit, 5-year lock-in", "status": "complete" }
+          ]
+        },
+        "itr5": {
+          "formId": "ITR-5",
+          "popularName": null,
+          "path": "data/forms/itr5/",
+          "files": [
+            { "filename": "overview.json", "fileId": "ITR5-OV", "description": "For partnership firms, LLPs, AOP, BOI", "status": "complete" },
+            { "filename": "schedules.json", "fileId": "ITR5-SCH", "description": "BP with 40(b) partner remuneration limits, DPM, AMT", "status": "complete" },
+            { "filename": "scenarios.json", "fileId": "ITR5-SCEN", "description": "5 scenarios: 2-partner firm, LLP, loss year, AOP rental, asset sale", "status": "complete" },
+            { "filename": "red-flags.json", "fileId": "ITR5-RF", "description": "10 red flags: 40(b) limits, MAT on LLP error, CFL filing timing", "status": "complete" }
+          ]
+        },
+        "itr6": {
+          "formId": "ITR-6",
+          "popularName": null,
+          "path": "data/forms/itr6/",
+          "files": [
+            { "filename": "overview.json", "fileId": "ITR6-OV", "description": "For domestic/foreign companies not claiming u/s 11", "status": "complete" },
+            { "filename": "schedules.json", "fileId": "ITR6-SCH", "description": "MAT Schedule, DPM, DOA, CG, Balance Sheet for companies", "status": "complete" },
+            { "filename": "scenarios.json", "fileId": "ITR6-SCEN", "description": "5 scenarios: 25% rate, MAT, 115BAA, loss CF, foreign company DTAA", "status": "complete" },
+            { "filename": "red-flags.json", "fileId": "ITR6-RF", "description": "8 red flags: MAT omission, wrong rate, CSR error, MATC credit", "status": "complete" }
+          ]
+        },
+        "itr7": {
+          "formId": "ITR-7",
+          "popularName": null,
+          "path": "data/forms/itr7/",
+          "files": [
+            { "filename": "overview.json", "fileId": "ITR7-OV", "description": "For charitable trusts, political parties, universities (139(4A)-(4D))", "status": "complete" },
+            { "filename": "schedules.json", "fileId": "ITR7-SCH", "description": "Schedule ER (85% application), Schedule AI (accumulation), IE, HP", "status": "complete" },
+            { "filename": "scenarios.json", "fileId": "ITR7-SCEN", "description": "5 scenarios: full-exempt trust, partial tax, political party, university, Section 8", "status": "complete" },
+            { "filename": "red-flags.json", "fileId": "ITR7-RF", "description": "8 red flags: registration lapse, 85% rule, anonymous donations, Form 10B", "status": "complete" }
+          ]
+        }
+      }
+    },
+    "income-guides": {
+      "path": "data/income-guides/",
+      "description": "Guides for each income type: components, tax treatment, deductions, examples",
+      "files": [
+        { "filename": "salary.json", "fileId": "IG-SALARY", "description": "Salary, HRA exemption, perquisites, LTA, standard deduction", "status": "complete" },
+        { "filename": "house-property.json", "fileId": "IG-HP", "description": "GAV, NAV, 30% SD, Section 24(b) interest, HP loss set-off", "status": "complete" },
+        { "filename": "capital-gains.json", "fileId": "IG-CG", "description": "LTCG 112A (12.5%), STCG 111A (20%), property, VDA, exemptions u/s 54/54F/54EC", "status": "complete" },
+        { "filename": "business-professional.json", "fileId": "IG-BPROF", "description": "44AD/44ADA/44AE presumptive + actual income, GST reconciliation", "status": "complete" },
+        { "filename": "foreign-income.json", "fileId": "IG-FOREIGN", "description": "Schedule FA/FSI/TR, DTAA credits, RSU taxation, NRE interest", "status": "complete" },
+        { "filename": "other-sources.json", "fileId": "IG-OS", "description": "FD interest, dividends, gifts, gaming winnings, VDA, NSC", "status": "complete" }
+      ]
+    },
+    "deduction-guides": {
+      "path": "data/deduction-guides/",
+      "description": "Per-section deduction guides with limits, eligibility, examples",
+      "files": [
+        { "filename": "section-80C.json", "fileId": "DG-80C", "description": "LIC, EPF, PPF, ELSS, home loan principal — ₹1.5L cap", "status": "complete" },
+        { "filename": "section-80CCD.json", "fileId": "DG-80CCD", "description": "NPS: 80CCD(1), 80CCD(1B) ₹50K, 80CCD(2) 14% — FY 2025-26 change", "isNewForFY202526": true, "status": "complete" },
+        { "filename": "section-80D.json", "fileId": "DG-80D", "description": "Health insurance premium — ₹25K/₹50K for self + parents", "status": "complete" },
+        { "filename": "section-80E.json", "fileId": "DG-80E", "description": "Education loan interest — no limit, 8 years", "status": "complete" },
+        { "filename": "section-80EE.json", "fileId": "DG-80EE", "description": "First-time home buyer interest (pre-2017 loans) — ₹50K", "status": "complete" },
+        { "filename": "section-80EEA.json", "fileId": "DG-80EEA", "description": "Affordable housing interest (2019-2022 loans) — ₹1.5L", "status": "complete" },
+        { "filename": "section-80EEB.json", "fileId": "DG-80EEB", "description": "Electric vehicle loan interest (2019-2023 loans) — ₹1.5L", "status": "complete" },
+        { "filename": "section-80G.json", "fileId": "DG-80G", "description": "Charitable donations — 100%/50% categories, cash limit ₹2K", "status": "complete" },
+        { "filename": "other-deductions.json", "fileId": "DG-OTHER", "description": "80GG, 80U, 80DD, 80DDB, 80TTA, 80TTB, 80CCH, 80RRB, 80QQB", "status": "complete" }
+      ]
+    },
+    "procedures": {
+      "path": "data/procedures/",
+      "description": "Post-filing compliance procedures with steps, timelines, consequences",
+      "files": [
+        { "filename": "e-verification.json", "fileId": "PROC-EV", "description": "E-verify within 30 days — Aadhaar OTP, EVC, DSC, ITR-V physical", "status": "complete" },
+        { "filename": "processing-assessment.json", "fileId": "PROC-PA", "description": "143(1) CPC processing, 143(2) scrutiny selection, 143(3) assessment", "status": "complete" },
+        { "filename": "defect-notices.json", "fileId": "PROC-DN", "description": "Section 139(9) defect notices — 15-day response window", "status": "complete" },
+        { "filename": "revised-return.json", "fileId": "PROC-RR", "description": "Revised return u/s 139(5) — until March 31, 2027", "status": "complete" },
+        { "filename": "belated-return.json", "fileId": "PROC-BR", "description": "Belated return u/s 139(4) — until December 31, 2026; loss CF forfeited", "status": "complete" },
+        { "filename": "interest-penalties.json", "fileId": "PROC-IP", "description": "234A/B/C interest, 234F late fee, 270A penalty, 271B audit penalty", "status": "complete" },
+        { "filename": "notice-response.json", "fileId": "PROC-NR", "description": "143(1) demand, 143(2) scrutiny, 148A re-assessment notice responses", "status": "complete" },
+        { "filename": "refund-processing.json", "fileId": "PROC-RP", "description": "Refund via NEFT, Section 244A 6% interest, status tracking", "status": "complete" },
+        { "filename": "rectification.json", "fileId": "PROC-RECT", "description": "Rectification u/s 154 — errors in AO order; within 4 years", "status": "complete" }
+      ]
+    }
+  },
+  "fy202526Highlights": [
+    { "changeId": "FA25-001", "summary": "New regime default — zero tax up to ₹12L (₹12.75L with standard deduction)", "affectedForms": ["ITR-1", "ITR-2", "ITR-3", "ITR-4"] },
+    { "changeId": "FA25-003", "summary": "ITR-4 expanded to 2 house properties (from 1)", "affectedForms": ["ITR-4"] },
+    { "changeId": "FA25-004", "summary": "ITR-4 allows LTCG 112A within ₹1.25L exemption limit", "affectedForms": ["ITR-4"] },
+    { "changeId": "FA25-005", "summary": "Mandatory cash/bank balance disclosure in Schedule BP (ITR-4)", "affectedForms": ["ITR-4"] },
+    { "changeId": "FA25-007", "summary": "80CCD(2) employer NPS limit raised from 10% to 14%", "affectedForms": ["ITR-1", "ITR-2", "ITR-3", "ITR-4"] },
+    { "changeId": "FA24-001", "summary": "LTCG 112A rate 12.5% (was 10%), exemption ₹1.25L (was ₹1L)", "affectedForms": ["ITR-2", "ITR-3", "ITR-4"] },
+    { "changeId": "FA24-002", "summary": "STCG 111A rate 20% (was 15%)", "affectedForms": ["ITR-2", "ITR-3"] }
+  ],
+  "schemaVersion": "1.0",
+  "tags": ["itr", "income-tax", "fy2025-26", "ay2026-27", "india", "react-ready"]
+}

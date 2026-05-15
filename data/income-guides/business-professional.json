@@ -1,0 +1,98 @@
+{
+  "guideId": "IG-BPROF",
+  "incomeType": "Business and Professional Income",
+  "fyApplicable": "2025-26",
+  "description": "Income from carrying on business or profession. Two paths: (1) Presumptive income (Sections 44AD/44ADA/44AE — flat % basis, ITR-4) or (2) Actual income with books of accounts (ITR-3). Most significant FY 2025-26 changes: ITR-4 now requires mandatory cash/bank balance disclosure in Schedule BP.",
+  "relevantITRForms": ["ITR-3 (actual books)", "ITR-4 (presumptive)", "ITR-5 (firms/LLP)", "ITR-6 (companies)"],
+  "relevantSchedules": ["Schedule-BP", "Schedule-PL", "Schedule-BS", "Schedule-DPM", "Schedule-DOA"],
+  "taxTreatment": {
+    "oldRegime": { "rate": "Slab rate on business income after all allowable deductions. Old regime requires Form 10-IEA if taxpayer has business income.", "notes": "Old regime requires Form 10-IEA filing for business income taxpayers" },
+    "newRegime": { "rate": "Slab rate — new regime is default. No HRA, 80C, 80D deductions. Only 80CCD(2) and standard deduction allowed.", "notes": "Default regime for FY 2025-26" },
+    "specialRate": null
+  },
+  "incomeComponents": [
+    {
+      "componentId": "BP-01",
+      "name": "Presumptive Income u/s 44AD (Eligible Business)",
+      "description": "8% of turnover (or 6% for digital receipts) declared as income without maintaining full books. Turnover limit: ₹3 Crore (₹2 Crore if cash > 5%). For retail traders, manufacturers, transporters (not professionals).",
+      "exemptAmount": null,
+      "isFullyTaxable": true,
+      "relevantSection": "Section 44AD",
+      "rate": "Minimum 8% of turnover (6% for digital)"
+    },
+    {
+      "componentId": "BP-02",
+      "name": "Presumptive Income u/s 44ADA (Eligible Professionals)",
+      "description": "50% of gross receipts declared as income. For resident individuals who are doctors, lawyers, CAs, engineers, architects, interior designers, technical consultants. Gross receipts limit: ₹75L (₹50L if cash > 5%).",
+      "exemptAmount": null,
+      "isFullyTaxable": true,
+      "relevantSection": "Section 44ADA",
+      "rate": "Minimum 50% of gross receipts"
+    },
+    {
+      "componentId": "BP-03",
+      "name": "Presumptive Income u/s 44AE (Goods Transport)",
+      "description": "Per vehicle income: Heavy goods vehicles (GVW > 12T): ₹1,000/ton of GVW/month; Other vehicles: ₹7,500/month. Owner must not own more than 10 vehicles at any time during the year.",
+      "exemptAmount": null,
+      "isFullyTaxable": true,
+      "relevantSection": "Section 44AE"
+    },
+    {
+      "componentId": "BP-04",
+      "name": "Actual Business Income (Books of Accounts)",
+      "description": "Actual net profit from P&L account after all allowable deductions. Used when not under presumptive scheme or when turnover exceeds presumptive limits.",
+      "exemptAmount": null,
+      "isFullyTaxable": true,
+      "relevantSection": "Sections 28-44"
+    }
+  ],
+  "deductionsAvailable": [
+    { "sectionId": "37", "name": "Business Expenses (General)", "limit": "Actual amount — must be genuinely for business", "regime": "both", "notes": "Expenditure not personal, not capital, wholly for business. 40A(3) disallows cash payments > ₹10K." },
+    { "sectionId": "32", "name": "Depreciation (IT Act WDV method)", "limit": "Actual at prescribed rates", "regime": "both", "notes": "Separate from book depreciation. 50% rate for assets acquired in second half of year." },
+    { "sectionId": "36(1)(va)", "name": "Employee Contribution to PF/ESI", "limit": "Actual — if deposited within due dates", "regime": "both", "notes": "Only deductible if deposited by due date; otherwise disallowed (Kessoram Industries ruling)" },
+    { "sectionId": "80CCD(2)", "name": "Employer NPS contribution", "limit": "14% of salary", "regime": "both", "notes": "Available even in new regime. Raised from 10% in FY 2025-26.", "isNewForFY202526": true }
+  ],
+  "keyRules": [
+    { "ruleId": "BP-R01", "rule": "Tax audit u/s 44AB mandatory when: Business turnover > ₹1Cr (₹10Cr if digital-heavy — cash receipts and payments ≤ 5% of total). Professional receipts > ₹50L. Opted out of 44AD with income below minimum rate.", "legalReference": "Section 44AB", "isNewForFY202526": false },
+    { "ruleId": "BP-R02", "rule": "44AD 5-year lock-in: Once a taxpayer opts out of 44AD (declares income < 8% or maintains books), they cannot use 44AD for the next 5 consecutive assessment years.", "legalReference": "Section 44AD(4)", "isNewForFY202526": false },
+    { "ruleId": "BP-R03", "rule": "GST reconciliation: GSTR-9 annual return turnover is cross-matched with ITR turnover. Significant discrepancy triggers AI-based notices. Reconcile before filing.", "legalReference": "CBDT-GSTN data sharing", "isNewForFY202526": false },
+    { "ruleId": "BP-R04", "rule": "Schedule BP mandatory cash/bank balance (FY 2025-26): ITR-4 filers under 44AD/44ADA/44AE MUST disclose actual cash in hand and aggregate bank balance as on March 31, 2026. New mandatory field.", "legalReference": "Schedule BP, ITR-4 Form for AY 2026-27", "isNewForFY202526": true },
+    { "ruleId": "BP-R05", "rule": "Old regime with business income: Taxpayer must file Form 10-IEA before or with ITR to opt for old tax regime. Failure means new regime is applied by default.", "legalReference": "Section 115BAC(6), Form 10-IEA", "isNewForFY202526": false }
+  ],
+  "workedExample": {
+    "profile": "Dr. Priya, radiologist, 44ADA presumptive",
+    "incomeDetails": {
+      "scheme": "Section 44ADA",
+      "grossReceipts": 6000000,
+      "presumptiveIncome": 3000000,
+      "actualExpenses": "Irrelevant under presumptive scheme",
+      "regimeChoice": "New Tax Regime"
+    },
+    "computation": {
+      "grossTotalIncome": 3000000,
+      "deductions": 0,
+      "taxableIncome": 3000000,
+      "taxBreakdown": "0-4L: nil; 4-8L: ₹20K (5%); 8-12L: ₹40K (10%); 12-24L: ₹30K (15% on 12-14L only since ₹30L income) Wait: ₹30L > ₹24L, let me recalc: 12-16L: ₹60K; 16-20L: ₹80K; 20-24L: ₹100K; 24-30L: ₹180K (30% on ₹6L) = total ₹4,80,000",
+      "totalTax": 480000,
+      "cess": 19200
+    },
+    "taxableIncome": 3000000,
+    "taxPayable": 499200
+  },
+  "commonMistakes": [
+    "Declaring income below presumptive minimum without maintaining actual books (invalid — must use ITR-3 with books)",
+    "Re-using 44AD within 5-year lock-in period after opting out",
+    "Not reconciling GST turnover with ITR turnover",
+    "Claiming personal expenses as business expenses u/s 37",
+    "Not disclosing cash/bank balance in ITR-4 Schedule BP (NEW mandatory for FY 2025-26)",
+    "Cash payment > ₹10K claimed as deduction (disallowed u/s 40A(3))"
+  ],
+  "auditTriggers": [
+    "Low GP ratio compared to industry average or prior years",
+    "Cash sales percentage higher than industry norm",
+    "Large purchases without corresponding GST input credits",
+    "Significant deposits in bank not matching declared business income",
+    "Turnaround from losses to profit or vice versa without explanation"
+  ],
+  "relatedGuides": ["IG-SALARY", "IG-CG"]
+}
