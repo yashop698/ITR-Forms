@@ -1,0 +1,36 @@
+{
+  "procedureId": "PROC-RR",
+  "procedureName": "Revised Return (Section 139(5))",
+  "fyApplicable": "2025-26",
+  "description": "If a taxpayer discovers an omission or wrong statement in a filed return, they can file a revised return u/s 139(5). The revised return replaces the original. Can be filed multiple times before the deadline.",
+  "applicableForms": ["ITR-1", "ITR-2", "ITR-3", "ITR-4", "ITR-5", "ITR-6", "ITR-7"],
+  "timeline": "Deadline: March 31, 2027 (3 years from end of AY 2026-27, capped at before completion of assessment, whichever is earlier)",
+  "eligibility": [
+    "Original return must be filed (cannot revise if original was not filed)",
+    "Revision must be before completion of assessment u/s 143(3)",
+    "Revised return replaces original — original stands withdrawn",
+    "Cannot reduce income already assessed by AO — only errors/omissions"
+  ],
+  "commonRevisionsReason": [
+    "Missed income head (forgot to include rental income)",
+    "Wrong deduction amount (80C excess claimed)",
+    "Incorrect bank account for refund",
+    "Missed TDS credit",
+    "Wrong tax regime selection"
+  ],
+  "steps": [
+    { "stepId": "RR-01", "stepName": "Identify error in original return", "description": "Review original ITR, Form 26AS, AIS carefully. Note specific changes needed.", "deadline": null, "isOnline": false, "legalReference": null },
+    { "stepId": "RR-02", "stepName": "File revised return on portal", "description": "Log into e-filing portal. Select 'File Income Tax Return'. Select AY 2026-27. Select 'Revised Return u/s 139(5)'. Enter original acknowledgment number and date.", "deadline": "Before March 31, 2027", "isOnline": true, "legalReference": "Section 139(5)" },
+    { "stepId": "RR-03", "stepName": "Complete and submit revised return", "description": "Fill in corrected details. Compute revised tax liability. Pay additional tax if any via self-assessment (Challan 280). Submit and e-verify.", "deadline": "Within 30 days of filing", "isOnline": true, "legalReference": null }
+  ],
+  "commonMistakes": [
+    "Filing revised return after March 31, 2027 (not accepted — belated return window closes)",
+    "Not paying interest u/s 234A/234B on additional tax before filing revision",
+    "Trying to reduce income in revised return that was already assessed — AO can reopen original assessment"
+  ],
+  "consequences": [
+    "If tax due not paid before revision: Interest u/s 234B continues to accrue",
+    "Cannot revise after assessment u/s 143(3) is completed — use rectification u/s 154 instead"
+  ],
+  "legalReference": "Section 139(5), Income-tax Act 1961"
+}
