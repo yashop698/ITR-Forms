@@ -217,7 +217,7 @@
             "netAnnualValue": 160000,
             "standardDeduction30Pct": 48000,
             "homeLoanInterest": 120000,
-            "incomeHP2": 160000 - 48000 - 120000,
+            "incomeHP2": -8000,
             "note": "Net HP income from let-out = ₹1,60,000 - ₹48,000 - ₹1,20,000 = -₹8,000 (loss). Under new regime, HP loss from let-out can be set off against HP income but NOT against other income in some interpretations — verify with current CBDT guidance."
           },
           "calculation": {
