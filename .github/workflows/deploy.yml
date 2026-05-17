@@ -3,6 +3,10 @@ name: Build and Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - 'index.html'
+      - 'favicon.svg'
+      - 'assets/**'
 
 permissions:
   contents: write
@@ -12,6 +16,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: actions/setup-node@v4
         with:
@@ -30,5 +36,6 @@ jobs:
           cp -f dist/favicon.svg favicon.svg
           cp -rf dist/assets assets
           git add index.html favicon.svg assets/
-          git diff --cached --quiet && echo "No changes" || git commit -m "Deploy: update built assets [skip ci]"
-          git push
+          git diff --cached --quiet && echo "No changes to deploy" || \
+            git commit -m "Deploy: update built assets [skip ci]" && \
+            git push origin main
