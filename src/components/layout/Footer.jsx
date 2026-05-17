@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { FileText, ExternalLink } from 'lucide-react'
+import { FileText, ExternalLink, Download } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -27,6 +27,13 @@ export default function Footer() {
               <li><Link to="/selector" className="hover:text-white transition-colors">ITR Form Selector</Link></li>
               <li><Link to="/forms/itr1" className="hover:text-white transition-colors">ITR-1 (Sahaj)</Link></li>
               <li><Link to="/forms/itr4" className="hover:text-white transition-colors">ITR-4 (Sugam)</Link></li>
+              <li>
+                <Link to="/downloads" className="hover:text-white transition-colors flex items-center gap-1.5">
+                  <Download size={12} />
+                  Downloads — AY 2026-27
+                  <span className="text-[9px] bg-green-500 text-white px-1.5 py-0.5 rounded-full leading-none font-bold">NEW</span>
+                </Link>
+              </li>
               <li><Link to="/procedures" className="hover:text-white transition-colors">Post-Filing Procedures</Link></li>
               <li><Link to="/reference" className="hover:text-white transition-colors">Key Dates & Deadlines</Link></li>
             </ul>

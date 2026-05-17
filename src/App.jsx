@@ -7,6 +7,7 @@ import IncomePage from './pages/guides/IncomePage'
 import DeductionsPage from './pages/guides/DeductionsPage'
 import ProceduresPage from './pages/procedures/ProceduresPage'
 import ReferencePage from './pages/reference/ReferencePage'
+import DownloadsPage from './pages/DownloadsPage'
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
           <Route path="deductions/:sectionId?" element={<DeductionsPage />} />
           <Route path="procedures/:procedureId?" element={<ProceduresPage />} />
           <Route path="reference/:sectionId?" element={<ReferencePage />} />
+          <Route path="downloads" element={<DownloadsPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>

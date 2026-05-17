@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, Search, FileText, ChevronDown } from 'lucide-react'
+import { Menu, Search, FileText, ChevronDown, Download } from 'lucide-react'
 import { useState } from 'react'
 
 const FORMS = [
@@ -118,6 +118,21 @@ export default function Navbar({ onMenuClick, onSearchClick }) {
               }`}
             >
               Reference
+            </Link>
+
+            <Link
+              to="/downloads"
+              className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-semibold transition-colors ${
+                isActive('/downloads')
+                  ? 'bg-accent text-white'
+                  : 'bg-accent/20 text-accent hover:bg-accent/30'
+              }`}
+            >
+              <Download size={14} />
+              Downloads
+              <span className="text-[10px] bg-green-400 text-white px-1.5 py-0.5 rounded-full leading-none font-bold">
+                NEW
+              </span>
             </Link>
           </nav>
 

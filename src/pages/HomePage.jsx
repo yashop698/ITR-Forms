@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import {
   GitBranch, FileText, Search, Calendar, ChevronRight, Star,
-  AlertTriangle, CheckCircle, TrendingUp, Users, Shield, Zap, ArrowRight
+  AlertTriangle, CheckCircle, TrendingUp, Users, Shield, Zap, ArrowRight, Download
 } from 'lucide-react'
 
 const FORMS = [
@@ -16,12 +16,12 @@ const FORMS = [
 
 const KEY_CHANGES = [
   { id: 'FA25-001', desc: 'Zero tax up to ₹12L under new regime (87A rebate ₹60K)', tag: 'New Regime' },
+  { id: 'FA25-012', desc: 'ITR-1 expanded to 2 house properties (from 1)', tag: 'ITR-1 NEW' },
+  { id: 'FA25-013', desc: 'ITR-1 now allows LTCG 112A within ₹1.25L exemption', tag: 'ITR-1 NEW' },
   { id: 'FA25-003', desc: 'ITR-4 expanded to 2 house properties (from 1)', tag: 'ITR-4' },
   { id: 'FA25-004', desc: 'ITR-4 allows LTCG 112A within ₹1.25L exemption', tag: 'ITR-4' },
   { id: 'FA25-005', desc: 'Mandatory cash/bank balance disclosure in Schedule BP', tag: 'ITR-4 NEW' },
   { id: 'FA25-007', desc: '80CCD(2) employer NPS limit raised to 14% (from 10%)', tag: 'Deductions' },
-  { id: 'FA24-001', desc: 'LTCG 112A rate 12.5% (was 10%), exemption ₹1.25L (was ₹1L)', tag: 'Capital Gains' },
-  { id: 'FA24-002', desc: 'STCG 111A rate 20% (was 15%) from Jul 23, 2024', tag: 'Capital Gains' },
 ]
 
 const STATS = [
@@ -186,6 +186,40 @@ export default function HomePage() {
               <h3 className="font-bold text-text-main mb-1">Post-Filing</h3>
               <p className="text-sm text-text-muted">E-verify, revised returns, notices, refunds</p>
             </Link>
+          </div>
+        </section>
+
+        {/* Downloads Banner */}
+        <section className="mb-12">
+          <div className="bg-gradient-to-r from-emerald-600 to-teal-700 rounded-2xl p-6 text-white">
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+              <div>
+                <div className="flex items-center gap-2 mb-2">
+                  <div className="flex items-center gap-1.5 bg-white/20 border border-white/30 px-2.5 py-1 rounded-full text-xs font-semibold">
+                    <span className="w-1.5 h-1.5 bg-green-300 rounded-full animate-pulse" />
+                    Live — Released 15-May-2026
+                  </div>
+                </div>
+                <h2 className="text-xl font-bold mb-1 flex items-center gap-2">
+                  <Download size={20} />
+                  AY 2026-27 Offline Utilities Available
+                </h2>
+                <p className="text-emerald-100 text-sm mb-2">
+                  ITR-1 (Sahaj) and ITR-4 (Sugam) Excel utilities, JSON schemas &amp; validation PDFs now live.
+                  ITR-2, 3, 5, 6, 7 coming soon.
+                </p>
+                <div className="flex flex-wrap gap-2 text-xs">
+                  <span className="bg-white/20 px-2.5 py-1 rounded-full">ITR-1 v1.0 · 4 MB ZIP</span>
+                  <span className="bg-white/20 px-2.5 py-1 rounded-full">ITR-4 v1.0 · 5 MB ZIP</span>
+                  <span className="bg-white/20 px-2.5 py-1 rounded-full">Excel 2016+ required</span>
+                </div>
+              </div>
+              <Link to="/downloads" className="flex items-center gap-2 bg-white text-teal-700 font-bold px-5 py-3 rounded-xl hover:bg-emerald-50 transition-colors flex-shrink-0 shadow">
+                <Download size={18} />
+                View Downloads
+                <ArrowRight size={16} />
+              </Link>
+            </div>
           </div>
         </section>
 

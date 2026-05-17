@@ -49,6 +49,49 @@
       "isNewForFY202526": true
     },
     {
+      "changeId": "FA25-012",
+      "category": "form-eligibility",
+      "priority": "high",
+      "form": "ITR-1",
+      "title": "ITR-1 (Sahaj) Now Allows Up to 2 House Properties",
+      "section": "ITR-1 Form Design — Schedule HP",
+      "legalReference": "CBDT Notification for ITR Forms AY 2026-27 (released 15-May-2026)",
+      "summary": "Effective FY 2025-26, the ITR-1 (Sahaj) form has been expanded to allow taxpayers to report income from up to 2 house properties (expanded from the previous limit of 1 house property). The overall income limit of ₹50 lakh still applies.",
+      "impact": "medium",
+      "affectedForms": ["ITR-1"],
+      "effectiveFrom": "2025-04-01",
+      "practicalImplication": "Salaried individuals who own 2 residential properties (e.g., one self-occupied and one let-out) can now use the simpler ITR-1 instead of being forced to file ITR-2.",
+      "conditions": [
+        "Applies only to Resident Individuals and RNORs",
+        "Total income must not exceed ₹50 lakh",
+        "No business/professional income allowed",
+        "If more than 2 house properties, must use ITR-2"
+      ],
+      "isNewForFY202526": true
+    },
+    {
+      "changeId": "FA25-013",
+      "category": "form-eligibility",
+      "priority": "high",
+      "form": "ITR-1",
+      "title": "ITR-1 Now Permits LTCG u/s 112A Up to ₹1.25 Lakh",
+      "section": "ITR-1 Form Design — Schedule CG (restricted)",
+      "legalReference": "CBDT Notification for ITR Forms AY 2026-27 (released 15-May-2026)",
+      "summary": "For FY 2025-26, ITR-1 filers can now report Long-Term Capital Gains on listed equity shares, equity-oriented mutual funds, or units of business trusts (u/s 112A), provided the net LTCG does not exceed ₹1,25,000. Previously, any capital gain disqualified ITR-1 completely.",
+      "impact": "medium",
+      "affectedForms": ["ITR-1"],
+      "effectiveFrom": "2025-04-01",
+      "conditions": [
+        "Only LTCG u/s 112A (listed equity/equity MF/business trust units) is allowed in ITR-1",
+        "Net LTCG u/s 112A must not exceed ₹1,25,000",
+        "No capital losses being carried forward",
+        "No other capital gain/loss transactions",
+        "If any of these conditions fail, must switch to ITR-2"
+      ],
+      "practicalImplication": "Salaried individuals with minor equity MF redemptions (within ₹1.25L LTCG) no longer need to switch to ITR-2 just for a small LTCG.",
+      "isNewForFY202526": true
+    },
+    {
       "changeId": "FA25-003",
       "category": "form-eligibility",
       "priority": "high",
@@ -279,8 +322,17 @@
   ],
   "formChangeSummary": {
     "ITR-1": {
-      "significantChanges": ["New tax regime slabs (87A rebate up to ₹12L)", "Nil slab extended to ₹4L"],
-      "formStructureChanged": false
+      "significantChanges": [
+        "Eligibility expanded to 2 house properties (from 1)",
+        "LTCG u/s 112A reporting allowed (within ₹1.25L exemption limit)",
+        "RNORs now eligible to use ITR-1",
+        "New tax regime slabs (87A rebate up to ₹12L)",
+        "Nil slab extended to ₹4L"
+      ],
+      "formStructureChanged": true,
+      "isNewForFY202526": true,
+      "utilityVersion": "1.0",
+      "utilityReleaseDate": "15-May-2026"
     },
     "ITR-2": {
       "significantChanges": ["New capital gains rates (112A at 12.5%, 111A at 20%)", "New tax slabs"],
@@ -298,7 +350,9 @@
         "New tax slabs under new regime"
       ],
       "formStructureChanged": true,
-      "isNewForFY202526": true
+      "isNewForFY202526": true,
+      "utilityVersion": "1.0",
+      "utilityReleaseDate": "15-May-2026"
     },
     "ITR-5": {
       "significantChanges": ["No major structural changes for FY 2025-26"],

@@ -3,13 +3,13 @@
   "popularName": "Sahaj",
   "fyApplicable": "2025-26",
   "ayApplicable": "2026-27",
-  "shortDescription": "For resident individuals with income from salary/pension, one house property, other sources (interest, dividends), and agricultural income up to ₹5,000. Total income must not exceed ₹50 lakh.",
-  "longDescription": "ITR-1 (Sahaj) is the simplest and most commonly used ITR form. It is designed for straightforward income profiles — primarily salaried employees and pensioners. The form has been designed to minimize data entry and is pre-filled with employer-reported data in many cases. For FY 2025-26, the primary changes are in the tax computation — the new tax regime default with the revised 87A rebate up to ₹12 lakh.",
+  "shortDescription": "For resident individuals with income from salary/pension, up to two house properties, other sources (interest, dividends), LTCG u/s 112A up to ₹1.25 lakh, and agricultural income up to ₹5,000. Total income must not exceed ₹50 lakh.",
+  "longDescription": "ITR-1 (Sahaj) is the simplest and most commonly used ITR form. It is designed for straightforward income profiles — primarily salaried employees and pensioners. For FY 2025-26 (AY 2026-27), the form has been significantly expanded: it now allows income from up to 2 house properties (previously only 1) and permits reporting of LTCG u/s 112A up to ₹1.25 lakh. The new tax regime is default with the revised 87A rebate giving zero tax up to ₹12 lakh. Offline Excel utility (v1.0) released on 15-May-2026.",
   "incomeLimitTotal": 5000000,
   "incomeLimitNote": "Total income from all sources must not exceed ₹50,00,000",
   "legalReference": "Rule 12, Income-tax Rules 1962",
-  "assesseeTypes": ["Resident Individual"],
-  "residencyNote": "ONLY ordinary resident individuals can file ITR-1. RNOR (Resident but Not Ordinarily Resident) and NRIs must use ITR-2.",
+  "assesseeTypes": ["Resident Individual", "RNOR (Resident but Not Ordinarily Resident)"],
+  "residencyNote": "For AY 2026-27, ITR-1 is available to both Ordinary Residents and RNORs (Resident but Not Ordinarily Resident). NRIs (Non-Residents) cannot use ITR-1 and must use ITR-2.",
   "eligibilityCriteria": [
     {
       "id": "EC-1",
@@ -25,9 +25,11 @@
     },
     {
       "id": "EC-3",
-      "criterion": "Income from one house property only",
-      "detail": "Self-occupied, let-out, or deemed let-out — but ONLY ONE property. If more than one house property exists, must use ITR-2.",
-      "isInclusion": true
+      "criterion": "Income from up to two house properties (NEW for FY 2025-26)",
+      "detail": "Self-occupied, let-out, or deemed let-out — up to TWO properties allowed. Expanded from 1 property in FY 2024-25. If more than 2 house properties exist, must use ITR-2.",
+      "isInclusion": true,
+      "isNewForFY202526": true,
+      "legalReference": "CBDT Notification, ITR-1 Form for AY 2026-27"
     },
     {
       "id": "EC-4",
@@ -63,14 +65,14 @@
     },
     {
       "id": "EX-4",
-      "criterion": "Any capital gains (long-term or short-term)",
-      "detail": "Any capital gain — including LTCG u/s 112A even within the ₹1.25L exempt limit — disqualifies ITR-1. Capital gains require ITR-2.",
+      "criterion": "LTCG u/s 112A exceeding ₹1.25 lakh, any STCG, or any other capital gain type",
+      "detail": "For AY 2026-27, LTCG u/s 112A up to ₹1.25 lakh is NOW PERMITTED in ITR-1. However, LTCG u/s 112A above ₹1.25 lakh, any STCG, capital gains on property/unlisted shares, or capital losses being carried forward disqualify ITR-1.",
       "consequence": "Must use ITR-2"
     },
     {
       "id": "EX-5",
-      "criterion": "More than one house property",
-      "detail": "Ownership of two or more house properties (even if one is under construction, or both self-occupied).",
+      "criterion": "More than two house properties",
+      "detail": "Ownership of three or more house properties disqualifies ITR-1. Up to two house properties are now allowed for AY 2026-27.",
       "consequence": "Must use ITR-2"
     },
     {
@@ -133,19 +135,35 @@
     }
   ],
   "commonMisconceptions": [
-    "Misconception: LTCG u/s 112A is exempt up to ₹1.25L so ITR-1 can be filed. Fact: ANY capital gain income — even fully exempt — requires ITR-2. Capital gains must be disclosed regardless.",
+    "Misconception: LTCG u/s 112A is NOT allowed in ITR-1. Fact: For AY 2026-27, LTCG u/s 112A up to ₹1.25L is now PERMITTED in ITR-1. However, LTCG exceeding ₹1.25L or any other capital gain type still requires ITR-2.",
     "Misconception: A salaried director of a small company can use ITR-1. Fact: Being a director in ANY company (even a startup or family company) disqualifies ITR-1. Must use ITR-2.",
+    "Misconception: ITR-1 can only be used for one house property. Fact: For AY 2026-27, ITR-1 allows up to 2 house properties. If you have 3 or more properties, use ITR-2.",
     "Misconception: If someone holds ESOP shares of a foreign company and they're unvested, ITR-1 can be used. Fact: Any beneficial interest in unlisted shares (including unvested ESOPs) disqualifies ITR-1.",
-    "Misconception: ITR-1 can be used if interest income is very small. Fact: The type of income matters, not the amount. Even ₹100 capital gain requires ITR-2.",
     "Misconception: If freelance income was incidental/one-time, ITR-1 can be used. Fact: ANY professional or business income — even a single consultancy payment — requires ITR-3 or ITR-4."
   ],
   "fy202526Changes": [
     {
+      "changeId": "FA25-012",
+      "summary": "House property eligibility expanded from 1 to 2 properties in ITR-1",
+      "detail": "For AY 2026-27, ITR-1 now allows income from up to 2 house properties. Previously only 1 house property was allowed.",
+      "isNewForFY202526": true,
+      "legalReference": "CBDT Notification, ITR-1 Form for AY 2026-27 (released 15-May-2026)"
+    },
+    {
+      "changeId": "FA25-013",
+      "summary": "LTCG u/s 112A reporting allowed in ITR-1 (within ₹1.25L exemption limit)",
+      "detail": "For AY 2026-27, ITR-1 filers can now report Long-Term Capital Gains u/s 112A (listed equity/equity MF) up to ₹1.25 lakh. Previously, any capital gain disqualified ITR-1.",
+      "isNewForFY202526": true,
+      "legalReference": "CBDT Notification, ITR-1 Form for AY 2026-27 (released 15-May-2026)"
+    },
+    {
+      "changeId": "FA25-001",
       "summary": "New tax regime is the DEFAULT for FY 2025-26",
       "detail": "Taxpayers who want old regime deductions (80C, 80D, HRA, etc.) must explicitly opt for old regime when filing ITR",
       "isNewForFY202526": true
     },
     {
+      "changeId": "FA25-002",
       "summary": "Zero tax up to ₹12,75,000 for salaried under new regime",
       "detail": "87A rebate of ₹60,000 applicable if taxable income ≤ ₹12L. With standard deduction of ₹75,000, salaried individuals with salary ≤ ₹12.75L pay zero tax.",
       "isNewForFY202526": true
@@ -156,7 +174,12 @@
       "isNewForFY202526": false
     }
   ],
-  "officialFormLink": "https://www.incometax.gov.in/iec/foportal/downloads/forms/incometaxreturns",
+  "offlineUtilityLink": "https://www.incometax.gov.in/iec/foportal/sites/default/files/2026-05/ITR1_AY_26-27_V1.0.zip",
+  "schemaLink": "https://www.incometax.gov.in/iec/foportal/sites/default/files/2026-05/ITR-1_2026_Main_V1.0_0.json",
+  "validationsLink": "https://www.incometax.gov.in/iec/foportal/sites/default/files/2026-05/CBDT_e-Filing_ITR%201_Validation%20Rules_AY%202026-27.pdf",
+  "utilityVersion": "1.0",
+  "utilityReleaseDate": "15-May-2026",
+  "officialFormLink": "https://www.incometax.gov.in/iec/foportal/downloads/income-tax-returns",
   "filingDeadline": "July 31, 2026",
   "mandatoryEfiling": true,
   "dscRequired": false,
