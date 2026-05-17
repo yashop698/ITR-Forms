@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Layout from './components/layout/Layout'
 import HomePage from './pages/HomePage'
 import DecisionTreePage from './pages/DecisionTreePage'
@@ -20,6 +20,7 @@ export default function App() {
           <Route path="deductions/:sectionId?" element={<DeductionsPage />} />
           <Route path="procedures/:procedureId?" element={<ProceduresPage />} />
           <Route path="reference/:sectionId?" element={<ReferencePage />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>
     </HashRouter>
