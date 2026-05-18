@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import {
-  GitBranch, FileText, Search, Calendar, ChevronRight, Star,
+  GitBranch, FileText, Search, Calendar, ChevronRight,
   AlertTriangle, CheckCircle, TrendingUp, Users, Shield, Zap, ArrowRight, Download
 } from 'lucide-react'
 
@@ -25,172 +25,253 @@ const KEY_CHANGES = [
 ]
 
 const STATS = [
-  { value: '7', label: 'ITR Forms', icon: FileText },
-  { value: '40+', label: 'Worked Scenarios', icon: TrendingUp },
-  { value: '61', label: 'Knowledge Files', icon: Shield },
-  { value: '100%', label: 'FY 2025-26 Updated', icon: CheckCircle },
+  { value: '7',    label: 'ITR Forms',        desc: 'Complete coverage' },
+  { value: '40+',  label: 'Scenarios',         desc: 'Real-world examples' },
+  { value: '61',   label: 'Knowledge Files',   desc: 'Comprehensive guides' },
+  { value: '100%', label: 'Updated',           desc: 'FY 2025-26 compliant' },
+]
+
+const QUICK_ACCESS = [
+  { to: '/selector',   icon: GitBranch,   color: 'text-primary',      hover: 'hover:border-primary/30',  title: 'ITR Form Selector',  desc: '3-step wizard to find your correct ITR form' },
+  { to: '/income',     icon: TrendingUp,  color: 'text-success',      hover: 'hover:border-success/30',  title: 'Income Guides',      desc: 'Salary, House Property, Capital Gains, Business' },
+  { to: '/deductions', icon: Shield,      color: 'text-accent-dark',  hover: 'hover:border-accent/30',   title: 'Deduction Guides',   desc: '80C, 80CCD, 80D, 80G and all other sections' },
+  { to: '/procedures', icon: CheckCircle, color: 'text-warning',      hover: 'hover:border-warning/30',  title: 'Post-Filing',        desc: 'E-verify, revised returns, notices, refunds' },
 ]
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen">
-      {/* Hero */}
-      <section className="bg-gradient-to-br from-primary via-primary-dark to-[#0d2060] text-white py-16 px-4">
-        <div className="max-w-screen-xl mx-auto">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 bg-accent/20 border border-accent/40 text-accent px-3 py-1 rounded-full text-sm font-semibold mb-4">
-              <Star size={14} />
-              Finance Act 2025 — Updated
-            </div>
-            <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight mb-4">
-              FY 2025-26 Income Tax Return (ITR) Filing Guide
-            </h1>
-            <p className="text-xl text-blue-200 mb-2">
-              Complete Knowledge Base for AY 2026-27
-            </p>
-            <p className="text-blue-300 mb-8 text-lg">
-              Professional. Comprehensive. Up-to-date with CBDT Changes.
-            </p>
+    <div className="min-h-screen" style={{ background: '#fafaf8' }}>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-3">
-              <Link to="/selector" className="btn-accent">
-                <GitBranch size={18} />
-                Start ITR Selector
-              </Link>
-              <Link to="/forms/itr1" className="btn-outline border-white text-white hover:bg-white hover:text-primary">
-                <FileText size={18} />
-                Browse All Forms
-              </Link>
-              <Link
-                to="/reference/dates"
-                className="flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white px-5 py-3 rounded-lg font-semibold transition-colors"
-              >
-                <Calendar size={18} />
-                View Deadlines
-              </Link>
-            </div>
+      {/* ── Hero ── */}
+      <section
+        className="relative overflow-hidden text-white text-center"
+        style={{
+          background: 'linear-gradient(135deg, #1e40af 0%, #1a3a7a 100%)',
+          padding: '100px 40px 80px',
+        }}
+      >
+        {/* Floating background blobs */}
+        <div className="anim-float-right" style={{
+          position: 'absolute', top: '10%', right: '8%',
+          width: 300, height: 300, borderRadius: '50%',
+          background: 'rgba(217,119,87,0.15)', filter: 'blur(60px)',
+          pointerEvents: 'none',
+        }} />
+        <div className="anim-float-left" style={{
+          position: 'absolute', bottom: '10%', left: '8%',
+          width: 250, height: 250, borderRadius: '50%',
+          background: 'rgba(217,119,87,0.10)', filter: 'blur(50px)',
+          pointerEvents: 'none',
+        }} />
+
+        <div style={{ position: 'relative', maxWidth: 1200, margin: '0 auto' }}>
+          <div className="anim-fade-in-down" style={{ marginBottom: 20 }}>
+            <span style={{
+              display: 'inline-block',
+              background: 'rgba(217,119,87,0.2)',
+              border: '1px solid rgba(217,119,87,0.4)',
+              color: '#ffd699',
+              padding: '8px 16px',
+              borderRadius: 20,
+              fontSize: 12,
+              textTransform: 'uppercase',
+              letterSpacing: '0.5px',
+            }}>
+              ✓ FY 2025-26 | AY 2026-27
+            </span>
           </div>
+
+          <h1 className="anim-fade-in-down-1" style={{
+            fontSize: 'clamp(36px, 5vw, 52px)',
+            fontWeight: 800,
+            lineHeight: 1.2,
+            color: 'white',
+            marginBottom: 12,
+          }}>
+            File Your Income Tax Return<br />with Confidence
+          </h1>
+
+          <p className="anim-fade-in-down-2" style={{
+            fontSize: 18, fontWeight: 300, color: 'white', marginBottom: 12,
+          }}>
+            Complete Knowledge Base for ITR Filing
+          </p>
+
+          <p className="anim-fade-in-down-3" style={{
+            fontSize: 14, color: 'rgba(255,255,255,0.85)', lineHeight: 1.6,
+            marginBottom: 40, maxWidth: 580, margin: '0 auto 40px',
+          }}>
+            Professional. Comprehensive. Up-to-date with CBDT &amp; Finance Act 2025 changes.
+          </p>
+
+          <Link
+            to="/selector"
+            className="anim-fade-in-up-4"
+            style={{
+              display: 'inline-flex', alignItems: 'center', gap: 8,
+              background: '#ffc107', color: '#333',
+              padding: '16px 40px', borderRadius: 8,
+              fontWeight: 600, fontSize: 14,
+              border: '2px solid #ffc107',
+              textDecoration: 'none',
+              transition: 'all 0.3s ease',
+            }}
+            onMouseEnter={e => {
+              e.currentTarget.style.background = 'white'
+              e.currentTarget.style.color = '#ffc107'
+              e.currentTarget.style.transform = 'translateY(-2px)'
+              e.currentTarget.style.boxShadow = '0 12px 24px rgba(217,119,87,0.3)'
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.background = '#ffc107'
+              e.currentTarget.style.color = '#333'
+              e.currentTarget.style.transform = 'translateY(0)'
+              e.currentTarget.style.boxShadow = 'none'
+            }}
+          >
+            <GitBranch size={18} />
+            → Start ITR Selector
+          </Link>
         </div>
       </section>
 
-      {/* Stats bar */}
-      <section className="bg-white border-b border-border-light">
-        <div className="max-w-screen-xl mx-auto px-4 py-5">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {STATS.map(({ value, label, icon: Icon }) => (
-              <div key={label} className="flex items-center gap-3">
-                <div className="bg-primary/10 p-2 rounded-lg">
-                  <Icon size={20} className="text-primary" />
-                </div>
-                <div>
-                  <div className="text-xl font-extrabold text-text-main">{value}</div>
-                  <div className="text-xs text-text-muted">{label}</div>
-                </div>
-              </div>
-            ))}
-          </div>
+      {/* ── Stats ── */}
+      <div style={{ background: '#f5f5f5', padding: '0 40px 60px' }}>
+        <div style={{
+          maxWidth: 1200, margin: '-30px auto 0',
+          background: 'white',
+          borderRadius: 12,
+          padding: '50px 40px',
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+          gap: 40,
+          boxShadow: '0 8px 24px rgba(0,0,0,0.08)',
+          position: 'relative',
+          zIndex: 10,
+        }}>
+          {STATS.map(({ value, label, desc }, i) => (
+            <div
+              key={label}
+              className={`anim-slide-in-up-${i + 1}`}
+              style={{ textAlign: 'center' }}
+            >
+              <span className="stat-number">{value}</span>
+              <div style={{ fontSize: 13, fontWeight: 500, color: '#999', marginBottom: 4 }}>{label}</div>
+              <div style={{ fontSize: 12, color: '#999' }}>{desc}</div>
+            </div>
+          ))}
         </div>
-      </section>
+      </div>
 
-      <div className="max-w-screen-xl mx-auto px-4 py-10">
+      {/* ── Main content ── */}
+      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 40px 60px' }}>
+
         {/* FY 2025-26 Key Changes */}
-        <section className="mb-12">
-          <div className="flex items-center justify-between mb-4">
+        <section style={{ marginBottom: 60, paddingTop: 60 }}>
+          <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', marginBottom: 24, flexWrap: 'wrap', gap: 12 }}>
             <div>
-              <h2 className="section-title flex items-center gap-2">
-                <AlertTriangle size={22} className="text-warning" />
+              <h2 style={{ fontSize: 32, fontWeight: 800, color: '#1a1a1a', marginBottom: 8, display: 'flex', alignItems: 'center', gap: 10 }}>
+                <AlertTriangle size={26} style={{ color: '#ea580c' }} />
                 FY 2025-26 Key Changes
               </h2>
-              <p className="section-subtitle">Finance Act 2025 — Critical updates for this assessment year</p>
+              <p style={{ fontSize: 16, color: '#666' }}>Finance Act 2025 — Critical updates for this assessment year</p>
             </div>
-            <Link to="/reference/changes" className="btn-ghost text-sm hidden sm:flex">
+            <Link to="/reference/changes" className="btn-ghost text-sm" style={{ flexShrink: 0 }}>
               View All <ChevronRight size={16} />
             </Link>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-            {KEY_CHANGES.map((change) => (
-              <div key={change.id} className="card p-4 flex items-start gap-3 hover:shadow-md transition-shadow">
-                <div className="mt-0.5 flex-shrink-0 w-6 h-6 bg-accent/10 rounded-full flex items-center justify-center">
-                  <Zap size={13} className="text-accent-dark" />
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+            {KEY_CHANGES.map((change, i) => (
+              <div key={change.id} className={`home-card anim-slide-in-up-${Math.min(i + 1, 4)}`} style={{ padding: 20, display: 'flex', alignItems: 'flex-start', gap: 14 }}>
+                <div style={{
+                  flexShrink: 0, width: 40, height: 40, borderRadius: '50%',
+                  background: 'linear-gradient(135deg, rgba(217,119,87,0.15), rgba(42,111,219,0.15))',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                }}>
+                  <Zap size={16} style={{ color: '#ea580c' }} />
                 </div>
                 <div>
-                  <span className="text-xs font-bold text-accent-dark bg-accent/10 px-2 py-0.5 rounded-full">
+                  <span style={{
+                    fontSize: 11, fontWeight: 700, color: '#ea580c',
+                    background: 'rgba(217,119,87,0.12)', padding: '3px 8px',
+                    borderRadius: 999, display: 'inline-block', marginBottom: 6,
+                  }}>
                     {change.tag}
                   </span>
-                  <p className="text-sm text-text-main mt-1">{change.desc}</p>
+                  <p style={{ fontSize: 13, color: '#1a1a1a', lineHeight: 1.6 }}>{change.desc}</p>
                 </div>
               </div>
             ))}
           </div>
         </section>
 
-        {/* ITR Forms Grid */}
-        <section className="mb-12">
-          <div className="flex items-center justify-between mb-4">
-            <div>
-              <h2 className="section-title">All ITR Forms</h2>
-              <p className="section-subtitle">Select the form to view eligibility, schedules, worked examples & red flags</p>
-            </div>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            {FORMS.map((form) => (
+        {/* All ITR Forms */}
+        <section style={{ marginBottom: 60 }}>
+          <h2 style={{ fontSize: 32, fontWeight: 800, color: '#1a1a1a', marginBottom: 8 }}>All ITR Forms</h2>
+          <p style={{ fontSize: 16, color: '#666', marginBottom: 30 }}>
+            Select the form to view eligibility, schedules, worked examples &amp; red flags
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 20 }}>
+            {FORMS.map((form, i) => (
               <Link
                 key={form.id}
                 to={`/forms/${form.id}`}
-                className="card p-5 hover:shadow-md transition-all hover:-translate-y-0.5 group"
+                className={`home-card anim-slide-in-up-${Math.min(i + 1, 4)}`}
+                style={{ padding: 24, textDecoration: 'none', color: 'inherit', display: 'block' }}
               >
-                <div className="flex items-start justify-between mb-3">
-                  <div className={`${form.color} text-white rounded-xl px-3 py-1.5 font-bold text-lg`}>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 14 }}>
+                  <span className={`${form.color} text-white`} style={{ borderRadius: 10, padding: '6px 14px', fontWeight: 700, fontSize: 17 }}>
                     {form.name}
-                  </div>
+                  </span>
                   {form.popular && (
-                    <span className="text-xs font-bold text-accent-dark bg-accent/10 px-2 py-0.5 rounded-full">
+                    <span style={{
+                      fontSize: 11, fontWeight: 700, color: '#ea580c',
+                      background: 'rgba(217,119,87,0.12)', padding: '3px 8px', borderRadius: 999,
+                    }}>
                       {form.popular}
                     </span>
                   )}
                 </div>
-                <p className="text-sm text-text-main mb-2 font-medium">{form.desc}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-xs text-text-muted flex items-center gap-1">
+                <p style={{ fontSize: 13, color: '#1a1a1a', marginBottom: 12, fontWeight: 500, lineHeight: 1.5 }}>{form.desc}</p>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                  <span style={{ fontSize: 12, color: '#999', display: 'flex', alignItems: 'center', gap: 4 }}>
                     <Users size={12} /> {form.who}
                   </span>
-                  <ArrowRight size={16} className="text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <ArrowRight size={15} style={{ color: '#2a6fdb', opacity: 0.7 }} />
                 </div>
               </Link>
             ))}
           </div>
         </section>
 
-        {/* Quick Actions Grid */}
-        <section className="mb-12">
-          <h2 className="section-title mb-4">Quick Access</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <Link to="/selector" className="card p-5 hover:shadow-md transition-all hover:border-primary/30 group">
-              <GitBranch size={28} className="text-primary mb-3" />
-              <h3 className="font-bold text-text-main mb-1">ITR Form Selector</h3>
-              <p className="text-sm text-text-muted">3-step wizard to find your correct ITR form</p>
-            </Link>
-            <Link to="/income" className="card p-5 hover:shadow-md transition-all hover:border-success/30 group">
-              <TrendingUp size={28} className="text-success mb-3" />
-              <h3 className="font-bold text-text-main mb-1">Income Guides</h3>
-              <p className="text-sm text-text-muted">Salary, House Property, Capital Gains, Business</p>
-            </Link>
-            <Link to="/deductions" className="card p-5 hover:shadow-md transition-all hover:border-accent/30 group">
-              <Shield size={28} className="text-accent-dark mb-3" />
-              <h3 className="font-bold text-text-main mb-1">Deduction Guides</h3>
-              <p className="text-sm text-text-muted">80C, 80CCD, 80D, 80G and all other sections</p>
-            </Link>
-            <Link to="/procedures" className="card p-5 hover:shadow-md transition-all hover:border-warning/30 group">
-              <CheckCircle size={28} className="text-warning mb-3" />
-              <h3 className="font-bold text-text-main mb-1">Post-Filing</h3>
-              <p className="text-sm text-text-muted">E-verify, revised returns, notices, refunds</p>
-            </Link>
+        {/* Quick Access */}
+        <section style={{ marginBottom: 60 }}>
+          <h2 style={{ fontSize: 32, fontWeight: 800, color: '#1a1a1a', marginBottom: 8 }}>Quick Access</h2>
+          <p style={{ fontSize: 16, color: '#666', marginBottom: 30 }}>Jump to the tools and guides you need most</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 20 }}>
+            {QUICK_ACCESS.map(({ to, icon: Icon, color, title, desc }, i) => (
+              <Link
+                key={to}
+                to={to}
+                className={`home-card anim-slide-in-up-${i + 1}`}
+                style={{ padding: 24, textDecoration: 'none', color: 'inherit', display: 'block' }}
+              >
+                <div style={{
+                  width: 48, height: 48, borderRadius: 10, marginBottom: 14,
+                  background: 'linear-gradient(135deg, rgba(217,119,87,0.12), rgba(42,111,219,0.12))',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                }}>
+                  <Icon size={24} className={color} />
+                </div>
+                <h3 style={{ fontSize: 15, fontWeight: 700, color: '#1a1a1a', marginBottom: 6 }}>{title}</h3>
+                <p style={{ fontSize: 13, color: '#666', lineHeight: 1.6 }}>{desc}</p>
+              </Link>
+            ))}
           </div>
         </section>
 
         {/* Downloads Banner */}
-        <section className="mb-12">
+        <section style={{ marginBottom: 40 }}>
           <div className="bg-gradient-to-r from-emerald-600 to-teal-700 rounded-2xl p-6 text-white">
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
               <div>
@@ -223,28 +304,31 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Key Dates Banner */}
-        <section className="mb-12 bg-gradient-to-r from-primary to-primary-dark rounded-2xl p-6 text-white">
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-            <div>
-              <h2 className="text-xl font-bold mb-2 flex items-center gap-2">
-                <Calendar size={22} className="text-accent" />
-                Important Dates — FY 2025-26
-              </h2>
-              <div className="grid grid-cols-2 gap-x-8 gap-y-1 text-sm text-blue-200">
-                <div><span className="text-white font-medium">ITR Filing:</span> July 31, 2026</div>
-                <div><span className="text-white font-medium">Tax Audit:</span> Oct 31, 2026</div>
-                <div><span className="text-white font-medium">Belated Return:</span> Dec 31, 2026</div>
-                <div><span className="text-white font-medium">Revised Return:</span> Mar 31, 2027</div>
-                <div><span className="text-white font-medium">E-Verify:</span> 30 days from filing</div>
-                <div><span className="text-white font-medium">Transfer Pricing:</span> Nov 30, 2026</div>
+        {/* Key Dates */}
+        <section style={{ marginBottom: 40 }}>
+          <div className="bg-gradient-to-r from-primary to-primary-dark rounded-2xl p-6 text-white">
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+              <div>
+                <h2 className="text-xl font-bold mb-2 flex items-center gap-2">
+                  <Calendar size={22} className="text-accent" />
+                  Important Dates — FY 2025-26
+                </h2>
+                <div className="grid grid-cols-2 gap-x-8 gap-y-1 text-sm text-blue-200">
+                  <div><span className="text-white font-medium">ITR Filing:</span> July 31, 2026</div>
+                  <div><span className="text-white font-medium">Tax Audit:</span> Oct 31, 2026</div>
+                  <div><span className="text-white font-medium">Belated Return:</span> Dec 31, 2026</div>
+                  <div><span className="text-white font-medium">Revised Return:</span> Mar 31, 2027</div>
+                  <div><span className="text-white font-medium">E-Verify:</span> 30 days from filing</div>
+                  <div><span className="text-white font-medium">Transfer Pricing:</span> Nov 30, 2026</div>
+                </div>
               </div>
+              <Link to="/reference/dates" className="btn-accent flex-shrink-0">
+                Full Calendar <ArrowRight size={16} />
+              </Link>
             </div>
-            <Link to="/reference/dates" className="btn-accent flex-shrink-0">
-              Full Calendar <ArrowRight size={16} />
-            </Link>
           </div>
         </section>
+
       </div>
     </div>
   )
