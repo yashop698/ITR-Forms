@@ -3,10 +3,6 @@ name: Build and Deploy to GitHub Pages
 on:
   push:
     branches: [main]
-    paths-ignore:
-      - 'index.html'
-      - 'favicon.svg'
-      - 'assets/**'
 
 permissions:
   contents: write
@@ -28,15 +24,17 @@ jobs:
 
       - run: npm run build
 
-      - name: Deploy built files to main root
+      - name: Deploy dist/ to gh-pages branch
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch origin gh-pages
+          git checkout gh-pages
+          rm -rf assets index.html favicon.svg
+          cp -rf dist/assets assets
           cp -f dist/index.html index.html
           cp -f dist/favicon.svg favicon.svg
-          rm -rf assets
-          cp -rf dist/assets assets
-          git add index.html favicon.svg assets/
+          git add assets/ index.html favicon.svg
           git diff --cached --quiet && echo "No changes to deploy" || \
             git commit -m "Deploy: update built assets [skip ci]" && \
-            git push origin main
+            git push origin gh-pages
