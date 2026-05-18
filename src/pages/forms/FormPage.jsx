@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import {
   ArrowLeft, CheckCircle, XCircle, AlertTriangle, Info,
-  FileText, List, BookOpen, Flag, ChevronRight, User,
+  FileText, List, BookOpen, Flag, ChevronRight, User, Users,
   Building, Layers, Shield, TrendingUp, Calculator, Star,
   ExternalLink, Clock, AlertCircle
 } from 'lucide-react'
