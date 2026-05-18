@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, Search, FileText, ChevronDown, Download } from 'lucide-react'
+import { Menu, Search, ChevronDown, Download } from 'lucide-react'
 import { useState } from 'react'
 
 const FORMS = [
@@ -33,9 +33,16 @@ export default function Navbar({ onMenuClick, onSearchClick }) {
               <Menu size={22} />
             </button>
             <Link to="/" className="flex items-center gap-2 group">
-              <div className="bg-accent rounded-lg p-1.5">
-                <FileText size={20} className="text-white" />
-              </div>
+              <svg viewBox="0 0 200 200" width="32" height="32" xmlns="http://www.w3.org/2000/svg" aria-label="ITR Filing Guide logo">
+                <line x1="35" y1="60" x2="165" y2="60" stroke="#ffffff" strokeWidth="1.2" opacity="0.4"/>
+                <line x1="35" y1="100" x2="165" y2="100" stroke="#ffffff" strokeWidth="1.2" opacity="0.5"/>
+                <line x1="35" y1="140" x2="165" y2="140" stroke="#ffffff" strokeWidth="1.2" opacity="0.4"/>
+                <line x1="60" y1="35" x2="60" y2="165" stroke="#ffffff" strokeWidth="1.2" opacity="0.4"/>
+                <line x1="100" y1="35" x2="100" y2="165" stroke="#ffffff" strokeWidth="1.2" opacity="0.5"/>
+                <line x1="140" y1="35" x2="140" y2="165" stroke="#ffffff" strokeWidth="1.2" opacity="0.4"/>
+                <path d="M 35 100 Q 70 80 100 100 Q 130 120 165 100" stroke="#ffffff" strokeWidth="2.2" fill="none" strokeLinecap="round" opacity="0.9"/>
+                <circle cx="100" cy="100" r="2.5" fill="#ffffff"/>
+              </svg>
               <div>
                 <div className="font-bold text-sm leading-none">ITR Filing Guide</div>
                 <div className="text-xs text-blue-200 leading-none mt-0.5">FY 2025-26 | AY 2026-27</div>
