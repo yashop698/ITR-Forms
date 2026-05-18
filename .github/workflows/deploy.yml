@@ -34,6 +34,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           cp -f dist/index.html index.html
           cp -f dist/favicon.svg favicon.svg
+          rm -rf assets
           cp -rf dist/assets assets
           git add index.html favicon.svg assets/
           git diff --cached --quiet && echo "No changes to deploy" || \
